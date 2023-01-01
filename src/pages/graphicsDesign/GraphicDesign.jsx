@@ -68,7 +68,6 @@ const GraphicDesignPage = () => {
               alt="Graphic Design and Branding Mobile"
             />
           </div>
-
           {/* Overlay Content */}
           <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
             <motion.div
@@ -111,8 +110,8 @@ const GraphicDesignPage = () => {
             </h1>
             <p className="text-gray-600 leading-relaxed">
               Your brand is more than just a logo; it’s the essence of your
-              business, the story you tell, and the impression you leave. At
-              MULTI-LEVEL BOOST, we specialize in creating visually striking
+              business, the story you tell, and the impression you leave. At 247
+              Corporate Consulting, we specialize in creating visually striking
               designs and cohesive branding strategies that set you apart from
               the competition. Whether you’re starting fresh or rebranding, our
               team is here to help you build a memorable and impactful brand.

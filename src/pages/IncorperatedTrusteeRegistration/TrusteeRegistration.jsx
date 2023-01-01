@@ -183,7 +183,7 @@ const TrusteeRegistrationPage = () => {
             </li>
             <li>
               Drafting of Governing Documents: Preparation of a robust
-              constitution or MEMART tailored to your organization’s goals.
+              constitution tailored to your organization’s goals.
             </li>
             <li>
               CAC Filing: Submission of all required documents, including
@@ -294,7 +294,7 @@ const TrusteeRegistrationPage = () => {
             <span className="text-blue-900">247 CORPORATE CONSULTING</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {/* Card 1 */}
+            {/* Card 1 
             <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="text-blue-900 text-4xl font-bold mr-6">1</div>
               <div>

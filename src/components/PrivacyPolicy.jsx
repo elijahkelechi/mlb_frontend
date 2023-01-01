@@ -5,13 +5,13 @@ const PrivacyPolicy = () => {
     <div className="container mx-auto px-4 md:px-8 py-8 shadow-lg">
       <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
       <p className="text-sm text-gray-600 mb-6">Last Updated: 2022-11-20</p>
-
+      {/*  services@247corporateconsulting.ng*/}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">1. Introduction</h2>
-        <p className="mb-4">Welcome to Multi Level Boost.</p>
+        <p className="mb-4">Welcome to247 Corporate Consulting.</p>
         <p className="mb-4">
-          Multi Level Boost (“us”, “we”, or “our”) operates mlb.ng (hereinafter
-          referred to as “Service”).
+          247 Corporate Consulting (“us”, “we”, or “our”) operates mlb.ng
+          (hereinafter referred to as “Service”).
         </p>
         <p className="mb-4">
           Our Privacy Policy governs your visit to mlb.ng, and explains how we
@@ -31,7 +31,6 @@ const PrivacyPolicy = () => {
           (“agreement”).
         </p>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">2. Definitions</h2>
         <ul className="list-disc ml-6 space-y-2">
@@ -78,7 +77,6 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">
           3. Information Collection and Use
@@ -88,7 +86,6 @@ const PrivacyPolicy = () => {
           to provide and improve our Service to you.
         </p>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">4. Types of Data Collected</h2>
 
@@ -190,7 +187,7 @@ const PrivacyPolicy = () => {
       <section>
         <h2 className="text-2xl font-bold mb-4">5. Use of Data</h2>
         <p className="mb-4">
-          Multi Level Boost uses the collected data for various purposes:
+          247 Corporate Consulting uses the collected data for various purposes:
         </p>
         <ul className="list-decimal list-inside mb-4">
           <li>to provide and maintain our Service;</li>
@@ -265,12 +262,12 @@ const PrivacyPolicy = () => {
           such information represents your agreement to that transfer.
         </p>
         <p className="mb-4">
-          Multi Level Boost will take all the steps reasonably necessary to
-          ensure that your data is treated securely and in accordance with this
-          Privacy Policy and no transfer of your Personal Data will take place
-          to an organization or a country unless there are adequate controls in
-          place including the security of your data and other personal
-          information.
+          247 Corporate Consulting will take all the steps reasonably necessary
+          to ensure that your data is treated securely and in accordance with
+          this Privacy Policy and no transfer of your Personal Data will take
+          place to an organization or a country unless there are adequate
+          controls in place including the security of your data and other
+          personal information.
         </p>
       </section>
       <section>
@@ -345,10 +342,10 @@ const PrivacyPolicy = () => {
           If you wish to be informed what Personal Data we hold about you and if
           you want it to be removed from our systems, please email us at{" "}
           <a
-            href="mailto:support@mlb.com.ng"
+            href="mailto: services@247corporateconsulting.ng"
             className="text-blue-500 underline"
           >
-            support@mlb.com.ng
+            services@247corporateconsulting.ng
           </a>
           .
         </p>
@@ -430,8 +427,11 @@ const PrivacyPolicy = () => {
           <li class="mb-2">
             Users are able to change their personal information by emailing us
             at{" "}
-            <a href="mailto:support@mlb.com.ng" class="text-blue-500 underline">
-              support@mlb.com.ng
+            <a
+              href="mailto: services@247corporateconsulting.ng"
+              class="text-blue-500 underline"
+            >
+              services@247corporateconsulting.ng
             </a>
             .
           </li>
@@ -546,8 +546,11 @@ const PrivacyPolicy = () => {
         <p class="mb-4">
           To exercise your California data protection rights described above,
           please send your request(s) by email:{" "}
-          <a href="mailto:support@mlb.com.ng" class="text-blue-500 underline">
-            support@mlb.com.ng
+          <a
+            href="mailto: services@247corporateconsulting.ng"
+            class="text-blue-500 underline"
+          >
+            services@247corporateconsulting.ng
           </a>
           .
         </p>
@@ -559,7 +562,6 @@ const PrivacyPolicy = () => {
           effect on 01/01/2020.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="service-providers">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">
           13. Service Providers
@@ -578,7 +580,6 @@ const PrivacyPolicy = () => {
           for any other purpose.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="analytics">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">14. Analytics</h2>
 
@@ -587,7 +588,6 @@ const PrivacyPolicy = () => {
           use of our Service.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="cicd-tools">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">15. CI/CD Tools</h2>
 
@@ -596,7 +596,6 @@ const PrivacyPolicy = () => {
           process of our Service.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="advertising">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">16. Advertising</h2>
 
@@ -605,7 +604,6 @@ const PrivacyPolicy = () => {
           to help support and maintain our Service.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="behavioral-remarketing">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">
           17. Behavioral Remarketing
@@ -618,7 +616,6 @@ const PrivacyPolicy = () => {
           visits to our Service.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="payments">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">18. Payments</h2>
 
@@ -639,7 +636,6 @@ const PrivacyPolicy = () => {
           payment information.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="links-to-other-sites">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">
           19. Links to Other Sites
@@ -657,7 +653,6 @@ const PrivacyPolicy = () => {
           privacy policies, or practices of any third-party sites or services.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="childrens-privacy">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">
           20. Children’s Privacy
@@ -676,7 +671,6 @@ const PrivacyPolicy = () => {
           consent, we take steps to remove that information from our servers.
         </p>
       </section>
-
       <section class="py-8 px-6 bg-gray-50" id="changes-to-privacy-policy">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">
           21. Changes to This Privacy Policy
@@ -699,17 +693,16 @@ const PrivacyPolicy = () => {
           posted on this page.
         </p>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">22. Contact Us</h2>
         <p>
           If you have any questions about this Privacy Policy, please contact us
           by email:{" "}
           <a
-            href="mailto:support@mlb.com.ng"
+            href="mailto: services@247corporateconsulting.ng"
             className="text-blue-500 underline"
           >
-            support@mlb.com.ng
+            services@247corporateconsulting.ng
           </a>
           .
         </p>

@@ -212,8 +212,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="text-center md:text-left mt-8 text-gray-700 text-sm">
-          &copy; {new Date().getFullYear()} 247 CORPORATE CONSULTING LTD. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} 247 CC. All rights reserved.
         </div>
       </div>
     </footer>

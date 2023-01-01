@@ -41,19 +41,17 @@ const BusinessNameRegistration = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           {/* Left Side: Text Content (Mobile View Overlay Only) */}
-          <div className="absolute inset-0 md:hidden bg-black bg-opacity-50 flex items-center justify-center z-10">
+          <div className="absolute inset-0 md:hidden flex items-center justify-center z-10">
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="text-center text-white px-6 "
             >
-              <h1 className="text-2xl sm:text-3xl font-bold">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
                 Register Your Business Name
               </h1>
-              <p className="mt-4 text-lg">
-                Hassle-Free Registration with MULTI-LEVEL BOOST.
-              </p>
+
               <Link
                 onClick={handleScrollToTop}
                 to="/business_name_registration_form"
@@ -63,7 +61,6 @@ const BusinessNameRegistration = () => {
               </Link>
             </motion.div>
           </div>
-
           {/* Left Side: Text Content (Desktop View, Positioned on the Left of Image) */}
           <div className="w-full md:w-1/2 h-full flex items-center justify-start px-6 md:px-12 z-10">
             <motion.div
@@ -75,9 +72,7 @@ const BusinessNameRegistration = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
                 Register Your Business Name
               </h1>
-              <p className="mt-4 text-lg text-gray-600">
-                Hassle-Free Registration with MULTI-LEVEL BOOST.
-              </p>
+
               <Link
                 onClick={handleScrollToTop}
                 to="/business_name_registration_form"
@@ -87,18 +82,17 @@ const BusinessNameRegistration = () => {
               </Link>
             </motion.div>
           </div>
-
           {/* Right Side: Image (Desktop and Mobile Images) */}
           <div className="w-full md:w-1/2 h-full relative">
             {/* Mobile Image */}
-            <motion.img
+            {/* <motion.img
               className="md:hidden h-full w-full object-cover"
               src={heroImageMobile}
               alt="Business Registration Mobile"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
-            />
+            /> */}
             {/* Desktop Image */}
             <motion.img
               className="hidden md:block h-full w-full object-cover"
@@ -123,8 +117,8 @@ const BusinessNameRegistration = () => {
               Starting a business is an exciting journey, but registering your
               business name with the Corporate Affairs Commission (CAC) is a
               crucial first step to establish your venture legally in Nigeria.
-              At MULTI-LEVEL BOOST, we make this process seamless, fast, and
-              stress-free, so you can focus on growing your business.
+              At 247 Corporate Consulting, we make this process seamless, fast,
+              and stress-free, so you can focus on growing your business.
             </p>
           </motion.div>
 

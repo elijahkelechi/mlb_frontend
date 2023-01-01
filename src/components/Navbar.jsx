@@ -64,7 +64,7 @@ const Navbar = () => {
           <span className="flex flex-col pl-2 justify-center">
             <h1 className="font-bold font-heading text-gray-800 text-xs md:text-lg">
               247 CORPORATE
-              <p className="text-lg"> CONSULTING</p>
+              <p> CONSULTING</p>
             </h1>
             <p className="hidden md:block font-sans text-center text-xs">
               Professional. Reliable. Timely

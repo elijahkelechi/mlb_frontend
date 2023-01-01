@@ -32,7 +32,6 @@ const TermsOfUse = () => {
               results from your use of our web pages.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="communications">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               2. Communications
@@ -44,13 +43,15 @@ const TermsOfUse = () => {
               send. However, you may opt out of receiving any, or all, of these
               communications from us by following the unsubscribe link or by
               emailing at{" "}
-              <a href="mailto:support@mlb.com.ng" class="text-blue-600">
-                support@mlb.com.ng
+              <a
+                href="mailto: services@247corporateconsulting.ng"
+                class="text-blue-600"
+              >
+                services@247corporateconsulting.ng
               </a>
               .
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="purchases">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">3. Purchases</h2>
 
@@ -69,7 +70,6 @@ const TermsOfUse = () => {
               information to these third parties subject to our Privacy Policy.
             </p>
           </section>
-
           <section
             class="py-8 px-6 bg-gray-50"
             id="contests-sweepstakes-promotions"
@@ -86,7 +86,6 @@ const TermsOfUse = () => {
               as well as our Privacy Policy.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="subscriptions">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               5. Subscriptions
@@ -105,7 +104,8 @@ const TermsOfUse = () => {
               automatically renew under the exact same conditions unless you
               cancel it or Multi Level Boost cancels it. You may cancel your
               Subscription renewal either through your online account management
-              page or by contacting support@mlb.com.ng customer support team.
+              page or by contacting services@247corporateconsulting.ng customer
+              support team.
             </p>
 
             <p class="mb-4">
@@ -125,7 +125,6 @@ const TermsOfUse = () => {
               with immediate effect.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="free-trial">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">6. Free Trial</h2>
 
@@ -159,7 +158,6 @@ const TermsOfUse = () => {
               <li>Cancel such Free Trial offer.</li>
             </ul>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="fee-changes">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               7. Fee Changes
@@ -184,7 +182,6 @@ const TermsOfUse = () => {
               Subscription fee amount.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="refunds">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">8. Refunds</h2>
 
@@ -193,7 +190,6 @@ const TermsOfUse = () => {
               purchase of the Contract.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="content">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">9. Content</h2>
 
@@ -206,7 +202,6 @@ const TermsOfUse = () => {
               us.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="prohibited-uses">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               10. Prohibited Uses
@@ -296,7 +291,6 @@ const TermsOfUse = () => {
               </li>
             </ul>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="analytics">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">11. Analytics</h2>
 
@@ -305,7 +299,6 @@ const TermsOfUse = () => {
               the use of our Service.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="no-use-by-minors">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               12. No Use By Minors
@@ -321,7 +314,6 @@ const TermsOfUse = () => {
               prohibited from both the access and usage of Service.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="accounts">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">13. Accounts</h2>
 
@@ -357,7 +349,6 @@ const TermsOfUse = () => {
               or edit content, or cancel orders in our sole discretion.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="intellectual-property">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               14. Intellectual Property
@@ -373,7 +364,6 @@ const TermsOfUse = () => {
               Multi Level Boost.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="copyright-policy">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               15. Copyright Policy
@@ -390,10 +380,11 @@ const TermsOfUse = () => {
               If you are a copyright owner, or authorized on behalf of one, and
               you believe that the copyrighted work has been copied in a way
               that constitutes copyright infringement, please submit your claim
-              via email to support@mlb.com.ng, with the subject line: “Copyright
-              Infringement” and include in your claim a detailed description of
-              the alleged Infringement as detailed below, under “DMCA Notice and
-              Procedure for Copyright Infringement Claims”.
+              via email to services@247corporateconsulting.ng, with the subject
+              line: “Copyright Infringement” and include in your claim a
+              detailed description of the alleged Infringement as detailed
+              below, under “DMCA Notice and Procedure for Copyright Infringement
+              Claims”.
             </p>
 
             <p class="mb-4">
@@ -403,7 +394,6 @@ const TermsOfUse = () => {
               your copyright.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="dmca-notice">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               16. DMCA Notice and Procedure for Copyright Infringement Claims
@@ -447,36 +437,35 @@ const TermsOfUse = () => {
 
             <p class="mb-4">
               You can contact our Copyright Agent via email at
-              support@mlb.com.ng.
+              services@247corporateconsulting.ng.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="error-reporting">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               17. Error Reporting and Feedback
             </h2>
 
             <p class="mb-4">
-              You may provide us either directly at support@mlb.com.ng or via
-              third party sites and tools with information and feedback
-              concerning errors, suggestions for improvements, ideas, problems,
-              complaints, and other matters related to our Service (“Feedback”).
-              You acknowledge and agree that: (i) you shall not retain, acquire
-              or assert any intellectual property right or other right, title or
-              interest in or to the Feedback; (ii) Company may have development
-              ideas similar to the Feedback; (iii) Feedback does not contain
-              confidential information or proprietary information from you or
-              any third party; and (iv) Company is not under any obligation of
-              confidentiality with respect to the Feedback. In the event the
-              transfer of the ownership to the Feedback is not possible due to
-              applicable mandatory laws, you grant Company and its affiliates an
-              exclusive, transferable, irrevocable, free-of-charge,
-              sub-licensable, unlimited and perpetual right to use (including
-              copy, modify, create derivative works, publish, distribute and
-              commercialize) Feedback in any manner and for any purpose.
+              You may provide us either directly at
+              services@247corporateconsulting.ng or via third party sites and
+              tools with information and feedback concerning errors, suggestions
+              for improvements, ideas, problems, complaints, and other matters
+              related to our Service (“Feedback”). You acknowledge and agree
+              that: (i) you shall not retain, acquire or assert any intellectual
+              property right or other right, title or interest in or to the
+              Feedback; (ii) Company may have development ideas similar to the
+              Feedback; (iii) Feedback does not contain confidential information
+              or proprietary information from you or any third party; and (iv)
+              Company is not under any obligation of confidentiality with
+              respect to the Feedback. In the event the transfer of the
+              ownership to the Feedback is not possible due to applicable
+              mandatory laws, you grant Company and its affiliates an exclusive,
+              transferable, irrevocable, free-of-charge, sub-licensable,
+              unlimited and perpetual right to use (including copy, modify,
+              create derivative works, publish, distribute and commercialize)
+              Feedback in any manner and for any purpose.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="links-to-other-websites">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               18. Links To Other Web Sites
@@ -507,7 +496,6 @@ const TermsOfUse = () => {
               POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="disclaimer-of-warranty">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               19. Disclaimer Of Warranty
@@ -550,7 +538,6 @@ const TermsOfUse = () => {
               EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="limitation-of-liability">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               20. Limitation Of Liability
@@ -602,7 +589,6 @@ const TermsOfUse = () => {
               and limitations of liability.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="governing-law">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               22. Governing Law
@@ -625,7 +611,6 @@ const TermsOfUse = () => {
               have had between us regarding Service.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="changes-to-service">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               23. Changes To Service
@@ -640,7 +625,6 @@ const TermsOfUse = () => {
               the entire Service, to users, including registered users.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="amendments-to-terms">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               24. Amendments To Terms
@@ -666,7 +650,6 @@ const TermsOfUse = () => {
               use Service.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="waiver-and-severability">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               25. Waiver And Severability
@@ -688,7 +671,6 @@ const TermsOfUse = () => {
               continue in full force and effect.
             </p>
           </section>
-
           <section class="py-8 px-6 bg-gray-50" id="acknowledgement">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               26. Acknowledgement
@@ -700,7 +682,6 @@ const TermsOfUse = () => {
               THEM.
             </p>
           </section>
-
           {/* Add other sections here */}
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -708,7 +689,7 @@ const TermsOfUse = () => {
             </h2>
             <p className="text-gray-700">
               Please send your feedback, comments, requests for technical
-              support by email: support@mlb.com.ng.
+              support by email: services@247corporateconsulting.ng.
             </p>
           </section>
         </div>

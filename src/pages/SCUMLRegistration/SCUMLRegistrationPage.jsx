@@ -42,9 +42,9 @@ const SCUMLRegistrationPage = () => {
   return (
     <div className="bg-gray-50  ">
       <div className=" bg-gray-50 overflow-hidden">
-        <div className="h-screen relative flex flex-col">
+        <div className="h-screen relative flex flex-col bg-gray-50">
           {/* Background Image */}
-          <div className="absolute inset-0 h-full w-full">
+          {/* <div className="absolute inset-0 h-full w-full">
             <img
               className="hidden md:flex h-full w-full object-cover"
               src={heroImageDesktop}
@@ -55,17 +55,17 @@ const SCUMLRegistrationPage = () => {
               src={heroImageMobile}
               alt="SCUML Registration Mobile"
             />
-          </div>
+          </div> */}
 
           {/* Overlay Content */}
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+          <div className="absolute inset-0 flex items-center">
             <div className="container text-left px-6 md:px-20">
               {/* Header Text */}
               <div className="text-2xl md:col-span-6 font-bold justify-center items-left text-left sm:text-3xl md:text-4xl">
                 <span className="text-green-500">
                   SCUML Registration Service
                 </span>
-                <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-100">
+                <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-800">
                   Comply with Anti-Money Laundering Laws and Secure Your
                   Business
                 </p>
