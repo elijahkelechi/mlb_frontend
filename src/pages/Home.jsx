@@ -1,0 +1,463 @@
+import React, { useState } from "react";
+import landingImage from "../assets/landingImage.webp";
+import { Link } from "react-router";
+import { FaFileSignature } from "react-icons/fa";
+import { MdCampaign } from "react-icons/md";
+import { FaLaptopCode } from "react-icons/fa";
+import { IdentificationIcon } from "@heroicons/react/20/solid";
+import { ShieldCheckIcon } from "@heroicons/react/20/solid";
+import { PaintBrushIcon } from "@heroicons/react/20/solid";
+import femaleImage from "../assets/femaleImage.webp";
+import { motion } from "framer-motion";
+
+const Home = () => {
+  const [expandedCard, setExpandedCard] = useState(0);
+
+  // Function to toggle card expansion
+  const toggleCard = (cardIndex) => {
+    setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
+  };
+
+  const cards = [
+    {
+      id: 1,
+      title: "Company Registration",
+      shortDescription:
+        "Business Name, Company, NGO and Association registration in the most seamless way. No paperwork or long registration process.",
+      fullDescription:
+        "Flexible payment option available. Our team ensures quick, accurate, and stress-free registration. Let us handle the paperwork while you focus on growing your business.",
+      icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 2,
+      title: "Social Media Ads",
+      shortDescription:
+        "Boost sales, get qualified leads, drive website traffic, and customer engagement.",
+      fullDescription:
+        "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
+      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 3,
+      title: "SCUML Registration",
+      shortDescription:
+        "Ensure your business complies with AML regulations by registering with SCUML.",
+      fullDescription:
+        "Protect your business and boost credibility with a valid SCUML certificate. Our experts make the process smooth and ensure compliance with all Nigerian regulations.",
+      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+    },
+    {
+      id: 4,
+      title: "TIN Registration and Tax Clearance",
+      shortDescription:
+        "Ensure your business is compliant with Nigerian tax laws by registering for a Tax Identification Number (TIN).",
+      fullDescription:
+        "Obtain a Tax Clearance Certificate (TCC) to complete your tax requirements. We assist with all the paperwork and ensure your business stays compliant.",
+      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+    },
+    {
+      id: 5,
+      title: "Website/App  for your Busineses",
+      shortDescription:
+        "Whether you’re in need of a simple WordPress website, a more complex eCommerce site, Website or App for your business.",
+      fullDescription:
+        "Our team will help bring your vision to life. We specialize in building user-friendly websites, mobile apps, and eCommerce solutions tailored to your business needs.",
+      icon: <FaLaptopCode className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 6,
+      title: "Graphic Designing",
+      shortDescription:
+        "Beautiful, engaging, and creative designs. We work with talented designers to create eye-catching designs that tell your brand's story.",
+      fullDescription:
+        "Our team will help you build a strong visual identity through creative graphic design solutions. Whether it's logos, marketing materials, or web graphics, we’ve got you covered.",
+      icon: <PaintBrushIcon className="text-cyan-500 size-14" />,
+    },
+  ];
+  const cards1 = [
+    {
+      id: 1,
+      title: "Company Registration",
+      shortDescription:
+        "Business Name, Company, NGO and Association registration in the most seamless way. No paperwork or long registration process.",
+      fullDescription:
+        "Flexible payment option available. Our team ensures quick, accurate, and stress-free registration. Let us handle the paperwork while you focus on growing your business.",
+      icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 2,
+      title: "Social Media Ads",
+      shortDescription:
+        "Boost sales, get qualified leads, drive website traffic, and customer engagement.",
+      fullDescription:
+        "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
+      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 3,
+      title: "SCUML Registration",
+      shortDescription:
+        "Ensure your business complies with AML regulations by registering with SCUML.",
+      fullDescription:
+        "Protect your business and boost credibility with a valid SCUML certificate. Our experts make the process smooth and ensure compliance with all Nigerian regulations.",
+      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+    },
+    {
+      id: 4,
+      title: "TIN Registration and Tax Clearance",
+      shortDescription:
+        "Ensure your business is compliant with Nigerian tax laws by registering for a Tax Identification Number (TIN).",
+      fullDescription:
+        "Obtain a Tax Clearance Certificate (TCC) to complete your tax requirements. We assist with all the paperwork and ensure your business stays compliant.",
+      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+    },
+    {
+      id: 5,
+      title: "Website/App  for your Busineses",
+      shortDescription:
+        "Whether you’re in need of a simple WordPress website, a more complex eCommerce site, Website or App for your business.",
+      fullDescription:
+        "Our team will help bring your vision to life. We specialize in building user-friendly websites, mobile apps, and eCommerce solutions tailored to your business needs.",
+      icon: <FaLaptopCode className="text-cyan-500 text-5xl" />,
+    },
+    {
+      id: 6,
+      title: "Graphic Designing",
+      shortDescription:
+        "Beautiful, engaging, and creative designs. We work with talented designers to create eye-catching designs that tell your brand's story.",
+      fullDescription:
+        "Our team will help you build a strong visual identity through creative graphic design solutions. Whether it's logos, marketing materials, or web graphics, we’ve got you covered.",
+      icon: <PaintBrushIcon className="text-cyan-500 size-14" />,
+    },
+  ];
+  return (
+    <div className="w-full overflow-x-hidden">
+      <div className="w-full overflow-x-hidden">
+        {/* Image Section with Motion */}
+        <motion.div
+          className="h-screen w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <img
+            className="bg-cover h-full w-full"
+            src={landingImage}
+            alt="Landing"
+          />
+        </motion.div>
+
+        <div className="absolute top-0 h-screen opacity-0 flex w-full bg-gray-50 " />
+
+        {/* Main Content Section with Motion */}
+        <motion.div
+          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-xl md:text-4xl text-gray-950 tracking-wide"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <div className="col-span-8 leading-snug h-screen px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
+            Empowering Your Business: From Seamless Registrations to Creative
+            Growth Solutions
+            <p className="text-xs text-gray-700 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
+              We register your: Business Name, Company, NGO Association
+              ,SCUML,TIN and tax clearance in the most seamless way. No
+              paperwork or long registration process. <br />
+              <br />
+              We also help you Boost sales, get qualified leads, drive website
+              traffic, customer engagement, and expand your business reach with
+              Social Media Ad Campaigns designed to inspire action.
+              <Link
+                to="/services"
+                className="text-xs text-cyan-500 border-b-2 border-cyan-500 hover:text-sm hover:text-cyan-800 hover:border-cyan-600 transition-all duration-300 ease-in-out"
+              >
+                Visit our services for more info
+              </Link>
+            </p>
+            <div className="flex md:block mt-4 justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <Link className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4">
+                  GET STARTED
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+              >
+                <Link className="btn font-heading bg-opacity-20 text-gray-800 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700">
+                  CREATE AN ACCOUNT
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+          <div className="col-span-4" />
+        </motion.div>
+      </div>
+      <div className=" h-[170rem] md:h-[135rem]  lg:h-[78rem] bg-gradient-to-r from-cyan-600 to-cyan-400">
+        <div className="py-6 md:pt-12">
+          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20  text-center font-heading font-bold text-gray-50">
+            Avoid Scams And Build Your Dream Business <br></br> With Muti-Level
+            Boost
+          </h1>
+          <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-50 mt-4 md:mt-6 font-sans">
+            Multi-Level Boost has all it takes for you to grow a legit and
+            successful business ranging from registring your business, running
+            effective ads, Creative designs to Building a Website or Mobile App
+            for your business with our team of designers/developers.
+          </p>
+          <h1 className="text-xl mt-8 lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20  text-center font-heading font-bold text-gray-50">
+            We have all it takes! to Build your business 💪
+          </h1>
+        </div>
+        <div className="cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-3 text-center justify-center">
+          {cards.map((card, index) => (
+            <div
+              key={card.id}
+              className={`z-20 div1 px-6 py-6 lg:py-2 md:py-8 md:px-8 lg:px-2 rounded-md bg-gray-50 grid grid-cols-1 lg:grid-cols-12 gap-2 transition-all duration-500 ease-in-out overflow-hidden ${
+                expandedCard === index
+                  ? "lg:h-auto opacity-100"
+                  : "lg:h-64 opacity-90"
+              }`}
+            >
+              {/* Left Icon */}
+              <div className="col-span-2 flex flex-col items-center">
+                {card.icon}
+              </div>
+
+              {/* Right Text Content */}
+              <div className="text-left col-span-10 font-sans">
+                <h1 className="font-heading mb-2 mt-2 font-bold text-2xl text-gray-800">
+                  {card.title}
+                </h1>
+                <p className="text-gray-700">{card.shortDescription}</p>
+                <button
+                  onClick={() => toggleCard(index)}
+                  className="flex md:flex btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                >
+                  {expandedCard === index ? "Show Less" : "Learn More"}
+                </button>
+
+                {/* Full Description Section */}
+                {expandedCard === index && (
+                  <div className="transition-opacity duration-500 ease-in-out opacity-100 mt-4">
+                    <p className="text-gray-700">{card.fullDescription}</p>
+                    <Link className="btn w-full mt-4 px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300">
+                      Get Started
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[200rem] md:top-[180rem] lg:top-[115rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+        <div className="py-4 md:py-16 pb-8">
+          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
+            Not Just Another Advertising Agency{" "}
+            <div className="ml-2 col-span-2 flex flex-col  ">
+              <MdCampaign className="size-14 md:size-36" />
+            </div>
+          </h1>
+          <p className="font-sans md:pr-32">
+            Your business is unique and has distinct goals. That’s why we carry
+            a vast arsenal of digital marketing solutions to help you achieve
+            those goals. Is it functional, SEO and mobile optimized website you
+            need? You’ve come to the right place. We are named the
+            <span className="font-bold font-heading text-lg">
+              #1 web development firm in Nigeria.
+            </span>{" "}
+            Searching tirelessly for an agency capable of generating sales and
+            qualified leads?{" "}
+            <span className="font-bold font-heading text-lg">
+              Social Media Ad Campaign
+            </span>{" "}
+            and Pay Per Click Advertising may be just what you need! Perhaps you
+            want to register your business, NGO or Association with Corporate
+            Affairs Commission (CAC), We are here to help you in the most
+            seamless way and at a very affordable fee.
+          </p>
+          <button className="mt-6 bg-cyan-500 bg-opacity-10 btn-md md:btn-lg border-2 rounded-sm md:rounded-md">
+            SKY ROCKET 🚀 YOUR BUSINESS NOW!
+          </button>
+        </div>
+      </div>
+      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[250rem] md:top-[192rem] lg:top-[122rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">89%</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Clients & employees retention rates
+          </span>
+        </div>
+
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">8+</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Countries where we manage campaigns
+          </span>
+        </div>
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">2k+</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Businesses | SCUML | TIN Registered
+          </span>
+        </div>
+      </div>
+      <div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[265rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
+        <div className="py-4 md:py-16 pb-8">
+          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
+            Marketing Solutions That Scale{" "}
+          </h1>
+          <p className="font-sans md:pr-32 mt-4">
+            We have solutions that integrate with your business needs. We cover
+            all possible ways to grow your business so you focus on more
+            pressing issues. Our strategy for which services revolves around
+            your goals, business type, and ad spend budget. To get the right
+            customers for your business and increase your ROI for your budget
+          </p>
+          <br></br>
+          <p>
+            We take your social marketing to the next level and develop web
+            design solutions your team isn't able to tackle in-house. With our
+            quality SEO Services, we optimize your website to rank higher in
+            search engines. We also work closely with partners and affiliates,
+            offering solutions that you can take to your customers to grow their
+            marketing while expanding your organization’s capabilities.
+          </p>
+          <div className="mt-6 bg-cyan-500 bg-opacity-10 border-2 rounded-md relative overflow-hidden p-4 text-center text-black font-medium">
+            <span className="flowing-text">
+              * Small Business Solutions * Medium Business Solutions *
+              Enterprise Solutions * Partner & Affiliate Solutions
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="absolute text-center grid bg-gray-200 w-full mr-8  top-[320rem]  md:top-[290rem] lg:top-[210rem]">
+        {/* Image and Overlay Section */}
+        <div className="relative w-full text-center flex items-center justify-center">
+          {/* Title Styled as a Message */}
+          <div className="absolute mt-16 px-4 py-2 bg-white rounded-full shadow-lg border border-gray-300">
+            <h1 className="text-sm md:text-4xl text-cyan-600 font-bold font-heading">
+              Why Do Brands Choose Us?
+            </h1>
+          </div>
+
+          {/* Background Image */}
+          <img
+            className="  md:h-[30rem] md:w-[32rem] object-cover"
+            style={{
+              "@media (min-width: 900px)": {
+                width: "25rem",
+              },
+            }}
+            src={femaleImage}
+            alt="Why Brands Chose Us"
+          />
+        </div>
+
+        {/* Text Content Section */}
+        <div className="text-left px-4 rounded-r-md pt-8 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 animate-gradient shadow-2xl">
+          {/* Section Title */}
+          <h1 className="font-heading font-extrabold text-2xl lg:text-5xl text-white text-center drop-shadow-md tracking-wide">
+            We have all it takes!
+          </h1>
+
+          {/* Key Points */}
+          <div className="grid p-4 md:p-8 lg:grid-cols-12 gap-8 mt-6 text-lg space-y-4 pb-16 text-gray-100">
+            <div
+              div
+              className="hidden p-8 md:flex md:col-span-4 w-full  flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg"
+            >
+              <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
+                🎉 Celebrate 3 Years of Success with Us! 🎉
+              </h1>
+              <p className="text-lg font-medium text-gray-200 text-center">
+                Get each service now at{" "}
+                <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
+                as we mark our 3rd of excellence in business!
+              </p>
+            </div>
+
+            <div className="md:col-span-8 space-y-6">
+              <p>
+                <span className="text-2xl">✨</span> We drive consistent results
+                and have increased
+                <span className="font-bold text-white">
+                  {" "}
+                  93% of our clients' ROAS
+                </span>{" "}
+                and revenue within the first 2 months of working together.
+              </p>
+
+              <p>
+                <span className="text-2xl">💡</span> We deeply understand
+                creative, and
+                <span className="font-bold text-white">
+                  {" "}
+                  what ad creatives will drive performance
+                </span>
+                at every stage of the funnel for your brand.
+              </p>
+              <p>
+                <span className="text-2xl">⚡</span> Fast and seamless
+                <span className="font-bold text-white">
+                  {" "}
+                  CAC | SCUML | TIN Registration Services
+                </span>
+                .
+              </p>
+              <p>
+                <span className="text-2xl">💻</span> Seamless
+                <span className="font-bold text-white">
+                  {" "}
+                  Website Development/Designs for your Business
+                </span>
+                .
+              </p>
+              <p>
+                <span className="text-2xl">🏆</span> We've been recognized by
+                <span className="font-bold text-white">
+                  {" "}
+                  Meta as one of their Business Partners
+                </span>
+                , which is given to us due to spending more than
+                <span className="font-bold text-white"> NGN50m a year</span> on
+                Facebook Ads alone.
+              </p>
+            </div>
+            <div className="md:hidden  p-4 w-full flex    flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg">
+              <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
+                🎉 Celebrate 3 Years of Success with Us! 🎉
+              </h1>
+              <p className="text-lg font-medium text-gray-200 text-center">
+                Get each service now at{" "}
+                <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
+                as we mark our 3rd of excellence in business!
+              </p>
+              <Link className="btn w-full mt-4 bg-cyan-500 text-gray-50">
+                Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
