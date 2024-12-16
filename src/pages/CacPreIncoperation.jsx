@@ -1,26 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+import bgImage from "../assets/formImage.webp";
+
+const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 
 const CacPreIncorporation = () => {
   return (
-    <div className="font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gradient-to-r from-cyan-600 to-cyan-400 ">
+    <div
+      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gradient-to-r from-cyan-600 to-cyan-400 min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      {/* Background Image with fixed scroll */}
+      <div
+        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      ></div>
+
       {/* Header */}
-      <header className="py-8 text-white shadow-md">
+      <header className="py-16 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
         <div className="container mx-auto text-center">
           <h1 className="text-2xl font-heading md:text-4xl font-bold leading-tight">
-            Multi Level Boost - CAC Pre-Incorporation Services
+            CAC Pre-Incorporation Services
           </h1>
         </div>
       </header>
 
       {/* Main Content */}
-      <div className="container w-full py-8 space-y-8">
+      <div className="container relative w-full py-8 space-y-8 z-10">
         {/* Business Name Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white p-6 rounded-lg shadow-md "
+          viewport={{ once: true, amount: 0.1 }}
+          className="bg-white p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
             Business Name (Enterprise)
@@ -30,16 +46,21 @@ const CacPreIncorporation = () => {
             carried on. It does not enjoy legal personality or limited
             liability.
           </p>
-          <button className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200">
+          <Link
+            onClick={handleScrollToTop}
+            to="/businessNameRegistration"
+            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+          >
             Proceed to Registration
-          </button>
+          </Link>
         </motion.div>
 
         {/* LLC Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-white p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
@@ -49,16 +70,21 @@ const CacPreIncorporation = () => {
             A Limited Liability Company provides legal personality to a business
             while protecting owners' personal assets.
           </p>
-          <button className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200">
+          <Link
+            onClick={handleScrollToTop}
+            to="/limited_liabiltiy_registration"
+            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+          >
             Proceed to Registration
-          </button>
+          </Link>
         </motion.div>
 
         {/* Incorporated Trustee Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-white p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
@@ -69,16 +95,21 @@ const CacPreIncorporation = () => {
             can acquire property, sue and be sued in the name of the
             Association.
           </p>
-          <button className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200">
+          <Link
+            onClick={handleScrollToTop}
+            to="/incorperated_trustee_registration"
+            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+          >
             Proceed to Registration
-          </button>
+          </Link>
         </motion.div>
 
         {/* Call to Action Section */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-blue-50 p-6 rounded-lg shadow-md text-center space-y-4"
         >
           <h2 className="text-lg md:text-2xl font-bold mb-2 leading-tight font-heading">
@@ -100,38 +131,6 @@ const CacPreIncorporation = () => {
           >
             Contact Support via WhatsApp
           </a>
-        </motion.div>
-
-        {/* Importance of CAC Registration Section */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="bg-white p-6 rounded-lg shadow-md text-gray-700"
-        >
-          <h2 className="text-2xl font-bold mb-4 font-heading">
-            Importance of CAC Registration
-          </h2>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>
-              Recently, the Central Bank of Nigeria (CBN) released a directive
-              that all businesses that opened bank accounts without their CAC
-              registration certificate should ensure they regularize their
-              accounts or would risk suspension.
-            </li>
-            <li>
-              In Nigeria, businesses must register with the Corporate Affairs
-              Commission (CAC) to open valid corporate bank accounts.
-            </li>
-            <li>
-              Business registration adds authenticity, legal protection, and
-              credibility to your operations.
-            </li>
-            <li>
-              Registered businesses have easier access to loans compared to
-              personal applications.
-            </li>
-          </ol>
         </motion.div>
       </div>
     </div>

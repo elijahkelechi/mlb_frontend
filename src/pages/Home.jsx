@@ -17,6 +17,9 @@ const Home = () => {
   const toggleCard = (cardIndex) => {
     setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
   };
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   const cards = [
     {
@@ -27,6 +30,7 @@ const Home = () => {
       fullDescription:
         "Flexible payment option available. Our team ensures quick, accurate, and stress-free registration. Let us handle the paperwork while you focus on growing your business.",
       icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
+      link: "/CAC_Pre-incoperation",
     },
     {
       id: 2,
@@ -36,6 +40,7 @@ const Home = () => {
       fullDescription:
         "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
+      link: "/",
     },
     {
       id: 3,
@@ -45,6 +50,7 @@ const Home = () => {
       fullDescription:
         "Protect your business and boost credibility with a valid SCUML certificate. Our experts make the process smooth and ensure compliance with all Nigerian regulations.",
       icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+      link: "/",
     },
     {
       id: 4,
@@ -54,6 +60,7 @@ const Home = () => {
       fullDescription:
         "Obtain a Tax Clearance Certificate (TCC) to complete your tax requirements. We assist with all the paperwork and ensure your business stays compliant.",
       icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+      link: "/",
     },
     {
       id: 5,
@@ -63,6 +70,7 @@ const Home = () => {
       fullDescription:
         "Our team will help bring your vision to life. We specialize in building user-friendly websites, mobile apps, and eCommerce solutions tailored to your business needs.",
       icon: <FaLaptopCode className="text-cyan-500 text-5xl" />,
+      link: "/website_app_design_development",
     },
     {
       id: 6,
@@ -72,64 +80,10 @@ const Home = () => {
       fullDescription:
         "Our team will help you build a strong visual identity through creative graphic design solutions. Whether it's logos, marketing materials, or web graphics, we’ve got you covered.",
       icon: <PaintBrushIcon className="text-cyan-500 size-14" />,
+      link: "/",
     },
   ];
-  const cards1 = [
-    {
-      id: 1,
-      title: "Company Registration",
-      shortDescription:
-        "Business Name, Company, NGO and Association registration in the most seamless way. No paperwork or long registration process.",
-      fullDescription:
-        "Flexible payment option available. Our team ensures quick, accurate, and stress-free registration. Let us handle the paperwork while you focus on growing your business.",
-      icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
-    },
-    {
-      id: 2,
-      title: "Social Media Ads",
-      shortDescription:
-        "Boost sales, get qualified leads, drive website traffic, and customer engagement.",
-      fullDescription:
-        "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
-      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
-    },
-    {
-      id: 3,
-      title: "SCUML Registration",
-      shortDescription:
-        "Ensure your business complies with AML regulations by registering with SCUML.",
-      fullDescription:
-        "Protect your business and boost credibility with a valid SCUML certificate. Our experts make the process smooth and ensure compliance with all Nigerian regulations.",
-      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
-    },
-    {
-      id: 4,
-      title: "TIN Registration and Tax Clearance",
-      shortDescription:
-        "Ensure your business is compliant with Nigerian tax laws by registering for a Tax Identification Number (TIN).",
-      fullDescription:
-        "Obtain a Tax Clearance Certificate (TCC) to complete your tax requirements. We assist with all the paperwork and ensure your business stays compliant.",
-      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
-    },
-    {
-      id: 5,
-      title: "Website/App  for your Busineses",
-      shortDescription:
-        "Whether you’re in need of a simple WordPress website, a more complex eCommerce site, Website or App for your business.",
-      fullDescription:
-        "Our team will help bring your vision to life. We specialize in building user-friendly websites, mobile apps, and eCommerce solutions tailored to your business needs.",
-      icon: <FaLaptopCode className="text-cyan-500 text-5xl" />,
-    },
-    {
-      id: 6,
-      title: "Graphic Designing",
-      shortDescription:
-        "Beautiful, engaging, and creative designs. We work with talented designers to create eye-catching designs that tell your brand's story.",
-      fullDescription:
-        "Our team will help you build a strong visual identity through creative graphic design solutions. Whether it's logos, marketing materials, or web graphics, we’ve got you covered.",
-      icon: <PaintBrushIcon className="text-cyan-500 size-14" />,
-    },
-  ];
+
   return (
     <div className="w-full overflow-x-hidden">
       <div className="w-full overflow-x-hidden">
@@ -180,7 +134,10 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
-                <Link className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4">
+                <Link
+                  onClick={handleScrollToTop}
+                  className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4"
+                >
                   GET STARTED
                 </Link>
               </motion.div>
@@ -247,7 +204,11 @@ const Home = () => {
                 {expandedCard === index && (
                   <div className="transition-opacity duration-500 ease-in-out opacity-100 mt-4">
                     <p className="text-gray-700">{card.fullDescription}</p>
-                    <Link className="btn w-full mt-4 px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300">
+                    <Link
+                      onClick={handleScrollToTop}
+                      to={card.link}
+                      className="btn w-full mt-4 px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                    >
                       Get Started
                     </Link>
                   </div>
@@ -318,7 +279,8 @@ const Home = () => {
           </span>
         </div>
       </div>
-      <div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[265rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
+
+      <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[265rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Marketing Solutions That Scale{" "}
@@ -346,7 +308,7 @@ const Home = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="absolute text-center grid bg-gray-200 w-full mr-8  top-[320rem]  md:top-[290rem] lg:top-[210rem]">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
+import heroImage from "../assets/servicePageImage.webp";
 import {
   FaRegFileAlt,
   FaRegHandshake,
@@ -9,6 +10,10 @@ import {
   FaPaintBrush,
   FaLaptopCode,
 } from "react-icons/fa";
+
+const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 
 // Services Array with dynamic links
 const services = [
@@ -78,57 +83,66 @@ const services = [
       "End-to-end development",
     ],
     icon: <FaLaptopCode className="text-cyan-500 text-3xl" />,
-    link: "/website-design-development",
+    link: "/website_app_design_development",
   },
 ];
 
 // Main Services Component
 const Services = () => {
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-cyan-400 py-16 px-4 md:px-8">
-      {/* Header Section */}
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-50 mb-6">
-          Our Services
-        </h1>
-        <p className="text-gray-50 mb-12">
-          We provide a range of professional services to help your business
-          thrive. Explore our offerings below.
-        </p>
-      </div>
+    <div
+      className="bg-cover bg-center bg-no-repeat py-16 px-4 md:px-8"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      {/* Overlay */}
+      <div className="bg-gray-900 bg-opacity-50 py-12 px-4 sm:px-6 md:px-12">
+        {/* Header Section */}
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-50 mb-6">
+            Our Services
+          </h1>
+          <p className="text-gray-50 text-sm sm:text-base mb-8 sm:mb-12">
+            We provide a range of professional services to help your business
+            thrive. Explore our offerings below.
+          </p>
+        </div>
 
-      {/* Services Grid */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-          >
-            {/* Service Card Content */}
-            <div className="p-6">
-              <div className="flex justify-center mb-4">{service.icon}</div>
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">
-                {service.title}
-              </h2>
-              <p className="text-gray-700 mb-4">{service.description}</p>
-              <ul className="list-disc pl-5 mb-4 text-gray-600">
-                {service.benefits.map((benefit, idx) => (
-                  <li key={idx}>{benefit}</li>
-                ))}
-              </ul>
-              {/* Link to proceed */}
-              <Link
-                to={service.link}
-                className="mt-4 bg-cyan-500 text-gray-50 py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
-              >
-                GET STARTED
-              </Link>
-            </div>
-          </motion.div>
-        ))}
+        {/* Services Grid */}
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              {/* Service Card Content */}
+              <div className="p-4 sm:p-6">
+                <div className="flex justify-center mb-4">{service.icon}</div>
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">
+                  {service.title}
+                </h2>
+                <p className="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4">
+                  {service.description}
+                </p>
+                <ul className="list-disc pl-4 sm:pl-5 mb-3 sm:mb-4 text-gray-600 text-sm sm:text-base">
+                  {service.benefits.map((benefit, idx) => (
+                    <li key={idx}>{benefit}</li>
+                  ))}
+                </ul>
+                {/* Link to proceed */}
+                <Link
+                  onClick={handleScrollToTop}
+                  to={service.link}
+                  className="mt-2 sm:mt-4 bg-cyan-500 text-gray-50 text-sm sm:text-base py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+                >
+                  GET STARTED
+                </Link>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -7,12 +7,13 @@ import { ListBulletIcon } from "@heroicons/react/24/solid";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    handleScrollToTop();
   };
 
   return (

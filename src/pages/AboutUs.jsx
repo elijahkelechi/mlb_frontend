@@ -8,6 +8,7 @@ import {
   FaLeaf,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import bgImage from "../assets/aboutPageImage.webp";
 
 const AboutUs = () => {
   const missionVisionValues = [
@@ -50,8 +51,13 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-cyan-600 to-cyan-400 py-16 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <div
+      className="bg-cover bg-center py-16 px-6 md:px-12"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
+      <div className="max-w-7xl mx-auto bg-opacity-75 bg-gray-900 p-6 rounded-lg">
         {/* Intro Section */}
         <motion.div
           className="text-center"
@@ -59,23 +65,17 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl font-bold text-gray-50 mb-6">About Us</h1>
-          <p className="text-lg text-gray-50">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            About Us
+          </h1>
+          <p className="text-white text-base md:text-lg">
             At{" "}
-            <span className="text-blue-800 font-semibold">
+            <span className="text-cyan-500 font-semibold">
               MULTI-LEVEL BOOST
             </span>
             , we are a passionate team of SEOs, advertising specialists,
             designers, developers, strategists, and corporate service experts
             committed to transforming businesses through innovative solutions.
-          </p>
-          <p className="text-lg text-gray-50 pt-4">
-            In addition to our digital marketing expertise, we specialize in
-            providing comprehensive company registration and post-incorporation
-            services, helping businesses establish a solid foundation and remain
-            compliant with regulatory requirements. Whether you’re starting a
-            new venture or managing an existing one, we simplify the process so
-            you can focus on growth.
           </p>
         </motion.div>
 
@@ -86,15 +86,14 @@ const AboutUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-2xl font-bold text-gray-50 mb-4">Our Journey</h2>
-          <p className="text-gray-50 leading-7">
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
+            Our Journey
+          </h2>
+          <p className="text-gray-300 leading-7">
             Based in Uyo, Akwa Ibom State, Nigeria, we started our journey in
             late 2021 with just two team members. Our mission is to help
             businesses grow through premium digital marketing and seamless
-            company registration services. We specialize in providing
-            comprehensive company registration and post-incorporation services,
-            empowering businesses to establish a solid foundation and remain
-            compliant.
+            company registration services.
           </p>
         </motion.div>
 
@@ -105,19 +104,19 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-2xl font-bold text-gray-50 mb-6">
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
             Mission, Vision & Core Values
           </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {missionVisionValues.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex items-start space-x-4 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white shadow-lg rounded-lg p-4 md:p-6 flex items-start space-x-4 hover:shadow-xl transition-shadow duration-300"
                 whileHover={{ scale: 1.05 }}
               >
                 <div>{item.icon}</div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800">
+                  <h3 className="text-md md:text-lg font-bold text-gray-800">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
@@ -134,13 +133,12 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-2xl font-bold text-gray-50 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
             When You Succeed, We Succeed
           </h2>
-          <p className="text-gray-50">
+          <p className="text-gray-300">
             In an ever-changing industry, we stay ahead of trends to deliver
-            tangible results. Our commitment to client success drives us to go
-            the extra mile. Let’s grow together!
+            tangible results. Let’s grow together!
           </p>
         </motion.div>
       </div>

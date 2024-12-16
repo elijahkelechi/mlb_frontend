@@ -8,6 +8,14 @@ import {
   ContactUs,
   Error,
   CacPreIncoperation,
+  BusinessNameRegistration,
+  LLCRegistrationForm,
+  LimitedLiabilityRegistration,
+  BusinessNameRegistrationForm,
+  TrusteeRegistration,
+  TrusteeForm,
+  Development,
+  GraphicDesign,
 } from "./pages";
 
 // Create Router
@@ -22,6 +30,39 @@ const router = createBrowserRouter([
       { path: "services", element: <Services /> },
       { path: "contactUs", element: <ContactUs /> },
       { path: "CAC_pre-incoperation", element: <CacPreIncoperation /> },
+      {
+        path: "businessNameRegistration",
+        element: <BusinessNameRegistration />,
+      },
+
+      {
+        path: "limited_liabiltiy_registration",
+        element: <LimitedLiabilityRegistration />,
+      },
+      {
+        path: "LLC_registration_form",
+        element: <LLCRegistrationForm />,
+      },
+      {
+        path: "business_name_registration_form",
+        element: <BusinessNameRegistrationForm />,
+      },
+      {
+        path: "incorperated_trustee_registration",
+        element: <TrusteeRegistration />,
+      },
+      {
+        path: "trustee_form",
+        element: <TrusteeForm />,
+      },
+      {
+        path: "website_app_design_development",
+        element: <Development />,
+      },
+      {
+        path: "graphic_design",
+        element: <GraphicDesign />,
+      },
     ],
   },
 ]);
