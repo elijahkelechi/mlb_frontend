@@ -30,7 +30,19 @@ const MultiStageForm = () => {
           streetName: "",
           houseNumber: "",
         },
-        documents: { idType: "", idNumber: "" },
+        documents: {
+          idType: "",
+          idNumber: "",
+          isChairman: false,
+          isSecretary: false,
+          validID: null,
+          signature: null,
+          passportPhoto: null,
+          minutesOfMeetings: null, // Optional
+          organizationConstitution: null, // Optional
+          trusteeDeclarationForm: null, // Optional
+          newspaperPublication: null, // Optional
+        },
       },
       {
         id: 2,
@@ -53,12 +65,23 @@ const MultiStageForm = () => {
           streetName: "",
           houseNumber: "",
         },
-        documents: { idType: "", idNumber: "" },
+        documents: {
+          idType: "",
+          idNumber: "",
+          isChairman: false,
+          isSecretary: false,
+          validID: null,
+          signature: null,
+          passportPhoto: null,
+          minutesOfMeetings: null, // Optional
+          organizationConstitution: null, // Optional
+          trusteeDeclarationForm: null, // Optional
+          newspaperPublication: null, // Optional
+        },
       },
     ],
   });
 
-  // Add a new trustee (up to 10 max)
   const addTrustee = () => {
     if (formData.trustees.length < 10) {
       setFormData((prev) => ({
@@ -86,14 +109,25 @@ const MultiStageForm = () => {
               streetName: "",
               houseNumber: "",
             },
-            documents: { idType: "", idNumber: "" },
+            documents: {
+              idType: "",
+              idNumber: "",
+              isChairman: false,
+              isSecretary: false,
+              validID: null,
+              signature: null,
+              passportPhoto: null,
+              minutesOfMeetings: null, // Optional
+              organizationConstitution: null, // Optional
+              trusteeDeclarationForm: null, // Optional
+              newspaperPublication: null, // Optional
+            },
           },
         ],
       }));
     }
   };
 
-  // Remove the last trustee (minimum of 2)
   const removeTrustee = () => {
     if (formData.trustees.length > 2) {
       setFormData((prev) => ({
@@ -103,20 +137,23 @@ const MultiStageForm = () => {
     }
   };
 
-  // Update form data
-  const handleInputChange = (trusteeIndex, section, fieldGroup, value) => {
+  const handleInputChange = (trusteeIndex, section, field, value) => {
     setFormData((prev) => {
       const updatedTrustees = [...prev.trustees];
-      updatedTrustees[trusteeIndex][section][fieldGroup] = value;
+      updatedTrustees[trusteeIndex] = {
+        ...updatedTrustees[trusteeIndex],
+        [section]: {
+          ...updatedTrustees[trusteeIndex][section],
+          [field]: value,
+        },
+      };
       return { ...prev, trustees: updatedTrustees };
     });
   };
 
-  // Navigation between form stages
-  const nextStage = () => setCurrentStage((prev) => prev + 1);
-  const previousStage = () => setCurrentStage((prev) => prev - 1);
+  const nextStage = () => setCurrentStage((prev) => Math.min(prev + 1, 3));
+  const previousStage = () => setCurrentStage((prev) => Math.max(prev - 1, 1));
 
-  // Handle form submission
   const handleSubmit = () => {
     console.log("Submitted Data:", formData);
     alert("Form Submitted Successfully!");
@@ -137,13 +174,12 @@ const MultiStageForm = () => {
           Trustee Registration Form
         </h1>
 
-        {/* Render form stages */}
         {currentStage === 1 &&
-          formData.trustees.map((_, index) => (
+          formData.trustees.map((trustee, index) => (
             <TrusteeDetails
-              key={index}
+              key={trustee.id}
               trusteeIndex={index}
-              formData={formData.trustees[index].details}
+              formData={trustee.details}
               onChange={(field, value) =>
                 handleInputChange(index, "details", field, value)
               }
@@ -151,11 +187,11 @@ const MultiStageForm = () => {
           ))}
 
         {currentStage === 2 &&
-          formData.trustees.map((_, index) => (
+          formData.trustees.map((trustee, index) => (
             <TrusteeAddress
-              key={index}
+              key={trustee.id}
               trusteeIndex={index}
-              formData={formData.trustees[index].address}
+              formData={trustee.address}
               onChange={(field, value) =>
                 handleInputChange(index, "address", field, value)
               }
@@ -163,18 +199,17 @@ const MultiStageForm = () => {
           ))}
 
         {currentStage === 3 &&
-          formData.trustees.map((_, index) => (
+          formData.trustees.map((trustee, index) => (
             <TrusteeDocuments
-              key={index}
+              key={trustee.id}
               trusteeIndex={index}
-              formData={formData.trustees[index].documents}
+              formData={trustee.documents}
               onChange={(field, value) =>
                 handleInputChange(index, "documents", field, value)
               }
             />
           ))}
 
-        {/* Navigation and actions */}
         <div className="flex justify-between mt-4">
           {currentStage > 1 && (
             <button
@@ -202,7 +237,6 @@ const MultiStageForm = () => {
           )}
         </div>
 
-        {/* Add/Remove Trustee */}
         <div className="flex justify-between mt-4">
           <button
             className="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded"

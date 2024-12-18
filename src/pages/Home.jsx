@@ -226,7 +226,7 @@ const Home = () => {
               <MdCampaign className="size-14 md:size-36" />
             </div>
           </h1>
-          <p className="font-sans md:pr-32">
+          <p className="font-sans md:pr-32 mb-8">
             Your business is unique and has distinct goals. That’s why we carry
             a vast arsenal of digital marketing solutions to help you achieve
             those goals. Is it functional, SEO and mobile optimized website you
@@ -244,9 +244,12 @@ const Home = () => {
             Affairs Commission (CAC), We are here to help you in the most
             seamless way and at a very affordable fee.
           </p>
-          <button className="mt-6 bg-cyan-500 bg-opacity-10 btn-md md:btn-lg border-2 rounded-sm md:rounded-md">
+          <Link
+            to="/services"
+            className=" p-2 bg-cyan-500 bg-opacity-10 btn-md md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
+          >
             SKY ROCKET 🚀 YOUR BUSINESS NOW!
-          </button>
+          </Link>
         </div>
       </div>
       <div className="grid place-items-center gap-4 md:gap-8 absolute top-[250rem] md:top-[192rem] lg:top-[122rem] z-40 w-full  md:w-[25rem] md:right-0  ">

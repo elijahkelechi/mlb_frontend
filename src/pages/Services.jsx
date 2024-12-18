@@ -47,7 +47,7 @@ const services = [
       "Enhanced brand awareness",
     ],
     icon: <FaBullhorn className="text-cyan-500 text-3xl" />,
-    link: "/social-media-ads",
+    link: "/social_media_ads",
   },
   {
     title: "SCUML Registration",

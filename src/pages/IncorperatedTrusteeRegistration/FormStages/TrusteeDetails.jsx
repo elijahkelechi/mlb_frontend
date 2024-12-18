@@ -8,51 +8,55 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
       <h2 className="text-xl font-semibold mb-4">
         Trustee {trusteeIndex + 1} - Details
       </h2>
-      <form>
-        <input
-          type="text"
-          placeholder="Last Name"
-          value={formData.lastName}
-          onChange={(e) => handleChange("lastName", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        />
-        <input
-          type="text"
-          placeholder="First Name"
-          value={formData.firstName}
-          onChange={(e) => handleChange("firstName", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        />
-        <input
-          type="text"
-          placeholder="Middle Name"
-          value={formData.middleName}
-          onChange={(e) => handleChange("middleName", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        />
-        <input
-          type="date"
-          placeholder="Date of Birth"
-          value={formData.DOB}
-          onChange={(e) => handleChange("DOB", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        />
-        <select
-          value={formData.gender}
-          onChange={(e) => handleChange("gender", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        >
-          <option value="">Select Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-        <input
-          type="text"
-          placeholder="Nationality"
-          value={formData.nationality}
-          onChange={(e) => handleChange("nationality", e.target.value)}
-          className="w-full p-2 border mb-4 rounded"
-        />
+      <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={(e) => handleChange("lastName", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          />
+          <input
+            type="text"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={(e) => handleChange("firstName", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          />
+          <input
+            type="text"
+            placeholder="Middle Name"
+            value={formData.middleName}
+            onChange={(e) => handleChange("middleName", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          />
+        </div>
+        <div>
+          <input
+            type="date"
+            placeholder="Date of Birth"
+            value={formData.DOB}
+            onChange={(e) => handleChange("DOB", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          />
+          <select
+            value={formData.gender}
+            onChange={(e) => handleChange("gender", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          >
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Nationality"
+            value={formData.nationality}
+            onChange={(e) => handleChange("nationality", e.target.value)}
+            className="w-full p-2 border mb-4 rounded"
+          />
+        </div>
         <input
           type="tel"
           placeholder="Phone Number"

@@ -13,3 +13,4 @@ export { default as TrusteeRegistration } from "./IncorperatedTrusteeRegistratio
 export { default as TrusteeForm } from "../pages/IncorperatedTrusteeRegistration/TrusteeFormPage";
 export { default as Development } from "../pages/Development";
 export { default as GraphicDesign } from "../pages/GraphicDesign";
+export { default as AdsPage } from "../pages/SocialAds/AdsPage";

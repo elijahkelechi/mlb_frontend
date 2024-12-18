@@ -16,6 +16,7 @@ import {
   TrusteeForm,
   Development,
   GraphicDesign,
+  AdsPage,
 } from "./pages";
 
 // Create Router
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "trustee_form",
         element: <TrusteeForm />,
+      },
+      {
+        path: "social_media_ads",
+        element: <AdsPage />,
       },
       {
         path: "website_app_design_development",
