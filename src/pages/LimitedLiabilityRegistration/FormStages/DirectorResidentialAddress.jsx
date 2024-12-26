@@ -97,7 +97,7 @@ const DirectorResidentialAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.directorId}
+              value={formData.directorDocuments.directorId}
               onChange={(e) =>
                 onChange("documents", "directorId", e.target.value)
               }
@@ -116,7 +116,7 @@ const DirectorResidentialAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.directorSignature}
+              value={formData.directorDocuments.directorSignature}
               onChange={(e) =>
                 onChange("documents", "directorSignature", e.target.value)
               }
@@ -129,7 +129,7 @@ const DirectorResidentialAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.directorPassport}
+              value={formData.directorDocuments.directorPassport}
               onChange={(e) =>
                 onChange("documents", "directorPassport", e.target.value)
               }

@@ -1,28 +1,44 @@
 import React from "react";
 import adsBg from "../../assets/adsBg.webp";
+import { motion } from "framer-motion"; // Import framer-motion
+import { Link } from "react-router";
+
 const AdsPage = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="min-h-screen bg-cover bg-center text-gray-800"
       style={{
         backgroundImage: `url(${adsBg})`,
       }}
     >
-      <div className="bg-gray-900 mx-4 md:mx-8  bg-opacity-70 min-h-screen">
+      <div className="bg-gray-900 mx-4 md:mx-8 bg-opacity-70 min-h-screen">
         <div className="container mx-auto py-12 md:px-8 px-2">
           {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-lg md:text-4xl font-bold font-heading text-white mb-4">
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h1 className="text-2xl md:text-4xl font-bold font-heading text-white mb-4">
               Digital Marketing – Social Media Advertising (Facebook & Instagram
               Ads)
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg md:text-xl text-gray-200">
               Unlock the Power of Social Media to Drive Business Growth
             </p>
-          </div>
+          </motion.div>
 
           {/* Introduction Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-lg shadow-lg p-8 mb-12"
+          >
             <h2 className="text-2xl font-heading font-bold mb-4 text-gray-800">
               Struggling to Get Results?
             </h2>
@@ -37,10 +53,15 @@ const AdsPage = () => {
               specialize in crafting high-converting Facebook advertising
               campaigns that generate leads and boost sales effortlessly.
             </p>
-          </div>
+          </motion.div>
 
           {/* Conversion Section */}
-          <div className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[71rem] md:top-[44rem] lg:top-[39rem] z-40 w-full  md:w-[20rem] lg:w-[25rem] md:right-0  ">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[71rem] md:top-[44rem] lg:top-[39rem] z-40 w-full md:w-[20rem] lg:w-[25rem] md:right-0"
+          >
             <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
               <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
                 <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -50,7 +71,6 @@ const AdsPage = () => {
                 High Converting Ads
               </span>
             </div>
-
             <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
               <span className="relative text-5xl text-cyan-600 font-extrabold">
                 <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -69,13 +89,19 @@ const AdsPage = () => {
                 Detailed Analytics
               </span>
             </div>
-          </div>
+          </motion.div>
+
           {/* Services Section */}
-          <div className="md:mr-40  md:py-16 text-gray-50 bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-lg shadow-lg p-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="md:mr-40 md:py-16 text-gray-50 bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-lg shadow-lg p-8 mb-12"
+          >
             <h2 className="text-2xl font-heading font-bold mb-6 text-gray-800">
               Our Scope of Services
             </h2>
-            <ul className="list-disc list-inside space-y-6 md:space-y-8 ">
+            <ul className="list-disc list-inside md:pr-24 space-y-6 md:space-y-8">
               <li>
                 <span className="font-bold">
                   Consultation and Strategy Development:
@@ -103,10 +129,15 @@ const AdsPage = () => {
                 Detailed reports to analyze campaign success.
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Why Facebook Ads Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-lg shadow-lg p-8 mb-12"
+          >
             <h2 className="text-2xl font-bold mb-6 text-gray-800">
               Why Choose Facebook Ads?
             </h2>
@@ -128,10 +159,15 @@ const AdsPage = () => {
                 analytics to track performance.
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Call to Action Section */}
-          <div className="text-center">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
             <h2 className="text-2xl font-bold text-white mb-6">
               Let’s Get Started!
             </h2>
@@ -140,101 +176,81 @@ const AdsPage = () => {
               us today!
             </p>
             <div className="flex justify-center space-x-4">
-              <a
-                href="https://wa.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-md
-                 bg-green-500 hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
+              <Link
+                to="/ads_subscription"
+                className="btn btn-md bg-green-500 hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
-          </div>
+          </motion.div>
 
           {/* Contact Form Section */}
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             id="contact-form"
             className="bg-white rounded-lg shadow-lg p-8 mt-12"
           >
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
-              Contact Us
-            </h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  Full Name:
+            <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
+            <form>
+              <div className="mb-6">
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 font-medium mb-2"
+                >
+                  Full Name
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your full name"
+                  id="name"
+                  className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
+                  placeholder="John Doe"
+                  required
                 />
               </div>
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  Phone Number:
-                </label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  WhatsApp Number:
-                </label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your WhatsApp number"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  Email:
+              <div className="mb-6">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 font-medium mb-2"
+                >
+                  Email Address
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your email"
+                  id="email"
+                  className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
+                  placeholder="john.doe@example.com"
+                  required
                 />
               </div>
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  General Nature of Business:
+              <div className="mb-6">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 font-medium mb-2"
+                >
+                  Your Message
                 </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your business type"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-600 font-medium">
-                  Campaign Goal:
-                </label>
-                <select className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <option>Sales</option>
-                  <option>Leads</option>
-                  <option>Website Traffic</option>
-                  <option>Engagement</option>
-                  <option>Awareness</option>
-                  <option>App Promotion</option>
-                </select>
+                <textarea
+                  id="message"
+                  rows="4"
+                  className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
               </div>
               <button
                 type="submit"
-                className="btn w-full bg-blue-500 hover:bg-gray-800 text-white py-3 rounded-lg shadow-lg transition-all"
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
               >
-                Submit
+                Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

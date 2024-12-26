@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import bgImage from "../../assets/formImage.webp";
 
 const BusinessNameRegistration = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,6 +28,7 @@ const BusinessNameRegistration = () => {
             Hassle-Free Registration with MULTI-LEVEL BOOST.
           </p>
           <Link
+            onClick={handleScrollToTop}
             to="/business_name_registration_form"
             className="bg-blue-500 text-gray-50 py-2 px-6 rounded shadow hover:bg-gray-800"
           >
@@ -126,6 +130,7 @@ const BusinessNameRegistration = () => {
         {/* Call to Action */}
         <div className="text-center mt-8">
           <Link
+            onClick={handleScrollToTop}
             to="/business_name_registration_form"
             className="bg-blue-600 text-white py-2 px-8 rounded shadow hover:bg-gray-800"
           >

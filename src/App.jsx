@@ -17,6 +17,9 @@ import {
   Development,
   GraphicDesign,
   AdsPage,
+  Subscription,
+  CacPostIncoperation,
+  AnnualReturnMain,
 } from "./pages";
 
 // Create Router
@@ -61,6 +64,10 @@ const router = createBrowserRouter([
         element: <AdsPage />,
       },
       {
+        path: "ads_subscription",
+        element: <Subscription />,
+      },
+      {
         path: "website_app_design_development",
         element: <Development />,
       },
@@ -68,13 +75,20 @@ const router = createBrowserRouter([
         path: "graphic_design",
         element: <GraphicDesign />,
       },
+      {
+        path: "CAC_post_incoperation",
+        element: <CacPostIncoperation />,
+      },
+      {
+        path: "Annual_return",
+        element: <AnnualReturnMain />,
+      },
     ],
   },
 ]);
 
 const App = () => {
   console.log("App rendering");
-
   return (
     <>
       <RouterProvider router={router} />

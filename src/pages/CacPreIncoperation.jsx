@@ -20,7 +20,7 @@ const CacPreIncorporation = () => {
       ></div>
 
       {/* Header */}
-      <header className="py-16 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
+      <header className="md:py-8 rounded-t-md py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
         <div className="container mx-auto text-center">
           <h1 className="text-2xl font-heading md:text-4xl font-bold leading-tight">
             CAC Pre-Incorporation Services

@@ -14,3 +14,6 @@ export { default as TrusteeForm } from "../pages/IncorperatedTrusteeRegistration
 export { default as Development } from "../pages/Development";
 export { default as GraphicDesign } from "../pages/GraphicDesign";
 export { default as AdsPage } from "../pages/SocialAds/AdsPage";
+export { default as Subscription } from "../pages/SocialAds/Subscription";
+export { default as CacPostIncoperation } from "../pages/CacPostIncoperation";
+export { default as AnnualReturnMain } from "../pages/AnnualReturnMain";

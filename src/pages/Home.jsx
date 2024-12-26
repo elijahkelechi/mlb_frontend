@@ -135,6 +135,7 @@ const Home = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <Link
+                  to="/services"
                   onClick={handleScrollToTop}
                   className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4"
                 >
