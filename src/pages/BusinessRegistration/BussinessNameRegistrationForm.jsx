@@ -8,8 +8,10 @@ import ProprietorDocuments from "./FormStages/ProprietorDocuments";
 import bgImage from "../../assets/formImage.webp";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 const MultiStageForm = () => {
+  const user = useSelector((state) => state.userState.user);
   const [currentStage, setCurrentStage] = useState(1);
   const [disableNext, setDisableNext] = useState(true); // State to disable/enable Next button
   const [isSubmitting, setIsSubmitting] = useState(false);

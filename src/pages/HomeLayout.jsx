@@ -1,10 +1,26 @@
 import { Outlet, useLocation } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Preloader from "../components/Preloader";
+import { useEffect, useState } from "react";
 
 const Homelayout = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const [showPreloader, setShowPreloader] = useState(true);
+
+  // Simulate a loading delay before rendering the content
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPreloader(false);
+    }, 2000); // Show preloader for 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showPreloader) {
+    return <Preloader />;
+  }
 
   return (
     <div>

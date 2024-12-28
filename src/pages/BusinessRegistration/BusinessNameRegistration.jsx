@@ -2,11 +2,20 @@ import React from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/formImage.webp";
-
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const BusinessNameRegistration = () => {
-  const handleScrollToTop = () => {
-    window.scrollTo(0, 0);
+  const user = useSelector((state) => state.userState.user);
+  const navigate = useNavigate();
+  const handleScrollToTop = (event) => {
+    event.preventDefault(); // Prevent Link's default navigation
+    if (!user) {
+      navigate("/login");
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
