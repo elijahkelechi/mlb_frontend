@@ -118,7 +118,7 @@ const Home = () => {
 
         {/* Main Content Section with Motion */}
         <motion.div
-          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-xl md:text-4xl text-gray-950 tracking-wide"
+          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-3xl md:text-4xl text-gray-950 tracking-wide"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -126,7 +126,7 @@ const Home = () => {
           <div className="col-span-8 leading-snug h-screen px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
             Empowering Your Business: From Seamless Registrations to Creative
             Growth Solutions
-            <p className="text-xs text-gray-700 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
+            <p className="text-sm text-gray-700 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
               We register your: Business Name, Company, NGO Association
               ,SCUML,TIN and tax clearance in the most seamless way. No
               paperwork or long registration process. <br />
