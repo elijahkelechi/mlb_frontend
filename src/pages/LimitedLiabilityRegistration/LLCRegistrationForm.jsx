@@ -4,7 +4,7 @@ import CompanyInformation from "./FormStages/companyInformation";
 import CompanyAddress from "./FormStages/CompanyAddress";
 import DirectorInfo from "./FormStages/DirectorInfo";
 import DirectorResidentialAddress from "./FormStages/DirectorResidentialAddress";
-import ShareholderInfo from "./FormStages/ShareHolderInfo";
+import ShareholderInfo from "./FormStages/ShareholderInfo";
 import ShareholderAddress from "./FormStages/ShareholderAddress";
 import SecretaryInfo from "./FormStages/SecretaryInfo";
 import SecretaryAddress from "./FormStages/SecretaryAddress";

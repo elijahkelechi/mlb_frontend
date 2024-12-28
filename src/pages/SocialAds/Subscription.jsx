@@ -1,7 +1,41 @@
 import React from "react";
+import { PaystackButton } from "react-paystack";
 import adsBg from "../../assets/adsBg.webp";
-
+import { useNavigate } from "react-router";
 const Subscription = () => {
+  const navigate = useNavigate();
+  const paystackConfig = {
+    email: "user@example.com", // Replace with the user's email from your authentication system
+    amount: 0, // Amount in kobo (initially 0)
+    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Replace with your Paystack public key
+  };
+
+  const handlePayment = (plan) => {
+    paystackConfig.reference = new Date().getTime().toString(); // Generates a unique reference
+    paystackConfig.amount =
+      parseInt(plan.price.replace("₦", "").replace(/,/g, "")) * 100; // Convert to kobo
+    paystackConfig.email = "user@example.com"; // Replace with the user's email
+
+    const componentProps = {
+      ...paystackConfig,
+      text: (
+        <div className="bg-cyan-600 text-white hover:bg-gray-800 p-4 rounded-md">
+          Subscribe to {plan.name}
+        </div>
+      ),
+      onSuccess: (response) => {
+        console.log("Payment successful!", response);
+        navigate("/ongoing_orders");
+        // Handle successful payment response, e.g., redirect or notify user
+      },
+      onClose: () => {
+        console.log("Payment modal closed");
+      },
+    };
+
+    return <PaystackButton {...componentProps} />;
+  };
+
   return (
     <div
       className="bg-cover bg-center text-gray-800 min-h-screen flex items-center justify-center"
@@ -10,7 +44,7 @@ const Subscription = () => {
       }}
     >
       <div className="bg-white bg-opacity-90 p-8 rounded shadow-lg w-full">
-        <h1 className="text-4xl font-extrabold mb-6 text-center text-blue-800">
+        <h1 className="text-4xl font-extrabold mb-6 text-center bg-cyan-600 text-cyan-50 p-8 rounded-md">
           Social Media Ads Subscription Plans
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
@@ -22,7 +56,7 @@ const Subscription = () => {
           encounter any issues, please{" "}
           <a
             href="https://wa.me/yourwhatsappnumber"
-            className="underline text-blue-600 hover:text-blue-800"
+            className="underline text-cyan-600 hover:text-cyan-800"
           >
             Contact Support
           </a>{" "}
@@ -31,7 +65,7 @@ const Subscription = () => {
 
         {/* Monthly Plans */}
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+          <h2 className="text-2xl font-semibold mb-4 text-cyan-700">
             Monthly Plans
           </h2>
           <div className="space-y-6">
@@ -79,7 +113,7 @@ const Subscription = () => {
               },
             ].map((plan, index) => (
               <div key={index} className="border p-6 rounded-lg bg-gray-50">
-                <h3 className="text-xl font-bold mb-4 text-blue-700">
+                <h3 className="text-xl font-bold mb-4 text-cyan-700">
                   {plan.name}
                 </h3>
                 <ul className="list-disc ml-6 mb-4 text-gray-700">
@@ -90,12 +124,7 @@ const Subscription = () => {
                 <p className="font-semibold text-lg mb-4 text-gray-800">
                   Monthly Service Charge: {plan.price}
                 </p>
-                <a
-                  href={plan.link}
-                  className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-                >
-                  Subscribe to {plan.name}
-                </a>
+                {handlePayment(plan)}
               </div>
             ))}
           </div>
@@ -107,7 +136,7 @@ const Subscription = () => {
 
         {/* Weekly Plans */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+          <h2 className="text-2xl font-semibold mb-4 text-cyan-700">
             Weekly Plans
           </h2>
           <div className="space-y-6">
@@ -126,10 +155,10 @@ const Subscription = () => {
               },
             ].map((plan, index) => (
               <div key={index} className="border p-6 rounded-lg bg-gray-50">
-                <h3 className="text-xl font-bold mb-4 text-blue-700">
+                <h3 className="text-xl font-bold mb-4 text-cyan-700">
                   {plan.name}
                 </h3>
-                <ul className="list-disc ml-6 mb-4 text-gray-700">
+                <ul className="list-disc ml-6 mb-4 text-gray-700 ">
                   {plan.details.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -137,12 +166,7 @@ const Subscription = () => {
                 <p className="font-semibold text-lg mb-4 text-gray-800">
                   Service Charge: {plan.price}
                 </p>
-                <a
-                  href={plan.link}
-                  className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded"
-                >
-                  Subscribe to {plan.name}
-                </a>
+                {handlePayment(plan)}
               </div>
             ))}
           </div>

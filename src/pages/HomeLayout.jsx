@@ -1,9 +1,11 @@
 import { Outlet, useLocation } from "react-router";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Homelayout = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
+
   return (
     <div>
       <Navbar />
@@ -12,6 +14,7 @@ const Homelayout = () => {
       >
         <Outlet />
       </section>
+      {!isHome && <Footer />} {/* Render Footer if not on the homepage */}
     </div>
   );
 };

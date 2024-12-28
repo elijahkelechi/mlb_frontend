@@ -4,6 +4,9 @@ import { motion } from "framer-motion"; // Import framer-motion
 import { Link } from "react-router";
 
 const AdsPage = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -177,6 +180,7 @@ const AdsPage = () => {
             </p>
             <div className="flex justify-center space-x-4">
               <Link
+                onClick={handleScrollToTop}
                 to="/ads_subscription"
                 className="btn btn-md bg-green-500 hover:bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
               >

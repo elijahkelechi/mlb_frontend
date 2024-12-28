@@ -11,6 +11,7 @@ import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import femaleImage from "../assets/femaleImage.webp";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [expandedCard, setExpandedCard] = useState(0);
@@ -187,7 +188,13 @@ const Home = () => {
             </div>
           </div>
           <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-800">
-            {user ? <div>Welcome! {user.name}</div> : <div></div>}
+            {user ? (
+              <div className="bg-gray-100 mb-[35rem] p-8">
+                Welcome! {user.name}
+              </div>
+            ) : (
+              <div></div>
+            )}
           </div>
         </motion.div>
       </div>
@@ -356,6 +363,7 @@ const Home = () => {
               Why Do Brands Choose Us?
             </h1>
             <Link
+              onClick={handleScrollToTop}
               to="/services"
               className="text-blue-600 border-b-2 hover:border-b-4"
             >
@@ -461,6 +469,9 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative mt-[210rem] md:mt-[190rem] lg:mt-[152rem]">
+        <Footer />
       </div>
     </div>
   );
