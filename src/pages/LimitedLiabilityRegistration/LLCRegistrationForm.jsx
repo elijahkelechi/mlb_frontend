@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import CompanyInformation from "./FormStages/companyInformation";
+import CompanyInformation from "./FormStages/CompanyInformation";
 import CompanyAddress from "./FormStages/CompanyAddress";
 import DirectorInfo from "./FormStages/DirectorInfo";
 import DirectorResidentialAddress from "./FormStages/DirectorResidentialAddress";
