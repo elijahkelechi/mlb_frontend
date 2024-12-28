@@ -21,14 +21,14 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="navbar px-8 bg-gray-50 fixed z-50 py-2 md:py-4 w-full shadow-md">
+      <div className="navbar px-8 bg-gray-50 fixed z-50 py-4 md:py-4 w-full shadow-md">
         {/* Navbar Start */}
         <Link
           onClick={handleScrollToTop}
           to="/"
           className="navbar-start rounded-full flex items-center"
         >
-          <img className="rounded-full h-10" src={logo} alt="Logo" />
+          <img className="rounded-full h-24" src={logo} alt="Logo" />
           <span className="flex flex-col pl-2 justify-center">
             <h1 className="font-bold font-heading text-gray-800 text-xs md:text-2xl">
               Multi-Level Boost
