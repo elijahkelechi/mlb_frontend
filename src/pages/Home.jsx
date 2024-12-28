@@ -124,13 +124,10 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <div className="col-span-8 leading-snug h-screen px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
-            Empowering Your Business: From Seamless Registrations to Creative
-            Growth Solutions
+            We register your: Business Name, Company, NGO Association ,SCUML,TIN
+            and tax clearance in the most seamless way. No paperwork or long
+            registration process.
             <p className="text-sm text-gray-800 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
-              We register your: Business Name, Company, NGO Association
-              ,SCUML,TIN and tax clearance in the most seamless way. No
-              paperwork or long registration process. <br />
-              <br />
               We also help you Boost sales, get qualified leads, drive website
               traffic, customer engagement, and expand your business reach with
               Social Media Ad Campaigns designed to inspire action.
@@ -260,7 +257,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[200rem] md:top-[180rem] lg:top-[115rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[210rem] md:top-[180rem] lg:top-[115rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
