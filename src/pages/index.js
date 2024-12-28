@@ -17,3 +17,6 @@ export { default as AdsPage } from "../pages/SocialAds/AdsPage";
 export { default as Subscription } from "../pages/SocialAds/Subscription";
 export { default as CacPostIncoperation } from "../pages/CacPostIncoperation";
 export { default as AnnualReturnMain } from "../pages/AnnualReturnMain";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as Orders } from "./Orders";

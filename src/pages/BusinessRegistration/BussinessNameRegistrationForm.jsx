@@ -5,12 +5,14 @@ import BusinessAddress from "./FormStages/BusinessAddress";
 import ProprietorInfo from "./FormStages/ProprietorInfo";
 import ProprietorAddress from "./FormStages/ProprietoAddress";
 import ProprietorDocuments from "./FormStages/ProprietorDocuments";
-
 import bgImage from "../../assets/formImage.webp";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-// Main MultiStageForm Component
 const MultiStageForm = () => {
   const [currentStage, setCurrentStage] = useState(1);
+  const [disableNext, setDisableNext] = useState(true); // State to disable/enable Next button
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     businessDetails: {
       businessNameOption1: "",
@@ -80,8 +82,40 @@ const MultiStageForm = () => {
   const previousStage = () => setCurrentStage((prev) => prev - 1);
 
   const handleSubmit = async () => {
-    console.log("Submitted Data:", formData);
-    alert("Form Submitted Successfully!");
+    setIsSubmitting(true);
+    const formattedData = new FormData();
+
+    // Append each form field and their values
+    Object.keys(formData).forEach((section) => {
+      Object.keys(formData[section]).forEach((field) => {
+        const value = formData[section][field];
+        if (value instanceof File) {
+          // Handle file inputs
+          formattedData.append(field, value); // Append directly, not under a nested structure
+        } else {
+          formattedData.append(`${section}.${field}`, value);
+        }
+      });
+    });
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/BusinessNameform/submit",
+        formattedData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true,
+        }
+      );
+      toast.success("Form submitted successfully");
+      console.log(response);
+    } catch (error) {
+      toast.error(error?.response?.data?.msg || "Failed to submit form");
+      console.log(error);
+    }
+    setIsSubmitting(false);
   };
 
   return (
@@ -89,7 +123,6 @@ const MultiStageForm = () => {
       className="relative min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* Animated container with motion applied */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -100,23 +133,39 @@ const MultiStageForm = () => {
           Business Name Registration Form
         </h1>
 
-        {/* Render the dynamic stages based on currentStage */}
         {currentStage === 1 && (
-          <BusinessDetails formData={formData} onChange={handleInputChange} />
+          <BusinessDetails
+            formData={formData}
+            onChange={handleInputChange}
+            setDisableNext={setDisableNext}
+          />
         )}
         {currentStage === 2 && (
-          <BusinessAddress formData={formData} onChange={handleInputChange} />
+          <BusinessAddress
+            formData={formData}
+            onChange={handleInputChange}
+            setDisableNext={setDisableNext}
+          />
         )}
         {currentStage === 3 && (
-          <ProprietorInfo formData={formData} onChange={handleInputChange} />
+          <ProprietorInfo
+            formData={formData}
+            onChange={handleInputChange}
+            setDisableNext={setDisableNext}
+          />
         )}
         {currentStage === 4 && (
-          <ProprietorAddress formData={formData} onChange={handleInputChange} />
+          <ProprietorAddress
+            formData={formData}
+            onChange={handleInputChange}
+            setDisableNext={setDisableNext}
+          />
         )}
         {currentStage === 5 && (
           <ProprietorDocuments
             formData={formData}
             onFileUpload={handleFileUpload}
+            setDisableNext={setDisableNext}
           />
         )}
         {currentStage === 6 && (
@@ -124,16 +173,24 @@ const MultiStageForm = () => {
             <h2 className="text-xl font-semibold mb-4 mt-8 text-center text-gray-800">
               Review & Submit
             </h2>
+
             <button
               className="text-center mt-8 bg-blue-500 text-gray-50 px-4 py-2 rounded hover:bg-gray-800"
               onClick={handleSubmit}
+              disabled={isSubmitting}
             >
-              Submit
+              {isSubmitting ? (
+                <span>
+                  {" "}
+                  <span className="loading loading-bars"></span> Submitting...
+                </span>
+              ) : (
+                <span> Submit</span>
+              )}
             </button>
           </div>
         )}
 
-        {/* Navigation buttons */}
         <div className="flex justify-between mt-4">
           {currentStage > 1 && (
             <button
@@ -145,8 +202,11 @@ const MultiStageForm = () => {
           )}
           {currentStage < 6 && (
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+              className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ${
+                disableNext ? "opacity-50 cursor-not-allowed" : ""
+              }`}
               onClick={nextStage}
+              disabled={disableNext}
             >
               Next
             </button>

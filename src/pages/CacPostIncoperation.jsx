@@ -1,5 +1,7 @@
 import React from "react";
 import bgImage from "../assets/formImage.webp";
+import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 const CacPostIncorporation = () => {
   return (
@@ -29,13 +31,18 @@ const CacPostIncorporation = () => {
         </div>
 
         {/* Services Section */}
-        <div className="space-y-12 mt-24">
+        <motion.div
+          className="space-y-12 mt-24"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           {[
             {
               title: "Annual Return Filing",
               description:
                 "Stay compliant with the Corporate Affairs Commission (CAC) by filing your annual returns promptly. Avoid penalties and maintain good standing for your business.",
-              link: "#annual-return",
+              link: "/Annual_return",
               buttonText: "Get Started with Annual Return Filing",
             },
             {
@@ -113,15 +120,15 @@ const CacPostIncorporation = () => {
                 {service.title}
               </h3>
               <p className="text-gray-700 mb-4">{service.description}</p>
-              <a
-                href={service.link}
+              <Link
+                to={service.link}
                 className="inline-block bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800"
               >
                 {service.buttonText}
-              </a>
+              </Link>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Why Choose Us Section */}
         <div className="mt-12 bg-gray-100 p-8 rounded-lg shadow-inner">

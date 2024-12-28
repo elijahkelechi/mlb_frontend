@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink } from "react-router-dom"; // Updated to 'react-router-dom' instead of 'react-router'
 import logo from "../assets/logo.jpg";
 import { UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ListBulletIcon } from "@heroicons/react/24/solid";
+import NavPersonLinks from "./NavPersonLiinks";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
@@ -88,18 +90,27 @@ const Navbar = () => {
         {/* Navbar End */}
         <div className="navbar-end rounded-full flex items-center">
           {/* User Icon */}
-          <span className="cursor-pointer">
-            <UserIcon className="h-12 shadow-md cursor-pointer text-gray-50 border-2 border-cyan-500 bg-cyan-500 rounded-full hidden lg:flex  hover:h-14 transform transition-all duration-300 ease-in-out" />
-            <p className="block md:mr-2 text-gray-950 font-sans border-b-2 border-cyan-500">
-              Hello 👋 UserName
-            </p>
+          <span
+            className="cursor-pointer relative"
+            onMouseEnter={() => setIsHovered(true)} // Show NavPersonLinks on hover
+            onMouseLeave={() => setIsHovered(false)} // Hide NavPersonLinks when not hovered
+          >
+            <UserIcon className="h-12 shadow-md cursor-pointer text-gray-50 border-2 border-cyan-500 bg-cyan-500 rounded-full hidden lg:flex hover:bg-cyan-700  hover:h-14 transform transition-all duration-300 ease-in-out" />
+
+            {/* Show NavPersonLinks when hovered */}
+            {isHovered && (
+              <div className="absolute top-12 left-0 bg-white shadow-lg rounded-md p-8">
+                <NavPersonLinks />
+              </div>
+            )}
           </span>
 
           <Link
+            to="/ongoing_orders"
             onClick={handleScrollToTop}
             className="btn ml-4 w-48 bg-cyan-500 text-gray-50 hover:bg-gray-800 hidden lg:flex"
           >
-            Get started
+            ongoing Orders...
           </Link>
           {/* List Icon */}
           <ListBulletIcon
@@ -125,8 +136,11 @@ const Navbar = () => {
 
         {/* Dropdown Links */}
         <nav className="flex flex-col items-center space-y-6 font-heading font-bold text-gray-950 tracking-wide capitalize mt-12">
-          <UserIcon className="h-24 p-2 border-2 border-cyan-500 rounded-full flex lg:hidden" />
-          <p>Hello 👋 UserName</p>
+          <div className="justify-center text-center">
+            <UserIcon className="size-36 p-2 border-2 border-cyan-500 rounded-full  lg:hidden" />
+            <NavPersonLinks />
+          </div>
+
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -172,11 +186,11 @@ const Navbar = () => {
             CONTACT
           </NavLink>
           <NavLink
-            to="contactUs"
+            to="/ongoing_orders"
             className="btn text-cyan-500 border-b-2 border-cyan-500"
             onClick={toggleMenu}
           >
-            GET STARTED
+            Ongoing orders...
           </NavLink>
         </nav>
       </div>

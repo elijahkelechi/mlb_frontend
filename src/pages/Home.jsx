@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import landingImage from "../assets/landingImage.webp";
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
+import { useNavigate } from "react-router";
 import { FaFileSignature } from "react-icons/fa";
 import { MdCampaign } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
@@ -9,10 +10,12 @@ import { ShieldCheckIcon } from "@heroicons/react/20/solid";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import femaleImage from "../assets/femaleImage.webp";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [expandedCard, setExpandedCard] = useState(0);
-
+  const user = useSelector((state) => state.userState.user);
+  const navigate = useNavigate();
   // Function to toggle card expansion
   const toggleCard = (cardIndex) => {
     setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
@@ -21,6 +24,15 @@ const Home = () => {
     window.scrollTo(0, 0);
   };
 
+  const handleGetStarted = () => {
+    if (user) {
+      navigate("/services");
+      handleScrollToTop();
+    } else {
+      navigate("/register");
+      handleScrollToTop();
+    }
+  };
   const cards = [
     {
       id: 1,
@@ -40,7 +52,7 @@ const Home = () => {
       fullDescription:
         "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
-      link: "/",
+      link: "/social_media_ads",
     },
     {
       id: 3,
@@ -135,8 +147,7 @@ const Home = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <Link
-                  to="/services"
-                  onClick={handleScrollToTop}
+                  onClick={handleGetStarted}
                   className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4"
                 >
                   GET STARTED
@@ -147,14 +158,37 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+                className="block"
               >
-                <Link className="btn font-heading bg-opacity-20 text-gray-800 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700">
-                  CREATE AN ACCOUNT
-                </Link>
+                {user ? (
+                  <div className="text-xs mt-2">
+                    Season's greeting {user.name} 🎉
+                  </div>
+                ) : (
+                  <div>
+                    <Link
+                      to="register"
+                      className="btn font-heading bg-opacity-20 text-gray-800 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700"
+                    >
+                      CREATE AN ACCOUNT
+                    </Link>
+                    <span className="block text-xs">
+                      do you have an acc?{" "}
+                      <Link
+                        to="/login"
+                        className="text-blue-600 hover:border-b-2 border-blue-700"
+                      >
+                        Login
+                      </Link>
+                    </span>
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>
-          <div className="col-span-4" />
+          <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-800">
+            {user ? <div>Welcome! {user.name}</div> : <div></div>}
+          </div>
         </motion.div>
       </div>
       <div className=" h-[170rem] md:h-[135rem]  lg:h-[78rem] bg-gradient-to-r from-cyan-600 to-cyan-400">
@@ -321,6 +355,12 @@ const Home = () => {
             <h1 className="text-sm md:text-4xl text-cyan-600 font-bold font-heading">
               Why Do Brands Choose Us?
             </h1>
+            <Link
+              to="/services"
+              className="text-blue-600 border-b-2 hover:border-b-4"
+            >
+              Our services
+            </Link>
           </div>
 
           {/* Background Image */}

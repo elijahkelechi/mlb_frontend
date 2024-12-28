@@ -20,8 +20,13 @@ import {
   Subscription,
   CacPostIncoperation,
   AnnualReturnMain,
+  Login,
+  Register,
+  Orders,
 } from "./pages";
-
+import { action as loginAction } from "./pages/Login";
+import { action as registerAction } from "./pages/Register";
+import { store } from "./store";
 // Create Router
 const router = createBrowserRouter([
   {
@@ -83,7 +88,23 @@ const router = createBrowserRouter([
         path: "Annual_return",
         element: <AnnualReturnMain />,
       },
+      {
+        path: "ongoing_orders",
+        element: <Orders />,
+      },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <Error />,
+    action: loginAction(store),
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    errorElement: <Error />,
+    action: registerAction,
   },
 ]);
 
