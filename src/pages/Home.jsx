@@ -118,12 +118,12 @@ const Home = () => {
 
         {/* Main Content Section with Motion */}
         <motion.div
-          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-2xl md:text-4xl text-gray-950 tracking-wide"
+          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-3xl md:text-4xl text-gray-950 tracking-wide"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <div className="col-span-8 leading-snug h-screen px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
+          <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
             We register your: Business Name, Company, NGO Association ,SCUML,TIN
             and tax clearance in the most seamless way. No paperwork or long
             registration process.
@@ -138,7 +138,7 @@ const Home = () => {
                 Visit our services for more info
               </Link>
             </p>
-            <div className="flex md:block mt-4 justify-center">
+            <div className="flex md:block mt-8 justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -467,7 +467,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[205rem] md:mt-[190rem] lg:mt-[152rem]">
+      <div className="relative mt-[200rem] md:mt-[190rem] lg:mt-[152rem]">
         <Footer />
       </div>
     </div>
