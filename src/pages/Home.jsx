@@ -138,7 +138,7 @@ const Home = () => {
                 Visit our services for more info
               </Link>
             </p>
-            <div className="flex md:block mt-8 justify-center">
+            <div className="flex md:block mt-14 justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
