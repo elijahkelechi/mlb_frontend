@@ -13,7 +13,7 @@ const Homelayout = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPreloader(false);
-    }, 2000); // Show preloader for 2 seconds
+    }, 200); // Show preloader for 2 seconds
 
     return () => clearTimeout(timer);
   }, []);
