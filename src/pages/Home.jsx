@@ -470,7 +470,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[210rem] md:mt-[190rem] lg:mt-[152rem]">
+      <div className="relative mt-[205rem] md:mt-[190rem] lg:mt-[152rem]">
         <Footer />
       </div>
     </div>
