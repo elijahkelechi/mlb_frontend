@@ -204,8 +204,8 @@ const MultiStageForm = () => {
           )}
           {currentStage < 6 && (
             <button
-              className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded ${
-                disableNext ? "opacity-50 cursor-not-allowed" : ""
+              className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
+                disableNext ? "opacity-80 md:opacity-50 cursor-not-allowed" : ""
               }`}
               onClick={nextStage}
               disabled={disableNext}
