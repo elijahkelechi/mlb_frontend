@@ -28,7 +28,7 @@ const Navbar = () => {
           to="/"
           className="navbar-start rounded-full flex items-center"
         >
-          <img className="rounded-full h-24" src={logo} alt="Logo" />
+          <img className="rounded-full h-14" src={logo} alt="Logo" />
           <span className="flex flex-col pl-2 justify-center">
             <h1 className="font-bold font-heading text-gray-800 text-xs md:text-2xl">
               Multi-Level Boost

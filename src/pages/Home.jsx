@@ -324,7 +324,7 @@ const Home = () => {
 
       <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[265rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
-          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
+          <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
             Marketing Solutions That Scale{" "}
           </h1>
           <p className="font-sans md:pr-32 mt-4">
