@@ -118,7 +118,7 @@ const Home = () => {
 
         {/* Main Content Section with Motion */}
         <motion.div
-          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-3xl md:text-4xl text-gray-950 tracking-wide"
+          className="absolute h-screen md:h-screen lg:h-screen grid md:grid-cols-12 top-0 md:top-0 lg:top-0 font-bold font-heading text-2xl md:text-4xl text-gray-950 tracking-wide"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
