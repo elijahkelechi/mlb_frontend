@@ -89,7 +89,7 @@ const Login = () => {
         </button>
         <p className="text-gray-500">
           Have no account?{" "}
-          <Link to="/register" className="link link-hover text-cyan-400">
+          <Link to="/register" className="link link-hover text-blue-700">
             Register
           </Link>
         </p>

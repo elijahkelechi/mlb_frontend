@@ -12,6 +12,7 @@ const BusinessNameRegistration = () => {
     if (!user) {
       navigate("/login");
     } else {
+      navigate("/business_name_registration_form");
       window.scrollTo(0, 0);
     }
   };
