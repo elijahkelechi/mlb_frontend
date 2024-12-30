@@ -97,7 +97,7 @@ const SecretaryAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.secretaryId}
+              value={formData.secretaryDocuments.validId}
               onChange={(e) =>
                 onChange("documents", "secretaryId", e.target.value)
               }
@@ -116,7 +116,7 @@ const SecretaryAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.secretarySignature}
+              value={formData.secretaryDocuments.signature}
               onChange={(e) =>
                 onChange("documents", "secretarySignature", e.target.value)
               }
@@ -129,7 +129,7 @@ const SecretaryAddress = ({ formData, onChange }) => {
             <input
               type="file"
               className="border p-2 rounded w-full"
-              value={formData.documents.secretaryPassport}
+              value={formData.secretaryDocuments.passport}
               onChange={(e) =>
                 onChange("documents", "secretaryPassport", e.target.value)
               }

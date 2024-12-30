@@ -51,7 +51,7 @@ const MultiStageForm = () => {
       streetName: "",
       houseNumber: "",
     },
-    directoDocuments: {
+    directorDocuments: {
       directorId: null,
       directorSignature: null,
       directorPassport: null,
