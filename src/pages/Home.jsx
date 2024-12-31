@@ -209,7 +209,7 @@ const Home = () => {
               <div className="mt-4">Season's greeting 👋 {user.name}</div>
             ) : (
               <Link
-                onClick={handleGetStarted}
+                to="/login"
                 className="btn bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition-all"
               >
                 Login
