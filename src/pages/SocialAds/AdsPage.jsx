@@ -170,10 +170,10 @@ const AdsPage = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-2xl font-bold text-white mb-6">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
             Let’s Get Started!
           </h2>
-          <p className="text-gray-200 mb-8">
+          <p className="text-gray-900 mb-8">
             Boost your business with results-driven Facebook Ads. Partner with
             us today!
           </p>
