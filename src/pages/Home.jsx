@@ -52,70 +52,109 @@ const Home = () => {
             <li> - Limited Liability Company (LLC) Registration</li>
             <li> - Incorporated Trustee (NGO/Association) Registration</li>
           </ul>
+          <Link
+            onClick={handleScrollToTop}
+            to="/CAC_Pre-incoperation"
+            className="btn btn-sm w-full rounded-full mb-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
+          >
+            Learn more
+          </Link>
+          <div>
+            <h1 className="font-bold text-cyan-500">
+              Post-Incorporation Services
+            </h1>
+            <ul>
+              <li> - Annual Return Filing</li>
+              <li> - Change of Company Name, Director, Trustee, or Address</li>
+              <li>
+                - Edit/Correction of Proprietor, Director, and Trustee Details
+              </li>
+              <li> - Retrieval of Certified True Copies of CAC Documents</li>
+              <li> - Transfer and Transmission of Shares </li>
+              <li> - Alteration of Memorandum and Articles of Association</li>
+              <li> - Addition or Change of Business Objects</li>
+            </ul>
+          </div>
         </div>
       ),
       icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
-      link: "/CAC_Pre-incoperation",
-    },
-    {
-      id: 2,
-      title: "Post-Incorporation Services",
-      shortDescription: (
-        <div>
-          <ul>
-            <li> - Annual Return Filing</li>
-            <li> - Change of Company Name, Director, Trustee, or Address</li>
-            <li>
-              - Edit/Correction of Proprietor, Director, and Trustee Details
-            </li>
-            <li> - Retrieval of Certified True Copies of CAC Documents</li>
-            <li> - Transfer and Transmission of Shares </li>
-            <li> - Alteration of Memorandum and Articles of Association</li>
-            <li> - Addition or Change of Business Objects</li>
-          </ul>
-        </div>
-      ),
-      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
       link: "/CAC_post_incoperation",
     },
     {
+      id: 2,
+      title: "Digital Marketing Services",
+      shortDescription: (
+        <div>
+          <div>
+            <span className="font-bold text-cyan-500">
+              - Social Media Ads:{" "}
+            </span>
+            High-performing Facebook and Instagram ads to drive leads, sales,
+            and brand visibility.
+            <br />
+            <Link
+              onClick={handleScrollToTop}
+              to="/social_media_ads"
+              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 w-full rounded-full"
+            >
+              Learn more
+            </Link>
+          </div>
+          <div>
+            <span className="font-bold text-cyan-500">
+              - Website Development:{" "}
+            </span>
+            Beautiful, functional, and user-friendly websites tailored to your
+            business needs.
+            <br />
+            <Link
+              onClick={handleScrollToTop}
+              to="/website_app_design_development"
+              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 w-full rounded-full"
+            >
+              Learn more
+            </Link>
+          </div>
+          <div>
+            <span className="font-bold text-cyan-500">
+              - Graphic Design & Branding:{" "}
+            </span>
+            From logos to complete branding packages, we help you make a lasting
+            impression.
+            <br />
+          </div>
+        </div>
+      ),
+      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
+      link: "/graphic-design",
+    },
+    {
       id: 3,
-      title: "SCUML Registration",
-      shortDescription:
-        "Ensure your business complies with AML regulations by registering with SCUML.",
-      fullDescription:
-        "Protect your business and boost credibility with a valid SCUML certificate. Our experts make the process smooth and ensure compliance with all Nigerian regulations.",
+      title: "Taxation Services",
+      shortDescription: (
+        <div>
+          Ensure your business complies with AML regulations by registering with
+          SCUML.
+          <ul>
+            <li>- Tax Identification Number (TIN) Registration</li>
+            <li>- Tax Clearance Certificate Processing</li>
+          </ul>
+        </div>
+      ),
       icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
       link: "/",
     },
     {
       id: 4,
-      title: "TIN Registration and Tax Clearance",
-      shortDescription:
-        "Ensure your business is compliant with Nigerian tax laws by registering for a Tax Identification Number (TIN).",
-      fullDescription:
-        "Obtain a Tax Clearance Certificate (TCC) to complete your tax requirements. We assist with all the paperwork and ensure your business stays compliant.",
+      title: "Special Control Unit Against Money Laundering (SCUML)",
+      shortDescription: (
+        <div>
+          We provide quick and reliable SCUML registration services, helping you
+          meet regulatory requirements and secure the necessary certification
+          for your business.
+        </div>
+      ),
       icon: <IdentificationIcon className="text-cyan-500 size-14" />,
-      link: "/",
-    },
-    {
-      id: 5,
-      title: "Website/App  for your Busineses",
-      shortDescription:
-        "Whether you’re in need of a simple WordPress website, a more complex eCommerce site, Website or App for your business.",
-      fullDescription:
-        "Our team will help bring your vision to life. We specialize in building user-friendly websites, mobile apps, and eCommerce solutions tailored to your business needs.",
-      icon: <FaLaptopCode className="text-cyan-500 text-5xl" />,
-      link: "/website_app_design_development",
-    },
-    {
-      id: 6,
-      title: "Graphic Designing",
-      shortDescription:
-        "Beautiful, engaging, and creative designs. We work with talented designers to create eye-catching designs that tell your brand's story.",
-      fullDescription:
-        "Our team will help you build a strong visual identity through creative graphic design solutions. Whether it's logos, marketing materials, or web graphics, we’ve got you covered.",
-      icon: <PaintBrushIcon className="text-cyan-500 size-14" />,
       link: "/",
     },
   ];
@@ -250,14 +289,14 @@ const Home = () => {
           We have all it takes! to Build your business 💪
         </h1>
       </div>
-      <div className="absolute h-[210rem] md:h-[115rem] lg:h-[70rem]  overflow-hidden">
+      <div className="relative h-[135rem] md:h-[115rem] lg:h-[62rem]  overflow-hidden">
         <img
-          className="absolute hidden lg:flex top-0 left-0 h-full w-full object-cover"
+          className="absolute hidden  top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
           alt="Landing"
         />
 
-        <div className="relative mt-8 cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-2 text-center justify-center">
+        <div className="relative mt-16 cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-2 text-center justify-center">
           {cards.map((card, index) => (
             <div
               key={card.id}
@@ -281,7 +320,7 @@ const Home = () => {
                 </div>
                 <Link
                   to={card.link}
-                  // onClick={() => toggleCard(index)}
+                  onClick={handleScrollToTop}
                   className="flex md:flex btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
                 >
                   {/* {expandedCard === index ? "Show Less" : "Learn More"} */}
@@ -307,7 +346,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[278rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="reative leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[0rem] md:top-[0rem] lg:top-[120rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
@@ -341,7 +380,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -372,6 +411,38 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Mobie view */}
+
+      <div className="md:hidden grid place-items-center gap-4 md:gap-8 relative top-[0rem] md:top-[0rem] lg:top-[0rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">89%</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Clients & employees retention rates
+          </span>
+        </div>
+
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">8+</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Countries where we manage campaigns
+          </span>
+        </div>
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+          <span className="relative text-5xl text-cyan-600 font-extrabold">
+            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+            <span className="z-10 relative">2k+</span>
+          </span>
+          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+            Businesses | SCUML | TIN Registered
+          </span>
+        </div>
+      </div>
       {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
@@ -401,7 +472,7 @@ const Home = () => {
           </div>
         </div>
       </motion.div> */}
-      <div className="absolute text-center grid bg-gray-200 w-full mr-8  top-[329rem]  md:top-[225rem] lg:top-[210rem]">
+      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[0rem]  md:top-[0rem] lg:top-[0rem]">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">
           {/* Title Styled as a Message */}
@@ -517,7 +588,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[350rem] md:mt-[242rem] lg:mt-[212rem]">
+      <div className="relative mt-[0rem] md:mt-[0rem] lg:mt-[0rem]">
         <Footer />
       </div>
     </div>
