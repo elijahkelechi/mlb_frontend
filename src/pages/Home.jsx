@@ -478,7 +478,7 @@ const Home = () => {
           {/* Title Styled as a Message */}
           <div className="absolute mt-16 px-4 py-2 bg-white rounded-full shadow-lg border border-gray-300">
             <h1 className="text-sm md:text-4xl text-cyan-600 font-bold font-heading">
-              Why Do Brands Choose Us?
+              Why Choose Multi-Level Boost?
             </h1>
             <Link
               onClick={handleScrollToTop}
