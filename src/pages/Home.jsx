@@ -289,7 +289,7 @@ const Home = () => {
           We have all it takes! to Build your business 💪
         </h1>
       </div>
-      <div className="relative h-[135rem] md:h-[115rem] lg:h-[62rem]  overflow-hidden">
+      <div className="relative h-[150rem] md:h-[115rem] lg:h-[62rem]  overflow-hidden">
         <img
           className="absolute hidden  top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
