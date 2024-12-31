@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import landingImage1 from "../assets/landingImage1.webp";
 import landingImage from "../assets/landingImage.webp";
 import { Link, Navigate } from "react-router";
 import { useNavigate } from "react-router";
@@ -108,8 +109,13 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <img
-            className="bg-cover h-full w-full"
+            className="hidden md:flex bg-cover h-full w-full"
             src={landingImage}
+            alt="Landing"
+          />
+          <img
+            className="flex md:hidden bg-cover h-full w-full"
+            src={landingImage1}
             alt="Landing"
           />
         </motion.div>
