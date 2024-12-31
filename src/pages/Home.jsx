@@ -307,7 +307,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[275rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[278rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
@@ -341,7 +341,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[265rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -517,7 +517,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[365rem] md:mt-[242rem] lg:mt-[212rem]">
+      <div className="relative mt-[360rem] md:mt-[242rem] lg:mt-[212rem]">
         <Footer />
       </div>
     </div>
