@@ -17,7 +17,7 @@ const AnnualReturnMain = () => {
       // }}
       className="text-center"
     >
-      <div className="w-full mx-auto bg-gray-50 bg-opacity-70 md:px-8 px-6 md:p-16">
+      <div className="w-full pt-16 mx-auto bg-gray-50 bg-opacity-70 md:px-8 px-6 md:p-16">
         <h1 className="text-2xl text-gray-50 rounded-md md:text-4xl bg-cyan-500 p-4 md:p-8 font-bold leading-tight mb-8">
           Comprehensive Guide to CAC Annual Return Filing
         </h1>
@@ -173,7 +173,7 @@ const AnnualReturnMain = () => {
           3. Relax as we handle the filing process for you.
         </p>
 
-        <div className="flex justify-center space-x-4">
+        {/* <div className="flex justify-center space-x-2">
           <div className=" bg-cyan-400 hover:bg-cyan-500 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
             File Annual Return for Business Name
             <br></br>
@@ -189,7 +189,7 @@ const AnnualReturnMain = () => {
             <br></br>
             <Link className="btn btn-sm">Get Started</Link>
           </div>
-        </div>
+        </div> */}
 
         <h2 className="text-4xl font-semibold mt-12 mb-6 flex items-center justify-center space-x-3">
           <FaRegClipboard className="text-cyan-400" />
@@ -203,6 +203,9 @@ const AnnualReturnMain = () => {
               <li>Default Penalty: 5,000 NGN</li>
               <li>Service Charge: 5,000 NGN</li>
             </ul>
+            <Link className="btn btn-sm bg-cyan-500  text-gray-50">
+              File Now
+            </Link>
           </div>
           <div className="mb-6">
             <strong>Limited Liability Company</strong>
@@ -211,6 +214,9 @@ const AnnualReturnMain = () => {
               <li>Default Penalty: 15,000 NGN</li>
               <li>Service Charge: 10,000 NGN</li>
             </ul>
+            <Link className="btn btn-sm bg-cyan-500  text-gray-50">
+              File Now
+            </Link>
           </div>
           <div className="mb-6">
             <strong>Incorporated Trustee</strong>
@@ -219,6 +225,9 @@ const AnnualReturnMain = () => {
               <li>Default Penalty: 8,000 NGN</li>
               <li>Service Charge: 7,000 NGN</li>
             </ul>
+            <Link className="btn btn-sm bg-cyan-500  text-gray-50">
+              File Now
+            </Link>
           </div>
         </div>
       </div>
