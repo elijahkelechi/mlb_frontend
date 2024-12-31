@@ -6,19 +6,19 @@ import { Link } from "react-router";
 const AnnualReturnMain = () => {
   return (
     <div
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "overlay",
-        backgroundColor: "rgba(0, 0, 0, 0.6)", // Overlay for contrast
-        color: "white",
-        padding: "60px 20px",
-      }}
+      // style={{
+      //   backgroundImage: `url(${bgImage})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundBlendMode: "overlay",
+      //   backgroundColor: "rgba(0, 0, 0, 0.6)", // Overlay for contrast
+      //   color: "white",
+      //   padding: "60px 20px",
+      // }}
       className="text-center"
     >
-      <div className="max-w-4xl mx-auto bg-gray-50 bg-opacity-70 p-4 md:p-16">
-        <h1 className="text-2xl rounded-md md:text-4xl bg-cyan-500 p-8 font-bold leading-tight mb-8">
+      <div className="w-full mx-auto bg-gray-50 bg-opacity-70 md:px-8 px-6 md:p-16">
+        <h1 className="text-2xl text-gray-50 rounded-md md:text-4xl bg-cyan-500 p-4 md:p-8 font-bold leading-tight mb-8">
           Comprehensive Guide to CAC Annual Return Filing
         </h1>
         <p className="text-lg mb-6">
