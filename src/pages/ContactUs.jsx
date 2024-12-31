@@ -34,7 +34,7 @@ const ContactUs = () => {
   return (
     <div
       className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-16 px-6"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      // style={{ backgroundImage: `url(${bgImage})` }}
     >
       <motion.div
         className="text-center mb-12"
@@ -42,10 +42,10 @@ const ContactUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
           Contact Us
         </h1>
-        <p className="text-lg text-gray-200 mt-4">
+        <p className="text-lg text-gray-900 mt-4">
           Reach out to us with any questions or concerns. We're here to help!
         </p>
       </motion.div>
@@ -60,19 +60,21 @@ const ContactUs = () => {
         >
           <div className="flex items-center space-x-4">
             <FaWhatsapp className="text-green-500 text-3xl" />
-            <p className="text-lg">WhatsApp: +234 (0) 907 460 2590</p>
+            <p className="text-lg text-gray-800">
+              WhatsApp: +234 (0) 907 460 2590
+            </p>
           </div>
           <div className="flex items-center space-x-4">
             <FaPhoneAlt className="text-blue-500 text-3xl" />
-            <p className="text-lg">Call: +234 (0) 803 221 0489</p>
+            <p className="text-lg text-gray-800">Call: +234 (0) 803 221 0489</p>
           </div>
           <div className="flex items-center space-x-4">
             <FaEnvelope className="text-yellow-500 text-3xl" />
-            <p className="text-lg">Email: services@mlb.ng</p>
+            <p className="text-lg text-gray-800">Email: services@mlb.ng</p>
           </div>
           <div className="flex items-center space-x-4">
             <FaMapMarkerAlt className="text-red-500 text-3xl" />
-            <p className="text-lg">
+            <p className="text-lg text-gray-800">
               Address: No 25 Unity Road, Off Ikot Akpan Abia Junction, Uyo, Akwa
               Ibom State, Nigeria
             </p>
