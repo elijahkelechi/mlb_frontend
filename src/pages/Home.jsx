@@ -250,9 +250,9 @@ const Home = () => {
           We have all it takes! to Build your business 💪
         </h1>
       </div>
-      <div className="absolute h-[170rem] md:h-[115rem] lg:h-[70rem]  overflow-hidden">
+      <div className="absolute h-[210rem] md:h-[115rem] lg:h-[70rem]  overflow-hidden">
         <img
-          className="absolute top-0 left-0 h-full w-full object-cover"
+          className="absolute hidden lg:flex top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
           alt="Landing"
         />
@@ -307,7 +307,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[225rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[275rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
@@ -335,13 +335,13 @@ const Home = () => {
           </p>
           <Link
             to="/services"
-            className=" p-2 bg-cyan-500 bg-opacity-10 btn-md md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
+            className=" p-2 bg-cyan-500 bg-opacity-10 btn-xs md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
           >
             SKY ROCKET 🚀 YOUR BUSINESS NOW!
           </Link>
         </div>
       </div>
-      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[250rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[265rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -372,7 +372,7 @@ const Home = () => {
         </div>
       </div>
 
-      <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[265rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
+      {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
             Marketing Solutions That Scale{" "}
@@ -400,8 +400,8 @@ const Home = () => {
             </span>
           </div>
         </div>
-      </motion.div>
-      <div className="absolute text-center grid bg-gray-200 w-full mr-8  top-[320rem]  md:top-[290rem] lg:top-[210rem]">
+      </motion.div> */}
+      <div className="absolute text-center grid bg-gray-200 w-full mr-8  top-[329rem]  md:top-[225rem] lg:top-[210rem]">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">
           {/* Title Styled as a Message */}
@@ -517,7 +517,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[200rem] md:mt-[307rem] lg:mt-[212rem]">
+      <div className="relative mt-[365rem] md:mt-[242rem] lg:mt-[212rem]">
         <Footer />
       </div>
     </div>
