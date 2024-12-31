@@ -82,6 +82,35 @@ const Home = () => {
     },
     {
       id: 2,
+      title: "Taxation Services",
+      shortDescription: (
+        <div>
+          Ensure your business complies with AML regulations by registering with
+          SCUML.
+          <ul>
+            <li>- Tax Identification Number (TIN) Registration</li>
+            <li>- Tax Clearance Certificate Processing</li>
+          </ul>
+        </div>
+      ),
+      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+      link: "/",
+    },
+    {
+      id: 3,
+      title: "Special Control Unit Against Money Laundering (SCUML)",
+      shortDescription: (
+        <div>
+          We provide quick and reliable SCUML registration services, helping you
+          meet regulatory requirements and secure the necessary certification
+          for your business.
+        </div>
+      ),
+      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+      link: "/",
+    },
+    {
+      id: 4,
       title: "Digital Marketing Services",
       shortDescription: (
         <div>
@@ -128,35 +157,6 @@ const Home = () => {
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
       link: "/graphic-design",
     },
-    {
-      id: 3,
-      title: "Taxation Services",
-      shortDescription: (
-        <div>
-          Ensure your business complies with AML regulations by registering with
-          SCUML.
-          <ul>
-            <li>- Tax Identification Number (TIN) Registration</li>
-            <li>- Tax Clearance Certificate Processing</li>
-          </ul>
-        </div>
-      ),
-      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
-      link: "/",
-    },
-    {
-      id: 4,
-      title: "Special Control Unit Against Money Laundering (SCUML)",
-      shortDescription: (
-        <div>
-          We provide quick and reliable SCUML registration services, helping you
-          meet regulatory requirements and secure the necessary certification
-          for your business.
-        </div>
-      ),
-      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
-      link: "/",
-    },
   ];
 
   return (
@@ -180,8 +180,8 @@ const Home = () => {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-50" />
 
         {/* Main Content */}
-        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-gray-50 px-4 md:px-8">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center text-gray-50 px-4 md:px-8">
+          <h1 className=" mt-24 text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
             Welcome to <span className="text-cyan-500">Multi-Level Boost</span>
           </h1>
           <p className="text-sm md:text-lg leading-relaxed mb-8">
@@ -240,18 +240,18 @@ const Home = () => {
           We have all it takes! to Build your business 💪
         </h1>
       </div>
-      <div className="relative h-[155rem] md:h-[115rem] lg:h-[62rem]  overflow-hidden">
+      <div className="relative h-[155rem] md:h-[115rem] lg:h-[118rem]  overflow-hidden">
         <img
           className="absolute hidden  top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
           alt="Landing"
         />
 
-        <div className="relative mt-16 cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-2 text-center justify-center">
+        <div className="relative mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`z-20 div1 px-6 py-6 lg:py-2 md:py-8 md:px-8 lg:px-2 rounded-md bg-gray-50 grid grid-cols-1 lg:grid-cols-12 gap-2 transition-all duration-500 ease-in-out overflow-hidden
+              className={`z-20 div1 px-4 py-4 lg:py-12 md:py-8 md:px-8 lg:px-2 rounded-md bg-gray-50 grid grid-cols-1 lg:grid-cols-12 gap-2 transition-all duration-500 ease-in-out overflow-hidden
                    "lg:h-auto opacity-90
               `}
             >
@@ -331,7 +331,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="hidden md:grid place-items-center gap-4 md:gap-8  absolute top-[268rem] md:top-[192rem] lg:top-[186rem] z-40 w-full  md:w-[25rem] md:right-0  ">
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
