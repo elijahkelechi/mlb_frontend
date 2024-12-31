@@ -138,9 +138,8 @@ const Home = () => {
             Corperate Solutions.
             <p className="text-sm p-4 rounded-md bg-cyan-600 text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
               At Multi-Level Boost, As a leading{" "}
-              <span className="font-extrabold text-lg">
-                digital marketing and{" "}
-              </span>
+              <span className="font-extrabold text-lg">digital marketing </span>
+              and
               <span className="font-extrabold text-lg">
                 company registration agency
               </span>
