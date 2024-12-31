@@ -89,6 +89,44 @@ const ShareholderAddress = ({ formData, onChange }) => {
               }
             />
           </div>
+          {/* shareholder ID - Spanning across columns */}
+          <div className="md:col-span-2">
+            <label className="block mb-1">Valid ID *</label>
+            <input
+              type="file"
+              className="border p-2 rounded w-full"
+              value={formData.shareholderDocuments.shareholderId}
+              onChange={(e) =>
+                onChange("documents", "shareholderId", e.target.value)
+              }
+            />
+          </div>
+
+          {/* shareholder Signature - Spanning across columns */}
+          <div className="md:col-span-2">
+            <label className="block mb-1">Shareholder Signature</label>
+            <input
+              type="file"
+              className="border p-2 rounded w-full"
+              value={formData.shareholderDocuments.shareholderSignature}
+              onChange={(e) =>
+                onChange("documents", "shareholderSignature", e.target.value)
+              }
+            />
+          </div>
+
+          {/* shareholder Passport - Spanning across columns */}
+          <div className="md:col-span-2">
+            <label className="block mb-1">Shareholder Passport *</label>
+            <input
+              type="file"
+              className="border p-2 rounded w-full"
+              value={formData.shareholderDocuments.shareholderPassport}
+              onChange={(e) =>
+                onChange("documents", "shareholderPassport", e.target.value)
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -81,6 +81,11 @@ const MultiStageForm = () => {
       streetName: "",
       houseNumber: "",
     },
+    shareholderDocuments: {
+      shareholderId: null,
+      shareholderSignature: null,
+      shareholderport: null,
+    },
     secretary: {
       firstName: "",
       lastName: "",

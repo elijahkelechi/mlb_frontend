@@ -30,7 +30,7 @@ const Home = () => {
       navigate("/services");
       handleScrollToTop();
     } else {
-      navigate("/register");
+      navigate("/services");
       handleScrollToTop();
     }
   };
@@ -124,13 +124,19 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-36 lg:pt-48 text-gray-800 bg-gray-50 bg-opacity-50 text-center md:text-left">
-            We register your: Business Name, Company, NGO Association ,SCUML,TIN
-            and tax clearance in the most seamless way. No paperwork or long
-            registration process.
+            <h1 className="mb-4">
+              Wecome to{" "}
+              <span className="text-cyan-700">Multi-Level Boost.</span>
+            </h1>
+            Your trusted partner in Digital Marketing, Company Registration and
+            Corperate Solutions.
             <p className="text-sm text-gray-800 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
-              We also help you Boost sales, get qualified leads, drive website
-              traffic, customer engagement, and expand your business reach with
-              Social Media Ad Campaigns designed to inspire action.
+              At Multi-Level Boost, As a leading digital marketing and company
+              registration agency, we are committed to helping businesses of all
+              sizes establish, grow, and thrive in today’s competitive
+              landscape. Whether you're starting a new venture, managing an
+              existing company, or looking to enhance your online presence, we
+              offer comprehensive solutions tailored to meet your unique needs.
               <Link
                 to="/services"
                 className="text-xs text-blue-700 border-b-2 border-blue-700 hover:text-sm hover:text-blue-800 hover:border-blue-600 transition-all duration-300 ease-in-out"
@@ -138,7 +144,7 @@ const Home = () => {
                 Visit our services for more info
               </Link>
             </p>
-            <div className="flex md:block mt-14 justify-center">
+            <div className="flex mt-4 justify-start">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -165,18 +171,18 @@ const Home = () => {
                 ) : (
                   <div>
                     <Link
-                      to="register"
+                      to="login"
                       className="btn font-heading bg-opacity-20 text-gray-800 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700"
                     >
-                      CREATE AN ACCOUNT
+                      Login
                     </Link>
-                    <span className="block text-xs">
-                      do you have an acc?{" "}
+                    <span className="block text-xs mt-1">
+                      don't have an acc?{" "}
                       <Link
-                        to="/login"
+                        to="/register"
                         className="text-blue-600 hover:border-b-2 border-blue-700"
                       >
-                        Login
+                        Register
                       </Link>
                     </span>
                   </div>

@@ -114,7 +114,11 @@ const MultiStageForm = () => {
       toast.success("Form submitted successfully");
       console.log(response);
     } catch (error) {
-      toast.error(error?.response?.data?.msg || "Failed to submit form");
+      if (error?.response?.data?.msg == "invalid authentication") {
+        toast.error("please login");
+      } else {
+        toast.error(error?.response?.data?.msg || "Failed to submit form");
+      }
       console.log(error);
     }
     setIsSubmitting(false);

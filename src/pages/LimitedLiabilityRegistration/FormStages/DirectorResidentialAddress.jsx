@@ -106,13 +106,7 @@ const DirectorResidentialAddress = ({ formData, onChange }) => {
 
           {/* Director Signature - Spanning across columns */}
           <div className="md:col-span-2">
-            <label className="block mb-1">
-              Director Signature
-              <span className="font-bold text-red-400">
-                (Snap your signature and send)
-              </span>{" "}
-              *
-            </label>
+            <label className="block mb-1">Director Signature *</label>
             <input
               type="file"
               className="border p-2 rounded w-full"
