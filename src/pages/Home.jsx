@@ -358,7 +358,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className=" md:hidden place-items-center gap-4 md:gap-8 absolute top-[258rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
+      <div className=" md:hidden place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
         {/* Retention Rates */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
@@ -483,7 +483,7 @@ const Home = () => {
           </div>
         </div>
       </motion.div> */}
-      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[10rem]  md:top-[0rem] lg:top-[0rem]">
+      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[15rem]  md:top-[0rem] lg:top-[0rem]">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">
           {/* Title Styled as a Message */}
