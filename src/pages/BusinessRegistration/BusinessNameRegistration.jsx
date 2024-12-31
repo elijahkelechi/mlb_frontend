@@ -56,7 +56,7 @@ const BusinessNameRegistration = () => {
           <h2 className="text-2xl font-bold text-gray-50">
             Why Register Your Business Name?
           </h2>
-          <div className="grid gap-6 mt-4 md:grid-cols-2">
+          <div className="grid md:gap-6 mt-4 md:grid-cols-2">
             {[
               {
                 title: "Legal Recognition",
@@ -85,7 +85,7 @@ const BusinessNameRegistration = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start space-x-4 bg-gray-100 p-4 rounded-lg"
+                className="flex items-start space-x-4 bg-gray-100 p-4 md:rounded-lg"
               >
                 <div className="text-4xl">{item.icon}</div>
                 <div>
@@ -102,9 +102,9 @@ const BusinessNameRegistration = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mt-8 bg-cyan-100 p-8 bg-opacity-30"
+          className="mt-8 bg-gray-100 p-8 bg-opacity-90"
         >
-          <h2 className="text-2xl font-bold text-gray-50">How It Works</h2>
+          <h2 className="text-2xl font-bold text-cyan-500">How It Works</h2>
           <ol className="list-decimal font-bold list-inside mt-4 text-gray-900 space-y-2">
             <li>Submit your details and required documents.</li>
             <li>Make a secure payment. Flexible options available.</li>
@@ -118,9 +118,9 @@ const BusinessNameRegistration = () => {
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mt-8 bg-cyan-100 p-8 bg-opacity-30"
+          className="mt-8 bg-gray-100 p-8 bg-opacity-90"
         >
-          <h2 className="text-2xl font-bold text-gray-50">
+          <h2 className="text-2xl font-bold text-cyan-500">
             Our Services Include
           </h2>
           <ul className="list-disc font-bold list-inside mt-4 text-gray-900 space-y-2">

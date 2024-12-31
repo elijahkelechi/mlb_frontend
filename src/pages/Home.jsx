@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import landingImage1 from "../assets/landingImage1.webp";
 import landingImage from "../assets/landingImage.webp";
 import serviceSectionImage from "../assets/ServicesImage.jpeg";
@@ -14,8 +14,25 @@ import femaleImage from "../assets/femaleImage.webp";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
+import CountUp from "react-countup";
 
 const Home = () => {
+  const [key1, setKey1] = useState(0);
+  const [key2, setKey2] = useState(0);
+  const [key3, setKey3] = useState(0);
+
+  // Reset the keys to trigger re-render
+  useEffect(() => {
+    const interval1 = setInterval(() => setKey1((prev) => prev + 1), 5000); // 5 seconds
+    const interval2 = setInterval(() => setKey2((prev) => prev + 1), 5000);
+    const interval3 = setInterval(() => setKey3((prev) => prev + 1), 5000);
+
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+    };
+  }, []);
   const [expandedCard, setExpandedCard] = useState(0);
   const user = useSelector((state) => state.userState.user);
   const navigate = useNavigate();
@@ -208,12 +225,22 @@ const Home = () => {
             {user ? (
               <div className="mt-4">Season's greeting 👋 {user.name}</div>
             ) : (
-              <Link
-                to="/login"
-                className="btn bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition-all"
-              >
-                Login
-              </Link>
+              <div className="block">
+                {" "}
+                <Link
+                  to="/login"
+                  className="btn bg-cyan-500 text-white px-8 py-2 rounded-full hover:bg-cyan-600 transition-all"
+                >
+                  Login
+                </Link>
+                <div>
+                  {" "}
+                  don't have an acc?{" "}
+                  <Link to="/register" className="text-blue-600">
+                    Register
+                  </Link>
+                </div>
+              </div>
             )}
 
             <Link
@@ -331,63 +358,96 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden md:grid place-items-center gap-4 md:gap-8  absolute top-[268rem] md:top-[192rem] lg:top-[186rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className=" md:hidden place-items-center gap-4 md:gap-8 absolute top-[258rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
+        {/* Retention Rates */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">89%</span>
+            <span className="z-10 relative">
+              <CountUp key={key1} start={0} end={89} duration={5} suffix="%" />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Clients & employees retention rates
           </span>
         </div>
 
+        {/* Campaigns Managed */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">8+</span>
+            <span className="z-10 relative">
+              <CountUp key={key2} start={0} end={8} duration={5} suffix="+" />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Countries where we manage campaigns
           </span>
         </div>
+
+        {/* Registered Businesses */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">2k+</span>
+            <span className="z-10 relative">
+              <CountUp
+                key={key3}
+                start={0}
+                end={2000}
+                duration={5}
+                separator=","
+                suffix="+"
+              />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Businesses | SCUML | TIN Registered
           </span>
         </div>
       </div>
+      {/* Laptop view */}
 
-      {/* Mobie view */}
-
-      <div className="md:hidden grid place-items-center gap-4 md:gap-8 relative top-[0rem] md:top-[0rem] lg:top-[0rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
+        {/* Retention Rates */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">89%</span>
+            <span className="z-10 relative">
+              <CountUp key={key1} start={0} end={89} duration={5} suffix="%" />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Clients & employees retention rates
           </span>
         </div>
 
+        {/* Campaigns Managed */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">8+</span>
+            <span className="z-10 relative">
+              <CountUp key={key2} start={0} end={8} duration={5} suffix="+" />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Countries where we manage campaigns
           </span>
         </div>
+
+        {/* Registered Businesses */}
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">2k+</span>
+            <span className="z-10 relative">
+              <CountUp
+                key={key3}
+                start={0}
+                end={2000}
+                duration={5}
+                separator=","
+                suffix="+"
+              />
+            </span>
           </span>
           <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
             Businesses | SCUML | TIN Registered
@@ -423,7 +483,7 @@ const Home = () => {
           </div>
         </div>
       </motion.div> */}
-      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[0rem]  md:top-[0rem] lg:top-[0rem]">
+      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[10rem]  md:top-[0rem] lg:top-[0rem]">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">
           {/* Title Styled as a Message */}

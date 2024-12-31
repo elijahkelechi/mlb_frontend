@@ -10,8 +10,8 @@ const handleScrollToTop = () => {
 const CacPreIncorporation = () => {
   return (
     <div
-      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gradient-to-r from-cyan-600 to-cyan-400 min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gray-100 min-h-screen bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Background Image with fixed scroll */}
       <div
@@ -36,7 +36,7 @@ const CacPreIncorporation = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-white p-6 rounded-lg shadow-md"
+          className="bg-gray-100 p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
             Business Name (Enterprise)
@@ -51,7 +51,7 @@ const CacPreIncorporation = () => {
             to="/businessNameRegistration"
             className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
-            Proceed to Registration
+            Learn More
           </Link>
         </motion.div>
 
@@ -61,7 +61,7 @@ const CacPreIncorporation = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-white p-6 rounded-lg shadow-md"
+          className="bg-gray-100 p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
             Limited Liability Company
@@ -75,7 +75,7 @@ const CacPreIncorporation = () => {
             to="/limited_liabiltiy_registration"
             className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
-            Proceed to Registration
+            Learn More
           </Link>
         </motion.div>
 
@@ -85,7 +85,7 @@ const CacPreIncorporation = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-white p-6 rounded-lg shadow-md"
+          className="bg-gray-100 p-6 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold mb-2 font-heading">
             Incorporated Trustee (NGO | Association)
@@ -100,7 +100,7 @@ const CacPreIncorporation = () => {
             to="/incorperated_trustee_registration"
             className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
-            Proceed to Registration
+            Learn More
           </Link>
         </motion.div>
 
