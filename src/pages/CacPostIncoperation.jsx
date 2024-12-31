@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const CacPostIncorporation = () => {
   return (
     <div
-      className="px-4 md:px-8 bg-cover bg-center min-h-screen text-gray-800"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
+      className="pt-8 px-4 md:px-8 bg-cover bg-center min-h-screen text-gray-800"
+      // style={{
+      //   backgroundImage: `url(${bgImage})`,
+      // }}
     >
       <div className="bg-gradient-to-r from-cyan-400 to-cyan-500 p-4 md:p-8 rounded-md">
-        <h1 className="text-4xl font-heading font-extrabold mb-6 text-center text-cyan-50">
+        <h1 className="text-2xl md:text-4xl font-heading font-extrabold mb-6 text-center text-cyan-50">
           CAC Post-Incorporation Services
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
