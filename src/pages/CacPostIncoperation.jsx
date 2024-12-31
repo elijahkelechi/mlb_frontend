@@ -11,8 +11,8 @@ const CacPostIncorporation = () => {
       //   backgroundImage: `url(${bgImage})`,
       // }}
     >
-      <div className="bg-gradient-to-r from-cyan-400 to-cyan-500 p-4 md:p-8 rounded-md">
-        <h1 className="text-2xl md:text-4xl font-heading font-extrabold mb-6 text-center text-cyan-50">
+      <div className="bg-gray-100 p-4 md:p-8 rounded-md">
+        <h1 className="text-2xl md:text-4xl font-heading font-extrabold mb-6 text-center text-cyan-500">
           CAC Post-Incorporation Services
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
