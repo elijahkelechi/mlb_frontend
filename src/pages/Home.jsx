@@ -137,12 +137,18 @@ const Home = () => {
             Your trusted partner in Digital Marketing, Company Registration and
             Corperate Solutions.
             <p className="text-sm p-4 rounded-md bg-cyan-600 text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
-              At Multi-Level Boost, As a leading digital marketing and company
-              registration agency, we are committed to helping businesses of all
-              sizes establish, grow, and thrive in today’s competitive
-              landscape. Whether you're starting a new venture, managing an
-              existing company, or looking to enhance your online presence, we
-              offer comprehensive solutions tailored to meet your unique needs.
+              At Multi-Level Boost, As a leading{" "}
+              <span className="font-extrabold text-lg">
+                digital marketing and{" "}
+              </span>
+              <span className="font-extrabold text-lg">
+                company registration agency
+              </span>
+              , we are committed to helping businesses of all sizes establish,
+              grow, and thrive in today’s competitive landscape. Whether you're
+              starting a new venture, managing an existing company, or looking
+              to enhance your online presence, we offer comprehensive solutions
+              tailored to meet your unique needs.
               <Link
                 to="/services"
                 className="text-xs text-blue-700 border-b-2 border-blue-700 hover:text-sm hover:text-blue-800 hover:border-blue-600 transition-all duration-300 ease-in-out"
