@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import landingImage1 from "../assets/landingImage1.webp";
 import landingImage from "../assets/landingImage.webp";
+import serviceSectionImage from "../assets/ServicesImage.jpeg";
 import { Link, Navigate } from "react-router";
 import { useNavigate } from "react-router";
 import { FaFileSignature } from "react-icons/fa";
@@ -19,9 +20,9 @@ const Home = () => {
   const user = useSelector((state) => state.userState.user);
   const navigate = useNavigate();
   // Function to toggle card expansion
-  const toggleCard = (cardIndex) => {
-    setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
-  };
+  // const toggleCard = (cardIndex) => {
+  //   setExpandedCard(expandedCard === cardIndex ? null : cardIndex);
+  // };
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -38,23 +39,44 @@ const Home = () => {
   const cards = [
     {
       id: 1,
-      title: "Company Registration",
-      shortDescription:
-        "Business Name, Company, NGO and Association registration in the most seamless way. No paperwork or long registration process.",
-      fullDescription:
-        "Flexible payment option available. Our team ensures quick, accurate, and stress-free registration. Let us handle the paperwork while you focus on growing your business.",
+      title: " Corporate Affairs Commission (CAC) Registration Services",
+      shortDescription: (
+        <div>
+          We simplify the process of registering and managing your business with
+          CAC
+          <h1 className="font-bold pt-2 text-cyan-500">
+            Pre-Incorporation Services
+          </h1>
+          <ul>
+            <li> - Business Name Registration</li>
+            <li> - Limited Liability Company (LLC) Registration</li>
+            <li> - Incorporated Trustee (NGO/Association) Registration</li>
+          </ul>
+        </div>
+      ),
       icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
       link: "/CAC_Pre-incoperation",
     },
     {
       id: 2,
-      title: "Social Media Ads",
-      shortDescription:
-        "Boost sales, get qualified leads, drive website traffic, and customer engagement.",
-      fullDescription:
-        "Expand your business reach with Social Media Ad Campaigns designed to inspire action. We help you craft impactful campaigns across Facebook, Instagram, and Google Ads.",
+      title: "Post-Incorporation Services",
+      shortDescription: (
+        <div>
+          <ul>
+            <li> - Annual Return Filing</li>
+            <li> - Change of Company Name, Director, Trustee, or Address</li>
+            <li>
+              - Edit/Correction of Proprietor, Director, and Trustee Details
+            </li>
+            <li> - Retrieval of Certified True Copies of CAC Documents</li>
+            <li> - Transfer and Transmission of Shares </li>
+            <li> - Alteration of Memorandum and Articles of Association</li>
+            <li> - Addition or Change of Business Objects</li>
+          </ul>
+        </div>
+      ),
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
-      link: "/social_media_ads",
+      link: "/CAC_post_incoperation",
     },
     {
       id: 3,
@@ -99,11 +121,11 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden ">
       <div className="w-full overflow-x-hidden">
         {/* Image Section with Motion */}
         <motion.div
-          className="h-screen w-full"
+          className="h-screen w-full "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -138,9 +160,11 @@ const Home = () => {
             Corperate Solutions.
             <p className="text-sm p-4 rounded-md bg-cyan-600 text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
               At Multi-Level Boost, As a leading{" "}
-              <span className="font-extrabold text-lg">digital marketing </span>
+              <span className="font-extrabold text-lg text-blue-600">
+                digital marketing{" "}
+              </span>
               and{" "}
-              <span className="font-extrabold text-lg">
+              <span className="font-extrabold text-lg text-blue-600">
                 company registration agency
               </span>
               , we are committed to helping businesses of all sizes establish,
@@ -212,34 +236,37 @@ const Home = () => {
           </div>
         </motion.div>
       </div>
-      <div className=" h-[170rem] md:h-[135rem]  lg:h-[78rem] bg-gradient-to-r from-cyan-600 to-cyan-400">
-        <div className="py-6 md:pt-12">
-          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20  text-center font-heading font-bold text-gray-50">
-            Avoid Scams And Build Your Dream Business <br></br> With Muti-Level
-            Boost
-          </h1>
-          <p className=" text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-50 mt-4 md:mt-6 font-sans">
-            Multi-Level Boost has all it takes for you to grow a legit and
-            successful business ranging from registring your business, running
-            effective ads, Creative designs to Building a Website or Mobile App
-            for your business with our team of designers/developers.
-          </p>
-          <h1 className="text-xl mt-8 lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20  text-center font-heading font-bold text-gray-50">
-            We have all it takes! to Build your business 💪
-          </h1>
-        </div>
-        <div className="cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-3 text-center justify-center">
+      <div className="relative py-6 mt-1  bg-gradient-to-r from-cyan-400 to-cyan-600">
+        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+          Our Services
+        </h1>
+        <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-50 mt-4 md:mt-6 font-sans">
+          Multi-Level Boost has all it takes for you to grow a legit and
+          successful business ranging from registering your business, running
+          effective ads, creative designs, to building a website or mobile app
+          for your business with our team of designers/developers.
+        </p>
+        <h1 className="text-xl mt-8 lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+          We have all it takes! to Build your business 💪
+        </h1>
+      </div>
+      <div className="absolute h-[170rem] md:h-[115rem] lg:h-[70rem]  overflow-hidden">
+        <img
+          className="absolute top-0 left-0 h-full w-full object-cover"
+          src={serviceSectionImage}
+          alt="Landing"
+        />
+
+        <div className="relative mt-8 cards-div mx-8 grid gap-8 grid-cols-1 lg:grid-cols-2 text-center justify-center">
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`z-20 div1 px-6 py-6 lg:py-2 md:py-8 md:px-8 lg:px-2 rounded-md bg-gray-50 grid grid-cols-1 lg:grid-cols-12 gap-2 transition-all duration-500 ease-in-out overflow-hidden ${
-                expandedCard === index
-                  ? "lg:h-auto opacity-100"
-                  : "lg:h-64 opacity-90"
-              }`}
+              className={`z-20 div1 px-6 py-6 lg:py-2 md:py-8 md:px-8 lg:px-2 rounded-md bg-gray-50 grid grid-cols-1 lg:grid-cols-12 gap-2 transition-all duration-500 ease-in-out overflow-hidden
+                   "lg:h-auto opacity-90
+              `}
             >
               {/* Left Icon */}
-              <div className="col-span-2 flex flex-col items-center">
+              <div className="col-span-2 lg:mt-2 flex flex-col items-center">
                 {card.icon}
               </div>
 
@@ -249,16 +276,21 @@ const Home = () => {
                   {card.title}
                 </h1>
                 <p className="text-gray-700">{card.shortDescription}</p>
-                <button
-                  onClick={() => toggleCard(index)}
+                <div className="transition-opacity duration-500 ease-in-out opacity-100 mt-4 z-50">
+                  <p className="text-gray-700">{card.fullDescription}</p>
+                </div>
+                <Link
+                  to={card.link}
+                  // onClick={() => toggleCard(index)}
                   className="flex md:flex btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
                 >
-                  {expandedCard === index ? "Show Less" : "Learn More"}
-                </button>
+                  {/* {expandedCard === index ? "Show Less" : "Learn More"} */}
+                  Learn more
+                </Link>
 
                 {/* Full Description Section */}
-                {expandedCard === index && (
-                  <div className="transition-opacity duration-500 ease-in-out opacity-100 mt-4">
+                {/* {expandedCard === index && (
+                  <div className="transition-opacity duration-500 ease-in-out opacity-100 mt-4 z-50">
                     <p className="text-gray-700">{card.fullDescription}</p>
                     <Link
                       onClick={handleScrollToTop}
@@ -268,13 +300,14 @@ const Home = () => {
                       Get Started
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[210rem] md:top-[180rem] lg:top-[115rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+
+      <div className="absolute leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[225rem] md:top-[180rem] lg:top-[130rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
@@ -308,7 +341,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[250rem] md:top-[192rem] lg:top-[122rem] z-40 w-full  md:w-[25rem] md:right-0  ">
+      <div className="grid place-items-center gap-4 md:gap-8 absolute top-[250rem] md:top-[192rem] lg:top-[135rem] z-40 w-full  md:w-[25rem] md:right-0  ">
         <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
@@ -484,7 +517,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[200rem] md:mt-[190rem] lg:mt-[152rem]">
+      <div className="relative mt-[200rem] md:mt-[307rem] lg:mt-[212rem]">
         <Footer />
       </div>
     </div>
