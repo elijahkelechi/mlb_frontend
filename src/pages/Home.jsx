@@ -477,52 +477,71 @@ const Home = () => {
             </div>
 
             <div className="md:col-span-8 space-y-6">
-              <p>
-                <span className="text-2xl">✨</span> We drive consistent results
-                and have increased
-                <span className="font-bold text-white">
-                  {" "}
-                  93% of our clients' ROAS
-                </span>{" "}
-                and revenue within the first 2 months of working together.
+              <p className="flex items-start space-x-4">
+                <span className="text-3xl">🏆</span>
+                <span>
+                  <strong>Expertise You Can Trust:</strong>
+                  Our experienced team ensures every process is handled with
+                  precision and professionalism.
+                </span>
               </p>
 
-              <p>
-                <span className="text-2xl">💡</span> We deeply understand
-                creative, and
-                <span className="font-bold text-white">
-                  {" "}
-                  what ad creatives will drive performance
+              <p className="flex items-start space-x-4">
+                <span className="text-3xl">🤝</span>
+                <span>
+                  <strong>Customer-Centric Approach:</strong>
+                  Your satisfaction is our top priority. We offer personalized
+                  services tailored to your needs.
                 </span>
-                at every stage of the funnel for your brand.
               </p>
-              <p>
-                <span className="text-2xl">⚡</span> Fast and seamless
-                <span className="font-bold text-white">
-                  {" "}
-                  CAC | SCUML | TIN Registration Services
+
+              <p className="flex items-start space-x-4">
+                <span className="text-3xl">🎯</span>
+                <span>
+                  <strong>One-Stop Solution:</strong>
+                  From business registration to branding and marketing, we've
+                  got everything covered.
                 </span>
-                .
               </p>
-              <p>
-                <span className="text-2xl">💻</span> Seamless
-                <span className="font-bold text-white">
-                  {" "}
-                  Website Development/Designs for your Business
+
+              <p className="flex items-start space-x-4">
+                <span className="text-3xl">🚀</span>
+                <span>
+                  <strong>Efficiency & Transparency:</strong>
+                  Enjoy fast delivery, competitive pricing, and clear
+                  communication throughout your journey.
                 </span>
-                .
               </p>
-              <p>
-                <span className="text-2xl">🏆</span> We've been recognized by
-                <span className="font-bold text-white">
-                  {" "}
-                  Meta as one of their Business Partners
-                </span>
-                , which is given to us due to spending more than
-                <span className="font-bold text-white"> NGN50m a year</span> on
-                Facebook Ads alone.
-              </p>
+
+              <div className="mt-8 text-center bg-cyan-50 p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  🚀 Get Started Today!
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  Let’s take your business to the next level! Whether you're
+                  registering a new business, enhancing your brand visibility,
+                  or managing post-incorporation updates, Multi-Level Boost is
+                  here to make the process seamless.
+                </p>
+                <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                  <Link
+                    onClick={handleScrollToTop}
+                    to="/services"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  >
+                    👉 Explore Our Services
+                  </Link>
+                  <Link
+                    onClick={handleScrollToTop}
+                    to="/contactUs"
+                    className="px-6 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition-all"
+                  >
+                    👉 Contact Us Now
+                  </Link>
+                </div>
+              </div>
             </div>
+
             <div className="md:hidden  p-4 w-full flex    flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg">
               <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
                 🎉 Celebrate 3 Years of Success with Us! 🎉
