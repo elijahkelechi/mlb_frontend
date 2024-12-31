@@ -93,7 +93,7 @@ const Home = () => {
           </ul>
         </div>
       ),
-      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
       link: "/",
     },
     {
@@ -106,7 +106,7 @@ const Home = () => {
           for your business.
         </div>
       ),
-      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
       link: "/",
     },
     {
