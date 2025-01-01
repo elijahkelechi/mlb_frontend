@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import CountUp from "react-countup";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Home = () => {
   const [key1, setKey1] = useState(0);

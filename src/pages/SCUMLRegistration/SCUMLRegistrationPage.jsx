@@ -18,9 +18,9 @@ const SCUMLRegistrationPage = () => {
   return (
     <div className="bg-gray-50 py-10 px-5">
       <div className="max-w-6xl mx-auto bg-gray-50 overflow-hidden">
-        <header className="bg-blue-600 text-white text-center py-6">
+        <header className="bg-cyan-600 text-white text-center py-6">
           <h1 className="text-2xl font-bold flex justify-center items-center text-center sm:text-3xl md:text-4xl">
-            <FaUserShield className="mr-2 text-lg sm:text-xl md:text-2xl" />{" "}
+            <FaUserShield className="hidden md:flex mr-2 text-lg sm:text-xl md:text-2xl" />{" "}
             SCUML Registration Service
           </h1>
           <p className="mt-2 text-sm sm:text-base md:text-lg">
