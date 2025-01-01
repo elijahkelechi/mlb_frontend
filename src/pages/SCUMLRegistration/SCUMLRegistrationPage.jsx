@@ -19,13 +19,15 @@ const SCUMLRegistrationPage = () => {
     <div className="bg-gray-50 py-10 px-5">
       <div className="max-w-6xl mx-auto bg-gray-50 overflow-hidden">
         <header className="bg-blue-600 text-white text-center py-6">
-          <h1 className="text-2xl font-bold flex justify-center items-center">
-            <FaUserShield className="mr-2" /> SCUML Registration Service
+          <h1 className="text-2xl font-bold flex justify-center items-center text-center sm:text-3xl md:text-4xl">
+            <FaUserShield className="mr-2 text-lg sm:text-xl md:text-2xl" />{" "}
+            SCUML Registration Service
           </h1>
-          <p className="mt-2">
+          <p className="mt-2 text-sm sm:text-base md:text-lg">
             Comply with Anti-Money Laundering Laws and Secure Your Business
           </p>
         </header>
+
         <main className="p-6 space-y-6">
           <motion.section
             initial={{ opacity: 0 }}
