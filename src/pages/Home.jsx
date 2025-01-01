@@ -123,7 +123,7 @@ const Home = () => {
         </div>
       ),
       icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
-      link: "/",
+      link: "/SCUML_Registeration",
     },
     {
       id: 4,

@@ -59,7 +59,7 @@ const services = [
       "Expert-led registration",
     ],
     icon: <FaUniversity className="text-cyan-500 text-3xl" />,
-    link: "/scuml-registration",
+    link: "/SCUML_Registeration",
   },
   {
     title: "Graphic Design",

@@ -21,3 +21,4 @@ export { default as Login } from "./Login";
 export { default as Register } from "./Register";
 export { default as Orders } from "./Orders";
 export { default as TinRegistrationPage } from "./TinRegistration/TINRegistrationPage";
+export { default as SCUMLRegistration } from "./SCUMLRegistration/SCUMLRegistrationPage";

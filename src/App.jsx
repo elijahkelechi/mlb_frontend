@@ -24,6 +24,7 @@ import {
   Login,
   Register,
   Orders,
+  SCUMLRegistration,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "TIN_Registration",
         element: <TinRegistrationPage />,
+      },
+      {
+        path: "SCUML_Registeration",
+        element: <SCUMLRegistration />,
       },
       {
         path: "social_media_ads",
