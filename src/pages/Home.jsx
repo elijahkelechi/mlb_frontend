@@ -294,7 +294,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative py-6 mt-8  bg-gradient-to-r from-cyan-400 to-cyan-600">
+      <div className="relative py-6 mt-8 md:mt-0  bg-gradient-to-r from-cyan-400 to-cyan-600">
         <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
           Our Services
         </h1>
