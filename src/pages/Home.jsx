@@ -102,8 +102,7 @@ const Home = () => {
       title: "Taxation Services",
       shortDescription: (
         <div>
-          Ensure your business complies with AML regulations by registering with
-          SCUML.
+          Ensure your business is tax-compliant with our efficient services:
           <ul>
             <li>- Tax Identification Number (TIN) Registration</li>
             <li>- Tax Clearance Certificate Processing</li>
@@ -111,7 +110,7 @@ const Home = () => {
         </div>
       ),
       icon: <IdentificationIcon className="text-cyan-500 size-14" />,
-      link: "/",
+      link: "/TIN_Registration",
     },
     {
       id: 3,
@@ -186,7 +185,7 @@ const Home = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <img
-          className=" bg-cover h-full w-full"
+          className="bg-cover h-full w-full"
           src={landingImage}
           alt="Landing"
         />
@@ -296,7 +295,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative py-6 mt-1  bg-gradient-to-r from-cyan-400 to-cyan-600">
+      <div className="relative py-6   bg-gradient-to-r from-cyan-400 to-cyan-600">
         <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
           Our Services
         </h1>

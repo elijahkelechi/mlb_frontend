@@ -45,7 +45,7 @@ const ContactUs = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
           Contact Us
         </h1>
-        <p className="text-lg text-gray-900 mt-4">
+        <p className="text-lg text-cyan-500 mt-4">
           Reach out to us with any questions or concerns. We're here to help!
         </p>
       </motion.div>

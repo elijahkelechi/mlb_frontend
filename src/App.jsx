@@ -14,6 +14,7 @@ import {
   BusinessNameRegistrationForm,
   TrusteeRegistration,
   TrusteeForm,
+  TinRegistrationPage,
   Development,
   GraphicDesign,
   AdsPage,
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "trustee_form",
         element: <TrusteeForm />,
+      },
+      {
+        path: "TIN_Registration",
+        element: <TinRegistrationPage />,
       },
       {
         path: "social_media_ads",
