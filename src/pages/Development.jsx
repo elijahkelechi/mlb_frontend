@@ -24,8 +24,8 @@ const Development = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-12 px-6 md:px-8">
-      <div className="mx-auto bg-gray-50 rounded-lg  overflow-hidden">
+    <div className="bg-gray-50 py-12 px-5">
+      <div className="max-w-6xl mx-auto bg-gray-50 rounded-lg  overflow-hidden">
         {/* Header */}
         <header className="bg-cyan-600 text-white text-center py-8">
           <motion.h1
@@ -47,7 +47,7 @@ const Development = () => {
         </header>
 
         {/* Main Content */}
-        <main className="py-8 space-y-8">
+        <main className="p-8 space-y-8">
           {/* Why Your Business Needs a Website */}
           <motion.section
             initial={{ opacity: 0 }}
@@ -99,7 +99,7 @@ const Development = () => {
               Our Website Design and Development Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="flex flex-col items-center bg-gray-50 py-6 rounded-lg ">
+              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Website Design</h3>
                 <ul className="text-gray-600 mt-4 space-y-2">
@@ -108,7 +108,7 @@ const Development = () => {
                   <li>Branding and theme alignment</li>
                 </ul>
               </div>
-              <div className="flex flex-col items-center bg-gray-50 p-6 rounded-lg ">
+              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaMobileAlt className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Website Development</h3>
                 <ul className="text-gray-600 mt-4 space-y-2">
@@ -117,7 +117,7 @@ const Development = () => {
                   <li>CMS integration for easy content management</li>
                 </ul>
               </div>
-              <div className="flex flex-col items-center bg-gray-50 p-6 rounded-lg ">
+              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaRegStar className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Optimization</h3>
                 <ul className="text-gray-600 mt-4 space-y-2">
@@ -128,7 +128,7 @@ const Development = () => {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-col items-center bg-gray-50 p-6 rounded-lg ">
+              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">
                   Maintenance and Support
