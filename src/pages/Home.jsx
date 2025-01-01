@@ -178,35 +178,44 @@ const Home = () => {
 
   return (
     <div className="w-full overflow-x-hidden ">
-      <div className="relative w-full h-screen overflow-x-hidden">
-        {/* Background Image */}
-        <div
-          className="hidden md:flex absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${landingImage})`,
-          }}
+      {/* Image Section with Motion */}
+      <motion.div
+        className="h-screen w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <img
+          className=" bg-cover h-full w-full"
+          src={landingImage}
+          alt="Landing"
         />
-        <div
-          className="md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${landingImage1})`,
-          }}
-        />
+        {/* <img
+          className="flex md:hidden bg-cover h-full w-full"
+          src={landingImage1}
+          alt="Landing"
+        /> */}
+      </motion.div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-50" />
+      {/* Overlay */}
+      <div className="absolute top-0 h-screen w-full bg-gray-900 bg-opacity-50" />
 
-        {/* Main Content */}
-        <div className="relative  z-10 h-full flex flex-col justify-center items-center text-center text-gray-50 px-4 md:px-8">
-          <h1 className=" mt-24 text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+      {/* Main Content Section with Motion */}
+      <motion.div
+        className="absolute h-screen grid lg:grid-cols-12 top-0 font-bold font-heading text-2xl md:text-4xl text-gray-50 tracking-wide"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-36 lg:pt-28 text-gray-50 bg-gray-900 bg-opacity-50">
+          <h1 className="mb-4">
             Welcome to <span className="text-cyan-500">Multi-Level Boost</span>
           </h1>
-          <p className="text-sm md:text-lg leading-relaxed mb-8">
+          <p>
             Your trusted partner in Digital Marketing, Company Registration, and
-            Corporate Solutions. Whether you're starting a new venture or
-            enhancing your online presence, we’ve got you covered!
+            Corporate Solutions.
           </p>
-          <p className="text-sm md:text-lg leading-relaxed bg-cyan-600 bg-opacity-90 px-4 py-6 rounded-md shadow-md font-semibold mb-8">
+          <p className="text-sm p-4 rounded-md bg-cyan-600 text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
             At Multi-Level Boost, as a leading{" "}
             <span className="font-extrabold text-lg text-blue-300">
               digital marketing
@@ -220,38 +229,72 @@ const Home = () => {
             starting a new venture, managing an existing company, or looking to
             enhance your online presence, we offer comprehensive solutions
             tailored to meet your unique needs.
-          </p>
-          <div className="flex space-x-4">
-            {user ? (
-              <div className="mt-4">Season's greeting 👋 {user.name}</div>
-            ) : (
-              <div className="block">
-                {" "}
-                <Link
-                  to="/login"
-                  className="btn bg-cyan-500 text-white px-8 py-2 rounded-full hover:bg-cyan-600 transition-all"
-                >
-                  Login
-                </Link>
-                <div>
-                  {" "}
-                  don't have an acc?{" "}
-                  <Link to="/register" className="text-blue-600">
-                    Register
-                  </Link>
-                </div>
-              </div>
-            )}
-
             <Link
               to="/services"
-              className="btn bg-gray-800 text-gray-50 px-6 py-2 rounded-full hover:bg-gray-700 transition-all"
+              className="text-xs text-blue-300 border-b-2 border-blue-300 hover:text-sm hover:text-blue-400 hover:border-blue-400 transition-all duration-300 ease-in-out"
             >
-              Explore Services
+              Visit our services for more info
             </Link>
+          </p>
+          <div className="flex mt-4 justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <Link
+                onClick={handleGetStarted}
+                className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4"
+              >
+                GET STARTED
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+                delay: 0.2,
+              }}
+              className="block"
+            >
+              {user ? (
+                <div className="text-xs mt-2">
+                  Season's greeting {user.name} 🎉
+                </div>
+              ) : (
+                <div>
+                  <Link
+                    to="login"
+                    className="btn font-heading bg-opacity-20 text-gray-50 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700"
+                  >
+                    Login
+                  </Link>
+                  <span className="block text-xs mt-1">
+                    don't have an account?{" "}
+                    <Link
+                      to="/register"
+                      className="text-blue-300 hover:border-b-2 border-blue-400"
+                    >
+                      Register
+                    </Link>
+                  </span>
+                </div>
+              )}
+            </motion.div>
           </div>
         </div>
-      </div>
+        <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-50">
+          {user ? (
+            <div className="bg-gray-800 mb-[35rem] p-8">
+              Welcome! {user.name}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+      </motion.div>
 
       <div className="relative py-6 mt-1  bg-gradient-to-r from-cyan-400 to-cyan-600">
         <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">

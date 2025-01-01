@@ -23,15 +23,15 @@ const BusinessNameRegistration = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="relative min-h-screen bg-no-repeat bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-      }}
+      // style={{
+      //   backgroundImage: `url(${bgImage})`,
+      // }}
     >
       {/* Main Content */}
       <div className="relative z-10 min-h-screen p-6 md:p-12 bg-transparent">
         {/* Hero Section */}
         <div className="relative bg-gradient-to-r from-cyan-500 to-cyan-700   text-white p-6 md:p-12">
-          <h1 className="text-3xl md:text-4xl font-bold">
+          <h1 className="text-2xl md:text-4xl font-bold">
             Register Your Business Name
           </h1>
           <p className="mt-2 text-lg mb-8">
@@ -53,7 +53,7 @@ const BusinessNameRegistration = () => {
           transition={{ duration: 0.8 }}
           className="mt-8"
         >
-          <h2 className="text-2xl font-bold text-gray-50">
+          <h2 className="text-2xl font-bold text-gray-800">
             Why Register Your Business Name?
           </h2>
           <div className="grid md:gap-6 mt-4 md:grid-cols-2">

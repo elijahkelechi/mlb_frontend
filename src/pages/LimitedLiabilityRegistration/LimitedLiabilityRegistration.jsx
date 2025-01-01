@@ -10,19 +10,19 @@ const handleScrollToTop = () => {
 const LimitedLiabilityRegistration = () => {
   return (
     <div
-      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gradient-to-r from-cyan-600 to-cyan-400 min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Background Image with fixed scroll */}
       <div
         className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        // style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
 
       {/* Hero Section */}
       <header className="py-8 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
         <div className="container mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-heading md:leading-tight font-bold">
+          <h1 className="text-2xl md:text-4xl font-heading md:leading-tight font-bold">
             Secure Your Business’s Future with Hassle-Free Limited Liability
             Company Registration
           </h1>
@@ -49,7 +49,7 @@ const LimitedLiabilityRegistration = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-white p-6 md:p-8 rounded-lg shadow-md text-gray-700"
+          className="bg-white p-6 md:p-8 rounded-lg  text-gray-700"
         >
           <h2 className="text-2xl font-bold mb-4 font-heading">
             Why Register a Limited Liability Company?
@@ -86,7 +86,7 @@ const LimitedLiabilityRegistration = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-white p-6 md:p-8 rounded-lg shadow-md text-gray-700"
+          className="bg-white p-6 md:p-8 rounded-lg  text-gray-700"
         >
           <h2 className="text-2xl font-bold mb-4 font-heading">
             Our Registration Services
