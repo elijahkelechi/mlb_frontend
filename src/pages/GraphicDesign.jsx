@@ -3,13 +3,15 @@ import React from "react";
 const GraphicDesignPage = () => {
   return (
     <div className="bg-gray-50 p-6 md:p-8">
-      <div className=" bg-gray-50 rounded-lg p-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-          Graphic Design and Branding Services
-        </h1>
-        <p className="text-gray-600 text-lg text-center mb-8">
-          Transform Your Brand with Stunning Designs and Strategic Branding
-        </p>
+      <div className=" bg-gray-50 rounded-lg p-8 ">
+        <div className="bg-cyan-600 text-center p-4 md:p-8 mb-8 rounded-t-lg">
+          <h1 className="text-3xl md:text-4xl font-bold text-white text-center">
+            Graphic Design and Branding Services
+          </h1>
+          <p className="text-white text-lg text-center ">
+            Transform Your Brand with Stunning Designs and Strategic Branding
+          </p>
+        </div>
 
         <div className="space-y-4">
           <h2 className="text-2xl font-semibold text-gray-800">
