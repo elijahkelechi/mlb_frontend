@@ -172,7 +172,7 @@ const Home = () => {
         </div>
       ),
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
-      link: "/graphic-design",
+      link: "/graphic_design",
     },
   ];
 

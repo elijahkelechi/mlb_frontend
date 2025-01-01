@@ -71,7 +71,7 @@ const services = [
       "Skilled designers",
     ],
     icon: <FaPaintBrush className="text-cyan-500 text-3xl" />,
-    link: "/graphic-design",
+    link: "/graphic_design",
   },
   {
     title: "Website Design and Development",
