@@ -236,7 +236,7 @@ const Home = () => {
               Visit our services for more info
             </Link>
           </p>
-          <div className="flex mt-4 justify-start">
+          <div className="flex my-8 justify-start">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,12 +257,10 @@ const Home = () => {
                 ease: "easeInOut",
                 delay: 0.2,
               }}
-              className="block"
+              className="block my-8"
             >
               {user ? (
-                <div className="text-xs mt-2">
-                  Season's greeting {user.name} 🎉
-                </div>
+                <div className="text-xs ">Season's greeting {user.name} 🎉</div>
               ) : (
                 <div>
                   <Link
