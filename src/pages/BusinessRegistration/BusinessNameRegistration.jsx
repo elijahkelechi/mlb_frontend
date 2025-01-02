@@ -264,7 +264,7 @@ const BusinessNameRegistration = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="bg-white  p-4 md:p-8 shadow-md rounded-lg">
+            <div className="bg-white  p-4 md:p-8  rounded-lg">
               <ol className="list-decimal pl-6 space-y-4 text-gray-700 text-lg">
                 <li>
                   <span className="font-bold text-cyan-600">
