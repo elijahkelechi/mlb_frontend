@@ -64,7 +64,7 @@ const Home = () => {
           We simplify the process of registering and managing your business with
           CAC
           <h1 className="font-bold pt-2 text-cyan-500">Pre-Incorporation</h1>
-          <ul className="list-disc">
+          <ul className="list-disc ml-4">
             <li> Business Name Registration</li>
             <li> Limited Liability Company (LLC) Registration</li>
             <li> Incorporated Trustee (NGO/Association) Registration</li>
@@ -78,7 +78,7 @@ const Home = () => {
           </Link>
           <div>
             <h1 className="font-bold text-cyan-500">Post-Incorporation</h1>
-            <ul className="list-disc">
+            <ul className="list-disc ml-4">
               <li> Annual Return Filing</li>
               <li> Change of Company Name, Director, Trustee, or Address</li>
               <li>
@@ -101,7 +101,7 @@ const Home = () => {
       shortDescription: (
         <div>
           Ensure your business is tax-compliant with our efficient services:
-          <ul className="list-disc">
+          <ul className="list-disc ml-4">
             <li> Tax Identification Number (TIN) Registration</li>
             <li>Tax Clearance Certificate Processing</li>
           </ul>
@@ -148,7 +148,7 @@ const Home = () => {
             </Link>
           </div>
           <div>
-            <ul className="font-bold text-cyan-500">
+            <ul className="font-bold text-cyan-500 list-disc ">
               <li> Website Development: </li>
             </ul>
             <span>
@@ -167,7 +167,7 @@ const Home = () => {
             </Link>
           </div>
           <div>
-            <ul className="font-bold text-cyan-500">
+            <ul className="font-bold text-cyan-500 list-disc">
               <li>Graphic Design & Branding: </li>
             </ul>
             <span>
