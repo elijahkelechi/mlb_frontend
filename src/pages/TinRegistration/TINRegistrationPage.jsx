@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { FaBolt, FaMoneyBillAlt, FaGlobe } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const TINRegistrationPage = () => {
   return (
@@ -74,7 +75,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <FaCheckCircle className="text-blue-600" />
+                <FaCheckCircle className="text-cyan-600" />
                 <span>{item}</span>
               </motion.li>
             ))}
@@ -97,16 +98,19 @@ const TINRegistrationPage = () => {
                 icon: FaUser,
                 title: "Individuals",
                 desc: "Employed professionals, self-employed individuals, or freelancers.",
+                link: "",
               },
               {
                 icon: FaBuilding,
                 title: "Business Owners",
                 desc: "Sole proprietors, partnerships, and limited liability companies.",
+                link: "",
               },
               {
                 icon: FaHandsHelping,
                 title: "Non-Profits",
                 desc: "NGOs, religious bodies, and community-based associations.",
+                link: "",
               },
             ].map((item, index) => (
               <motion.div
@@ -116,11 +120,14 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <item.icon className="text-blue-600 text-4xl mx-auto mb-4" />
+                <item.icon className="text-cyan-600 text-4xl mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-700">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{item.desc}</p>
+                <Link className="btn mt-2 bg-cyan-600 hover:bg-gray-800 text-white">
+                  Register Now
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -131,6 +138,10 @@ const TINRegistrationPage = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Our TIN Registration Services
           </h2>
+          <h3 className="pb-4 font-bold text-gray-700">
+            We provide comprehensive TIN Registration Services to make the
+            process quick and Hassle-free
+          </h3>
           <ul className="space-y-4">
             {[
               {
@@ -161,7 +172,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <item.icon className="text-blue-600 text-2xl" />
+                <item.icon className="text-cyan-600 text-2xl" />
                 <div>
                   <h4 className="text-lg font-bold text-gray-700">
                     {item.title}
@@ -205,7 +216,7 @@ const TINRegistrationPage = () => {
         {/* Call to Action */}
         <div className="text-center">
           <motion.button
-            className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            className="px-8 py-4 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -234,6 +245,7 @@ const TINRegistrationPage = () => {
                   "Valid Identification: National ID, International Passport, or Driver’s License",
                   "Utility Bill: Recent proof of address",
                 ],
+                link: "",
               },
               {
                 icon: FaBuilding,
@@ -244,6 +256,7 @@ const TINRegistrationPage = () => {
                   "MEMART (Memorandum And Articles of Association) for Ltd registrations",
                   "Valid Identification of Proprietor/Director",
                 ],
+                link: "",
               },
               {
                 icon: FaHandsHelping,
@@ -254,6 +267,7 @@ const TINRegistrationPage = () => {
                   "Constitution",
                   "Valid Identification of any of the Trustees",
                 ],
+                link: "",
               },
             ].map((item, index) => (
               <motion.div
@@ -263,7 +277,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <item.icon className="text-blue-600 text-4xl mb-4" />
+                <item.icon className="text-cyan-600 text-4xl mb-4" />
                 <h3 className="text-lg font-bold text-gray-700">
                   {item.title}
                 </h3>
@@ -272,22 +286,13 @@ const TINRegistrationPage = () => {
                     <li key={reqIndex}>{req}</li>
                   ))}
                 </ul>
+                <Link className="mt-4 btn text-white bg-cyan-600 hover:bg-gray-800">
+                  Register Now
+                </Link>
               </motion.div>
             ))}
           </div>
         </section>
-        <div className="bg-white p-6 my-8 rounded-lg shadow-lg max-w-md mx-auto">
-          <h3 className="text-lg font-bold text-gray-800 mb-4">
-            Benefits of a Tax Identification Number (TIN)
-          </h3>
-          <ul className="space-y-2 list-disc list-inside text-gray-600">
-            <li>Opening a corporate bank account</li>
-            <li>Filing tax returns</li>
-            <li>Accessing government contracts and grants</li>
-            <li>Registering vehicles and properties</li>
-            <li>Import/export clearance</li>
-          </ul>
-        </div>
 
         {/* Why Choose MULTI-LEVEL BOOST */}
         <section className="mb-16">
@@ -324,7 +329,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <item.icon className="text-blue-600 text-2xl" />
+                <item.icon className="text-cyan-600 text-2xl" />
                 <div>
                   <h4 className="text-lg font-bold text-gray-700">
                     {item.title}

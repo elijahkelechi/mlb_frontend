@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import landingImage1 from "../assets/landingImage1.webp";
+import landingImage2 from "../assets/landingImage2.webp";
 import landingImage from "../assets/landingImage.webp";
 import serviceSectionImage from "../assets/ServicesImage.jpeg";
 import { Link, Navigate } from "react-router";
@@ -186,15 +186,15 @@ const Home = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
       >
         <img
-          className="bg-cover h-full w-full"
+          className="bg-cover hidden md:flex h-full w-full"
           src={landingImage}
           alt="Landing"
         />
-        {/* <img
+        <img
           className="flex md:hidden bg-cover h-full w-full"
-          src={landingImage1}
+          src={landingImage2}
           alt="Landing"
-        /> */}
+        />
       </motion.div>
 
       {/* Overlay */}

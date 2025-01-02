@@ -14,6 +14,17 @@ const GraphicDesignPage = () => {
         </div>
 
         <div className="space-y-4">
+          <h1 className="text-2xl font-semibold text-gray-800">
+            Transform Your Brand with Stunning Designs and Strategic Branding
+          </h1>
+          <p className="text-gray-600 leading-relaxed">
+            Your brand is more than just a logo; it’s the essence of your
+            business, the story you tell, and the impression you leave. At
+            MULTI-LEVEL BOOST, we specialize in creating visually striking
+            designs and cohesive branding strategies that set you apart from the
+            competition. Whether you’re starting fresh or rebranding, our team
+            is here to help you build a memorable and impactful brand
+          </p>
           <h2 className="text-2xl font-semibold text-gray-800">
             Why Your Business Needs Professional Graphic Design and Branding
           </h2>
