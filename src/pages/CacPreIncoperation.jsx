@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import bgImage from "../assets/formImage.webp";
+import { FaWhatsapp } from "react-icons/fa";
 
 const handleScrollToTop = () => {
   window.scrollTo(0, 0);
@@ -121,7 +122,7 @@ const CacPreIncorporation = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-200"
           >
-            Contact Support via WhatsApp
+            <FaWhatsapp className="mx-2 size-6 md:size-12" /> Contact Support
           </a>
           <h2 className="text-lg md:text-2xl font-bold mb-2 leading-tight font-heading pt-8">
             Join the ranks of successful businesses that entrusted their company

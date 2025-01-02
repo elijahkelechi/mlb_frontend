@@ -11,6 +11,7 @@ import { IdentificationIcon } from "@heroicons/react/20/solid";
 import { ShieldCheckIcon } from "@heroicons/react/20/solid";
 import { PaintBrushIcon } from "@heroicons/react/20/solid";
 import femaleImage from "../assets/femaleImage.webp";
+import femaleImage1 from "../assets/femaleImage1.webp";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
@@ -57,40 +58,36 @@ const Home = () => {
   const cards = [
     {
       id: 1,
-      title: " Corporate Affairs Commission (CAC) Registration Services",
+      title: "CAC Registration services",
       shortDescription: (
         <div>
           We simplify the process of registering and managing your business with
           CAC
-          <h1 className="font-bold pt-2 text-cyan-500">
-            Pre-Incorporation Services
-          </h1>
-          <ul>
-            <li> - Business Name Registration</li>
-            <li> - Limited Liability Company (LLC) Registration</li>
-            <li> - Incorporated Trustee (NGO/Association) Registration</li>
+          <h1 className="font-bold pt-2 text-cyan-500">Pre-Incorporation</h1>
+          <ul className="list-disc">
+            <li> Business Name Registration</li>
+            <li> Limited Liability Company (LLC) Registration</li>
+            <li> Incorporated Trustee (NGO/Association) Registration</li>
           </ul>
           <Link
             onClick={handleScrollToTop}
             to="/CAC_Pre-incoperation"
-            className="btn btn-sm w-full rounded-full mb-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
+            className="btn btn-sm  rounded-full mb-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
           >
             Learn more
           </Link>
           <div>
-            <h1 className="font-bold text-cyan-500">
-              Post-Incorporation Services
-            </h1>
-            <ul>
-              <li> - Annual Return Filing</li>
-              <li> - Change of Company Name, Director, Trustee, or Address</li>
+            <h1 className="font-bold text-cyan-500">Post-Incorporation</h1>
+            <ul className="list-disc">
+              <li> Annual Return Filing</li>
+              <li> Change of Company Name, Director, Trustee, or Address</li>
               <li>
-                - Edit/Correction of Proprietor, Director, and Trustee Details
+                Edit/Correction of Proprietor, Director, and Trustee Details
               </li>
-              <li> - Retrieval of Certified True Copies of CAC Documents</li>
-              <li> - Transfer and Transmission of Shares </li>
-              <li> - Alteration of Memorandum and Articles of Association</li>
-              <li> - Addition or Change of Business Objects</li>
+              <li> Retrieval of Certified True Copies of CAC Documents</li>
+              <li> Transfer and Transmission of Shares </li>
+              <li> Alteration of Memorandum and Articles of Association</li>
+              <li> Addition or Change of Business Objects</li>
             </ul>
           </div>
         </div>
@@ -104,9 +101,9 @@ const Home = () => {
       shortDescription: (
         <div>
           Ensure your business is tax-compliant with our efficient services:
-          <ul>
-            <li>- Tax Identification Number (TIN) Registration</li>
-            <li>- Tax Clearance Certificate Processing</li>
+          <ul className="list-disc">
+            <li> Tax Identification Number (TIN) Registration</li>
+            <li>Tax Clearance Certificate Processing</li>
           </ul>
         </div>
       ),
@@ -132,41 +129,53 @@ const Home = () => {
       shortDescription: (
         <div>
           <div>
-            <span className="font-bold text-cyan-500">
-              - Social Media Ads:{" "}
+            <ul className="list-disc font-bold text-cyan-500">
+              <li> Social Media Ads: </li>
+            </ul>
+            <span>
+              {" "}
+              High-performing Facebook and Instagram ads to drive leads, sales,
+              and brand visibility.
             </span>
-            High-performing Facebook and Instagram ads to drive leads, sales,
-            and brand visibility.
+
             <br />
             <Link
               onClick={handleScrollToTop}
               to="/social_media_ads"
-              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 w-full rounded-full"
+              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
             >
               Learn more
             </Link>
           </div>
           <div>
-            <span className="font-bold text-cyan-500">
-              - Website Development:{" "}
+            <ul className="font-bold text-cyan-500">
+              <li> Website Development: </li>
+            </ul>
+            <span>
+              {" "}
+              Beautiful, functional, and user-friendly websites tailored to your
+              business needs.
             </span>
-            Beautiful, functional, and user-friendly websites tailored to your
-            business needs.
+
             <br />
             <Link
               onClick={handleScrollToTop}
               to="/website_app_design_development"
-              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 w-full rounded-full"
+              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
             >
               Learn more
             </Link>
           </div>
           <div>
-            <span className="font-bold text-cyan-500">
-              - Graphic Design & Branding:{" "}
+            <ul className="font-bold text-cyan-500">
+              <li>Graphic Design & Branding: </li>
+            </ul>
+            <span>
+              {" "}
+              From logos to complete branding packages, we help you make a
+              lasting impression.
             </span>
-            From logos to complete branding packages, we help you make a lasting
-            impression.
+
             <br />
           </div>
         </div>
@@ -177,7 +186,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden ">
+    <div className="w-full overflow-x-hidden bg-cyan-600 ">
       {/* Image Section with Motion */}
       <motion.div
         className="h-screen w-full"
@@ -207,16 +216,13 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-36 lg:pt-28 text-gray-50 bg-gray-900 bg-opacity-50">
+        <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-56 lg:pt-40 text-gray-50 bg-gray-900 bg-opacity-50">
           <h1 className="mb-4">
-            Welcome to <span className="text-cyan-500">Multi-Level Boost</span>
+            Digital Marketing, Company Registration and Corporate Solutions.
           </h1>
-          <p>
-            Your trusted partner in Digital Marketing, Company Registration, and
-            Corporate Solutions.
-          </p>
-          <p className="text-sm p-4 rounded-md bg-cyan-600 text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans mt-8 font-semibold">
-            At Multi-Level Boost, as a leading{" "}
+
+          <p className="text-sm p-4 rounded-md  text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans md:mt-8 font-semibold">
+            as a leading{" "}
             <span className="font-extrabold text-lg text-blue-300">
               digital marketing
             </span>{" "}
@@ -294,7 +300,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative py-6 mt-8 md:mt-0  bg-gradient-to-r from-cyan-400 to-cyan-600">
+      <div className="relative py-6 mt-8 md:mt-0">
         <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
           Our Services
         </h1>
@@ -308,7 +314,7 @@ const Home = () => {
           We have all it takes! to Build your business 💪
         </h1>
       </div>
-      <div className="relative h-[155rem] md:h-[115rem] lg:h-[118rem]  overflow-hidden">
+      <div className="relative h-[155rem] md:h-[118rem] lg:h-[118rem]  overflow-hidden">
         <img
           className="absolute hidden  top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
@@ -340,7 +346,7 @@ const Home = () => {
                 <Link
                   to={card.link}
                   onClick={handleScrollToTop}
-                  className="flex md:flex btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                  className=" btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
                 >
                   {/* {expandedCard === index ? "Show Less" : "Learn More"} */}
                   Learn more
@@ -365,7 +371,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="reative leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[0rem] md:top-[0rem] lg:top-[120rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="reative leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[0rem] md:top-[0rem] lg:top-[0rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
@@ -543,13 +549,23 @@ const Home = () => {
 
           {/* Background Image */}
           <img
-            className="  md:h-[30rem] md:w-[32rem] object-cover"
+            className="flex md:hidden  md:h-[30rem] md:w-[32rem] object-cover"
             style={{
               "@media (min-width: 900px)": {
                 width: "25rem",
               },
             }}
             src={femaleImage}
+            alt="Why Brands Chose Us"
+          />
+          <img
+            className=" hidden md:flex md:h-[30rem] md:w-[32rem] object-cover"
+            style={{
+              "@media (min-width: 900px)": {
+                width: "25rem",
+              },
+            }}
+            src={femaleImage1}
             alt="Why Brands Chose Us"
           />
         </div>
@@ -614,7 +630,7 @@ const Home = () => {
                 </span>
               </p>
 
-              <div className="mt-8 text-center bg-cyan-50 p-6 rounded-lg shadow-md">
+              <div className="mt-8 text-left bg-cyan-50 p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   🚀 Get Started Today!
                 </h2>
@@ -624,7 +640,7 @@ const Home = () => {
                   or managing post-incorporation updates, Multi-Level Boost is
                   here to make the process seamless.
                 </p>
-                <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                <div className="flex flex-col md:flex-row justify-center items-start space-y-4 md:space-y-0 md:space-x-4">
                   <Link
                     onClick={handleScrollToTop}
                     to="/services"

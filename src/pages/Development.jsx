@@ -5,8 +5,11 @@ import {
   FaLaptopCode,
   FaWhatsapp,
 } from "react-icons/fa";
+import { FaUserCog } from "react-icons/fa"; // Human with settings icon
+import { FiSettings } from "react-icons/fi"; // Spanner icon
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import webImage from "../assets/webImage.webp";
 
 const Development = () => {
   const [formData, setFormData] = useState({
@@ -45,6 +48,48 @@ const Development = () => {
             Your Vision, Our Expertise—Building Websites That Drive Success
           </motion.p>
         </header>
+
+        <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8">
+            {/* Text Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Build a Website for Your Brand
+              </h2>
+              <p className="text-gray-700 text-base md:text-lg mb-6">
+                In today’s digital landscape, your website is more than just an
+                online presence; it’s the face of your brand, the hub of your
+                operations, and often the first impression potential customers
+                have of your business.
+              </p>
+              <p className="text-gray-700 text-base md:text-lg mb-6">
+                At{" "}
+                <span className="text-cyan-600 font-semibold">
+                  MULTI-LEVEL BOOST
+                </span>
+                , we specialize in creating stunning, user-friendly, and
+                mobile-optimized websites tailored to meet your unique needs.
+                From design to development, we transform your vision into a
+                powerful digital platform that drives results.
+              </p>
+              <a
+                href="#contact"
+                className="inline-block bg-cyan-600 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-cyan-700 transition duration-200"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Visual Content */}
+            <div className="flex justify-center">
+              <img
+                src={webImage}
+                alt="Website Design Illustration"
+                className="rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Main Content */}
         <main className="p-8 space-y-8">
@@ -100,18 +145,18 @@ const Development = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
+                <FaMobileAlt className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Website Design</h3>
-                <ul className="text-gray-600 mt-4 space-y-2">
+                <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Custom, visually appealing layouts</li>
                   <li>Mobile-responsive and user-friendly designs</li>
                   <li>Branding and theme alignment</li>
                 </ul>
               </div>
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaMobileAlt className="text-4xl text-cyan-600 mb-4" />
+                <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Website Development</h3>
-                <ul className="text-gray-600 mt-4 space-y-2">
+                <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Dynamic, functional websites with seamless navigation</li>
                   <li>E-commerce platforms for online sales</li>
                   <li>CMS integration for easy content management</li>
@@ -120,7 +165,7 @@ const Development = () => {
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaRegStar className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Optimization</h3>
-                <ul className="text-gray-600 mt-4 space-y-2">
+                <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Fast-loading pages for enhanced user experience</li>
                   <li>SEO-ready designs to boost search engine rankings</li>
                   <li>
@@ -129,11 +174,14 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
+                <div className="flex items-center text-cyan-600 mb-4">
+                  <FiSettings className="text-xl mr-2" /> {/* Spanner Icon */}
+                  <FaUserCog className="text-xl" /> {/* Human Icon */}
+                </div>
                 <h3 className="text-lg font-semibold">
                   Maintenance and Support
                 </h3>
-                <ul className="text-gray-600 mt-4 space-y-2">
+                <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Regular updates and backups</li>
                   <li>Bug fixes and performance enhancements</li>
                   <li>Ongoing support for your evolving needs</li>
@@ -175,6 +223,10 @@ const Development = () => {
                 "Hospitality and Tourism",
                 "NGOs and Associations",
                 "Startups and Entrepreneurs",
+                "Automobile",
+                "Renewable Energy",
+                "Technology",
+                "Agriculture",
               ].map((item, index) => (
                 <li key={index} className="text-lg">
                   {item}
@@ -222,6 +274,7 @@ const Development = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.7 }}
+            className=" bg-gray-100 shadow-lg rounded-l p-6 md:p-12"
           >
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               Our Website Development Process
@@ -355,6 +408,11 @@ const Development = () => {
                   <option value="Startups and Entrepreneurs">
                     Startups and Entrepreneurs
                   </option>
+                  <option value="Automobile">Automobile</option>
+                  <option value="Renewable Energy Technology">
+                    Renewable Energy Technology
+                  </option>
+                  <option value="Agriculture">Agriculture</option>
                 </select>
               </div>
               <div>
@@ -369,12 +427,12 @@ const Development = () => {
                   }
                 />
               </div>
-              <div className="text-center block space-y-4">
+              <div className="text-left block space-y-4">
                 <button
                   type="submit"
                   className="bg-cyan-600 text-white py-3 px-6 rounded-lg hover:bg-cyan-700 transition duration-200"
                 >
-                  Get Started Today
+                  Submit
                 </button>
 
                 <p className="font-bold">

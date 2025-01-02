@@ -7,26 +7,110 @@ import {
 } from "react-icons/ai";
 import { MdHowToReg } from "react-icons/md";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const SCUMLRegistrationPage = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showAllItems, setShowAllItems] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  const toggleShowAll = () => setShowAllItems(!showAllItems);
+  const businessList = [
+    "Audit Firms",
+    "Cars & Vehicles",
+    "Chartered Accountants",
+    "Clearing and Settlement",
+    "Construction Company",
+    "Consultants and consulting company",
+    "Dealers in jewelries and Luxury",
+    "Dealers in Real Estate",
+    "Estate Surveyors and Valuers",
+    "Hotel & Hospitality",
+    "Legal Practitioners",
+    "Mechanized Farming",
+    "Mortgage Brokers",
+    "Non Profit Organisations",
+    "Pool, Betting, Lottery, and Casino",
+    "Precious Stones & Metals",
+    "Supermarket",
+    "Tax Consultant",
+    "Trust and Company Services",
+  ];
 
+  const visibleItems = showAllItems ? businessList : businessList.slice(0, 5);
   return (
     <div className="bg-gray-50 py-10 px-5">
-      <div className="max-w-6xl mx-auto bg-gray-50 overflow-hidden">
-        <header className="bg-cyan-600 text-white text-center py-6">
-          <h1 className="text-2xl font-bold flex justify-center items-center text-center sm:text-3xl md:text-4xl">
-            <FaUserShield className="hidden md:flex mr-2 text-lg sm:text-xl md:text-2xl" />{" "}
-            SCUML Registration Service
-          </h1>
-          <p className="mt-2 text-sm sm:text-base md:text-lg">
-            Comply with Anti-Money Laundering Laws and Secure Your Business
-          </p>
-        </header>
+      <div className=" bg-gray-50 overflow-hidden">
+        <div className="grid md:grid-cols-12 text-gray-800 text-center py-6 w-full items-center">
+          {/* Header Text */}
+          <div className="text-2xl md:col-span-6 font-bold justify-center items-center text-center sm:text-3xl md:text-4xl">
+            <span className="text-cyan-500">SCUML Registration Service</span>
+            <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-700">
+              Comply with Anti-Money Laundering Laws and Secure Your Business
+            </p>
+            <Link
+              to="/SCUML_Registeration"
+              className="btn bg-green-600 my-4 hover:bg-gray-800 text-white"
+            >
+              Start Registration
+            </Link>
+          </div>
+
+          {/* Icon */}
+          <div className="md:col-span-6 flex justify-center items-center mt-4 md:mt-0">
+            <FaUserShield className="text-cyan-500 text-6xl md:text-8xl" />
+          </div>
+        </div>
+
+        <section className="bg-gray-50 py-10 px-6 md:px-16 lg:px-20">
+          <div className="max-w-7xl mx-auto text-center">
+            {/* Header */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Secure Your SCUML Certificate
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8">
+              Are you operating an NGO, Church, or Business in sectors like
+              Mechanized Farming, Consulting, Construction, Real Estate,
+              Automobile, Jewelry, Clearing and Settlement, Hotel and
+              Hospitality, Supermarkets, or other SCUML-required industries?
+            </p>
+
+            {/* Benefits Section */}
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 lg:gap-8">
+              <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
+                <FaCheckCircle className="text-green-500 text-3xl" />
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">
+                    Avoid Bank Restrictions
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Operate seamlessly without disruptions to your financial
+                    activities.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
+                <FaCheckCircle className="text-green-500 text-3xl" />
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">
+                    Ensure Smooth Account Opening
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Easily open business bank accounts for efficient operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Call-to-Action Button */}
+            <div className="mt-10">
+              <a
+                href="/scuml-registration"
+                className="bg-green-600 text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-gray-800 transition duration-200"
+              >
+                Get Started Now
+              </a>
+            </div>
+          </div>
+        </section>
 
         <main className="p-6 space-y-6">
           <motion.section
@@ -50,46 +134,36 @@ const SCUMLRegistrationPage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h3
-              className="text-lg font-bold text-gray-800 flex items-center justify-between cursor-pointer"
-              onClick={toggleDropdown}
-            >
+            <h3 className="text-lg font-bold text-gray-800 flex items-center justify-between cursor-pointer">
               Businesses Required to Register with SCUML
-              {isDropdownOpen ? (
-                <AiOutlineUp className="ml-2 text-cyan-600 font-bold size-10" />
-              ) : (
-                <AiOutlineDown className="ml-2 text-blue-600 font-bold size-10" />
-              )}
             </h3>
-            {isDropdownOpen && (
-              <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
-                {[
-                  "Audit Firms",
-                  "Cars & Vehicles",
-                  "Chartered Accountants",
-                  "Clearing and Settlement",
-                  "Construction Company",
-                  "Consultants and consulting company",
-                  "Dealers in jewelries and Luxury",
-                  "Dealers in Real Estate",
-                  "Estate Surveyors and Valuers",
-                  "Hotel & Hospitality",
-                  "Legal Practitioners",
-                  "Mechanized Farming",
-                  "Mortgage Brokers",
-                  "Non Profit Organisations",
-                  "Pool, Betting, Lottery, and Casino",
-                  "Precious Stones & Metals",
-                  "Supermarket",
-                  "Tax Consultant",
-                  "Trust and Company Services",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center">
-                    <FaCheckCircle className="text-green-500 mr-2" /> {item}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {
+              <div>
+                <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
+                  {visibleItems.map((item, index) => (
+                    <li key={index} className="flex items-center">
+                      <FaCheckCircle className="text-green-500 mr-2" /> {item}
+                    </li>
+                  ))}
+                </ul>
+                {!showAllItems && (
+                  <button
+                    onClick={toggleShowAll}
+                    className="mt-3 text-cyan-600 font-bold underline"
+                  >
+                    More
+                  </button>
+                )}
+                {showAllItems && (
+                  <button
+                    onClick={toggleShowAll}
+                    className="mt-3 text-cyan-600 font-bold underline"
+                  >
+                    Show Less
+                  </button>
+                )}
+              </div>
+            }
           </motion.section>
 
           <motion.section
@@ -166,8 +240,11 @@ const SCUMLRegistrationPage = () => {
               <li>Tax Identification Number (TIN)</li>
               <li>Business Profile</li>
               <li>Valid Identification</li>
-              <li>BVN</li>
-              <li>Bank Account Details</li>
+              <li>Proprietor BVN</li>
+              <li>
+                Proprietor or business bank account details ( Account Number and
+                bank name)
+              </li>
             </ul>
             <h3 className="font-semibold text-gray-800 mt-4">
               2. Limited Liability Company
@@ -177,8 +254,11 @@ const SCUMLRegistrationPage = () => {
               <li>Tax Identification Number (TIN)</li>
               <li>Company Profile</li>
               <li>Valid Identification</li>
-              <li>BVN</li>
-              <li>Bank Account Details</li>
+              <li>Director BVN</li>
+              <li>
+                Director or business bank account details ( Account Number and
+                bank name)
+              </li>
             </ul>
             <h3 className="font-semibold text-gray-800 mt-4">
               3. Incorporated Trustee
@@ -188,8 +268,11 @@ const SCUMLRegistrationPage = () => {
               <li>Tax Identification Number (TIN)</li>
               <li>Organization Profile</li>
               <li>Valid Identification</li>
-              <li>BVN</li>
-              <li>Bank Account Details</li>
+              <li>Trustee BVN</li>
+              <li>
+                Trustee or Organization bank account details ( Account Number
+                and bank name)
+              </li>
             </ul>
           </motion.section>
 
@@ -245,9 +328,9 @@ const SCUMLRegistrationPage = () => {
             </ol>
           </motion.section>
 
-          <div className="text-center mt-6">
-            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200">
-              Get Started Today <AiOutlineArrowRight className="ml-2" />
+          <div className="text-left mt-6">
+            <button className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition duration-200">
+              Start Registraion <AiOutlineArrowRight className="ml-2" />
             </button>
           </div>
         </main>

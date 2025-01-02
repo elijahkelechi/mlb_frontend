@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImage from "../assets/servicePageImage.webp";
 import {
   FaRegFileAlt,
   FaRegHandshake,
@@ -9,133 +8,115 @@ import {
   FaUniversity,
   FaPaintBrush,
   FaLaptopCode,
+  FaFileSignature,
 } from "react-icons/fa";
 
 const handleScrollToTop = () => {
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-// Services Array with dynamic links
+// Services Array
 const services = [
   {
     title: "CAC Registration",
     description:
-      "Register your Business Name, Limited Liability Company (LLC), NGO, or Association with ease. No stress, no lengthy paperwork, and fast document delivery in both soft and hard copy.",
+      "Register your Business Name, Limited Liability Company (LLC), NGO, or Association with ease. No stress, no lengthy paperwork, and fast document delivery.",
     benefits: ["Seamless process", "No paperwork", "Fast document delivery"],
-    icon: <FaRegFileAlt className="text-cyan-500 text-3xl" />,
+    icon: <FaRegFileAlt className="text-cyan-500 text-4xl" />,
     link: "/CAC_pre-incoperation",
   },
   {
     title: "CAC Post Incorporation",
     description:
-      "Easily update your registered business or NGO details, including changing directors, trustees, name, address, or business activities. We also assist with filing annual returns or increasing share capital.",
-    benefits: [
-      "Change directors or trustees",
-      "Update business details",
-      "File annual returns",
-    ],
-    icon: <FaRegHandshake className="text-cyan-500 text-3xl" />,
+      "Easily update your registered business or NGO details, including directors, trustees, address, or business activities. Filing annual returns is simplified.",
+    benefits: ["Change directors/trustees", "Update details", "File returns"],
+    icon: <FaRegHandshake className="text-cyan-500 text-4xl" />,
     link: "/CAC_post_incoperation",
   },
   {
     title: "Social Media Ads",
     description:
-      "Reach your target audience, get more sales and leads, grow brand awareness, and drive relevant website traffic with our expert Social Media Ad services.",
-    benefits: [
-      "Targeted audience reach",
-      "Increased sales and leads",
-      "Enhanced brand awareness",
-    ],
-    icon: <FaBullhorn className="text-cyan-500 text-3xl" />,
+      "Reach your target audience, grow leads, and enhance brand awareness with expert-managed ad campaigns tailored for success.",
+    benefits: ["Targeted campaigns", "Increased leads", "Brand growth"],
+    icon: <FaBullhorn className="text-cyan-500 text-4xl" />,
     link: "/social_media_ads",
   },
   {
     title: "SCUML Registration",
     description:
-      "Operate seamlessly in SCUML-required sectors like NGOs, Churches, Mechanized Farming, and more. Avoid bank restrictions and ensure compliance with our expert SCUML registration services.",
-    benefits: [
-      "Avoid bank restrictions",
-      "Get SCUML compliance",
-      "Expert-led registration",
-    ],
-    icon: <FaUniversity className="text-cyan-500 text-3xl" />,
+      "Ensure compliance and avoid restrictions in SCUML-required sectors like NGOs, Churches, and Mechanized Farming with expert guidance.",
+    benefits: ["Compliance assurance", "Bank-ready certificates", "Expert-led"],
+    icon: <FaUniversity className="text-cyan-500 text-4xl" />,
     link: "/SCUML_Registeration",
+  },
+  {
+    title: "TIN Registration",
+    description:
+      "Simplify your tax compliance process with our TIN registration services. We handle registrations for businesses, NGOs, and individuals.",
+    benefits: ["Fast registration", "Business & NGO support", "Tax compliance"],
+    icon: <FaFileSignature className="text-cyan-500 text-4xl" />,
+    link: "/TIN_registration",
+  },
+
+  {
+    title: "Website Design & Development",
+    description:
+      "From simple websites to advanced eCommerce platforms, we deliver responsive, customized solutions that meet your business goals.",
+    benefits: ["Responsive designs", "Custom development", "SEO-optimized"],
+    icon: <FaLaptopCode className="text-cyan-500 text-4xl" />,
+    link: "/website_app_design_development",
   },
   {
     title: "Graphic Design",
     description:
-      "Our creative team delivers beautiful and engaging designs that tell the story of your brand. From logos to marketing materials, we've got you covered.",
-    benefits: [
-      "Creative, eye-catching designs",
-      "Brand-focused storytelling",
-      "Skilled designers",
-    ],
-    icon: <FaPaintBrush className="text-cyan-500 text-3xl" />,
+      "Our creative team delivers visually stunning and engaging designs that elevate your brand's identity.",
+    benefits: ["Custom logos", "Brand-focused visuals", "Marketing materials"],
+    icon: <FaPaintBrush className="text-cyan-500 text-4xl" />,
     link: "/graphic_design",
-  },
-  {
-    title: "Website Design and Development",
-    description:
-      "From simple WordPress websites to complex eCommerce platforms, our development team will bring your vision to life with custom, responsive designs.",
-    benefits: [
-      "Custom website solutions",
-      "Responsive design",
-      "End-to-end development",
-    ],
-    icon: <FaLaptopCode className="text-cyan-500 text-3xl" />,
-    link: "/website_app_design_development",
   },
 ];
 
-// Main Services Component
 const Services = () => {
   return (
-    <div
-      className=" bg-cover bg-center bg-no-repeat py-16 px-4 md:px-8"
-      // style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      {/* Overlay */}
-
-      {/* Header Section */}
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-850 mb-6">
+    <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-16 px-6">
+      {/* Header */}
+      <div className="max-w-5xl mx-auto text-center">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">
           Our Services
         </h1>
-        <p className=" text-cyan-500 text-sm sm:text-base mb-8 sm:mb-12">
-          We provide a range of professional services to help your business
-          thrive. Explore our offerings below.
+        <p className="text-gray-600 text-lg mb-12">
+          Explore a range of professional services designed to grow your
+          business and simplify your operations.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            {/* Service Card Content */}
-            <div className="p-4 sm:p-6">
-              <div className="flex justify-center mb-4">{service.icon}</div>
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">
+            <div className="p-6">
+              <div className="flex justify-center mb-6">{service.icon}</div>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 {service.title}
               </h2>
-              <p className="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4">
+              <p className="text-gray-600 text-sm mb-4">
                 {service.description}
               </p>
-              <ul className="list-disc pl-4 sm:pl-5 mb-3 sm:mb-4 text-gray-600 text-sm sm:text-base">
+              <ul className="list-disc list-inside text-gray-500 text-sm mb-4">
                 {service.benefits.map((benefit, idx) => (
                   <li key={idx}>{benefit}</li>
                 ))}
               </ul>
-              {/* Link to proceed */}
               <Link
-                onClick={handleScrollToTop}
                 to={service.link}
-                className="mt-2 sm:mt-4 bg-cyan-500 text-gray-50 text-sm sm:text-base py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+                onClick={handleScrollToTop}
+                className="block text-center bg-cyan-500 text-white py-2 px-4 rounded shadow-md hover:bg-cyan-600 transition duration-200"
               >
                 GET STARTED
               </Link>
