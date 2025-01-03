@@ -242,7 +242,7 @@ const Home = () => {
               Visit our services for more info
             </Link>
           </p>
-          <div className="flex my-8 justify-start">
+          <div className="flex my-4 md:my-8 justify-start">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -300,9 +300,12 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative py-6 mt-8 md:mt-0">
-        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+      <div className="relative pt-20 pb-4 mt-8 md:mt-0">
+        <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
           Our Services
+        </h1>
+        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+          We have all it takes! to Build your business 💪
         </h1>
         <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-50 mt-4 md:mt-6 font-sans">
           Multi-Level Boost has all it takes for you to grow a legit and
@@ -310,18 +313,15 @@ const Home = () => {
           effective ads, creative designs, to building a website or mobile app
           for your business with our team of designers/developers.
         </p>
-        <h1 className="text-xl mt-8 lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
-          We have all it takes! to Build your business 💪
-        </h1>
       </div>
-      <div className="relative h-[155rem] md:h-[118rem] lg:h-[118rem]  overflow-hidden">
+      <div className="relative h-auto overflow-hidden">
         <img
           className="absolute hidden  top-0 left-0 h-full w-full object-cover"
           src={serviceSectionImage}
           alt="Landing"
         />
 
-        <div className="relative mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
+        <div className="relative mt-0 md:mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
           {cards.map((card, index) => (
             <div
               key={card.id}
@@ -371,8 +371,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="reative leading-relaxed  p-8  md:mr-36 text-gray-50 md:p-8 md:pr-36 rounded-r-md top-[0rem] md:top-[0rem] lg:top-[0rem] z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
-        <div className="py-4 md:py-16 pb-8">
+      <div className="reative grid mt-8 md:grid-cols-12  leading-relaxed  p-8   text-gray-50 md:p-8 md:pr-36 rounded-r-md  z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+        <div className="col-span-9 py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
             Not Just Another Advertising Agency{" "}
             <div className="ml-2 col-span-2 flex flex-col  ">
@@ -404,10 +404,73 @@ const Home = () => {
             SKY ROCKET 🚀 YOUR BUSINESS NOW!
           </Link>
         </div>
+        {/* Laptop view */}
+        <div className="col-span-3 w-full mt-24">
+          {" "}
+          <div className="hidden md:grid gap-4 md:gap-8 relative  z-40 w-full md:w-[25rem] md:right-0">
+            {/* Retention Rates */}
+            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex ">
+              <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
+                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="z-10 relative">
+                  <CountUp
+                    key={key1}
+                    start={0}
+                    end={89}
+                    duration={5}
+                    suffix="%"
+                  />
+                </span>
+              </span>
+              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                Clients & employees retention rates
+              </span>
+            </div>
+
+            {/* Campaigns Managed */}
+            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+              <span className="relative text-5xl text-cyan-600 font-extrabold">
+                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="z-10 relative">
+                  <CountUp
+                    key={key2}
+                    start={0}
+                    end={8}
+                    duration={5}
+                    suffix="+"
+                  />
+                </span>
+              </span>
+              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                Countries where we manage campaigns
+              </span>
+            </div>
+
+            {/* Registered Businesses */}
+            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+              <span className="relative text-5xl text-cyan-600 font-extrabold">
+                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="z-10 relative">
+                  <CountUp
+                    key={key3}
+                    start={0}
+                    end={2000}
+                    duration={5}
+                    separator=","
+                    suffix="+"
+                  />
+                </span>
+              </span>
+              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                Businesses | SCUML | TIN Registered
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className=" md:hidden place-items-center gap-4 md:gap-8 absolute top-[275rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
+      <div className=" md:hidden place-items-center gap-4 md:gap-8 relative z-40 w-full md:w-[25rem] md:right-0 mt-8">
         {/* Retention Rates */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
           <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
             <span className="z-10 relative">
@@ -420,7 +483,7 @@ const Home = () => {
         </div>
 
         {/* Campaigns Managed */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
             <span className="z-10 relative">
@@ -433,7 +496,7 @@ const Home = () => {
         </div>
 
         {/* Registered Businesses */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
           <span className="relative text-5xl text-cyan-600 font-extrabold">
             <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
             <span className="z-10 relative">
@@ -452,55 +515,7 @@ const Home = () => {
           </span>
         </div>
       </div>
-      {/* Laptop view */}
 
-      <div className="hidden md:grid place-items-center gap-4 md:gap-8 absolute top-[268rem] md:top-[192rem] lg:top-[186rem] z-40 w-full md:w-[25rem] md:right-0">
-        {/* Retention Rates */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-          <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp key={key1} start={0} end={89} duration={5} suffix="%" />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Clients & employees retention rates
-          </span>
-        </div>
-
-        {/* Campaigns Managed */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-          <span className="relative text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp key={key2} start={0} end={8} duration={5} suffix="+" />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Countries where we manage campaigns
-          </span>
-        </div>
-
-        {/* Registered Businesses */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-          <span className="relative text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp
-                key={key3}
-                start={0}
-                end={2000}
-                duration={5}
-                separator=","
-                suffix="+"
-              />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Businesses | SCUML | TIN Registered
-          </span>
-        </div>
-      </div>
       {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
@@ -530,7 +545,7 @@ const Home = () => {
           </div>
         </div>
       </motion.div> */}
-      <div className="relative text-center grid bg-gray-200 w-full mr-8  top-[15rem]  md:top-[0rem] lg:top-[0rem]">
+      <div className="relative text-center grid bg-gray-200 w-full mr-8  mt-8">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex items-center justify-center">
           {/* Title Styled as a Message */}
@@ -675,7 +690,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="relative mt-[15rem] md:mt-[0rem] lg:mt-[0rem]">
+      <div className="relative">
         <Footer />
       </div>
     </div>
