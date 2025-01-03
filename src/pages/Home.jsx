@@ -291,8 +291,8 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative pt-20 pb-4 mt-8 md:mt-0">
-        <p className="text-sm p-4 rounded-md text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans md:mt-8 font-semibold">
+      <div className="relative text-center  pb-4  md:mt-0 bg-gray-50">
+        <h3 className="text-sm p-4 rounded-md text-gray-800 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
           <span className="font-extrabold text-lg text-blue-300">
             digital marketing
@@ -312,14 +312,12 @@ const Home = () => {
           >
             Visit our services for more info
           </Link>
-        </p>
-        <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
-          Our Services
-        </h1>
-        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+        </h3>
+
+        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-600">
           We have all it takes! to Build your business 💪
         </h1>
-        <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-50 mt-4 md:mt-6 font-sans">
+        <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
           Multi-Level Boost has all it takes for you to grow a legit and
           successful business ranging from registering your business, running
           effective ads, creative designs, to building a website or mobile app
@@ -334,6 +332,9 @@ const Home = () => {
         />
 
         <div className="relative mt-0 md:mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
+          <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
+            Our Services
+          </h1>
           {cards.map((card, index) => (
             <div
               key={card.id}
