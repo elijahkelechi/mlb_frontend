@@ -72,7 +72,7 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/CAC_Pre-incoperation"
-            className="btn btn-sm  rounded-full mb-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
+            className="btn btn-sm w-full md:w-96 rounded-full my-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
           >
             Learn more
           </Link>
@@ -130,7 +130,7 @@ const Home = () => {
         <div>
           <div>
             <ul className="list-disc font-bold text-cyan-500">
-              <li> Social Media Ads: </li>
+              <li> Social Media Ads </li>
             </ul>
             <span>
               {" "}
@@ -142,14 +142,14 @@ const Home = () => {
             <Link
               onClick={handleScrollToTop}
               to="/social_media_ads"
-              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
+              className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
             >
               Learn more
             </Link>
           </div>
           <div>
             <ul className="font-bold text-cyan-500 list-disc ">
-              <li> Website Development: </li>
+              <li> Website Development </li>
             </ul>
             <span>
               {" "}
@@ -161,14 +161,14 @@ const Home = () => {
             <Link
               onClick={handleScrollToTop}
               to="/website_app_design_development"
-              className="btn btn-sm bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
+              className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
             >
               Learn more
             </Link>
           </div>
           <div>
             <ul className="font-bold text-cyan-500 list-disc">
-              <li>Graphic Design & Branding: </li>
+              <li>Graphic Design & Branding </li>
             </ul>
             <span>
               {" "}
@@ -186,7 +186,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden bg-cyan-600 ">
+    <div className="w-full overflow-x-hidden bg-gray-200 ">
       {/* Image Section with Motion */}
       <motion.div
         className="h-screen w-full relative flex flex-col"
@@ -291,14 +291,14 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative text-center  pb-4  md:mt-0 bg-gray-50">
-        <h3 className="text-sm p-4 rounded-md text-gray-800 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
+      <div className="relative text-center pt-8 md:mt-0 bg-gray-200">
+        <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
-          <span className="font-extrabold text-lg text-blue-300">
+          <span className="font-extrabold text-lg text-blue-500">
             digital marketing
           </span>{" "}
           and{" "}
-          <span className="font-extrabold text-lg text-blue-300">
+          <span className="font-extrabold text-lg text-blue-500">
             company registration agency
           </span>
           , we are committed to helping businesses of all sizes establish, grow,
@@ -307,22 +307,28 @@ const Home = () => {
           online presence, we offer comprehensive solutions tailored to meet
           your unique needs.
           <Link
+            onClick={handleScrollToTop}
             to="/services"
-            className="text-xs text-blue-300 border-b-2 border-blue-300 hover:text-sm hover:text-blue-400 hover:border-blue-400 transition-all duration-300 ease-in-out"
+            className="text-xs text-blue-500 border-b-2 border-blue-500 hover:text-sm hover:text-blue-600 hover:border-blue-600 transition-all duration-300 ease-in-out"
           >
             Visit our services for more info
           </Link>
         </h3>
-
-        <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-600">
-          We have all it takes! to Build your business 💪
-        </h1>
-        <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
-          Multi-Level Boost has all it takes for you to grow a legit and
-          successful business ranging from registering your business, running
-          effective ads, creative designs, to building a website or mobile app
-          for your business with our team of designers/developers.
-        </p>
+        <div className="pt-12 pb-6 md:pb-0">
+          {" "}
+          <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
+            Our Services
+          </h1>
+          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
+            We have all it takes! to Build your business 💪
+          </h1>
+          <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
+            Multi-Level Boost has all it takes for you to grow a legit and
+            successful business ranging from registering your business, running
+            effective ads, creative designs, to building a website or mobile app
+            for your business with our team of designers/developers.
+          </p>
+        </div>
       </div>
       <div className="relative h-auto overflow-hidden">
         <img
@@ -332,9 +338,6 @@ const Home = () => {
         />
 
         <div className="relative mt-0 md:mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
-          <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
-            Our Services
-          </h1>
           {cards.map((card, index) => (
             <div
               key={card.id}
@@ -359,7 +362,7 @@ const Home = () => {
                 <Link
                   to={card.link}
                   onClick={handleScrollToTop}
-                  className=" btn btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                  className=" btn w-full md:w-96  btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
                 >
                   {/* {expandedCard === index ? "Show Less" : "Learn More"} */}
                   Learn more
@@ -560,53 +563,47 @@ const Home = () => {
       </motion.div> */}
       <div className="relative text-center grid bg-gray-200 w-full mr-8  mt-8">
         {/* Image and Overlay Section */}
-        <div className="relative w-full text-center flex items-center justify-center">
-          {/* Title Styled as a Message */}
-          <div className="absolute mt-16 px-4 py-2 bg-white rounded-full shadow-lg border border-gray-300">
-            <h1 className="text-sm md:text-4xl text-cyan-600 font-bold font-heading">
-              Why Choose Multi-Level Boost?
-            </h1>
-            <Link
-              onClick={handleScrollToTop}
-              to="/services"
-              className="text-blue-600 border-b-2 hover:border-b-4"
-            >
-              Our services
-            </Link>
+        <div className="relative w-full text-center flex flex-col items-center justify-center px-4 md:px-8">
+          {/* Image for Mobile View */}
+          <img
+            className="block md:hidden h-64 w-full object-cover"
+            src={femaleImage}
+            alt="Why Brands Choose Us"
+          />
+
+          {/* Overlay Text for Mobile View */}
+          <div className="absolute inset-0 flex md:hidden items-center justify-center">
+            <div className="text-center px-4">
+              <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-4 py-2">
+                <h1 className="text-sm text-cyan-600 font-bold font-heading">
+                  Why Choose Multi-Level Boost?
+                </h1>
+              </div>
+              <h1 className="font-heading font-extrabold text-xl text-white drop-shadow-md tracking-wide mt-2">
+                We have all it takes!
+              </h1>
+            </div>
           </div>
 
-          {/* Background Image */}
-          <img
-            className="flex md:hidden  md:h-[30rem] md:w-[32rem] object-cover"
-            style={{
-              "@media (min-width: 900px)": {
-                width: "25rem",
-              },
-            }}
-            src={femaleImage}
-            alt="Why Brands Chose Us"
-          />
-          <img
-            className=" hidden md:flex md:h-[30rem] md:w-[32rem] object-cover"
-            style={{
-              "@media (min-width: 900px)": {
-                width: "25rem",
-              },
-            }}
-            src={femaleImage1}
-            alt="Why Brands Chose Us"
-          />
+          {/* Text for Larger Screens */}
+          <div className="hidden md:flex flex-col items-center">
+            <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-6 py-3">
+              <h1 className="text-xl md:text-2xl lg:text-4xl text-cyan-600 font-bold font-heading">
+                Why Choose Multi-Level Boost?
+              </h1>
+            </div>
+            <h1 className="font-heading font-extrabold text-2xl md:text-4xl lg:text-5xl text-white drop-shadow-md tracking-wide mt-4 lg:mt-6">
+              We have all it takes!
+            </h1>
+          </div>
         </div>
 
         {/* Text Content Section */}
-        <div className="text-left px-4 rounded-r-md pt-8 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 animate-gradient shadow-2xl">
+        <div className="text-left px-4 rounded-r-md pt-4 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 animate-gradient shadow-2xl">
           {/* Section Title */}
-          <h1 className="font-heading font-extrabold text-2xl lg:text-5xl text-white text-center drop-shadow-md tracking-wide">
-            We have all it takes!
-          </h1>
 
           {/* Key Points */}
-          <div className="grid p-4 md:p-8 lg:grid-cols-12 gap-8 mt-6 text-lg space-y-4 pb-16 text-gray-100">
+          <div className="grid p-4 md:p-8 lg:grid-cols-12 gap-8  text-lg space-y-4 pb-16 text-gray-100">
             <div
               div
               className="hidden p-8 md:flex md:col-span-4 w-full  flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg"
