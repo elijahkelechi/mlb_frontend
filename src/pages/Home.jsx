@@ -189,118 +189,130 @@ const Home = () => {
     <div className="w-full overflow-x-hidden bg-cyan-600 ">
       {/* Image Section with Motion */}
       <motion.div
-        className="h-screen w-full"
+        className="h-screen w-full relative flex flex-col"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <img
-          className="bg-cover hidden md:flex h-full w-full"
-          src={landingImage}
-          alt="Landing"
-        />
-        <img
-          className="flex md:hidden bg-cover h-full w-full"
-          src={landingImage2}
-          alt="Landing"
-        />
-      </motion.div>
-
-      {/* Overlay */}
-      <div className="absolute top-0 h-screen w-full bg-gray-900 bg-opacity-50" />
-
-      {/* Main Content Section with Motion */}
-      <motion.div
-        className="absolute h-screen grid lg:grid-cols-12 top-0 font-bold font-heading text-2xl md:text-4xl text-gray-50 tracking-wide"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-      >
-        <div className="col-span-8 leading-snug h-screen px-4 md:px-8 pt-36 md:pt-56 lg:pt-40 text-gray-50 bg-gray-900 bg-opacity-50">
-          <h1 className="mb-4">
-            Digital Marketing, Company Registration and Corporate Solutions.
-          </h1>
-
-          <p className="text-sm p-4 rounded-md  text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans md:mt-8 font-semibold">
-            as a leading{" "}
-            <span className="font-extrabold text-lg text-blue-300">
-              digital marketing
-            </span>{" "}
-            and{" "}
-            <span className="font-extrabold text-lg text-blue-300">
-              company registration agency
-            </span>
-            , we are committed to helping businesses of all sizes establish,
-            grow, and thrive in today’s competitive landscape. Whether you're
-            starting a new venture, managing an existing company, or looking to
-            enhance your online presence, we offer comprehensive solutions
-            tailored to meet your unique needs.
-            <Link
-              to="/services"
-              className="text-xs text-blue-300 border-b-2 border-blue-300 hover:text-sm hover:text-blue-400 hover:border-blue-400 transition-all duration-300 ease-in-out"
-            >
-              Visit our services for more info
-            </Link>
-          </p>
-          <div className="flex my-4 md:my-8 justify-start">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              <Link
-                onClick={handleGetStarted}
-                className="btn text-xs font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 w-32 mr-4"
-              >
-                GET STARTED
-              </Link>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-                delay: 0.2,
-              }}
-              className="block"
-            >
-              {user ? (
-                <div className="text-xs ">Season's greeting {user.name} 🎉</div>
-              ) : (
-                <div>
-                  <Link
-                    to="login"
-                    className="btn font-heading bg-opacity-20 text-gray-50 border-cyan-500 w-36 md:w-56 text-xs hover:bg-opacity-0 hover:text-cyan-700"
-                  >
-                    Login
-                  </Link>
-                  <span className="block text-xs mt-1">
-                    don't have an account?{" "}
-                    <Link
-                      to="/register"
-                      className="text-blue-300 hover:border-b-2 border-blue-400"
-                    >
-                      Register
-                    </Link>
-                  </span>
-                </div>
-              )}
-            </motion.div>
-          </div>
+        {/* Background Image */}
+        <div className="h-full w-full flex-shrink-0">
+          <img
+            className="hidden md:flex h-full w-full object-cover"
+            src={landingImage}
+            alt="Landing"
+          />
+          <img
+            className="flex md:hidden h-full w-full object-cover"
+            src={landingImage2}
+            alt="Landing"
+          />
         </div>
-        <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-50">
-          {user ? (
-            <div className="bg-gray-800 mb-[35rem] p-8">
-              Welcome! {user.name}
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-50">
+          <motion.div
+            className="h-screen grid grid-cols-1 lg:grid-cols-12 font-bold font-heading text-gray-50"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            {/* Main Content */}
+            <div className="col-span-8 px-4 sm:px-4 md:px-8 lg:px-8 pt-28 sm:pt-32 md:pt-40 lg:pt-48">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-snug sm:leading-tight">
+                Digital Marketing, <br />
+                Company Registration, <br />
+                and Corporate Solutions.
+              </h1>
+
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed font-light mb-8">
+                Helping businesses of all sizes establish, grow, and thrive. Let
+                us handle the complexities while you focus on success.
+              </p>
+
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  <Link
+                    onClick={handleGetStarted}
+                    className="btn text-sm sm:text-base font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 px-6 py-3"
+                  >
+                    GET STARTED
+                  </Link>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                    delay: 0.2,
+                  }}
+                >
+                  {user ? (
+                    <div className="text-sm sm:text-base">
+                      Season's greeting {user.name} 🎉
+                    </div>
+                  ) : (
+                    <div>
+                      <Link
+                        to="login"
+                        className="btn font-heading bg-opacity-20 text-gray-50 border-cyan-500 px-6 py-3 text-sm sm:text-base hover:bg-opacity-0 hover:text-cyan-700"
+                      >
+                        Login
+                      </Link>
+                      <span className="block text-sm mt-2">
+                        Don't have an account?{" "}
+                        <Link
+                          to="/register"
+                          className="text-blue-300 hover:border-b-2 border-blue-400"
+                        >
+                          Register
+                        </Link>
+                      </span>
+                    </div>
+                  )}
+                </motion.div>
+              </div>
             </div>
-          ) : (
-            <div></div>
-          )}
+
+            <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-50">
+              {user ? (
+                <div className="bg-gray-800 mb-[35rem] p-8">
+                  Welcome! {user.name}
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </motion.div>
         </div>
       </motion.div>
 
       <div className="relative pt-20 pb-4 mt-8 md:mt-0">
+        <p className="text-sm p-4 rounded-md text-gray-50 leading-relaxed md:text-sm lg:text-lg font-sans md:mt-8 font-semibold">
+          As a leading{" "}
+          <span className="font-extrabold text-lg text-blue-300">
+            digital marketing
+          </span>{" "}
+          and{" "}
+          <span className="font-extrabold text-lg text-blue-300">
+            company registration agency
+          </span>
+          , we are committed to helping businesses of all sizes establish, grow,
+          and thrive in today’s competitive landscape. Whether you're starting a
+          new venture, managing an existing company, or looking to enhance your
+          online presence, we offer comprehensive solutions tailored to meet
+          your unique needs.
+          <Link
+            to="/services"
+            className="text-xs text-blue-300 border-b-2 border-blue-300 hover:text-sm hover:text-blue-400 hover:border-blue-400 transition-all duration-300 ease-in-out"
+          >
+            Visit our services for more info
+          </Link>
+        </p>
         <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-gray-50">
           Our Services
         </h1>
