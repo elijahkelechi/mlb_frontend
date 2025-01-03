@@ -17,6 +17,8 @@ import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import CountUp from "react-countup";
 import { FaWhatsapp } from "react-icons/fa";
+import LaptopCounter from "../components/LaptopCounter";
+import MobileCounter from "../components/MobileCounter";
 
 const Home = () => {
   const [key1, setKey1] = useState(0);
@@ -217,7 +219,7 @@ const Home = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             {/* Main Content */}
-            <div className="col-span-8 px-4 sm:px-4 md:px-8 lg:px-8 pt-28 sm:pt-32 md:pt-40 lg:pt-48">
+            <div className="col-span-8 px-4 sm:px-4 md:px-8 lg:px-8 pt-32 sm:pt-36 md:pt-40 lg:pt-48">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-snug sm:leading-tight">
                 Digital Marketing, <br />
                 Company Registration, <br />
@@ -294,11 +296,11 @@ const Home = () => {
       <div className="relative text-center pt-8 md:mt-0 bg-gray-200">
         <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
-          <span className="font-extrabold text-lg text-blue-500">
+          <span className="font-extrabold text-lg text-cyan-500">
             digital marketing
           </span>{" "}
           and{" "}
-          <span className="font-extrabold text-lg text-blue-500">
+          <span className="font-extrabold text-lg text-cyan-500">
             company registration agency
           </span>
           , we are committed to helping businesses of all sizes establish, grow,
@@ -387,13 +389,13 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="reative grid mt-8 md:grid-cols-12  leading-relaxed  p-8   text-gray-50 md:p-8 md:pr-36 rounded-r-md  z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
-        <div className="col-span-9 py-4 md:py-16 pb-8">
-          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 mt-2 ">
+      <div className="reative grid mt-8 md:grid-cols-12  leading-relaxed  px-8   text-gray-50 md:p-8 md:pr-36 rounded-r-md  z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+        <div className="col-span-9 pt-4 md:py-16 pb-8">
+          <div className="ml-2 col-span-2 flex flex-col  ">
+            <MdCampaign className="size-14 md:size-36" />
+          </div>
+          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 my-2 ">
             Not Just Another Advertising Agency{" "}
-            <div className="ml-2 col-span-2 flex flex-col  ">
-              <MdCampaign className="size-14 md:size-36" />
-            </div>
           </h1>
           <p className="font-sans md:pr-32 mb-8">
             Your business is unique and has distinct goals. That’s why we carry
@@ -414,124 +416,18 @@ const Home = () => {
             seamless way and at a very affordable fee.
           </p>
           <Link
-            to="/services"
+            onClick={handleScrollToTop}
+            to="/social_media_ads"
             className=" p-2 bg-cyan-500 bg-opacity-10 btn-xs md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
           >
             SKY ROCKET 🚀 YOUR BUSINESS NOW!
           </Link>
         </div>
         {/* Laptop view */}
-        <div className="col-span-3 w-full mt-24">
-          {" "}
-          <div className="hidden md:grid gap-4 md:gap-8 relative  z-40 w-full md:w-[25rem] md:right-0">
-            {/* Retention Rates */}
-            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex ">
-              <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
-                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-                <span className="z-10 relative">
-                  <CountUp
-                    key={key1}
-                    start={0}
-                    end={89}
-                    duration={5}
-                    suffix="%"
-                  />
-                </span>
-              </span>
-              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-                Clients & employees retention rates
-              </span>
-            </div>
-
-            {/* Campaigns Managed */}
-            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-              <span className="relative text-5xl text-cyan-600 font-extrabold">
-                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-                <span className="z-10 relative">
-                  <CountUp
-                    key={key2}
-                    start={0}
-                    end={8}
-                    duration={5}
-                    suffix="+"
-                  />
-                </span>
-              </span>
-              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-                Countries where we manage campaigns
-              </span>
-            </div>
-
-            {/* Registered Businesses */}
-            <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-              <span className="relative text-5xl text-cyan-600 font-extrabold">
-                <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-                <span className="z-10 relative">
-                  <CountUp
-                    key={key3}
-                    start={0}
-                    end={2000}
-                    duration={5}
-                    separator=","
-                    suffix="+"
-                  />
-                </span>
-              </span>
-              <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-                Businesses | SCUML | TIN Registered
-              </span>
-            </div>
-          </div>
-        </div>
+        <LaptopCounter />
       </div>
-      <div className=" md:hidden place-items-center gap-4 md:gap-8 relative z-40 w-full md:w-[25rem] md:right-0 mt-8">
-        {/* Retention Rates */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
-          <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp key={key1} start={0} end={89} duration={5} suffix="%" />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Clients & employees retention rates
-          </span>
-        </div>
-
-        {/* Campaigns Managed */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
-          <span className="relative text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp key={key2} start={0} end={8} duration={5} suffix="+" />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Countries where we manage campaigns
-          </span>
-        </div>
-
-        {/* Registered Businesses */}
-        <div className="bg-gray-50 text-gray-800 font-bold p-2 md:p-8 text-xl rounded-t-md flex items-center justify-center">
-          <span className="relative text-5xl text-cyan-600 font-extrabold">
-            <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-            <span className="z-10 relative">
-              <CountUp
-                key={key3}
-                start={0}
-                end={2000}
-                duration={5}
-                separator=","
-                suffix="+"
-              />
-            </span>
-          </span>
-          <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-            Businesses | SCUML | TIN Registered
-          </span>
-        </div>
-      </div>
-
+      {/* mobile view */}
+      <MobileCounter />
       {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
         <div className="py-4 md:py-16 pb-8">
           <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
@@ -603,19 +499,26 @@ const Home = () => {
           {/* Section Title */}
 
           {/* Key Points */}
-          <div className="grid p-4 md:p-8 lg:grid-cols-12 gap-8  text-lg space-y-4 pb-16 text-gray-100">
+          <div className="grid p-4 md:p-8 lg:grid-cols-12 place-items-center justify-center gap-8  text-lg space-y-4 pb-16 text-gray-100">
             <div
               div
-              className="hidden p-8 md:flex md:col-span-4 w-full  flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg"
+              className="hidden p-8 lg:flex md:col-span-4 w-full  flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg"
             >
               <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
-                🎉 Celebrate 3 Years of Success with Us! 🎉
+                🎉 Celebrate 10 Years of Success with Us! 🎉
               </h1>
               <p className="text-lg font-medium text-gray-200 text-center">
                 Get each service now at{" "}
                 <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
-                as we mark our 3rd of excellence in business!
+                as we mark our 10th Year of excellence in business!
               </p>
+              <Link
+                onClick={handleScrollToTop}
+                to="/services"
+                className="btn w-full mt-4 bg-cyan-500 text-gray-50"
+              >
+                Services
+              </Link>
             </div>
 
             <div className="md:col-span-8 space-y-6">
@@ -686,14 +589,18 @@ const Home = () => {
 
             <div className="md:hidden  p-4 w-full flex    flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg">
               <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
-                🎉 Celebrate 3 Years of Success with Us! 🎉
+                🎉 Celebrate 10 Years of Success with Us! 🎉
               </h1>
               <p className="text-lg font-medium text-gray-200 text-center">
                 Get each service now at{" "}
                 <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
-                as we mark our 3rd of excellence in business!
+                as we mark our 10th Year of excellence in business!
               </p>
-              <Link className="btn w-full mt-4 bg-cyan-500 text-gray-50">
+              <Link
+                onClick={handleScrollToTop}
+                to="/services"
+                className="btn w-full mt-4 bg-cyan-500 text-gray-50"
+              >
                 Services
               </Link>
             </div>
