@@ -193,15 +193,12 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
               />
             </div>
 
-            {/* ID Type */}
-
-            {/* ID Number */}
             <div>
               <label htmlFor="idType" className="block font-medium">
                 ID Type*
               </label>
               <select
-                id="idType"
+                type="text"
                 value={idType}
                 onChange={(e) =>
                   onChange("shareholder", "idType", e.target.value)
@@ -216,6 +213,18 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
                 <option value="National ID">National ID</option>
                 <option value="Other">Other</option>
               </select>
+            </div>
+            {/* ID Number */}
+            <div>
+              <label className="block mb-1">ID Number *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={idNumber}
+                onChange={(e) =>
+                  onChange("shareholder", "idNumber", e.target.value)
+                }
+              />
             </div>
             <div>
               <label className="block mb-1">Share Type *</label>
