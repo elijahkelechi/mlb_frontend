@@ -185,21 +185,26 @@ const MultiStageForm = () => {
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className={`bg-white relative min-h-screen ${
+        window.innerWidth >= 768 ? "bg-cover bg-center" : ""
+      }`}
+      style={{
+        backgroundImage:
+          window.innerWidth >= 768 ? `url(${bgImage})` : undefined,
+      }}
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="p-8 bg-transparent min-h-screen"
+        className="p-4 md:p-8 bg-transparent min-h-screen"
       >
         <h1 className="text-3xl font-bold text-cyan-500 text-center mb-8">
           Business Name Registration Form
         </h1>
 
         {currentStage === 1 && (
-          <div className="grid gap-4 md:gap-8">
+          <div className="grid bg-white gap-4 md:gap-8">
             {" "}
             <BusinessDetails
               formData={formData}
@@ -214,7 +219,7 @@ const MultiStageForm = () => {
           </div>
         )}
         {currentStage === 2 && (
-          <div className="grid gap-4 md:gap-8">
+          <div className="grid ">
             <ProprietorInfo
               formData={formData}
               onChange={handleInputChange}
@@ -236,7 +241,7 @@ const MultiStageForm = () => {
           />
         )}
         {currentStage === 4 && (
-          <div className="bg-gray-50 p-4 justify-center place-items-center">
+          <div className="bg-gray-20 p-4 justify-center place-items-center">
             <h2 className="text-xl font-semibold mb-4 mt-8 text-center text-gray-800">
               Review & Submit
             </h2>
