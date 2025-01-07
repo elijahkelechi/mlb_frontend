@@ -194,17 +194,6 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
             </div>
 
             {/* ID Type */}
-            <div>
-              <label className="block mb-1">ID Type *</label>
-              <input
-                className="border p-2 rounded w-full"
-                type="text"
-                value={idType}
-                onChange={(e) =>
-                  onChange("shareholder", "idType", e.target.value)
-                }
-              />
-            </div>
 
             {/* ID Number */}
             <div>
