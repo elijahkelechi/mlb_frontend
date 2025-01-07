@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
   const { country, state, lga, city, postalCode, streetName, houseNumber } =
@@ -42,7 +42,7 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
       state &&
       lga &&
       city &&
-      postalCode &&
+      // postalCode &&
       streetName &&
       houseNumber &&
       occupation &&
@@ -65,7 +65,7 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
     state,
     lga,
     city,
-    postalCode,
+    // postalCode,
     streetName,
     houseNumber,
     shareholderId,
@@ -79,7 +79,73 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
   const handleFileChange = (category, field, file) => {
     onChange(category, field, file); // Ensure the files are correctly handled
   };
+  const states = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "Federal Capital Territory",
+  ];
 
+  // State for error messages
+  const [phoneError, setPhoneError] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
+
+  // Phone number validation
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // Adjust for your requirements
+    if (!phone) {
+      setPhoneError("Phone number is required.");
+    } else if (!phoneRegex.test(phone)) {
+      setPhoneError("Enter a valid phone number (10-15 digits).");
+    } else {
+      setPhoneError("");
+    }
+  };
+
+  // Email validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setEmailError("Email is required.");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
   return (
     <div>
       <div className="flex items-center justify-center bg-gray-50">
@@ -171,26 +237,38 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
             <div>
               <label className="block mb-1">Phone Number *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="number"
                 value={phoneNumber}
-                onChange={(e) =>
-                  onChange("shareholder", "phoneNumber", e.target.value)
-                }
+                onChange={(e) => {
+                  onChange("shareholder", "phoneNumber", e.target.value);
+                  validatePhone(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  phoneError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {phoneError && (
+                <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+              )}
             </div>
 
             {/* Email */}
             <div>
               <label className="block mb-1">Email *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="email"
                 value={email}
-                onChange={(e) =>
-                  onChange("shareholder", "email", e.target.value)
-                }
+                onChange={(e) => {
+                  onChange("shareholder", "email", e.target.value);
+                  validateEmail(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  emailError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {emailError && (
+                <p className="text-red-500 text-sm mt-1">{emailError}</p>
+              )}
             </div>
 
             <div>
@@ -228,14 +306,21 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
             </div>
             <div>
               <label className="block mb-1">Share Type *</label>
-              <input
+              <select
                 className="border p-2 rounded w-full"
                 type="text"
                 value={shareType}
                 onChange={(e) =>
                   onChange("shareholder", "shareType", e.target.value)
                 }
-              />
+              >
+                <option value="" disabled>
+                  Select ShareType
+                </option>
+                <option value="Ordinary(Equity)">Ordinary(Equity)</option>
+                <option value="Preference">Preference</option>
+              </select>
+              <input />
             </div>
             {/* Share Percentage */}
             <div>
@@ -273,13 +358,29 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
             {/* State */}
             <div>
               <label className="block mb-1">State *</label>
-              <input
-                className="border p-2 rounded w-full"
-                value={state}
-                onChange={(e) =>
-                  onChange("shareholderAddress", "state", e.target.value)
-                }
-              />
+              {states ? (
+                <select
+                  className="border p-2 rounded w-full"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("shareholderAddress", "state", e.target.value)
+                  }
+                >
+                  {states.map((stateName) => (
+                    <option key={stateName} value={stateName}>
+                      {stateName}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  className="border p-2 rounded w-full"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("shareholderAddress", "state", e.target.value)
+                  }
+                />
+              )}
             </div>
             {/* L.G.A */}
             <div>
@@ -305,7 +406,7 @@ const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
             </div>
             {/* Postal Code */}
             <div>
-              <label className="block mb-1">Postal Code *</label>
+              <label className="block mb-1">Postal Code(Optional)</label>
               <input
                 type="number"
                 className="border p-2 rounded w-full"

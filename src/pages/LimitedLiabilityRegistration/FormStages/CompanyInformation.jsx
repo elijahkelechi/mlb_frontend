@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
   const { state, lga, city, postCode, streetName, houseNumber } =
@@ -26,7 +26,7 @@ const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
       state?.trim() &&
       lga?.trim() &&
       city?.trim() &&
-      postCode?.trim() &&
+      // postCode?.trim() &&
       streetName?.trim() &&
       houseNumber?.trim();
 
@@ -43,12 +43,78 @@ const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
     state,
     lga,
     city,
-    postCode,
+    // postCode,
     streetName,
     houseNumber,
     setDisableNext,
   ]);
+  const states = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "Federal Capital Territory",
+  ];
 
+  // State for error messages
+  const [phoneError, setPhoneError] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
+
+  // Phone number validation
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // Adjust for your requirements
+    if (!phone) {
+      setPhoneError("Phone number is required.");
+    } else if (!phoneRegex.test(phone)) {
+      setPhoneError("Enter a valid phone number (10-15 digits).");
+    } else {
+      setPhoneError("");
+    }
+  };
+
+  // Email validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setEmailError("Email is required.");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
   return (
     <div>
       {/* Company Information Section */}
@@ -97,25 +163,37 @@ const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
             <div>
               <label className="block mb-1">Company Phone Number *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="text"
                 value={businessPhone}
-                onChange={(e) =>
-                  onChange("company", "businessPhone", e.target.value)
-                }
+                onChange={(e) => {
+                  onChange("company", "businessPhone", e.target.value);
+                  validatePhone(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  phoneError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {phoneError && (
+                <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+              )}
             </div>
 
             <div>
               <label className="block mb-1">Company Email *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="email"
                 value={businessEmail}
-                onChange={(e) =>
-                  onChange("company", "businessEmail", e.target.value)
-                }
+                onChange={(e) => {
+                  onChange("company", "businessEmail", e.target.value);
+                  validateEmail(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  emailError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {emailError && (
+                <p className="text-red-500 text-sm mt-1">{emailError}</p>
+              )}
             </div>
 
             <div>
@@ -155,14 +233,31 @@ const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block mb-1">State *</label>
-              <input
-                className="border p-2 rounded w-full"
-                type="text"
-                value={state}
-                onChange={(e) =>
-                  onChange("companyAddress", "state", e.target.value)
-                }
-              />
+              {states ? (
+                <select
+                  id="state"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("companyAddress", "state", e.target.value)
+                  }
+                  className="w-full p-2 border rounded"
+                >
+                  {states.map((stateName) => (
+                    <option key={stateName} value={stateName}>
+                      {stateName}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  className="border p-2 rounded w-full"
+                  type="text"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("companyAddress", "state", e.target.value)
+                  }
+                />
+              )}
             </div>
 
             <div>
@@ -190,7 +285,7 @@ const CompanyInformation = ({ formData, onChange, setDisableNext }) => {
             </div>
 
             <div>
-              <label className="block mb-1">Post Code *</label>
+              <label className="block mb-1">Post Code(optional)</label>
               <input
                 className="border p-2 rounded w-full"
                 type="text"

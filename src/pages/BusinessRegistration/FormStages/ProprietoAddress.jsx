@@ -10,6 +10,45 @@ const ProprietorAddress = ({ formData, onChange, setDisableNext }) => {
       country && state && lga && city && streetName && houseNumber;
     setDisableNext(!isValid);
   }, [country, state, lga, city, streetName, houseNumber, setDisableNext]);
+  const states = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "Federal Capital Territory",
+  ];
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -34,16 +73,34 @@ const ProprietorAddress = ({ formData, onChange, setDisableNext }) => {
           <label htmlFor="state" className="block font-medium">
             State*
           </label>
-          <input
-            id="state"
-            type="text"
-            placeholder="State*"
-            value={state}
-            onChange={(e) =>
-              onChange("proprietorAddress", "state", e.target.value)
-            }
-            className="w-full p-2 border rounded"
-          />
+          {states ? (
+            <select
+              id="state"
+              value={state}
+              onChange={(e) =>
+                onChange("proprietorAddress", "state", e.target.value)
+              }
+              className="w-full p-2 border rounded"
+            >
+              <option value="">Select State</option>
+              {states.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <input
+              id="state"
+              type="text"
+              placeholder="State*"
+              value={state}
+              onChange={(e) =>
+                onChange("proprietorAddress", "state", e.target.value)
+              }
+              className="w-full p-2 border rounded"
+            />
+          )}
         </div>
         <div>
           <label htmlFor="lga" className="block font-medium">

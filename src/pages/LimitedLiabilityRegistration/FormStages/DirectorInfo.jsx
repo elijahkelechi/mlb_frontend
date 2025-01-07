@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
   const { country, state, lga, city, postalCode, streetName, houseNumber } =
@@ -38,7 +38,7 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
       state &&
       lga &&
       city &&
-      postalCode &&
+      // postalCode &&
       streetName &&
       houseNumber &&
       directorId && // Must be a valid file object
@@ -61,7 +61,7 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
     state,
     lga,
     city,
-    postalCode,
+    // postalCode,
     streetName,
     houseNumber,
     directorId,
@@ -74,7 +74,73 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
     console.log(`${field} file uploaded:`, file); // Debugging log
     onChange(category, field, file); // Ensure the files are correctly handled
   };
+  const states = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "Federal Capital Territory",
+  ];
 
+  // State for error messages
+  const [phoneError, setPhoneError] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
+
+  // Phone number validation
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // Adjust for your requirements
+    if (!phone) {
+      setPhoneError("Phone number is required.");
+    } else if (!phoneRegex.test(phone)) {
+      setPhoneError("Enter a valid phone number (10-15 digits).");
+    } else {
+      setPhoneError("");
+    }
+  };
+
+  // Email validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setEmailError("Email is required.");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
   return (
     <div>
       <div className="flex items-center justify-center bg-gray-50">
@@ -153,24 +219,38 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
             <div>
               <label className="block mb-1">Phone Number *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="number"
                 value={phoneNumber}
-                onChange={(e) =>
-                  onChange("director", "phoneNumber", e.target.value)
-                }
+                onChange={(e) => {
+                  onChange("director", "phoneNumber", e.target.value);
+                  validatePhone(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  phoneError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {phoneError && (
+                <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+              )}
             </div>
 
             {/* Email */}
             <div>
               <label className="block mb-1">Email *</label>
               <input
-                className="border p-2 rounded w-full"
                 type="email"
                 value={email}
-                onChange={(e) => onChange("director", "email", e.target.value)}
+                onChange={(e) => {
+                  onChange("director", "email", e.target.value);
+                  validateEmail(e.target.value);
+                }}
+                className={`w-full p-2 border rounded ${
+                  emailError ? "border-red-500" : "border-gray-300"
+                }`}
               />
+              {emailError && (
+                <p className="text-red-500 text-sm mt-1">{emailError}</p>
+              )}
             </div>
 
             {/* ID Type */}
@@ -231,13 +311,30 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
             {/* State */}
             <div>
               <label className="block mb-1">State *</label>
-              <input
-                className="border p-2 rounded w-full"
-                value={state}
-                onChange={(e) =>
-                  onChange("directorAddress", "state", e.target.value)
-                }
-              />
+              {states ? (
+                <select
+                  id="state"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("directorAddress", "state", e.target.value)
+                  }
+                  className="w-full p-2 border rounded"
+                >
+                  {states.map((stateName) => (
+                    <option key={stateName} value={stateName}>
+                      {stateName}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  className="border p-2 rounded w-full"
+                  value={state}
+                  onChange={(e) =>
+                    onChange("directorAddress", "state", e.target.value)
+                  }
+                />
+              )}
             </div>
 
             {/* L.G.A */}
@@ -266,7 +363,7 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
 
             {/* Postal Code */}
             <div>
-              <label className="block mb-1">Postal Code *</label>
+              <label className="block mb-1">Postal Code(optional)</label>
               <input
                 type="number"
                 className="border p-2 rounded w-full"
@@ -300,7 +397,11 @@ const DirectorInfo = ({ formData, onChange, setDisableNext }) => {
                 }
               />
             </div>
+            <br></br>
 
+            <h2 className="block my-6 text-2xl font-semibold mb-6 text-center">
+              Director Documents
+            </h2>
             {/* Director ID - Spanning across columns */}
             <div className="md:col-span-2">
               <label className="block mb-1">Director ID *</label>

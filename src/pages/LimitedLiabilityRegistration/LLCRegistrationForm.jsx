@@ -540,23 +540,23 @@ const MultiStageForm = () => {
             </ul>
             <div className="bg-blue-50 border border-blue-300 rounded-lg p-4 my-6 shadow-md">
               <h2 className="text-lg font-semibold text-blue-800 mb-2">
-                Payment Confirmation
+                Payment
               </h2>
               <p className="text-gray-700">
                 You are about to pay the sum of{" "}
                 <span className="font-bold text-blue-600">
                   65,000 Naira only
                 </span>{" "}
-                for your Business Name registration with the details you
-                provided above.
+                for your Company registration with the details you provided
+                above.
               </p>
               <p className="text-gray-700 mt-2">
                 Please review your details carefully before proceeding to
                 payment.
               </p>
-              <p>
-                <span>Note:</span> This form pdf Would be auto downloaded to
-                your device after a successful payment.
+              <p className="my-6">
+                <span className="font-semibold">Note:</span> Form would be
+                submitted automatically on Successful payment
               </p>
             </div>
 
@@ -572,7 +572,7 @@ const MultiStageForm = () => {
                 </span>
               ) : (
                 <PaystackButton
-                  text="Make Payment and Submit"
+                  text="Procced to payment"
                   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
                   {...paystackConfig}
                   onSuccess={handlePaymentSuccess}
@@ -663,26 +663,34 @@ const MultiStageForm = () => {
         )}
 
         {/* Navigation buttons */}
-        <div className="flex justify-between mt-4">
-          {currentStage > 1 && (
-            <button
-              className="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded"
-              onClick={previousStage}
-            >
-              Previous
-            </button>
-          )}
-          {currentStage < 5 && (
-            <button
-              className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
-                disableNext ? "opacity-80 md:opacity-50 cursor-not-allowed" : ""
-              }`}
-              onClick={nextStage}
-              disabled={disableNext}
-            >
-              Next
-            </button>
-          )}
+        <div className="mt-4 w-full">
+          <div className="flex justify-start">
+            {" "}
+            {currentStage > 1 && (
+              <button
+                className="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded"
+                onClick={previousStage}
+              >
+                Previous
+              </button>
+            )}
+          </div>
+
+          <div className="flex justify-end">
+            {currentStage < 5 && (
+              <button
+                className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
+                  disableNext
+                    ? "opacity-80 md:opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
+                onClick={nextStage}
+                disabled={disableNext}
+              >
+                Next
+              </button>
+            )}
+          </div>
         </div>
       </motion.div>
     </div>

@@ -247,7 +247,7 @@ const MultiStageForm = () => {
             </h2>
 
             {/* Displaying the form data dynamically */}
-            <div className="space-y-4">
+            <div className="space-y-4 bg-white p-16">
               {/* Business Details */}
               <div>
                 <h3 className="font-semibold">Business Details</h3>
@@ -390,6 +390,39 @@ const MultiStageForm = () => {
                   {formData.documents.signature ? "Uploaded" : "Not Uploaded"}
                 </p>
               </div>
+
+              <h3 className="text-lg font-semibold text-gray-700 mt-4">
+                Director Documents
+              </h3>
+              <ul className="list-disc pl-5 mt-2">
+                {Object.entries(formData.documents).map(([key, file]) => (
+                  <li key={key}>
+                    <span className="font-medium capitalize">
+                      {key.replace(/([A-Z])/g, " $1")}:
+                    </span>{" "}
+                    {file ? (
+                      file.type.startsWith("image/") ? (
+                        <img
+                          src={URL.createObjectURL(file)}
+                          alt={key}
+                          className="mt-2 h-24 w-24 object-cover border rounded"
+                        />
+                      ) : (
+                        <a
+                          href={URL.createObjectURL(file)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 underline"
+                        >
+                          {file.name}
+                        </a>
+                      )
+                    ) : (
+                      "No file uploaded"
+                    )}
+                  </li>
+                ))}
+              </ul>
               <div className="bg-blue-50 border border-blue-300 rounded-lg p-4 my-6 shadow-md">
                 <h2 className="text-lg font-semibold text-blue-800 mb-2">
                   Payment Confirmation
@@ -525,17 +558,24 @@ const MultiStageForm = () => {
               Previous
             </button>
           )}
-          {currentStage < 4 && (
-            <button
-              className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
-                disableNext ? "opacity-80 md:opacity-50 cursor-not-allowed" : ""
-              }`}
-              onClick={nextStage}
-              disabled={disableNext}
-            >
-              Next
-            </button>
-          )}
+
+          <div className="w-full">
+            {currentStage < 4 && (
+              <div className="flex justify-end ">
+                <button
+                  className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
+                    disableNext
+                      ? "opacity-80 md:opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
+                  onClick={nextStage}
+                  disabled={disableNext}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </motion.div>
     </div>

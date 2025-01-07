@@ -41,6 +41,33 @@ const ProprietorInfo = ({ formData, onChange, setDisableNext }) => {
     idNumber,
     setDisableNext,
   ]);
+  // State for error messages
+  const [phoneError, setPhoneError] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
+
+  // Phone number validation
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // Adjust for your requirements
+    if (!phone) {
+      setPhoneError("Phone number is required.");
+    } else if (!phoneRegex.test(phone)) {
+      setPhoneError("Enter a valid phone number (10-15 digits).");
+    } else {
+      setPhoneError("");
+    }
+  };
+
+  // Email validation
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setEmailError("Email is required.");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -164,11 +191,17 @@ const ProprietorInfo = ({ formData, onChange, setDisableNext }) => {
             type="tel"
             placeholder="Phone Number*"
             value={phoneNumber}
-            onChange={(e) =>
-              onChange("proprietorInfo", "phoneNumber", e.target.value)
-            }
-            className="w-full p-2 border rounded"
+            onChange={(e) => {
+              onChange("proprietorInfo", "phoneNumber", e.target.value);
+              validatePhone(e.target.value); // Trigger validation
+            }}
+            className={`w-full p-2 border rounded ${
+              phoneError ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {phoneError && (
+            <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+          )}
         </div>
         <div>
           <label htmlFor="email" className="block font-medium">
@@ -179,11 +212,17 @@ const ProprietorInfo = ({ formData, onChange, setDisableNext }) => {
             type="email"
             placeholder="Email*"
             value={email}
-            onChange={(e) =>
-              onChange("proprietorInfo", "email", e.target.value)
-            }
-            className="w-full p-2 border rounded"
+            onChange={(e) => {
+              onChange("proprietorInfo", "email", e.target.value);
+              validateEmail(e.target.value);
+            }}
+            className={`w-full p-2 border rounded ${
+              emailError ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {emailError && (
+            <p className="text-red-500 text-sm mt-1">{emailError}</p>
+          )}
         </div>
         <div>
           <label htmlFor="idType" className="block font-medium">

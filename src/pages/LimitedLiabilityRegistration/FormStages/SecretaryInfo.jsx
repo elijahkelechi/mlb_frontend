@@ -22,51 +22,51 @@ const SecretaryInfo = ({ formData, onChange, setDisableNext }) => {
   // Validate fields to enable/disable "Next" button
   useEffect(() => {
     const areFieldsFilled = [
-      lastName,
-      firstName,
-      phoneNumber,
-      email,
-      gender,
-      dateOfBirth,
-      nationality,
-      idType,
-      idNumber,
-      country,
-      state,
-      lga,
-      city,
-      postalCode,
-      streetName,
-      houseNumber,
+      // lastName,
+      // firstName,
+      // phoneNumber,
+      // email,
+      // gender,
+      // dateOfBirth,
+      // nationality,
+      // idType,
+      // idNumber,
+      // country,
+      // state,
+      // lga,
+      // city,
+      // postalCode,
+      // streetName,
+      // houseNumber,
     ].every((field) => field && field.trim() !== "");
 
     const areFilesUploaded = [
-      secretaryValidId,
-      secretarySignature,
-      secretaryPassport,
+      // secretaryValidId,
+      // secretarySignature,
+      // secretaryPassport,
     ].every((file) => file instanceof File);
 
     setDisableNext(!(areFieldsFilled && areFilesUploaded)); // Disable if not valid
   }, [
-    lastName,
-    firstName,
-    phoneNumber,
-    email,
-    gender,
-    dateOfBirth,
-    nationality,
-    idType,
-    idNumber,
-    country,
-    state,
-    lga,
-    city,
-    postalCode,
-    streetName,
-    houseNumber,
-    secretaryValidId,
-    secretarySignature,
-    secretaryPassport,
+    // lastName,
+    // firstName,
+    // phoneNumber,
+    // email,
+    // gender,
+    // dateOfBirth,
+    // nationality,
+    // idType,
+    // idNumber,
+    // country,
+    // state,
+    // lga,
+    // city,
+    // postalCode,
+    // streetName,
+    // houseNumber,
+    // secretaryValidId,
+    // secretarySignature,
+    // secretaryPassport,
     setDisableNext,
   ]);
 
@@ -232,6 +232,7 @@ const SecretaryInfo = ({ formData, onChange, setDisableNext }) => {
             {/* State */}
             <div>
               <label className="block mb-1">State *</label>
+
               <input
                 className="border p-2 rounded w-full"
                 value={state}
