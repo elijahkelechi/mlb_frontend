@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import { jsPDF } from "jspdf";
 import { PaystackButton } from "react-paystack";
 import { Link } from "react-router";
+import { customFetch } from "../../utils";
 
 const MultiStageForm = () => {
   const user = useSelector((state) => state.userState.user);
@@ -104,8 +105,8 @@ const MultiStageForm = () => {
     });
 
     try {
-      const response = await axios.post(
-        "https://mlb-backend-4asz.onrender.com/api/v1/BusinessNameform/submit",
+      const response = await customFetch.post(
+        "/BusinessNameform/submit",
         formattedData,
         {
           headers: {
