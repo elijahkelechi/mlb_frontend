@@ -251,8 +251,13 @@ const MultiStageForm = () => {
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className={`bg-white relative min-h-screen ${
+        window.innerWidth >= 768 ? "bg-cover bg-center" : ""
+      }`}
+      style={{
+        backgroundImage:
+          window.innerWidth >= 768 ? `url(${bgImage})` : undefined,
+      }}
     >
       <motion.div
         initial={{ opacity: 0 }}
