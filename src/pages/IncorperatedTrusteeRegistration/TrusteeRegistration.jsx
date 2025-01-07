@@ -20,7 +20,7 @@ const TrusteeRegistrationPage = () => {
       navigate("/login");
       toast.warning("Please log in to continue");
     } else {
-      navigate("/business_name_registration_form");
+      navigate("/trustee_form");
       window.scrollTo(0, 0);
     }
   };
@@ -421,7 +421,6 @@ const TrusteeRegistrationPage = () => {
             MULTI-LEVEL BOOST. Let us guide you every step of the way.
           </p>
           <Link
-            to="/trustee_form"
             onClick={handleScrollToTop}
             className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-200"
           >

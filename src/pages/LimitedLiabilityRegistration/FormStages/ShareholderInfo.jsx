@@ -1,182 +1,390 @@
-const ShareholderInfo = ({ formData, onChange }) => {
+import { useEffect } from "react";
+
+const ShareholderInfo = ({ formData, onChange, setDisableNext }) => {
+  const { country, state, lga, city, postalCode, streetName, houseNumber } =
+    formData.shareholderAddress;
+  const { shareholderId, shareholderSignature, shareholderPassport } =
+    formData.shareholderDocuments;
+  const {
+    lastName,
+    firstName,
+    dateOfBirth,
+    gender,
+    nationality,
+    phoneNumber,
+    email,
+    idType,
+    idNumber,
+    sharePercentage,
+    occupation,
+    shareType,
+  } = formData.shareholder;
+
+  useEffect(() => {
+    // Check if all required fields are filled and if files are uploaded
+    const filesValid =
+      (shareholderId && shareholderId.name) ||
+      (shareholderSignature && shareholderSignature.name) ||
+      (shareholderPassport && shareholderPassport.name);
+
+    const isValid =
+      lastName &&
+      firstName &&
+      dateOfBirth &&
+      gender &&
+      nationality &&
+      phoneNumber &&
+      email &&
+      idType &&
+      idNumber &&
+      sharePercentage &&
+      country &&
+      state &&
+      lga &&
+      city &&
+      postalCode &&
+      streetName &&
+      houseNumber &&
+      occupation &&
+      shareType &&
+      filesValid;
+
+    setDisableNext(!isValid); // Disable Next button if the form is invalid
+  }, [
+    lastName,
+    firstName,
+    dateOfBirth,
+    gender,
+    nationality,
+    phoneNumber,
+    email,
+    idType,
+    idNumber,
+    sharePercentage,
+    country,
+    state,
+    lga,
+    city,
+    postalCode,
+    streetName,
+    houseNumber,
+    shareholderId,
+    shareholderSignature,
+    shareholderPassport,
+    occupation,
+    shareType,
+    setDisableNext,
+  ]);
+
+  const handleFileChange = (category, field, file) => {
+    onChange(category, field, file); // Ensure the files are correctly handled
+  };
+
   return (
-    <div className="flex items-center justify-center bg-gray-50">
-      <div className="w-full max-w-4xl bg-white shadow-md rounded-lg p-8">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
-          Stage 5 - Shareholder Information
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* Last Name */}
-          <div>
-            <label className="block mb-1">Last Name *</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.lastName}
-              onChange={(e) =>
-                onChange("shareholder", "lastName", e.target.value)
-              }
-            />
-          </div>
+    <div>
+      <div className="flex items-center justify-center bg-gray-50">
+        <div className="w-full max-w-4xl bg-white shadow-md rounded-lg p-8">
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            Stage 5 - Shareholder Information
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Surname */}
+            <div>
+              <label className="block mb-1">Surname *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={lastName}
+                onChange={(e) =>
+                  onChange("shareholder", "lastName", e.target.value)
+                }
+              />
+            </div>
 
-          {/* First Name */}
-          <div>
-            <label className="block mb-1">First Name *</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.firstName}
-              onChange={(e) =>
-                onChange("shareholder", "firstName", e.target.value)
-              }
-            />
-          </div>
+            {/* First Name */}
+            <div>
+              <label className="block mb-1">First Name *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={firstName}
+                onChange={(e) =>
+                  onChange("shareholder", "firstName", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Middle Name */}
-          <div>
-            <label className="block mb-1">Middle Name</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.middleName}
-              onChange={(e) =>
-                onChange("shareholder", "middleName", e.target.value)
-              }
-            />
-          </div>
+            {/* Date of Birth */}
+            <div>
+              <label className="block mb-1">Date of Birth *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="date"
+                value={dateOfBirth}
+                onChange={(e) =>
+                  onChange("shareholder", "dateOfBirth", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Date of Birth */}
-          <div>
-            <label className="block mb-1">Date of Birth *</label>
-            <input
-              className="border p-2 rounded w-full"
-              type="date"
-              value={formData.shareholder.dateOfBirth}
-              onChange={(e) =>
-                onChange("shareholder", "dateOfBirth", e.target.value)
-              }
-            />
-          </div>
+            {/* Gender */}
+            <div>
+              <label className="block mb-1">Gender *</label>
+              <select
+                className="border p-2 rounded w-full"
+                value={gender}
+                onChange={(e) =>
+                  onChange("shareholder", "gender", e.target.value)
+                }
+              >
+                <option value="">Select...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
 
-          {/* Gender */}
-          <div>
-            <label className="block mb-1">Gender *</label>
-            <select
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.gender}
-              onChange={(e) =>
-                onChange("shareholder", "gender", e.target.value)
-              }
-            >
-              <option value="">Select...</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
+            {/* Nationality */}
+            <div>
+              <label className="block mb-1">Nationality *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={nationality}
+                onChange={(e) =>
+                  onChange("shareholder", "nationality", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label className="block mb-1">Occupation *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={occupation}
+                onChange={(e) =>
+                  onChange("shareholder", "occupation", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Nationality */}
-          <div>
-            <label className="block mb-1">Nationality *</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.nationality}
-              onChange={(e) =>
-                onChange("shareholder", "nationality", e.target.value)
-              }
-            />
-          </div>
+            {/* Phone Number */}
+            <div>
+              <label className="block mb-1">Phone Number *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="number"
+                value={phoneNumber}
+                onChange={(e) =>
+                  onChange("shareholder", "phoneNumber", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Phone Number */}
-          <div>
-            <label className="block mb-1">Phone Number *</label>
-            <input
-              className="border p-2 rounded w-full"
-              type="number"
-              value={formData.shareholder.phoneNumber}
-              onChange={(e) =>
-                onChange("shareholder", "phoneNumber", e.target.value)
-              }
-            />
-          </div>
+            {/* Email */}
+            <div>
+              <label className="block mb-1">Email *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="email"
+                value={email}
+                onChange={(e) =>
+                  onChange("shareholder", "email", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Email */}
-          <div>
-            <label className="block mb-1">Email *</label>
-            <input
-              className="border p-2 rounded w-full"
-              type="email"
-              value={formData.shareholder.email}
-              onChange={(e) => onChange("shareholder", "email", e.target.value)}
-            />
-          </div>
+            {/* ID Type */}
+            <div>
+              <label className="block mb-1">ID Type *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={idType}
+                onChange={(e) =>
+                  onChange("shareholder", "idType", e.target.value)
+                }
+              />
+            </div>
 
-          {/* Occupation */}
-          <div>
-            <label className="block mb-1">Occupation</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.occupation}
-              onChange={(e) =>
-                onChange("shareholder", "occupation", e.target.value)
-              }
-            />
+            {/* ID Number */}
+            <div>
+              <label htmlFor="idType" className="block font-medium">
+                ID Type*
+              </label>
+              <select
+                id="idType"
+                value={idType}
+                onChange={(e) =>
+                  onChange("shareholder", "idType", e.target.value)
+                }
+                className="w-full p-2 border rounded"
+              >
+                <option value="" disabled>
+                  Select ID Type*
+                </option>
+                <option value="Passport">Passport</option>
+                <option value="Driver's License">Driver's License</option>
+                <option value="National ID">National ID</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label className="block mb-1">Share Type *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="text"
+                value={shareType}
+                onChange={(e) =>
+                  onChange("shareholder", "shareType", e.target.value)
+                }
+              />
+            </div>
+            {/* Share Percentage */}
+            <div>
+              <label className="block mb-1">Share Percentage *</label>
+              <input
+                className="border p-2 rounded w-full"
+                type="number"
+                value={sharePercentage}
+                onChange={(e) =>
+                  onChange("shareholder", "sharePercentage", e.target.value)
+                }
+              />
+            </div>
           </div>
+        </div>
+      </div>
 
-          {/* ID Type */}
-          <div>
-            <label className="block mb-1">ID Type</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.idType}
-              onChange={(e) =>
-                onChange("shareholder", "idType", e.target.value)
-              }
-            />
-          </div>
+      <div className="flex items-center justify-center bg-gray-50">
+        <div className="w-full max-w-4xl bg-white shadow-md rounded-lg p-8">
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            Shareholder Residential Address
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Country */}
+            <div>
+              <label className="block mb-1">Country *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={country}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "country", e.target.value)
+                }
+              />
+            </div>
+            {/* State */}
+            <div>
+              <label className="block mb-1">State *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={state}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "state", e.target.value)
+                }
+              />
+            </div>
+            {/* L.G.A */}
+            <div>
+              <label className="block mb-1">L.G.A *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={lga}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "lga", e.target.value)
+                }
+              />
+            </div>
+            {/* City */}
+            <div>
+              <label className="block mb-1">City *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={city}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "city", e.target.value)
+                }
+              />
+            </div>
+            {/* Postal Code */}
+            <div>
+              <label className="block mb-1">Postal Code *</label>
+              <input
+                type="number"
+                className="border p-2 rounded w-full"
+                value={postalCode}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "postalCode", e.target.value)
+                }
+              />
+            </div>
+            {/* Street Name */}
+            <div>
+              <label className="block mb-1">Street Name *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={streetName}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "streetName", e.target.value)
+                }
+              />
+            </div>
+            {/* House Number */}
+            <div>
+              <label className="block mb-1">House Number *</label>
+              <input
+                className="border p-2 rounded w-full"
+                value={houseNumber}
+                onChange={(e) =>
+                  onChange("shareholderAddress", "houseNumber", e.target.value)
+                }
+              />
+            </div>
+            {/* Shareholder ID - Spanning across columns */}
+            <div className="md:col-span-2">
+              <label className="block mb-1">Shareholder ID *</label>
+              <input
+                type="file"
+                className="border p-2 rounded w-full"
+                onChange={(e) =>
+                  handleFileChange(
+                    "shareholderDocuments",
+                    "shareholderValidId",
+                    e.target.files[0]
+                  )
+                }
+              />
+            </div>
 
-          {/* ID Number */}
-          <div>
-            <label className="block mb-1">ID Number</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.idNumber}
-              onChange={(e) =>
-                onChange("shareholder", "idNumber", e.target.value)
-              }
-            />
-          </div>
-
-          {/* Share Type */}
-          <div>
-            <label className="block mb-1">Share Type</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.shareType}
-              onChange={(e) =>
-                onChange("shareholder", "shareType", e.target.value)
-              }
-            />
-          </div>
-
-          {/* Share Percentage */}
-          <div>
-            <label className="block mb-1">Share Percentage</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.sharePercentage}
-              onChange={(e) =>
-                onChange("shareholder", "sharePercentage", e.target.value)
-              }
-            />
-          </div>
-
-          {/* Share Division */}
-          <div>
-            <label className="block mb-1">Share Division</label>
-            <input
-              className="border p-2 rounded w-full"
-              value={formData.shareholder.shareDivision}
-              onChange={(e) =>
-                onChange("shareholder", "shareDivision", e.target.value)
-              }
-            />
+            {/* Shareholder Signature - Spanning across columns */}
+            <div className="md:col-span-2">
+              <label className="block mb-1">Shareholder Signature *</label>
+              <input
+                type="file"
+                className="border p-2 rounded w-full"
+                onChange={(e) =>
+                  handleFileChange(
+                    "shareholderDocuments",
+                    "shareholderSignature",
+                    e.target.files[0]
+                  )
+                }
+              />
+            </div>
+            {/* Shareholder Passport - Spanning across columns */}
+            <div className="md:col-span-2">
+              <label className="block mb-1">Shareholder Passport *</label>
+              <input
+                type="file"
+                className="border p-2 rounded w-full"
+                onChange={(e) =>
+                  handleFileChange(
+                    "shareholderDocuments",
+                    "shareholderPassport",
+                    e.target.files[0]
+                  )
+                }
+              />
+            </div>
           </div>
         </div>
       </div>
