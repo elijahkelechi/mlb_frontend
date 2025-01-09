@@ -496,7 +496,7 @@ const Home = () => {
         </div>
 
         {/* Text Content Section */}
-        <div className="text-left px-4 pt-16 md:pt-4">
+        <div className="text-left px-2 md:px-8 pt-16 md:pt-4">
           <div className="grid md:grid-cols-2 gap-6 p-6 ">
             <p className="flex items-start space-x-4 rounded-lg shadow-md p-4 md:p-8">
               <span className="text-3xl">🏆</span>
