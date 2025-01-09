@@ -34,7 +34,7 @@ const Homelayout = () => {
         <div>
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/09163381375"
+            href="https://wa.me/0907 460 2590"
             target="_blank"
             rel="noopener noreferrer"
             className="z-50 fixed bottom-5 right-5 bg-green-500 p-4 rounded-full text-white shadow-lg hover:bg-green-600"

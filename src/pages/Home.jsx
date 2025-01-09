@@ -219,7 +219,7 @@ const Home = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             {/* Main Content */}
-            <div className="col-span-8 px-4 sm:px-4 md:px-8 lg:px-8 pt-32 sm:pt-36 md:pt-40 lg:pt-48">
+            <div className="col-span-8 px-4 sm:px-4 md:px-8 lg:px-8 pt-44 sm:pt-36 md:pt-40 lg:pt-48">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 leading-snug sm:leading-tight">
                 Digital Marketing, <br />
                 Company Registration, <br />
@@ -457,7 +457,8 @@ const Home = () => {
           </div>
         </div>
       </motion.div> */}
-      <div className="relative text-center grid bg-gray-200 w-full mr-8  mt-8">
+      {/* Main Section */}
+      <div className="relative text-center grid  w-full mr-8 mt-8">
         {/* Image and Overlay Section */}
         <div className="relative w-full text-center flex flex-col items-center justify-center px-4 md:px-8">
           {/* Image for Mobile View */}
@@ -469,13 +470,13 @@ const Home = () => {
 
           {/* Overlay Text for Mobile View */}
           <div className="absolute inset-0 flex md:hidden items-center justify-center">
-            <div className="text-center px-4">
+            <div className="text-center px-4 mt-80">
               <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-4 py-2">
                 <h1 className="text-sm text-cyan-600 font-bold font-heading">
                   Why Choose Multi-Level Boost?
                 </h1>
               </div>
-              <h1 className="font-heading font-extrabold text-xl text-white drop-shadow-md tracking-wide mt-2">
+              <h1 className="font-heading font-extrabold text-xl text-gray-800 drop-shadow-md tracking-wide mt-2">
                 We have all it takes!
               </h1>
             </div>
@@ -488,125 +489,75 @@ const Home = () => {
                 Why Choose Multi-Level Boost?
               </h1>
             </div>
-            <h1 className="font-heading font-extrabold text-2xl md:text-4xl lg:text-5xl text-white drop-shadow-md tracking-wide mt-4 lg:mt-6">
+            <h1 className="font-heading font-extrabold text-2xl md:text-4xl lg:text-5xl text-gray-800 tracking-wide mt-4 lg:mt-6">
               We have all it takes!
             </h1>
           </div>
         </div>
 
         {/* Text Content Section */}
-        <div className="text-left px-4 rounded-r-md pt-4 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 animate-gradient shadow-2xl">
-          {/* Section Title */}
+        <div className="text-left px-4 pt-16 md:pt-4">
+          <div className="grid md:grid-cols-2 gap-6 p-6 ">
+            <p className="flex items-start space-x-4 rounded-lg shadow-md p-4 md:p-8">
+              <span className="text-3xl">🏆</span>
+              <span>
+                <strong>Expertise You Can Trust:</strong>
+                Our experienced team ensures every process is handled with
+                precision and professionalism.
+              </span>
+            </p>
 
-          {/* Key Points */}
-          <div className="grid p-4 md:p-8 lg:grid-cols-12 place-items-center justify-center gap-8  text-lg space-y-4 pb-16 text-gray-100">
-            <div
-              div
-              className="hidden p-8 lg:flex md:col-span-4 w-full  flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg"
-            >
-              <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
-                🎉 Celebrate 10 Years of Success with Us! 🎉
-              </h1>
-              <p className="text-lg font-medium text-gray-200 text-center">
-                Get each service now at{" "}
-                <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
-                as we mark our 10th Year of excellence in business!
-              </p>
-              <Link
-                onClick={handleScrollToTop}
-                to="/services"
-                className="btn w-full mt-4 bg-cyan-500 text-gray-50"
-              >
-                Services
-              </Link>
-            </div>
+            <p className="flex items-start space-x-4 rounded-lg shadow-md p-4 md:p-8">
+              <span className="text-3xl">🤝</span>
+              <span>
+                <strong>Customer-Centric Approach:</strong>
+                Your satisfaction is our top priority. We offer personalized
+                services tailored to your needs.
+              </span>
+            </p>
 
-            <div className="md:col-span-8 space-y-6">
-              <p className="flex items-start space-x-4">
-                <span className="text-3xl">🏆</span>
-                <span>
-                  <strong>Expertise You Can Trust:</strong>
-                  Our experienced team ensures every process is handled with
-                  precision and professionalism.
-                </span>
-              </p>
+            <p className="flex items-start space-x-4 rounded-lg shadow-md p-4 md:p-8">
+              <span className="text-3xl">🎯</span>
+              <span>
+                <strong>One-Stop Solution:</strong>
+                From business registration to branding and marketing, we've got
+                everything covered.
+              </span>
+            </p>
 
-              <p className="flex items-start space-x-4">
-                <span className="text-3xl">🤝</span>
-                <span>
-                  <strong>Customer-Centric Approach:</strong>
-                  Your satisfaction is our top priority. We offer personalized
-                  services tailored to your needs.
-                </span>
-              </p>
-
-              <p className="flex items-start space-x-4">
-                <span className="text-3xl">🎯</span>
-                <span>
-                  <strong>One-Stop Solution:</strong>
-                  From business registration to branding and marketing, we've
-                  got everything covered.
-                </span>
-              </p>
-
-              <p className="flex items-start space-x-4">
-                <span className="text-3xl">🚀</span>
-                <span>
-                  <strong>Efficiency & Transparency:</strong>
-                  Enjoy fast delivery, competitive pricing, and clear
-                  communication throughout your journey.
-                </span>
-              </p>
-
-              <div className="mt-8 text-left bg-cyan-50 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  🚀 Get Started Today!
-                </h2>
-                <p className="text-gray-700 mb-4">
-                  Let’s take your business to the next level! Whether you're
-                  registering a new business, enhancing your brand visibility,
-                  or managing post-incorporation updates, Multi-Level Boost is
-                  here to make the process seamless.
-                </p>
-                <div className="flex flex-col md:flex-row justify-center items-start space-y-4 md:space-y-0 md:space-x-4">
-                  <Link
-                    onClick={handleScrollToTop}
-                    to="/services"
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all"
-                  >
-                    👉 Explore Our Services
-                  </Link>
-                  <Link
-                    onClick={handleScrollToTop}
-                    to="/contactUs"
-                    className="px-6 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition-all"
-                  >
-                    👉 Contact Us Now
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:hidden  p-4 w-full flex    flex-col items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg  shadow-lg">
-              <h1 className="text-2xl  md:text-4xl font-extrabold font-heading mb-4 text-center">
-                🎉 Celebrate 10 Years of Success with Us! 🎉
-              </h1>
-              <p className="text-lg font-medium text-gray-200 text-center">
-                Get each service now at{" "}
-                <span className="text-yellow-300 font-bold">20% Discount</span>{" "}
-                as we mark our 10th Year of excellence in business!
-              </p>
-              <Link
-                onClick={handleScrollToTop}
-                to="/services"
-                className="btn w-full mt-4 bg-cyan-500 text-gray-50"
-              >
-                Services
-              </Link>
-            </div>
+            <p className="flex items-start space-x-4 rounded-lg shadow-md p-4 md:p-8">
+              <span className="text-3xl">🚀</span>
+              <span>
+                <strong>Efficiency & Transparency:</strong>
+                Enjoy fast delivery, competitive pricing, and clear
+                communication throughout your journey.
+              </span>
+            </p>
           </div>
         </div>
       </div>
+
+      {/* Celebrate Us Section */}
+      <div className="relative bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-8 mt-8 rounded-lg shadow-lg">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-extrabold font-heading mb-4 text-center">
+            🎉 Celebrate 10 Years of Success with Us! 🎉
+          </h1>
+          <p className="text-lg font-medium text-center">
+            Get each service now at{" "}
+            <span className="text-yellow-300 font-bold">20% Discount</span> as
+            we mark our 10th Year of excellence in business!
+          </p>
+          <Link
+            onClick={handleScrollToTop}
+            to="/services"
+            className="btn w-full mt-4 bg-cyan-500 text-gray-50 px-6 py-2 rounded-lg hover:bg-cyan-600 transition-all"
+          >
+            Services
+          </Link>
+        </div>
+      </div>
+
       <div className="relative">
         <Footer />
       </div>
