@@ -551,7 +551,7 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/services"
-            className="btn w-full mt-4 bg-cyan-500 text-gray-50 px-6 py-2 rounded-lg hover:bg-cyan-600 transition-all"
+            className="btn w-full mt-4 bg-cyan-600 text-gray-50 px-6 py-2 rounded-lg hover:bg-cyan-700 transition-all"
           >
             Services
           </Link>
