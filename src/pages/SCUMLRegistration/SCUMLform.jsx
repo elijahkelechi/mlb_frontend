@@ -81,7 +81,7 @@ const SCUMLform = () => {
 
     // Add Title
     doc.setFontSize(titleFontSize);
-    doc.text("Business Name Registration Form", margin, yOffset);
+    doc.text("SCUML Registration Form(powered by MLB)", margin, yOffset);
     yOffset += lineHeight * 2;
 
     // Iterate through formData fields
