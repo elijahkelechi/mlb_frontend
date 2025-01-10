@@ -453,7 +453,8 @@ const MultiStageForm = () => {
               {isSubmitting ? (
                 <span>
                   {" "}
-                  <span className="loading loading-bars"></span> Submitting...
+                  <span className="loading loading-bars"></span> payment
+                  processing...
                 </span>
               ) : (
                 <PaystackButton

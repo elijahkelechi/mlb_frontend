@@ -34,7 +34,9 @@ const SCUMLRegistrationPage = () => {
     "Tax Consultant",
     "Trust and Company Services",
   ];
-
+  const handleScrollToTop = () => {
+    scrollTo(0, 0);
+  };
   const visibleItems = showAllItems ? businessList : businessList.slice(0, 5);
   return (
     <div className="bg-gray-50 py-10 px-5">
@@ -47,7 +49,8 @@ const SCUMLRegistrationPage = () => {
               Comply with Anti-Money Laundering Laws and Secure Your Business
             </p>
             <Link
-              to="/SCUML_Registeration"
+              onClick={handleScrollToTop}
+              to="/SCUML_Form"
               className="btn bg-green-600 my-4 hover:bg-gray-800 text-white"
             >
               Start Registration
@@ -102,12 +105,13 @@ const SCUMLRegistrationPage = () => {
 
             {/* Call-to-Action Button */}
             <div className="mt-10">
-              <a
-                href="/scuml-registration"
+              <Link
+                onClick={handleScrollToTop}
+                to="/SCUML_form"
                 className="bg-green-600 text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-gray-800 transition duration-200"
               >
                 Get Started Now
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -329,9 +333,13 @@ const SCUMLRegistrationPage = () => {
           </motion.section>
 
           <div className="text-left mt-6">
-            <button className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition duration-200">
-              Start Registraion <AiOutlineArrowRight className="ml-2" />
-            </button>
+            <Link
+              onClick={handleScrollToTop}
+              to="/SCUML_Form"
+              className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition duration-200"
+            >
+              Start Registraion
+            </Link>
           </div>
         </main>
       </div>
