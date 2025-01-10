@@ -42,15 +42,7 @@ const SCUMLform = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
   const [disableBtn, setDisableBtn] = useState(true);
-  const checkAgreement = () => {
-    if (formData.termsAccepted === false) {
-      setDisableBtn(true);
-      return;
-    } else {
-      setDisableBtn(false);
-      return;
-    }
-  };
+
   const handleSubmit = async () => {
     setIsSubmitting(true); // Ensure this is always set regardless of the terms
     setIsSubmissionSuccessful(false); // Reset successful submission state
@@ -126,6 +118,28 @@ const SCUMLform = () => {
 
     // Save the PDF
     doc.save("SCUML_Form.pdf");
+  };
+
+  const isFormValid = () => {
+    // Check if all required fields are filled and documents are uploaded
+    return (
+      formData.surname &&
+      formData.firstName &&
+      formData.middleName &&
+      formData.phoneNumber &&
+      formData.whatsappNumber &&
+      formData.email &&
+      formData.nin &&
+      formData.bvn &&
+      formData.accountNumber &&
+      formData.accountName &&
+      formData.bankName &&
+      formData.idDocument &&
+      formData.certificateOfIncorporation &&
+      formData.statusReport &&
+      formData.tinCertificate &&
+      formData.termsAccepted
+    );
   };
 
   const paystackConfig = {
@@ -344,6 +358,14 @@ const SCUMLform = () => {
             />
           </div>
         </div>
+        <div class="p-4 mt-4 bg-yellow-100 text-yellow-800 border-l-4 border-yellow-500 rounded-lg shadow-md text-sm">
+          <p class="font-medium">
+            Note:{" "}
+            <span class="font-normal">
+              Form would be submitted automatically on successful payment.
+            </span>
+          </p>
+        </div>
 
         {/* Terms and Conditions */}
         <div className="flex items-center space-x-2">
@@ -354,20 +376,30 @@ const SCUMLform = () => {
             onChange={handleChange}
             required
           />
-          <label className="text-gray-600">
+          <label className="text-gray-600 my-4">
             I agree to the terms and conditions *
           </label>
         </div>
+        {/* Warning Message */}
+        {!formData.termsAccepted && (
+          <p className="text-red-600 mb-4">
+            You must agree to the terms and conditions to proceed.
+          </p>
+        )}
+
+        {/* Submit */}
 
         {/* Submit */}
         <PaystackButton
           text="Make Payment and Submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className={`bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 ${
+            !isFormValid() ? "cursor-not-allowed opacity-50" : ""
+          }`}
           {...paystackConfig}
           onSuccess={handlePaymentSuccess}
           onClose={handlePaymentError}
+          disabled={!isFormValid()}
         />
-
         {isSubmitting && (
           <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
             <div className="text-center">
