@@ -268,7 +268,7 @@ const SecretaryInfo = ({ formData, onChange, setDisableNext }) => {
 
             {/* Postal Code */}
             <div>
-              <label className="block mb-1">Postal Code *</label>
+              <label className="block mb-1">Postal Code(Optional)</label>
               <input
                 className="border p-2 rounded w-full"
                 value={postalCode}
