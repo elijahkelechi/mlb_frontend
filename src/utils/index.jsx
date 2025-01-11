@@ -1,5 +1,5 @@
 import axios from "axios";
-const productionUrl = "https://mlb-backend-4asz.onrender.com/api/v1";
+const productionUrl = "https://multilevelboost.ng/api/v1";
 
 export const customFetch = axios.create({
   baseURL: productionUrl,
