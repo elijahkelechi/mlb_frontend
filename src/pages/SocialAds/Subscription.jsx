@@ -55,7 +55,7 @@ const Subscription = () => {
           <strong>Note:</strong> Pricing does not include the ads budget. If you
           encounter any issues, please{" "}
           <a
-            href="https://wa.me/yourwhatsappnumber"
+            href="https://wa.me/09074602590"
             className="underline text-cyan-600 hover:text-cyan-800"
           >
             Contact Support

@@ -205,7 +205,7 @@ const BusinessNameRegistration = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mt-8"
+          className="mt-8 px-8 md:px-16"
         >
           <h2 className="text-2xl text-left font-bold text-gray-800">
             Why Register Your Business Name?
@@ -256,7 +256,7 @@ const BusinessNameRegistration = () => {
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mt-8 bg-gray-100 p-8 bg-opacity-90"
+          className="mt-8 bg-gray-100 p-6 md:p-16 bg-opacity-90"
         >
           <h2 className="text-2xl font-bold text-cyan-600">
             Our Services Include

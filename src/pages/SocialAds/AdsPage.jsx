@@ -1,5 +1,6 @@
 import React from "react";
-import adsBg from "../../assets/adsBg.webp";
+import heroImageDesktop from "../../assets/adsPage/laptopHero.jpeg";
+import heroImageMobile from "../../assets/adsPage/mobileHero.jpeg";
 import { motion } from "framer-motion"; // Import framer-motion
 import { Link } from "react-router";
 
@@ -26,21 +27,54 @@ const AdsPage = () => {
       //   backgroundImage: `url(${adsBg})`,
       // }}
     >
-      <div className="container mx-auto py-12 md:px-8 px-2">
+      <div className=" w-full">
         {/* Header Section */}
         <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="h-screen w-full relative flex flex-col"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-800 mb-4">
-            Digital Marketing – Social Media Advertising (Facebook & Instagram
-            Ads)
-          </h1>
-          <p className="text-lg md:text-xl text-cyan-500">
-            Unlock the Power of Social Media to Drive Business Growth
-          </p>
+          {/* Background Image */}
+          <div className="h-full w-full flex-shrink-0">
+            <img
+              className="hidden md:flex h-full w-full object-cover"
+              src={heroImageDesktop}
+              alt="Digital Marketing Desktop"
+            />
+            <img
+              className="flex md:hidden h-full w-full object-cover"
+              src={heroImageMobile}
+              alt="Digital Marketing Mobile"
+            />
+          </div>
+
+          {/* Overlay Content */}
+          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+            <motion.div
+              className="h-screen flex items-center justify-center font-bold text-white px-6 md:px-12"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <div className="text-center">
+                <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-50 mb-4">
+                  Digital Marketing – Social Media Advertising (Facebook &
+                  Instagram Ads)
+                </h1>
+                <p className="text-lg md:text-xl text-cyan-300">
+                  Unlock the Power of Social Media to Drive Business Growth
+                </p>
+                <Link
+                  onClick={handleScrollToTop}
+                  to="/ads_subscription"
+                  className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
+                >
+                  Book Ads Campaign
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Introduction Section */}
@@ -77,226 +111,237 @@ const AdsPage = () => {
           </Link>
         </motion.div>
 
-        {/* Conversion Section */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="hidden lg:grid place-items-center gap-4 md:gap-8 absolute top-[71rem] md:top-[180rem] lg:top-[65rem] z-40 w-full md:w-[20rem] lg:w-[25rem] md:right-0"
-        >
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative">🔍</span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Audience Research.
-            </span>
-          </div>
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative">🎯</span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Targeted Campaigns
-            </span>
-          </div>
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative">📊 </span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Detailed Analytics
-            </span>
-          </div>
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative">💡 </span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Creative Excellence
-            </span>
-          </div>
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative">🧲 </span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Magnetic Copy
-            </span>
-          </div>
-          <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-            <span className="relative text-5xl text-cyan-600 font-extrabold">
-              <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
-              <span className="z-10 relative"> 📈 ​</span>
-            </span>
-            <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
-              Proven Results
-            </span>
-          </div>
-        </motion.div>
-
-        {/* Services Section */}
         {/* Services Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="md:py-16 bg-gradient-to-r from-cyan-700 via-cyan-500 to-cyan-400 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
+          className="md:py-16 lg:w-full  bg-gradient-to-r lg:grid lg:grid-cols-12 from-cyan-700 via-cyan-500 to-cyan-400 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
         >
-          <h2 className="text-3xl font-heading font-bold mb-8 text-center text-white">
-            Our Scope of Services
-          </h2>
-          <ul className="space-y-8  lg:mr-96">
-            <li>
-              <h3 className="font-bold text-xl mb-2">
-                Consultation and Strategy Development
-              </h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">
-                    Initial Consultation:
-                  </strong>{" "}
-                  We start with a thorough analysis of your business goals,
-                  target audience, and current marketing efforts.
-                </li>
-                <li>
-                  <strong className="text-blue-200">Custom Strategy:</strong>{" "}
-                  Based on our analysis, we develop a tailored advertising
-                  strategy designed to meet your specific objectives, whether
-                  it's increasing brand awareness, driving engagement,
-                  generating leads, or driving sales.
-                </li>
-              </ul>
-            </li>
+          <div className="col-span-8 flex-col w-full pr-8">
+            {" "}
+            <h2 className="text-3xl font-heading font-bold mb-8 text-center text-white">
+              Our Scope of Services
+            </h2>
+            <ul className="">
+              <li>
+                <h3 className="font-bold text-xl mb-2">
+                  Consultation and Strategy Development
+                </h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">
+                      Initial Consultation:
+                    </strong>{" "}
+                    We start with a thorough analysis of your business goals,
+                    target audience, and current marketing efforts.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">Custom Strategy:</strong>{" "}
+                    Based on our analysis, we develop a tailored advertising
+                    strategy designed to meet your specific objectives, whether
+                    it's increasing brand awareness, driving engagement,
+                    generating leads, or driving sales.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">Ad Creation</h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">
-                    Creative Development:
-                  </strong>{" "}
-                  Our team creates engaging ad copy and visually appealing
-                  graphics or videos that resonate with your target audience.
-                </li>
-                <li>
-                  <strong className="text-blue-200">Ad Variations:</strong> We
-                  design multiple ad variations for A/B testing to determine
-                  what works best for your audience.
-                </li>
-              </ul>
-            </li>
+              <li>
+                <h3 className="font-bold text-xl mb-2">Ad Creation</h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">
+                      Creative Development:
+                    </strong>{" "}
+                    Our team creates engaging ad copy and visually appealing
+                    graphics or videos that resonate with your target audience.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">Ad Variations:</strong> We
+                    design multiple ad variations for A/B testing to determine
+                    what works best for your audience.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">Targeting and Setup</h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">Advanced Targeting:</strong>{" "}
-                  We use Facebook’s advanced targeting options to reach your
-                  ideal customers, including demographic, geographic,
-                  interest-based, and behavioral targeting.
-                </li>
-                <li>
-                  <strong className="text-blue-200">Custom Audiences:</strong>{" "}
-                  We create and manage custom audiences based on your existing
-                  customer data and website traffic.
-                </li>
-              </ul>
-            </li>
+              <li>
+                <h3 className="font-bold text-xl mb-2">Targeting and Setup</h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">
+                      Advanced Targeting:
+                    </strong>{" "}
+                    We use Facebook’s advanced targeting options to reach your
+                    ideal customers, including demographic, geographic,
+                    interest-based, and behavioral targeting.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">Custom Audiences:</strong>{" "}
+                    We create and manage custom audiences based on your existing
+                    customer data and website traffic.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">Campaign Management</h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">Ad Placement:</strong> We
-                  handle the setup and placement of your ads across Facebook’s
-                  various platforms, including Facebook, Instagram, Audience
-                  Network, and Messenger.
-                </li>
-                <li>
-                  <strong className="text-blue-200">Budget Management:</strong>{" "}
-                  We manage your ad spend to ensure maximum ROI, adjusting bids
-                  and budgets as necessary to optimize performance.
-                </li>
-              </ul>
-            </li>
+              <li>
+                <h3 className="font-bold text-xl mb-2">Campaign Management</h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">Ad Placement:</strong> We
+                    handle the setup and placement of your ads across Facebook’s
+                    various platforms, including Facebook, Instagram, Audience
+                    Network, and Messenger.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">
+                      Budget Management:
+                    </strong>{" "}
+                    We manage your ad spend to ensure maximum ROI, adjusting
+                    bids and budgets as necessary to optimize performance.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">
-                Monitoring and Optimization
-              </h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">
-                    Performance Tracking:
-                  </strong>{" "}
-                  We continuously monitor your campaigns, using advanced
-                  analytics to track key performance indicators (KPIs) like
-                  click-through rates (CTR), conversion rates, and return on ad
-                  spend (ROAS).
-                </li>
-                <li>
-                  <strong className="text-blue-200">
-                    Ongoing Optimization:
-                  </strong>{" "}
-                  Based on performance data, we make regular adjustments to
-                  improve ad effectiveness, including tweaking ad creatives,
-                  targeting, and bidding strategies.
-                </li>
-              </ul>
-            </li>
+              <li>
+                <h3 className="font-bold text-xl mb-2">
+                  Monitoring and Optimization
+                </h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">
+                      Performance Tracking:
+                    </strong>{" "}
+                    We continuously monitor your campaigns, using advanced
+                    analytics to track key performance indicators (KPIs) like
+                    click-through rates (CTR), conversion rates, and return on
+                    ad spend (ROAS).
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">
+                      Ongoing Optimization:
+                    </strong>{" "}
+                    Based on performance data, we make regular adjustments to
+                    improve ad effectiveness, including tweaking ad creatives,
+                    targeting, and bidding strategies.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">Reporting and Insights</h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">Regular Reports:</strong> We
-                  provide detailed reports on campaign performance, highlighting
-                  key metrics and insights.
-                </li>
-                <li>
-                  <strong className="text-blue-200">
-                    Actionable Insights:
-                  </strong>{" "}
-                  We offer recommendations based on data analysis to further
-                  enhance your advertising strategy and achieve better results.
-                </li>
-              </ul>
-            </li>
+              <li>
+                <h3 className="font-bold text-xl mb-2">
+                  Reporting and Insights
+                </h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">Regular Reports:</strong>{" "}
+                    We provide detailed reports on campaign performance,
+                    highlighting key metrics and insights.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">
+                      Actionable Insights:
+                    </strong>{" "}
+                    We offer recommendations based on data analysis to further
+                    enhance your advertising strategy and achieve better
+                    results.
+                  </li>
+                </ul>
+              </li>
 
-            <li>
-              <h3 className="font-bold text-xl mb-2">
-                Support and Consultation
-              </h3>
-              <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
-                <li>
-                  <strong className="text-blue-200">Ongoing Support:</strong>{" "}
-                  Our team is available to answer any questions and provide
-                  support throughout the campaign.
-                </li>
-                <li>
-                  <strong className="text-blue-200">
-                    Consultation Sessions:
-                  </strong>{" "}
-                  We offer regular consultation sessions to review progress,
-                  discuss results, and plan future campaigns.
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <div className="text-center">
-            <Link
-              onClick={handleScrollToTop}
-              to="/ads_subscription"
-              className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
+              <li>
+                <h3 className="font-bold text-xl mb-2">
+                  Support and Consultation
+                </h3>
+                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                  <li>
+                    <strong className="text-blue-200">Ongoing Support:</strong>{" "}
+                    Our team is available to answer any questions and provide
+                    support throughout the campaign.
+                  </li>
+                  <li>
+                    <strong className="text-blue-200">
+                      Consultation Sessions:
+                    </strong>{" "}
+                    We offer regular consultation sessions to review progress,
+                    discuss results, and plan future campaigns.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div className="text-center">
+              <Link
+                onClick={handleScrollToTop}
+                to="/ads_subscription"
+                className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
+              >
+                Book Ads Campaign
+              </Link>
+            </div>
+          </div>
+          <div className="col-span-4 flex-col w-full">
+            {" "}
+            {/* Conversion Section */}
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="hidden relative lg:grid place-items-center gap-4 md:gap-8 lg:gap-24  z-40 w-full md:w-[20rem] lg:w-[25rem] lg:mt-24 lg:right-0 md:right-0"
             >
-              Book Ads Campaign
-            </Link>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative">🔍</span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Audience Research.
+                </span>
+              </div>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative">🎯</span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Targeted Campaigns
+                </span>
+              </div>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative">📊 </span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Detailed Analytics
+                </span>
+              </div>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative">💡 </span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Creative Excellence
+                </span>
+              </div>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative">🧲 </span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Magnetic Copy
+                </span>
+              </div>
+              <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
+                <span className="relative text-5xl text-cyan-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                  <span className="z-10 relative"> 📈 ​</span>
+                </span>
+                <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
+                  Proven Results
+                </span>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 
