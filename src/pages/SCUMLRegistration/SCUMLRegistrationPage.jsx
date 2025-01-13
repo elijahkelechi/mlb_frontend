@@ -177,7 +177,7 @@ const SCUMLRegistrationPage = () => {
                 {!showAllItems && (
                   <button
                     onClick={toggleShowAll}
-                    className="mt-3 text-cyan-600 font-bold underline"
+                    className="mt-3 text-green-600 font-bold underline"
                   >
                     More
                   </button>

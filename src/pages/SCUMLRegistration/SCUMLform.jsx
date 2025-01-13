@@ -30,10 +30,32 @@ const SCUMLform = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
-    if (type === "checkbox") {
+
+    // If file input, check file type validation
+    if (type === "file") {
+      // Get file extension for validation
+      const file = files[0];
+      const fileExtension = file?.name.split(".").pop().toLowerCase();
+
+      // Validate file types based on the document
+      if (name === "idDocument" || name === "tinCertificate") {
+        // Allow PDF and Image files for Director Valid ID and TIN Certificate
+        if (!["pdf", "jpg", "jpeg", "png", "gif"].includes(fileExtension)) {
+          toast.error("Invalid file type. Please upload a valid image or PDF.");
+          return; // Exit function if invalid file
+        }
+      } else {
+        // Only allow PDF files for other documents
+        if (fileExtension !== "pdf") {
+          toast.error("Invalid file type. Please upload a PDF file.");
+          return; // Exit function if invalid file
+        }
+      }
+
+      // If validation passes, update the form data
+      setFormData({ ...formData, [name]: file });
+    } else if (type === "checkbox") {
       setFormData({ ...formData, [name]: checked });
-    } else if (type === "file") {
-      setFormData({ ...formData, [name]: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -169,8 +191,11 @@ const SCUMLform = () => {
         <h1 className="text-2xl font-semibold mb-6 text-center">
           SCUML REGISTRATION FORM
         </h1>
+        <p className="text-gray-600 my-4 text-center">
+          Registration cost is ₦47,500.only
+        </p>
         <p className="text-gray-600 mb-4 text-center">
-          All fields marked * are required. Registration cost is ₦47,500.
+          All fields marked * are required.
         </p>
 
         {/* Organization Contact Person */}
@@ -179,125 +204,189 @@ const SCUMLform = () => {
           Proprietor or Director or Trustee details
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="text"
-            name="surname"
-            placeholder="Surname *"
-            value={formData.surname}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
+          <div className="relative">
+            <label htmlFor="surname" className="block text-gray-500 mb-1">
+              Surname *
+            </label>
+            <input
+              type="text"
+              name="surname"
+              placeholder="Enter your surname"
+              value={formData.surname}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
 
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First Name *"
-            value={formData.firstName}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="text"
-            name="middleName"
-            placeholder="Middle Name *"
-            value={formData.middleName}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="tel"
-            name="phoneNumber"
-            placeholder="Phone Number *"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="tel"
-            name="whatsappNumber"
-            placeholder="WhatsApp Number *"
-            value={formData.whatsappNumber}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email *"
-            value={formData.email}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="text"
-            name="nin"
-            placeholder="NIN *"
-            value={formData.nin}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="text"
-            name="bvn"
-            placeholder="BVN *"
-            value={formData.bvn}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
+          <div className="relative">
+            <label htmlFor="firstName" className="block text-gray-500 mb-1">
+              First Name *
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Enter your first name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="middleName" className="block text-gray-500 mb-1">
+              Middle Name *
+            </label>
+            <input
+              type="text"
+              name="middleName"
+              placeholder="Enter your middle name"
+              value={formData.middleName}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="phoneNumber" className="block text-gray-500 mb-1">
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              placeholder="Enter your phone number"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label
+              htmlFor="whatsappNumber"
+              className="block text-gray-500 mb-1"
+            >
+              WhatsApp Number *
+            </label>
+            <input
+              type="tel"
+              name="whatsappNumber"
+              placeholder="Enter your WhatsApp number"
+              value={formData.whatsappNumber}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="email" className="block text-gray-500 mb-1">
+              Email *
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              value={formData.email}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="nin" className="block text-gray-500 mb-1">
+              NIN *
+            </label>
+            <input
+              type="text"
+              name="nin"
+              placeholder="Enter your NIN"
+              value={formData.nin}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="bvn" className="block text-gray-500 mb-1">
+              BVN *
+            </label>
+            <input
+              type="text"
+              name="bvn"
+              placeholder="Enter your BVN"
+              value={formData.bvn}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
         </div>
-
         {/* Bank Account Details */}
-        <h2 className="text-xl font-medium mb-2">Bank Account Details</h2>
+        <h2 className="text-xl font-medium mb-2 my-6">Bank Account Details</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="text"
-            name="accountNumber"
-            placeholder="Account Number *"
-            value={formData.accountNumber}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="text"
-            name="accountName"
-            placeholder="Account Name *"
-            value={formData.accountName}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
-          <input
-            type="text"
-            name="bankName"
-            placeholder="Bank Name *"
-            value={formData.bankName}
-            onChange={handleChange}
-            className="p-2 border rounded"
-            required
-          />
+          <div className="relative">
+            <label htmlFor="accountNumber" className="block text-gray-500 mb-1">
+              Account Number *
+            </label>
+            <input
+              type="text"
+              name="accountNumber"
+              placeholder="Enter your account number"
+              value={formData.accountNumber}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="accountName" className="block text-gray-500 mb-1">
+              Account Name *
+            </label>
+            <input
+              type="text"
+              name="accountName"
+              placeholder="Enter your account name"
+              value={formData.accountName}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
+
+          <div className="relative">
+            <label htmlFor="bankName" className="block text-gray-500 mb-1">
+              Bank Name *
+            </label>
+            <input
+              type="text"
+              name="bankName"
+              placeholder="Enter your bank name"
+              value={formData.bankName}
+              onChange={handleChange}
+              className="p-2 border rounded w-full"
+              required
+            />
+          </div>
         </div>
 
         {/* Upload Documents */}
         <h2 className="text-xl font-medium mb-2 my-8">Upload Documents</h2>
         <div className="space-y-2">
           <div>
-            <label className="block text-gray-600 mb-1">
-              Director Valid ID (NIN) *
-            </label>
+            <label className="block text-gray-600 mb-1">Valid ID *</label>
             <input
               type="file"
               name="idDocument"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf,image/*" // Allow PDF and images
               required
             />
           </div>
@@ -310,6 +399,7 @@ const SCUMLform = () => {
               name="certificateOfIncorporation"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf" // Allow only PDF
               required
             />
           </div>
@@ -320,29 +410,33 @@ const SCUMLform = () => {
               name="statusReport"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf" // Allow only PDF
               required
             />
           </div>
           <div>
             <label className="block text-gray-600 mb-1">
-              Memorandum and Articles of Association (Optional)
+              Memorandum and Articles of Association (for LTD Registrations
+              only)
             </label>
             <input
               type="file"
               name="memorandum"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf" // Allow only PDF
             />
           </div>
           <div>
             <label className="block text-gray-600 mb-1">
-              Constitution (Optional)
+              Constitution (for NGO/Association Registration only)
             </label>
             <input
               type="file"
               name="constitution"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf" // Allow only PDF
             />
           </div>
           <div>
@@ -354,6 +448,7 @@ const SCUMLform = () => {
               name="tinCertificate"
               onChange={handleChange}
               className="p-2 border rounded w-full"
+              accept="application/pdf,image/*" // Allow PDF and images
               required
             />
           </div>
@@ -391,7 +486,7 @@ const SCUMLform = () => {
 
         {/* Submit */}
         <PaystackButton
-          text="Make Payment and Submit"
+          text="Proceed to Payment"
           className={`bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 ${
             !isFormValid() ? "cursor-not-allowed opacity-50" : ""
           }`}
