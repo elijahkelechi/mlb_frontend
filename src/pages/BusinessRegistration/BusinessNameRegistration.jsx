@@ -154,13 +154,13 @@ const BusinessNameRegistration = () => {
             </Link>
           </motion.div>
         </section>
-        <section className=" text-gray-800 py-16 px-4 md:px-16 rounded-lg">
+        <section className=" text-gray-800 py-16 px-6 md:px-16 rounded-lg">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12 mx-6 md:mx-12"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold mb-4 text-cyan-600">
               What is a Business Name?
