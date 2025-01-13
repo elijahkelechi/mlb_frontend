@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <div className="navbar px-8 bg-gray-50 fixed z-50 py-4 md:py-4 w-full shadow-md">
+      <div className="navbar px-8 bg-gray-50 fixed z-50 py-4 md:py-6 w-full shadow-md">
         {/* Navbar Start */}
         <Link
           onClick={handleScrollToTop}

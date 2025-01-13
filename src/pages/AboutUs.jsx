@@ -8,7 +8,8 @@ import {
   FaLeaf,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import heroImageDesktop from "../assets/aboutUs/bgLaptop.jpeg";
+import heroImageMobile from "../assets/aboutUs/bgMobile.jpeg";
 const AboutUs = () => {
   const missionVisionValues = [
     {
@@ -50,47 +51,70 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 px-6 md:px-12">
-      {/* Hero Section */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          About Us
-        </h1>
-        <p className="text-base text-gray-800 md:text-lg">
-          At{" "}
-          <span className="text-cyan-500 font-semibold">MULTI-LEVEL BOOST</span>
-          , we are a passionate team of SEOs, advertising specialists,
-          designers, developers, strategists, and corporate service experts
-          committed to transforming businesses through innovative solutions.
-        </p>
-      </motion.div>
+    <div className="bg-gray-50 ">
+      <div className="h-screen relative flex flex-col">
+        {/* Background Image */}
+        <div className="absolute inset-0 h-full w-full">
+          <img
+            className="hidden md:flex h-full w-full object-cover"
+            src={heroImageDesktop} // Replace with your hero image for desktop
+            alt="About Us Hero Image"
+          />
+          <img
+            className="flex md:hidden h-full w-full object-cover"
+            src={heroImageMobile} // Replace with your hero image for mobile
+            alt="About Us Hero Image Mobile"
+          />
+        </div>
 
-      {/* Story Section */}
-      <motion.div
-        className="mt-12"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-          Our Journey
-        </h2>
-        <p className="text-gray-800 leading-7">
-          Based in Uyo, Akwa Ibom State, Nigeria, we started our journey in late
-          2021 with just two team members. Our mission is to help businesses
-          grow through premium digital marketing and seamless company
-          registration services.
-        </p>
-      </motion.div>
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-start justify-start">
+          <div className="container text-left px-4 md:px-12">
+            {/* Header Text */}
+            <motion.div
+              className="text-2xl mt-32 md:mt-40 md:col-span-6 font-bold text-white sm:text-3xl md:text-4xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-100 mb-6">
+                About Us
+              </h1>
+              <p className="text-base text-gray-100 md:text-lg">
+                At{" "}
+                <span className="text-cyan-500 font-semibold">
+                  MULTI-LEVEL BOOST
+                </span>
+                , we are a passionate team of SEOs, advertising specialists,
+                designers, developers, strategists, and corporate service
+                experts committed to transforming businesses through innovative
+                solutions.
+              </p>
+            </motion.div>
+            {/* Story Section */}
+            <motion.div
+              className="mt-12 "
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
+                Our Journey
+              </h2>
+              <p className="text-white leading-7">
+                Based in Uyo, Akwa Ibom State, Nigeria, we started our journey
+                in late 2021 with just two team members. Our mission is to help
+                businesses grow through premium digital marketing and seamless
+                company registration services.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
 
       {/* Mission and Vision */}
       <motion.div
-        className="mt-16"
+        className="mt-16 px-4 md:px-12"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -117,7 +141,7 @@ const AboutUs = () => {
 
       {/* Core Values */}
       <motion.div
-        className="mt-16"
+        className="mt-16 px-4 md:px-12"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -146,15 +170,15 @@ const AboutUs = () => {
 
       {/* Closing Section */}
       <motion.div
-        className="mt-16 text-center"
+        className="mt-16 text-center px-4 md:px-12"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 ">
           Let’s Grow Together!
         </h2>
-        <p className="text-gray-900 leading-7">
+        <p className="text-gray-900 leading-7 pb-20">
           Whether you’re looking to scale your business, enhance your online
           presence, or handle corporate services with ease, we have the
           expertise and drive to make it happen. If we’ve achieved success for

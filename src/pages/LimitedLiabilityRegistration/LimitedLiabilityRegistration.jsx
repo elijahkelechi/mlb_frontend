@@ -4,7 +4,8 @@ import { Link, useNavigate } from "react-router";
 import bgImage from "../../assets/formImage.webp";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
-
+import heroImageDesktop from "../../assets/SCUMLdesktop.jpeg";
+import heroImageMobile from "../../assets/SCUMLmobile.jpeg";
 const LimitedLiabilityRegistration = () => {
   const user = useSelector((state) => state.userState.user);
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const LimitedLiabilityRegistration = () => {
   };
   return (
     <div
-      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
+      className="relative font-sans w-full place-content-center justify-center bg-gray-50 min-h-screen bg-cover bg-center bg-no-repeat"
       // style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Background Image with fixed scroll */}
@@ -30,27 +31,50 @@ const LimitedLiabilityRegistration = () => {
       ></div>
 
       {/* Hero Section */}
-      <header className="py-8 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-2xl md:text-4xl font-heading md:leading-tight font-bold">
-            Secure Your Business’s Future with Hassle-Free Limited Liability
-            Company Registration
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-100">
-            A Limited Liability Company (LLC) offers legal protection,
-            operational flexibility, and business credibility.
-          </p>
-          <div className="mt-6">
-            <Link
-              onClick={handleScrollToTop}
-              to="/LLC_registration_form"
-              className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
-            >
-              Start Your Registration
-            </Link>
-          </div>
+      <header className="h-screen relative flex flex-col">
+        {/* Background Image */}
+        <div className="absolute inset-0 h-full w-full">
+          <img
+            className="hidden md:flex h-full w-full object-cover"
+            src={heroImageDesktop}
+            alt="Limited Liability Company Registration"
+          />
+          <img
+            className="flex md:hidden h-full w-full object-cover"
+            src={heroImageMobile}
+            alt="LLC Registration Mobile"
+          />
+        </div>
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+          <motion.div
+            className="container  px-6 md:px-12 text-left"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <h1 className="text-2xl md:text-4xl font-heading md:leading-tight font-bold text-white">
+              Secure Your Business’s Future with Hassle-Free Limited Liability
+              Company Registration
+            </h1>
+            <p className="mt-4 text-lg md:text-xl text-gray-100">
+              A Limited Liability Company (LLC) offers legal protection,
+              operational flexibility, and business credibility.
+            </p>
+            <div className="mt-6">
+              <Link
+                onClick={handleScrollToTop}
+                to="/LLC_registration_form"
+                className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
+              >
+                Start Your Registration
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </header>
+
       <section className=" text-gray-800 py-16 px-4 md:px-8 rounded-lg">
         {/* Section Header */}
         <motion.div

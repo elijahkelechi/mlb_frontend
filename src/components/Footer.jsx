@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-200 py-8 px-4 md:px-8">
+    <footer className="bg-gray-200 py-8 px-4 md:px-8 ">
       <div className="container mx-auto">
         {/* Top Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

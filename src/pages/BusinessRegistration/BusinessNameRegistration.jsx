@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/formImage.webp";
+import heroImageDesktop from "../../assets/SCUMLdesktop.jpeg";
+import heroImageMobile from "../../assets/SCUMLmobile.jpeg";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -24,30 +26,62 @@ const BusinessNameRegistration = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="relative min-h-screen bg-no-repeat bg-cover bg-center"
+      className="relative min-h-screen bg-no-repeat bg-cover bg-center w-full"
       // style={{
       //   backgroundImage: `url(${bgImage})`,
       // }}
     >
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen p-6 md:p-12 bg-transparent">
+      <div className="relative z-10 min-h-screen  bg-transparent">
         {/* Hero Section */}
-        <div className="relative bg-gradient-to-r from-cyan-500 to-cyan-700   text-white p-6 md:p-12">
-          <h1 className="text-2xl md:text-4xl font-bold">
-            Register Your Business Name
-          </h1>
-          <p className="mt-2 text-lg mb-8">
-            Hassle-Free Registration with MULTI-LEVEL BOOST.
-          </p>
+        <motion.div
+          className="h-screen w-full relative flex flex-col"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          {/* Background Image */}
+          <div className="h-full w-full flex-shrink-0">
+            <img
+              className="hidden md:flex h-full w-full object-cover"
+              src={heroImageDesktop}
+              alt="Business Registration"
+            />
+            <img
+              className="flex md:hidden h-full w-full object-cover"
+              src={heroImageMobile}
+              alt="Business Registration Mobile"
+            />
+          </div>
 
-          <Link
-            onClick={handleScrollToTop}
-            to="/business_name_registration_form"
-            className="bg-blue-600 text-gray-50 py-2 px-6 rounded shadow hover:bg-gray-800"
-          >
-            Register Now
-          </Link>
-        </div>
+          {/* Overlay Content */}
+          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+            <motion.div
+              className="h-screen flex items-center justify-start font-bold text-white px-6 md:px-12"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <div className="">
+                <h1 className="text-left text-2xl md:text-4xl font-bold">
+                  Register Your Business Name
+                </h1>
+                <p className="mt-4 text-left text-lg mb-8">
+                  Hassle-Free Registration with MULTI-LEVEL BOOST.
+                </p>
+
+                <Link
+                  onClick={handleScrollToTop}
+                  to="/business_name_registration_form"
+                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                >
+                  Register Now
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         <section className=" text-gray-800 py-16 px-4 md:px-8 rounded-lg">
           {/* Section Header */}
           <motion.div
