@@ -37,22 +37,24 @@ const TrusteeRegistrationPage = () => {
         transition={{ duration: 0.8 }}
         className="bg-black bg-opacity-60 py-10"
       >
-        <div className="container mx-auto text-center text-white">
-          <h1 className="text-3xl md:text-5xl font-bold mb-2">
-            Incorporated Trustee Registration (NGO | Association)
-          </h1>
-          <p className="text-lg md:text-xl font-medium">
-            Establish Your Organization with Confidence
-          </p>
-        </div>
-        <div className="text-center mt-6">
-          <Link
-            to="/trustee_form"
-            onClick={handleScrollToTop}
-            className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-200"
-          >
-            Start Registration
-          </Link>
+        <div className="h-64 mt-24 md:mt-36">
+          <div className="container mx-auto text-center text-white">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2">
+              Incorporated Trustee Registration (NGO | Association)
+            </h1>
+            <p className="text-lg md:text-xl font-medium">
+              Establish Your Organization with Confidence
+            </p>
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              to="/trustee_form"
+              onClick={handleScrollToTop}
+              className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-200"
+            >
+              Start Registration
+            </Link>
+          </div>
         </div>
       </motion.header>
 

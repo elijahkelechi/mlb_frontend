@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { customFetch } from "../utils";
 
 const Orders = () => {
   const [formData, setFormData] = useState(null);
@@ -10,8 +11,8 @@ const Orders = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(
-          "https://mlb-backend-4asz.onrender.com/api/v1/BusinessNameform/currentUser",
+        const response = await customFetch.get(
+          "/BusinessNameform/currentUser",
           { withCredentials: true }
         );
         setFormData(response.data.forms); // Save the fetched data
