@@ -167,7 +167,7 @@ const SCUMLform = () => {
   const paystackConfig = {
     email: formData.email, // Default to user email if proprietor email is unavailable
     amount: 47500 * 100, // Paystack requires amount in kobo
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Replace with your actual Paystack public key
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
   };
 
   const handlePaymentSuccess = (response) => {
@@ -184,10 +184,10 @@ const SCUMLform = () => {
   };
   return (
     <div
-      className="pt-8 bg-cover bg-center min-h-screen"
+      className="pt-8 bg-cover bg-center min-h-screen pb-8"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="bg-white bg-opacity-90 p-8 mb-2 rounded shadow-md max-w-4xl mx-auto">
+      <div className="bg-white bg-opacity-90 p-8  rounded shadow-md max-w-4xl mx-auto">
         <h1 className="text-2xl font-semibold mb-6 text-center">
           SCUML REGISTRATION FORM
         </h1>
