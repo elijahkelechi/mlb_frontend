@@ -116,14 +116,14 @@ const AdsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="md:py-16 lg:w-full  bg-gradient-to-r lg:grid lg:grid-cols-12 from-cyan-700 via-cyan-500 to-cyan-400 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
+          className="md:py-16 lg:w-full bg-cyan-600 md:bg-gradient-to-r lg:grid lg:grid-cols-12 from-cyan-700 via-cyan-500 to-cyan-400 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
         >
-          <div className="col-span-8 flex-col w-full pr-8">
+          <div className="col-span-8 flex-col w-full pr-8 ">
             {" "}
             <h2 className="text-3xl font-heading font-bold mb-8 text-center text-white">
               Our Scope of Services
             </h2>
-            <ul className="">
+            <ul className="space-y-8">
               <li>
                 <h3 className="font-bold text-xl mb-2">
                   Consultation and Strategy Development
