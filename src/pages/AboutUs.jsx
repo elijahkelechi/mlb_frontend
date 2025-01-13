@@ -72,40 +72,44 @@ const AboutUs = () => {
           <div className="container text-left px-4 md:px-12">
             {/* Header Text */}
             <motion.div
-              className="text-2xl mt-32 md:mt-40 md:col-span-6 font-bold text-white sm:text-3xl md:text-4xl"
+              className="text-center justify-center items-center mt-36 md:mt-44 md:col-span-6 text-white"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-100 mb-6">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
                 About Us
               </h1>
-              <p className="text-base text-gray-100 md:text-lg">
-                At{" "}
-                <span className="text-cyan-500 font-semibold">
-                  MULTI-LEVEL BOOST
+              <p className="text-lg md:text-xl font-medium text-gray-100 leading-relaxed">
+                We are a{" "}
+                <span className="font-semibold text-white">
+                  passionate team
+                </span>{" "}
+                of
+                <span className="font-semibold text-cyan-400"> SEOs</span>,
+                <span className="font-semibold text-cyan-400">
+                  {" "}
+                  advertising specialists
                 </span>
-                , we are a passionate team of SEOs, advertising specialists,
-                designers, developers, strategists, and corporate service
-                experts committed to transforming businesses through innovative
-                solutions.
-              </p>
-            </motion.div>
-            {/* Story Section */}
-            <motion.div
-              className="mt-12 "
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
-                Our Journey
-              </h2>
-              <p className="text-white leading-7">
-                Based in Uyo, Akwa Ibom State, Nigeria, we started our journey
-                in late 2021 with just two team members. Our mission is to help
-                businesses grow through premium digital marketing and seamless
-                company registration services.
+                ,<span className="font-semibold text-cyan-400"> designers</span>
+                ,
+                <span className="font-semibold text-cyan-400"> developers</span>
+                ,
+                <span className="font-semibold text-cyan-400">
+                  {" "}
+                  strategists
+                </span>
+                , and
+                <span className="font-semibold text-cyan-400">
+                  {" "}
+                  corporate service experts
+                </span>{" "}
+                committed to transforming businesses through
+                <span className="font-semibold text-white">
+                  {" "}
+                  innovative solutions
+                </span>
+                .
               </p>
             </motion.div>
           </div>
@@ -119,6 +123,23 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
+        {/* Story Section */}
+        <motion.div
+          className="mt-12 mb-8"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-4">
+            Our Journey
+          </h2>
+          <p className="text-gray-800 leading-7">
+            Based in Uyo, Akwa Ibom State, Nigeria, we started our journey in
+            late 2021 with just two team members. Our mission is to help
+            businesses grow through premium digital marketing and seamless
+            company registration services.
+          </p>
+        </motion.div>
         <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-4">
           Mission and Vision
         </h2>
