@@ -160,7 +160,7 @@ const BusinessNameRegistration = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-center mb-12 mx-6 md:mx-12"
           >
             <h2 className="text-4xl font-bold mb-4 text-cyan-600">
               What is a Business Name?
