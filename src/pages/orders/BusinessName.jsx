@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { customFetch } from "../utils";
+import { customFetch } from "../../utils";
 
-const Orders = () => {
+const BusinessName = () => {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -15,6 +15,7 @@ const Orders = () => {
           "/BusinessNameform/currentUser",
           { withCredentials: true }
         );
+        2;
         setFormData(response.data.forms); // Save the fetched data
       } catch (err) {
         setError(err.message); // Save the error message if the fetch fails
@@ -22,7 +23,6 @@ const Orders = () => {
         setLoading(false); // Stop loading after fetching data
       }
     };
-
     fetchUserData();
   }, []);
 
@@ -188,4 +188,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default BusinessName;

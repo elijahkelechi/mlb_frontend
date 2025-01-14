@@ -1,23 +1,45 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom"; // Updated to 'react-router-dom' instead of 'react-router'
+import { Link, NavLink, useNavigate } from "react-router-dom"; // Updated to 'react-router-dom' instead of 'react-router'
 import logo from "../assets/logo.jpg";
 import { UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ListBulletIcon } from "@heroicons/react/24/solid";
 import NavPersonLinks from "./NavPersonLiinks";
-
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+const links = [
+  { id: 1, url: "adminDashboard", text: "Upload Products" },
+  { id: 2, url: "usersOrders", text: "UsersOrders" },
+  { id: 3, url: "/", text: "Home" },
+  { id: 4, url: "services", text: "Services" },
+  { id: 5, url: "aboutUs", text: "About" },
+  { id: 6, url: "checkout", text: "Checkout" },
+  { id: 7, url: "orders", text: "orders" },
+  { id: 8, url: "about", text: "aboutUs" },
+];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false); // Track hover state
+  const [isHovered, setIsHove red] = useState(false); // Track hover state
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-  };
+  };h
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     handleScrollToTop();
   };
 
+  const user = useSelector((state) => state.userState.user);
+  const navigate = useNavigate();
+  const handleOrderCheck = () => {
+    if (!user) {
+      navigate("/login");
+      toast.warning("pls login to check your orders");
+      return;
+    } else {
+      navigate("/ongoing_orders");
+    }
+  };
   return (
     <>
       {/* Navbar */}
@@ -106,8 +128,7 @@ const Navbar = () => {
           </span>
 
           <Link
-            to="/ongoing_orders"
-            onClick={handleScrollToTop}
+            onClick={handleOrderCheck}
             className="btn ml-4 w-48 bg-cyan-500 text-gray-50 hover:bg-gray-800 hidden lg:flex"
           >
             ongoing Orders...
@@ -186,9 +207,8 @@ const Navbar = () => {
             CONTACT
           </NavLink>
           <NavLink
-            to="/ongoing_orders"
             className="btn text-cyan-500 border-b-2 border-cyan-500"
-            onClick={toggleMenu}
+            onClick={handleOrderCheck}
           >
             Ongoing orders...
           </NavLink>

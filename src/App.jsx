@@ -26,6 +26,14 @@ import {
   Orders,
   SCUMLRegistration,
   SCUMLform,
+  BusinessNameOrders,
+  LLCorders,
+  TrusteeOrders,
+  SCUMLorders,
+  TINorders,
+  AdsOrders,
+  WebDesignOrders,
+  GraphicDesignOrders,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";

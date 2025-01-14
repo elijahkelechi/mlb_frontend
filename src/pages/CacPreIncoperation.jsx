@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import bgImage from "../assets/formImage.webp";
 import { FaWhatsapp } from "react-icons/fa";
-
-const handleScrollToTop = () => {
-  window.scrollTo(0, 0);
-};
+import heroImageDesktop from "../assets/preIncoperation/heroDesktop.jpeg";
+import heroImageMobile from "../assets/preIncoperation/heroMobile.jpeg";
 
 const CacPreIncorporation = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  const ScrollToBusinessName = () => {
+    businessNameRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const businessNameRef = useRef(null);
+
   return (
     <div
-      className="relative font-sans w-full place-content-center justify-center px-6 md:px-8 pt-10 bg-gray-100 min-h-screen bg-cover bg-center bg-no-repeat"
+      className="relative font-sans w-full place-content-center justify-centerpt-10 bg-gray-100 min-h-screen bg-cover bg-center bg-no-repeat"
       // style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Background Image with fixed scroll */}
@@ -20,19 +26,59 @@ const CacPreIncorporation = () => {
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
 
-      {/* Header */}
-      <header className="md:py-8 rounded-t-md py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white shadow-md relative z-10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-2xl font-heading md:text-4xl font-bold leading-tight">
-            CAC Pre-Incorporation Services
-          </h1>
+      {/* Hero Section */}
+      <motion.div
+        className="h-screen w-full relative flex flex-col"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        {/* Background Image */}
+        <div className="h-full w-full flex-shrink-0">
+          <img
+            className="hidden md:flex h-full w-full object-cover"
+            src={heroImageDesktop} // Add your desktop image path
+            alt="CAC Pre-Incorporation Services Desktop"
+          />
+          <img
+            className="flex md:hidden h-full w-full object-cover"
+            src={heroImageMobile} // Add your mobile image path
+            alt="CAC Pre-Incorporation Services Mobile"
+          />
         </div>
-      </header>
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+          <motion.div
+            className="h-screen flex items-center justify-start font-bold text-white px-6 md:px-12"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <div>
+              <h1 className="text-left text-2xl md:text-4xl font-bold">
+                CAC Pre-Incorporation Services
+              </h1>
+              <p className="mt-4 text-left text-lg mb-8">
+                Simplify Your Business Setup with Expert Assistance
+              </p>
+
+              <button
+                onClick={ScrollToBusinessName}
+                className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+              >
+                Learn More
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
 
       {/* Main Content */}
-      <div className="container relative w-full py-8 space-y-8 z-10">
+      <div className="container relative w-full py-8 space-y-8 z-10  px-6 md:px-8 ">
         {/* Business Name Section */}
         <motion.div
+          ref={businessNameRef} // Attach the ref here
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}

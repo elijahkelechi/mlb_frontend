@@ -9,7 +9,9 @@ import { FaUserCog } from "react-icons/fa"; // Human with settings icon
 import { FiSettings } from "react-icons/fi"; // Spanner icon
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import webImage from "../assets/webImage.webp";
+import webImage from "../assets/website/webImage.webp";
+import mobileHero from "../assets/website/mobileHero.jpeg";
+import desktopHero from "../assets/website/desktopHero.jpeg";
 
 const Development = () => {
   const [formData, setFormData] = useState({
@@ -25,36 +27,68 @@ const Development = () => {
     e.preventDefault();
     // Handle form submission logic here
   };
-
+  const handleScrollToTop = () => {
+    scrollTo(0, 0);
+  };
   return (
-    <div className="bg-gray-50 py-12 px-5">
-      <div className="max-w-6xl mx-auto bg-gray-50 rounded-lg  overflow-hidden">
-        {/* Header */}
-        <header className="bg-cyan-600 text-white text-center py-8">
-          <motion.h1
-            className="text-3xl font-bold"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            Website Design and Development Services
-          </motion.h1>
-          <motion.p
-            className="mt-4 text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            Your Vision, Our Expertise—Building Websites That Drive Success
-          </motion.p>
-        </header>
+    <div className="bg-gray-50">
+      <div className=" bg-gray-50 rounded-lg  overflow-hidden">
+        {/* Hero Section */}
+        <motion.div
+          className="h-screen w-full relative flex flex-col"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          {/* Background Image */}
+          <div className="h-full w-full flex-shrink-0">
+            <img
+              className="hidden md:flex h-full w-full object-cover"
+              src={desktopHero} // Add your desktop image path
+              alt="Website Design and Development Desktop"
+            />
+            <img
+              className="flex md:hidden h-full w-full object-cover"
+              src={mobileHero} // Add your mobile image path
+              alt="Website Design and Development Mobile"
+            />
+          </div>
+
+          {/* Overlay Content */}
+          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+            <motion.div
+              className="h-screen flex items-center justify-start font-bold text-white px-6 md:px-12"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <div>
+                <h1 className="text-left text-2xl md:text-4xl font-bold">
+                  Professional Website Design and Development Services
+                </h1>
+                <p className="mt-4 text-left text-lg mb-8">
+                  Your Vision, Our Expertise—Building Websites That Drive
+                  Success
+                </p>
+
+                <Link
+                  onClick={handleScrollToTop}
+                  to="/website_design_services" // Adjust the link as necessary
+                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
 
         <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8">
             {/* Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Build a Website for Your Brand
+                Build a High Functional Website for Your brand
               </h2>
               <p className="text-gray-700 text-base md:text-lg mb-6">
                 In today’s digital landscape, your website is more than just an
@@ -92,7 +126,7 @@ const Development = () => {
         </section>
 
         {/* Main Content */}
-        <main className="p-8 space-y-8">
+        <main className="p-6 md:p-16 space-y-8">
           {/* Why Your Business Needs a Website */}
           <motion.section
             initial={{ opacity: 0 }}
@@ -152,6 +186,9 @@ const Development = () => {
                   <li>Mobile-responsive and user-friendly designs</li>
                   <li>Branding and theme alignment</li>
                 </ul>
+                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
+                  Learn More
+                </Link>
               </div>
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
@@ -161,6 +198,9 @@ const Development = () => {
                   <li>E-commerce platforms for online sales</li>
                   <li>CMS integration for easy content management</li>
                 </ul>
+                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
+                  Learn More
+                </Link>
               </div>
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaRegStar className="text-4xl text-cyan-600 mb-4" />
@@ -172,6 +212,9 @@ const Development = () => {
                     Secure websites with SSL certificates and data protection
                   </li>
                 </ul>
+                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
+                  Learn More
+                </Link>
               </div>
               <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
                 <div className="flex items-center text-cyan-600 mb-4">
@@ -186,15 +229,14 @@ const Development = () => {
                   <li>Bug fixes and performance enhancements</li>
                   <li>Ongoing support for your evolving needs</li>
                 </ul>
+                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
+                  Learn More
+                </Link>
               </div>
             </div>
           </motion.section>
 
           <div>
-            {" "}
-            <p className="font-bold">
-              Chat Our Senior Developer via WhatsApp Now!
-            </p>
             <a
               href="https://wa.me/09163381375"
               target="_blank"
@@ -203,7 +245,7 @@ const Development = () => {
             >
               <FaWhatsapp className="mr-2" size={20} />{" "}
               {/* Adds some margin between icon and text */}
-              Chat via WhatsApp
+              Chat our senior developer
             </a>
           </div>
           {/* Industries Served */}
