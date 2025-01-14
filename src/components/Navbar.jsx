@@ -18,11 +18,12 @@ const links = [
 ];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHovered, setIsHove red] = useState(false); // Track hover state
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-  };h
+  };
+  h;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
