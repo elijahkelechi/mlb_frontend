@@ -23,7 +23,6 @@ const Navbar = () => {
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  h;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
