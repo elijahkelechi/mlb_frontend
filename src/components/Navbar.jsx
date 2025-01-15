@@ -6,16 +6,7 @@ import { ListBulletIcon } from "@heroicons/react/24/solid";
 import NavPersonLinks from "./NavPersonLiinks";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
-const links = [
-  { id: 1, url: "adminDashboard", text: "Upload Products" },
-  { id: 2, url: "usersOrders", text: "UsersOrders" },
-  { id: 3, url: "/", text: "Home" },
-  { id: 4, url: "services", text: "Services" },
-  { id: 5, url: "aboutUs", text: "About" },
-  { id: 6, url: "checkout", text: "Checkout" },
-  { id: 7, url: "orders", text: "orders" },
-  { id: 8, url: "about", text: "aboutUs" },
-];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false); // Track hover state
@@ -33,13 +24,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleOrderCheck = () => {
     if (!user) {
+      toast.warning("Please log in to check your orders");
       navigate("/login");
-      toast.warning("pls login to check your orders");
-      return;
     } else {
       navigate("/ongoing_orders");
     }
   };
+
   return (
     <>
       {/* Navbar */}
@@ -127,12 +118,12 @@ const Navbar = () => {
             )}
           </span>
 
-          <Link
+          <button
             onClick={handleOrderCheck}
             className="btn ml-4 w-48 bg-cyan-500 text-gray-50 hover:bg-gray-800 hidden lg:flex"
           >
             ongoing Orders...
-          </Link>
+          </button>
           {/* List Icon */}
           <ListBulletIcon
             className="flex h-12 w-12 lg:hidden font-bold text-cyan-500 cursor-pointer"
@@ -206,12 +197,12 @@ const Navbar = () => {
           >
             CONTACT
           </NavLink>
-          <NavLink
+          <button
             className="btn text-cyan-500 border-b-2 border-cyan-500"
             onClick={handleOrderCheck}
           >
             Ongoing orders...
-          </NavLink>
+          </button>
         </nav>
       </div>
     </>
