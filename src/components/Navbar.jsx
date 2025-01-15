@@ -28,7 +28,7 @@ const Navbar = () => {
       navigate("/login");
     } else {
       navigate("/ongoing_orders");
-      handleScrollToTop();
+      toggleMenu();
     }
   };
 
