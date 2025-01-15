@@ -115,6 +115,10 @@ const router = createBrowserRouter([
         path: "ongoing_orders",
         element: <Orders />,
       },
+      {
+        path: "businessName_orders",
+        element: <BusinessNameOrders />,
+      },
     ],
   },
   {

@@ -15,7 +15,7 @@ const Orders = () => {
   const orders = [
     {
       name: "Business Name (Enterprise) Orders",
-      path: "/enterprise-orders",
+      path: "/businessName_orders",
       icon: <FaBuilding />,
     },
     {
