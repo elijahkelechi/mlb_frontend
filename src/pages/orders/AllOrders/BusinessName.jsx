@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { customFetch } from "../../utils";
+import { customFetch } from "../../../utils";
 import { Link } from "react-router";
 
 const BusinessName = () => {
@@ -11,10 +11,9 @@ const BusinessName = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await customFetch.get(
-          "/BusinessNameform/currentUser",
-          { withCredentials: true }
-        );
+        const response = await customFetch.get("/BusinessNameform", {
+          withCredentials: true,
+        });
         setFormData(response.data.forms);
       } catch (err) {
         setError(err.message);
@@ -51,9 +50,9 @@ const BusinessName = () => {
   return (
     <div className="p-6 md:p-12 bg-cyan-50">
       <h2 className="text-3xl font-semibold  text-gray-600 text-center mb-12 mt-8">
-        Business Name Registration Orders
+        All Users Business Name Registration Orders(admin only)
         <p className="text-lg">
-          Below are your sucessful business registration orders 📖
+          Below are sucessful business registration orders 📖
         </p>
       </h2>
 
@@ -189,13 +188,6 @@ const BusinessName = () => {
                 <h3 className="text-2xl font-semibold text-blue-600">Status</h3>
                 <p className="font-medium text-gray-700">{order.status}</p>
               </section>
-              <Link
-                to="/contactUs"
-                onClick={handleScrollToTop}
-                className="btn my-8 bg-cyan-500 text-gray-50 hover:bg-gray-800"
-              >
-                Contact Support
-              </Link>
             </div>
           ))}
         </div>

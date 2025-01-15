@@ -28,12 +28,16 @@ import {
   SCUMLform,
   BusinessNameOrders,
   LLCorders,
+  AllUsersOrders,
   TrusteeOrders,
   SCUMLorders,
   TINorders,
   AdsOrders,
   WebDesignOrders,
   GraphicDesignOrders,
+  AllBusinessNameOrders,
+  AllLLCorders,
+  AllSCUMLorders,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";
@@ -118,6 +122,30 @@ const router = createBrowserRouter([
       {
         path: "businessName_orders",
         element: <BusinessNameOrders />,
+      },
+      {
+        path: "LLC_orders",
+        element: <LLCorders />,
+      },
+      {
+        path: "SCUML_orders",
+        element: <SCUMLorders />,
+      },
+      {
+        path: "All_Users_Orders",
+        element: <AllUsersOrders />,
+      },
+      {
+        path: "All_BusinessName_Orders",
+        element: <AllBusinessNameOrders />,
+      },
+      {
+        path: "All_LLC_Orders",
+        element: <AllLLCorders />,
+      },
+      {
+        path: "All_SCUML_Orders",
+        element: <AllSCUMLorders />,
       },
     ],
   },

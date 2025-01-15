@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { customFetch } from "../../utils";
+import { customFetch } from "../../../utils";
 import { Link } from "react-router";
 
 const LLC = () => {
@@ -11,7 +11,7 @@ const LLC = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await customFetch.get("/LLCform/currentUser", {
+        const response = await customFetch.get("/LLCform", {
           withCredentials: true,
         });
         setFormData(response.data.forms);
@@ -51,10 +51,11 @@ const LLC = () => {
   return (
     <div className="p-6 md:p-12 bg-cyan-50">
       <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8 mt-12">
-        Limited Liability Company(LLC) Registration Orders
+        All User's Limited Liability Company(LLC) Registration Orders(admin
+        only)
       </h2>
       <p className="text-lg text-gray-600 text-center mb-8">
-        Below are your successful LLC registration orders 📖
+        Below are successful LLC registration orders 📖
       </p>
 
       {formData && formData.length > 0 ? (
@@ -82,15 +83,17 @@ const LLC = () => {
                     </li>
                     <li>
                       Business Name Option 2:{" "}
-                      {order.company.businessNameOption2}
+                      {order.company?.businessNameOption2}
                     </li>
-                    <li>Nominal Share: {order.company.nominalShare}</li>
-                    <li>Business Phone: {order.company.businessPhone}</li>
-                    <li>Business Email: {order.company.businessEmail}</li>
-                    <li>Business Activity: {order.company.businessActivity}</li>
+                    <li>Nominal Share: {order.company?.nominalShare}</li>
+                    <li>Business Phone: {order.company?.businessPhone}</li>
+                    <li>Business Email: {order.company?.businessEmail}</li>
+                    <li>
+                      Business Activity: {order.company?.businessActivity}
+                    </li>
                     <li>
                       Other Business Activities:{" "}
-                      {order.company.otherBusinessActivities}
+                      {order.company?.otherBusinessActivities}
                     </li>
                   </ul>
 
@@ -98,12 +101,12 @@ const LLC = () => {
                     Company Address
                   </h4>
                   <ul className="text-gray-600 space-y-2">
-                    <li>State: {order.companyAddress.state}</li>
-                    <li>LGA: {order.companyAddress.lga}</li>
-                    <li>City: {order.companyAddress.city}</li>
-                    <li>Post Code: {order.companyAddress.postCode}</li>
-                    <li>Street Name: {order.companyAddress.streetName}</li>
-                    <li>House Number: {order.companyAddress.houseNumber}</li>
+                    <li>State: {order.companyAddress?.state}</li>
+                    <li>LGA: {order.companyAddress?.lga}</li>
+                    <li>City: {order.companyAddress?.city}</li>
+                    <li>Post Code: {order.companyAddress?.postCode}</li>
+                    <li>Street Name: {order.companyAddress?.streetName}</li>
+                    <li>House Number: {order.companyAddress?.houseNumber}</li>
                   </ul>
                 </div>
 
@@ -112,38 +115,38 @@ const LLC = () => {
                     Director Details
                   </h4>
                   <ul className="text-gray-600 space-y-2">
-                    <li>First Name: {order.director.firstName}</li>
-                    <li>Last Name: {order.director.lastName}</li>
+                    <li>First Name: {order.director?.firstName}</li>
+                    <li>Last Name: {order.director?.lastName}</li>
                     <li>
                       Date of Birth:{" "}
                       {new Date(
-                        order.director.dateOfBirth
+                        order.director?.dateOfBirth
                       ).toLocaleDateString()}
                     </li>
-                    <li>Gender: {order.director.gender}</li>
-                    <li>Nationality: {order.director.nationality}</li>
-                    <li>Phone Number: {order.director.phoneNumber}</li>
-                    <li>Email: {order.director.email}</li>
-                    <li>ID Type: {order.director.idType}</li>
-                    <li>ID Number: {order.director.idNumber}</li>
+                    <li>Gender: {order.director?.gender}</li>
+                    <li>Nationality: {order.director?.nationality}</li>
+                    <li>Phone Number: {order.director?.phoneNumber}</li>
+                    <li>Email: {order.director?.email}</li>
+                    <li>ID Type: {order.director?.idType}</li>
+                    <li>ID Number: {order.director?.idNumber}</li>
                   </ul>
 
                   <h4 className="font-semibold text-gray-800 mt-6 mb-2">
                     Director Address
                   </h4>
                   <ul className="text-gray-600 space-y-2">
-                    <li>Country: {order.directorAddress.country}</li>
-                    <li>State: {order.directorAddress.state}</li>
-                    <li>LGA: {order.directorAddress.lga}</li>
-                    <li>City: {order.directorAddress.city}</li>
-                    <li>Postal Code: {order.directorAddress.postalCode}</li>
-                    <li>Street Name: {order.directorAddress.streetName}</li>
-                    <li>House Number: {order.directorAddress.houseNumber}</li>
+                    <li>Country: {order.directorAddress?.country}</li>
+                    <li>State: {order.directorAddress?.state}</li>
+                    <li>LGA: {order.directorAddress?.lga}</li>
+                    <li>City: {order.directorAddress?.city}</li>
+                    <li>Postal Code: {order.directorAddress?.postalCode}</li>
+                    <li>Street Name: {order.directorAddress?.streetName}</li>
+                    <li>House Number: {order.directorAddress?.houseNumber}</li>
                   </ul>
 
                   <div className="mt-4 space-y-8">
                     <a
-                      href={order.directorDocuments.directorId}
+                      href={order.directorDocuments?.directorId}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -151,7 +154,7 @@ const LLC = () => {
                       View Director ID
                     </a>
                     <a
-                      href={order.directorDocuments.directorSignature}
+                      href={order.directorDocuments?.directorSignature}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -159,7 +162,7 @@ const LLC = () => {
                       View Director Signature
                     </a>
                     <a
-                      href={order.directorDocuments.directorPassport}
+                      href={order.directorDocuments?.directorPassport}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -178,41 +181,43 @@ const LLC = () => {
                   Shareholder Details
                 </h4>
                 <ul className="text-gray-600 space-y-2">
-                  <li>First Name: {order.shareholder.firstName}</li>
-                  <li>Last Name: {order.shareholder.lastName}</li>
+                  <li>First Name: {order.shareholder?.firstName}</li>
+                  <li>Last Name: {order.shareholder?.lastName}</li>
                   <li>
                     Date of Birth:{" "}
                     {new Date(
                       order.shareholder.dateOfBirth
                     ).toLocaleDateString()}
                   </li>
-                  <li>Gender: {order.shareholder.gender}</li>
-                  <li>Nationality: {order.shareholder.nationality}</li>
-                  <li>Phone Number: {order.shareholder.phoneNumber}</li>
-                  <li>Email: {order.shareholder.email}</li>
-                  <li>Occupation: {order.shareholder.occupation}</li>
-                  <li>ID Type: {order.shareholder.idType}</li>
-                  <li>ID Number: {order.shareholder.idNumber}</li>
-                  <li>Share Type: {order.shareholder.shareType}</li>
-                  <li>Share Percentage: {order.shareholder.sharePercentage}</li>
+                  <li>Gender: {order.shareholder?.gender}</li>
+                  <li>Nationality: {order.shareholder?.nationality}</li>
+                  <li>Phone Number: {order.shareholder?.phoneNumber}</li>
+                  <li>Email: {order.shareholder?.email}</li>
+                  <li>Occupation: {order.shareholder?.occupation}</li>
+                  <li>ID Type: {order.shareholder?.idType}</li>
+                  <li>ID Number: {order.shareholder?.idNumber}</li>
+                  <li>Share Type: {order.shareholder?.shareType}</li>
+                  <li>
+                    Share Percentage: {order.shareholder?.sharePercentage}
+                  </li>
                 </ul>
 
                 <h4 className="font-semibold text-gray-800 mt-6 mb-2">
                   Shareholder Address
                 </h4>
                 <ul className="text-gray-600 space-y-2">
-                  <li>Country: {order.shareholderAddress.country}</li>
-                  <li>State: {order.shareholderAddress.state}</li>
-                  <li>LGA: {order.shareholderAddress.lga}</li>
-                  <li>City: {order.shareholderAddress.city}</li>
-                  <li>Postal Code: {order.shareholderAddress.postalCode}</li>
-                  <li>Street Name: {order.shareholderAddress.streetName}</li>
-                  <li>House Number: {order.shareholderAddress.houseNumber}</li>
+                  <li>Country: {order.shareholderAddress?.country}</li>
+                  <li>State: {order.shareholderAddress?.state}</li>
+                  <li>LGA: {order.shareholderAddress?.lga}</li>
+                  <li>City: {order.shareholderAddress?.city}</li>
+                  <li>Postal Code: {order.shareholderAddress?.postalCode}</li>
+                  <li>Street Name: {order.shareholderAddress?.streetName}</li>
+                  <li>House Number: {order.shareholderAddress?.houseNumber}</li>
                 </ul>
 
                 <div className="mt-4 space-y-2">
                   <a
-                    href={order.shareholderDocuments.shareholderValidId}
+                    href={order.shareholderDocuments?.shareholderValidId}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -220,7 +225,7 @@ const LLC = () => {
                     View Shareholder ID
                   </a>
                   <a
-                    href={order.shareholderDocuments.shareholderSignature}
+                    href={order.shareholderDocuments?.shareholderSignature}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -228,7 +233,7 @@ const LLC = () => {
                     View Shareholder Signature
                   </a>
                   <a
-                    href={order.shareholderDocuments.shareholderPassport}
+                    href={order.shareholderDocuments?.shareholderPassport}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -246,36 +251,38 @@ const LLC = () => {
                   Secretary Details
                 </h4>
                 <ul className="text-gray-600 space-y-2">
-                  <li>First Name: {order.secretary.firstName}</li>
-                  <li>Last Name: {order.secretary.lastName}</li>
+                  <li>First Name: {order.secretary?.firstName}</li>
+                  <li>Last Name: {order.secretary?.lastName}</li>
                   <li>
                     Date of Birth:{" "}
-                    {new Date(order.secretary.dateOfBirth).toLocaleDateString()}
+                    {new Date(
+                      order.secretary?.dateOfBirth
+                    ).toLocaleDateString()}
                   </li>
-                  <li>Gender: {order.secretary.gender}</li>
-                  <li>Nationality: {order.secretary.nationality}</li>
-                  <li>Phone Number: {order.secretary.phoneNumber}</li>
-                  <li>Email: {order.secretary.email}</li>
-                  <li>ID Type: {order.secretary.idType}</li>
-                  <li>ID Number: {order.secretary.idNumber}</li>
+                  <li>Gender: {order.secretary?.gender}</li>
+                  <li>Nationality: {order.secretary?.nationality}</li>
+                  <li>Phone Number: {order.secretary?.phoneNumber}</li>
+                  <li>Email: {order.secretary?.email}</li>
+                  <li>ID Type: {order.secretary?.idType}</li>
+                  <li>ID Number: {order.secretary?.idNumber}</li>
                 </ul>
 
                 <h4 className="font-semibold text-gray-800 mt-6 mb-2">
                   Secretary Address
                 </h4>
                 <ul className="text-gray-600 space-y-2">
-                  <li>Country: {order.secretaryAddress.country}</li>
-                  <li>State: {order.secretaryAddress.state}</li>
-                  <li>LGA: {order.secretaryAddress.lga}</li>
-                  <li>City: {order.secretaryAddress.city}</li>
-                  <li>Postal Code: {order.secretaryAddress.postalCode}</li>
-                  <li>Street Name: {order.secretaryAddress.streetName}</li>
-                  <li>House Number: {order.secretaryAddress.houseNumber}</li>
+                  <li>Country: {order.secretaryAddress?.country}</li>
+                  <li>State: {order.secretaryAddress?.state}</li>
+                  <li>LGA: {order.secretaryAddress?.lga}</li>
+                  <li>City: {order.secretaryAddress?.city}</li>
+                  <li>Postal Code: {order.secretaryAddress?.postalCode}</li>
+                  <li>Street Name: {order.secretaryAddress?.streetName}</li>
+                  <li>House Number: {order.secretaryAddress?.houseNumber}</li>
                 </ul>
 
                 <div className="mt-4 space-y-2">
                   <a
-                    href={order.secretaryDocuments.secretaryValidId}
+                    href={order.secretaryDocuments?.secretaryValidId}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -283,7 +290,7 @@ const LLC = () => {
                     View Secretary ID
                   </a>
                   <a
-                    href={order.secretaryDocuments.secretarySignature}
+                    href={order.secretaryDocuments?.secretarySignature}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -291,7 +298,7 @@ const LLC = () => {
                     View Secretary Signature
                   </a>
                   <a
-                    href={order.secretaryDocuments.secretaryPassport}
+                    href={order.secretaryDocuments?.secretaryPassport}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn bg-cyan-500 mx-2 text-blue-600 hover:underline"
@@ -300,13 +307,6 @@ const LLC = () => {
                   </a>
                 </div>
               </div>
-              <Link
-                to="/contactUs"
-                onClick={handleScrollToTop}
-                className="btn my-16 bg-cyan-500 text-gray-50 hover:bg-gray-800"
-              >
-                Contact Support
-              </Link>
             </div>
           ))}
         </div>

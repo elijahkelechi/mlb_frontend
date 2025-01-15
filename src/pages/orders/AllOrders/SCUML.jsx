@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { customFetch } from "../../utils";
+import { customFetch } from "../../../utils";
 import { Link } from "react-router";
 
 const SCUML = () => {
@@ -11,7 +11,7 @@ const SCUML = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await customFetch.get("/SCUMLform/currentUser", {
+        const response = await customFetch.get("/SCUMLform", {
           withCredentials: true,
         });
         setFormData(response.data.forms);
@@ -53,9 +53,9 @@ const SCUML = () => {
   return (
     <div className="p-6 md:p-12 bg-cyan-50">
       <h2 className="text-3xl font-semibold text-gray-600 text-center mb-12 mt-8">
-        SCUML Registration Orders
+        All User's SCUML Registration Orders(admin only!)
         <p className="text-lg">
-          Below are your successful SCUML registration orders 📖
+          Below are successful SCUML registration orders 📖
         </p>
       </h2>
 
@@ -156,13 +156,6 @@ const SCUML = () => {
                   Terms Accepted: {order.termsAccepted ? "Yes" : "No"}
                 </p>
               </div>
-              <Link
-                to="/contactUs"
-                onClick={handleScrollToTop}
-                className="btn my-16 bg-cyan-500 text-gray-50 hover:bg-gray-800"
-              >
-                Contact Support
-              </Link>
             </div>
           ))}
         </div>

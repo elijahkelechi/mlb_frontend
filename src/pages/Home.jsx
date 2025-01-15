@@ -39,6 +39,7 @@ const Home = () => {
   }, []);
   const [expandedCard, setExpandedCard] = useState(0);
   const user = useSelector((state) => state.userState.user);
+  const admin = user?.role === "admin";
   const navigate = useNavigate();
   // Function to toggle card expansion
   // const toggleCard = (cardIndex) => {
@@ -239,7 +240,9 @@ const Home = () => {
                 >
                   <Link
                     onClick={handleGetStarted}
-                    className="btn text-sm sm:text-base font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 px-6 py-3"
+                    className={`btn text-sm sm:text-base font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 px-6 py-3 ${
+                      admin ? "hidden md:flex" : "flex"
+                    }`}
                   >
                     GET STARTED
                   </Link>
@@ -254,7 +257,11 @@ const Home = () => {
                   }}
                 >
                   {user ? (
-                    <div className="text-sm sm:text-base">
+                    <div
+                      className={`text-sm sm:text-base ${
+                        admin ? "hidden" : "flex"
+                      }`}
+                    >
                       Season's greeting {user.name} 🎉
                     </div>
                   ) : (
@@ -276,14 +283,34 @@ const Home = () => {
                       </span>
                     </div>
                   )}
+                  {admin ? (
+                    <div className="flex md:hidden ">
+                      Welcome! {user.role}
+                      <Link to="All_Users_Orders" className="btn btn-sm mx-6">
+                        All Users Orders
+                      </Link>
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
                 </motion.div>
               </div>
             </div>
 
             <div className="hidden md:flex w-full text-center col-span-4 mt-36 font-heading text-gray-50">
-              {user ? (
+              {user && !admin ? (
                 <div className="bg-gray-800 mb-[35rem] p-8">
                   Welcome! {user.name}
+                </div>
+              ) : (
+                <div></div>
+              )}
+              {admin ? (
+                <div className="bg-gray-800 mb-[35rem] p-8">
+                  Welcome! {user.role}
+                  <Link to="All_Users_Orders" className="btn mx-6">
+                    All Users Orders
+                  </Link>
                 </div>
               ) : (
                 <div></div>

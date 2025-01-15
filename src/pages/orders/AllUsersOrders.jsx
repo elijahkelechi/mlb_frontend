@@ -15,12 +15,12 @@ const Orders = () => {
   const orders = [
     {
       name: "Business Name (Enterprise) Orders",
-      path: "/businessName_orders",
+      path: "/All_BusinessName_Orders",
       icon: <FaBuilding />,
     },
     {
       name: "Limited Liability Company Orders",
-      path: "/LLC_orders",
+      path: "/All_LLC_Orders",
       icon: <FaBriefcase />,
     },
     {
@@ -29,7 +29,11 @@ const Orders = () => {
       icon: <FaUsers />,
     },
 
-    { name: "SCUML Orders", path: "/SCUML_orders", icon: <FaShieldAlt /> },
+    {
+      name: "SCUML Orders",
+      path: "/All_SCUML_Orders",
+      icon: <FaShieldAlt />,
+    },
     {
       name: "Website Design Orders",
       path: "/web-design-orders",
@@ -55,7 +59,7 @@ const Orders = () => {
     <div className="min-h-screen bg-cyan-50  py-10">
       <div className="px-6 md:px-16">
         <h1 className="text-3xl font-bold text-gray-800 text-center mb-8 border-b-4 border-cyan-500 p-2">
-          Check Your Ongoing Orders Here! 🚀
+          All User's Order(Admin Only)
         </h1>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {orders.map((order, index) => (

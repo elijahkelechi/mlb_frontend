@@ -21,14 +21,32 @@ const Navbar = () => {
   };
 
   const user = useSelector((state) => state.userState.user);
+  const admin = user?.role === "admin";
   const navigate = useNavigate();
-  const handleOrderCheck = () => {
+  const handleOrderCheckMobile = () => {
     if (!user) {
       toast.warning("Please log in to check your orders");
       navigate("/login");
-    } else {
+    } else if (user && !admin) {
       navigate("/ongoing_orders");
       toggleMenu();
+      handleScrollToTop();
+    } else {
+      navigate("/All_Users_Orders");
+      toggleMenu();
+      handleScrollToTop();
+    }
+  };
+  const handleOrderCheckLaptop = () => {
+    if (!user) {
+      toast.warning("Please log in to check your orders");
+      navigate("/login");
+    } else if (user && !admin) {
+      navigate("/ongoing_orders");
+      handleScrollToTop();
+    } else {
+      navigate("/All_Users_Orders");
+      handleScrollToTop();
     }
   };
 
@@ -120,10 +138,10 @@ const Navbar = () => {
           </span>
 
           <button
-            onClick={handleOrderCheck}
-            className="btn ml-4 w-48 bg-cyan-500 text-gray-50 hover:bg-gray-800 hidden lg:flex"
+            onClick={handleOrderCheckLaptop}
+            className={`btn ml-4 w-48 bg-cyan-500 text-gray-50 hover:bg-gray-800 hidden lg:flex`}
           >
-            ongoing Orders...
+            {admin ? "All User's Orders..." : " ongoing Orders..."}
           </button>
           {/* List Icon */}
           <ListBulletIcon
@@ -200,7 +218,7 @@ const Navbar = () => {
           </NavLink>
           <button
             className="btn text-cyan-500 border-b-2 border-cyan-500"
-            onClick={handleOrderCheck}
+            onClick={handleOrderCheckMobile}
           >
             Ongoing orders...
           </button>
