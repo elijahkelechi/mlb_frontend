@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { customFetch } from "../../../utils";
 import { Link } from "react-router";
+import { jsPDF } from "jspdf";
 
 const SCUML = () => {
   const [formData, setFormData] = useState(null);
@@ -28,6 +29,33 @@ const SCUML = () => {
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+  const downloadPDF = (order) => {
+    const doc = new jsPDF();
+    doc.setFontSize(12);
+
+    // Add order details to the PDF
+    doc.text(`Order ID: ${order._id}`, 10, 10);
+    doc.text(`First Name: ${order.firstName}`, 10, 20);
+    doc.text(`Middle Name: ${order.middleName}`, 10, 30);
+    doc.text(`Surname: ${order.surname}`, 10, 40);
+    doc.text(`Phone: ${order.phoneNumber}`, 10, 50);
+    doc.text(`WhatsApp: ${order.whatsappNumber}`, 10, 60);
+    doc.text(`Email: ${order.email}`, 10, 70);
+    doc.text(`NIN: ${order.nin}`, 10, 80);
+    doc.text(`BVN: ${order.bvn}`, 10, 90);
+    doc.text(`Account Name: ${order.accountName}`, 10, 100);
+    doc.text(`Bank Name: ${order.bankName}`, 10, 110);
+    doc.text(`Account Number: ${order.accountNumber}`, 10, 120);
+    doc.text(`Status: ${order.status}`, 10, 130);
+    doc.text(
+      `Created At: ${new Date(order.createdAt).toLocaleString()}`,
+      10,
+      140
+    );
+
+    // Save the PDF
+    doc.save(`SCUML_Order_${order._id}.pdf`);
   };
 
   // Render loading state
@@ -156,6 +184,12 @@ const SCUML = () => {
                   Terms Accepted: {order.termsAccepted ? "Yes" : "No"}
                 </p>
               </div>
+              <button
+                onClick={() => downloadPDF(order)}
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                Download PDF
+              </button>
             </div>
           ))}
         </div>

@@ -31,17 +31,17 @@ const Orders = () => {
 
     { name: "SCUML Orders", path: "/SCUML_orders", icon: <FaShieldAlt /> },
     {
+      name: "Facebook Ads Subscription Orders",
+      path: "/Ads_Orders",
+      icon: <FaFacebook />,
+    },
+    {
       name: "Website Design Orders",
       path: "/web-design-orders",
       icon: <FaDesktop />,
     },
     { name: "TIN Orders", path: "/tin-orders", icon: <FaFileAlt /> },
 
-    {
-      name: "Facebook Ads Subscription Orders",
-      path: "/facebook-ads-orders",
-      icon: <FaFacebook />,
-    },
     {
       name: "Graphic Design Orders",
       path: "/graphic-design-orders",

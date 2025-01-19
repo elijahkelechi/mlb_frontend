@@ -16,6 +16,7 @@ const BusinessName = () => {
           { withCredentials: true }
         );
         setFormData(response.data.forms);
+        console.log(response.data.forms);
       } catch (err) {
         setError(err.message);
       } finally {

@@ -64,33 +64,6 @@ const SCUMLform = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
   const [disableBtn, setDisableBtn] = useState(true);
-
-  const handleSubmit = async () => {
-    setIsSubmitting(true); // Ensure this is always set regardless of the terms
-    setIsSubmissionSuccessful(false); // Reset successful submission state
-
-    try {
-      const response = await customFetch.post("/SCUMLform/submit", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true,
-      });
-      setIsSubmissionSuccessful(true);
-      console.log("submitted");
-      toast.success("Form submitted successfully");
-    } catch (error) {
-      if (error?.response?.data?.msg === "invalid authentication") {
-        toast.error("Please login");
-      } else {
-        toast.error(error?.response?.data?.msg || "Failed to submit form");
-      }
-      console.log(error);
-    } finally {
-      setIsSubmitting(false); // Ensure `isSubmitting` is reset after the process
-    }
-  };
-
   const handleDownloadPDF = () => {
     const doc = new jsPDF();
     const titleFontSize = 16;
@@ -140,6 +113,34 @@ const SCUMLform = () => {
 
     // Save the PDF
     doc.save("SCUML_Form.pdf");
+  };
+
+  const handleSubmit = async () => {
+    setIsSubmitting(true); // Ensure this is always set regardless of the terms
+    setIsSubmissionSuccessful(false); // Reset successful submission state
+
+    try {
+      const response = await customFetch.post("/SCUMLform/submit", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        withCredentials: true,
+      });
+      setIsSubmissionSuccessful(true);
+      handleDownloadPDF();
+      console.log("submitted");
+      toast.success("Form submitted successfully");
+      console.log(response);
+    } catch (error) {
+      if (error?.response?.data?.msg === "invalid authentication") {
+        toast.error("Please login");
+      } else {
+        toast.error(error?.response?.data?.msg || "Failed to submit form");
+      }
+      console.log(error);
+    } finally {
+      setIsSubmitting(false); // Ensure `isSubmitting` is reset after the process
+    }
   };
 
   const isFormValid = () => {

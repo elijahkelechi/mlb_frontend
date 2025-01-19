@@ -215,7 +215,7 @@ const MultiStageForm = () => {
           withCredentials: true,
         }
       );
-
+      handleDownloadPDF();
       console.log("Form Submission Response:", response);
       toast.success("Form submitted successfully");
       setIsSubmissionSuccessful(true);

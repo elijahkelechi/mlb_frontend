@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { customFetch } from "../../../utils";
 import { Link } from "react-router";
-
+import { jsPDF } from "jspdf";
 const LLC = () => {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,6 +28,87 @@ const LLC = () => {
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
+  const handleDownloadPDF = (order, index) => {
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+    doc.text("Limited Liability Company (LLC) Registration Details", 20, 20);
+
+    let yOffset = 30; // Start position for text
+
+    // Flatten the structure to make it easier to display
+    const sections = [
+      {
+        title: "Company Details",
+        data: order?.company,
+      },
+      {
+        title: "Company Address",
+        data: order?.companyAddress,
+      },
+      {
+        title: "Director Details",
+        data: order?.director,
+      },
+      {
+        title: "Director Address",
+        data: order?.directorAddress,
+      },
+      {
+        title: "Shareholder Details",
+        data: order?.shareholder,
+      },
+      {
+        title: "Shareholder Address",
+        data: order?.shareholderAddress,
+      },
+      {
+        title: "Secretary Details",
+        data: order?.secretary,
+      },
+      {
+        title: "Secretary Address",
+        data: order?.secretaryAddress,
+      },
+    ];
+
+    sections.forEach((section) => {
+      if (!section.data) return;
+
+      // Section title
+      doc.setFontSize(14);
+      doc.text(section.title, 20, yOffset);
+      yOffset += 10;
+
+      // Section fields
+      Object.entries(section.data).forEach(([key, value]) => {
+        let displayValue = value;
+
+        if (value instanceof Date) {
+          displayValue = new Date(value).toLocaleDateString();
+        } else if (typeof value === "object" && value !== null) {
+          displayValue = JSON.stringify(value);
+        }
+
+        doc.setFontSize(12);
+        doc.text(
+          `${key.replace(/([A-Z])/g, " $1")}: ${displayValue || "N/A"}`,
+          20,
+          yOffset
+        );
+        yOffset += 10;
+
+        // Page break if content exceeds the page
+        if (yOffset > 280) {
+          doc.addPage();
+          yOffset = 20;
+        }
+      });
+    });
+
+    // Save the generated PDF with a unique filename
+    doc.save(`Order_${index + 1}_LLC_Registration.pdf`);
+  };
+
   // Render loading state
   if (loading) {
     return (
@@ -307,6 +388,12 @@ const LLC = () => {
                   </a>
                 </div>
               </div>
+              <button
+                className="btn bg-cyan-500 text-white m-8"
+                onClick={() => handleDownloadPDF(order, index)}
+              >
+                Download pdf
+              </button>
             </div>
           ))}
         </div>

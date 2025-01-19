@@ -43,7 +43,7 @@ const Orders = () => {
 
     {
       name: "Facebook Ads Subscription Orders",
-      path: "/facebook-ads-orders",
+      path: "/All_Ads_Orders",
       icon: <FaFacebook />,
     },
     {

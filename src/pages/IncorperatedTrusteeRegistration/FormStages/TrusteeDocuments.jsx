@@ -1,10 +1,18 @@
+import React from "react";
+
 const TrusteeDocuments = ({ formData, trusteeIndex, onChange }) => {
+  // Handles changes for text and radio fields
   const handleChange = (field, value) => {
     onChange(field, value);
   };
 
-  const handleFileChange = (field, file) => {
-    onChange(field, file); // Handle file uploads
+  // Handles file selection and validates the input
+  const handleFileChange = (field, event) => {
+    const file = event.target.files[0];
+    if (file) {
+      console.log(`${field} file selected:`, file);
+      onChange(field, file);
+    }
   };
 
   return (
@@ -13,113 +21,60 @@ const TrusteeDocuments = ({ formData, trusteeIndex, onChange }) => {
         Trustee {trusteeIndex + 1} - Documents
       </h2>
       <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* ID Type and ID Number */}
-        <div>
-          <input
-            type="text"
-            placeholder="ID Type"
-            value={formData.idType}
-            onChange={(e) => handleChange("idType", e.target.value)}
-            className="w-full p-2 border rounded"
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="ID Number"
-            value={formData.idNumber}
-            onChange={(e) => handleChange("idNumber", e.target.value)}
-            className="w-full p-2 border rounded"
-          />
-        </div>
-
-        {/* Chairman and Secretary Radio Buttons */}
-        <div className="col-span-2 flex gap-4 items-center">
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              name={`chairman-${trusteeIndex}`}
-              checked={formData.isChairman}
-              onChange={() => handleChange("isChairman", true)}
-            />
-            This Trustee is Chairman
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              name={`chairman-${trusteeIndex}`}
-              checked={!formData.isChairman}
-              onChange={() => handleChange("isChairman", false)}
-            />
-            No
-          </label>
-        </div>
-
-        <div className="col-span-2 flex gap-4 items-center">
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              name={`secretary-${trusteeIndex}`}
-              checked={formData.isSecretary}
-              onChange={() => handleChange("isSecretary", true)}
-            />
-            This Trustee is Secretary
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="radio"
-              name={`secretary-${trusteeIndex}`}
-              checked={!formData.isSecretary}
-              onChange={() => handleChange("isSecretary", false)}
-            />
-            No
-          </label>
-        </div>
-
         {/* File Uploads */}
         <div>
-          <label className="block text-gray-700">Upload Valid ID</label>
+          <label htmlFor="validID" className="block text-sm font-medium mb-1">
+            Upload Valid ID
+          </label>
           <input
             type="file"
+            id="validID"
             accept="image/*,.pdf"
-            onChange={(e) => handleFileChange("validID", e.target.files[0])}
+            onChange={(e) => handleFileChange("validID", e)}
             className="w-full p-2 border rounded"
           />
         </div>
         <div>
-          <label className="block text-gray-700">Upload Signature</label>
+          <label htmlFor="signature" className="block text-sm font-medium mb-1">
+            Upload Signature
+          </label>
           <input
             type="file"
+            id="signature"
             accept="image/*"
-            onChange={(e) => handleFileChange("signature", e.target.files[0])}
+            onChange={(e) => handleFileChange("signature", e)}
             className="w-full p-2 border rounded"
           />
         </div>
         <div>
-          <label className="block text-gray-700">
+          <label
+            htmlFor="passportPhoto"
+            className="block text-sm font-medium mb-1"
+          >
             Upload Passport Photograph
           </label>
           <input
             type="file"
+            id="passportPhoto"
             accept="image/*"
-            onChange={(e) =>
-              handleFileChange("passportPhoto", e.target.files[0])
-            }
+            onChange={(e) => handleFileChange("passportPhoto", e)}
             className="w-full p-2 border rounded"
           />
         </div>
 
         {/* New File Upload Fields */}
         <div>
-          <label className="block text-gray-700">
+          <label
+            htmlFor="minutesOfMeetings"
+            className="block text-sm font-medium mb-1"
+          >
             Upload Minutes of Meetings and Special Clause (Optional)
           </label>
           <input
             type="file"
+            id="minutesOfMeetings"
             accept="image/*,.pdf"
-            onChange={(e) =>
-              handleFileChange("minutesOfMeetings", e.target.files[0])
-            }
+            onChange={(e) => handleFileChange("minutesOfMeetings", e)}
             className="w-full p-2 border rounded"
           />
           <p className="text-sm text-gray-500">
@@ -127,15 +82,17 @@ const TrusteeDocuments = ({ formData, trusteeIndex, onChange }) => {
           </p>
         </div>
         <div>
-          <label className="block text-gray-700">
+          <label
+            htmlFor="organizationConstitution"
+            className="block text-sm font-medium mb-1"
+          >
             Upload Organization Constitution (Optional)
           </label>
           <input
             type="file"
+            id="organizationConstitution"
             accept="image/*,.pdf"
-            onChange={(e) =>
-              handleFileChange("organizationConstitution", e.target.files[0])
-            }
+            onChange={(e) => handleFileChange("organizationConstitution", e)}
             className="w-full p-2 border rounded"
           />
           <p className="text-sm text-gray-500">
@@ -143,15 +100,17 @@ const TrusteeDocuments = ({ formData, trusteeIndex, onChange }) => {
           </p>
         </div>
         <div>
-          <label className="block text-gray-700">
+          <label
+            htmlFor="trusteeDeclarationForm"
+            className="block text-sm font-medium mb-1"
+          >
             Upload Trustee Declaration Form (Optional)
           </label>
           <input
             type="file"
+            id="trusteeDeclarationForm"
             accept="image/*,.pdf"
-            onChange={(e) =>
-              handleFileChange("trusteeDeclarationForm", e.target.files[0])
-            }
+            onChange={(e) => handleFileChange("trusteeDeclarationForm", e)}
             className="w-full p-2 border rounded"
           />
           <p className="text-sm text-gray-500">
@@ -159,15 +118,17 @@ const TrusteeDocuments = ({ formData, trusteeIndex, onChange }) => {
           </p>
         </div>
         <div>
-          <label className="block text-gray-700">
+          <label
+            htmlFor="newspaperPublication"
+            className="block text-sm font-medium mb-1"
+          >
             Upload Newspaper Publication (Optional)
           </label>
           <input
             type="file"
+            id="newspaperPublication"
             accept="image/*,.pdf"
-            onChange={(e) =>
-              handleFileChange("newspaperPublication", e.target.files[0])
-            }
+            onChange={(e) => handleFileChange("newspaperPublication", e)}
             className="w-full p-2 border rounded"
           />
           <p className="text-sm text-gray-500">

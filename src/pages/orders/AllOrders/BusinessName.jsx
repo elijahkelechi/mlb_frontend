@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { customFetch } from "../../../utils";
 import { Link } from "react-router";
-
+import { jsPDF } from "jspdf";
 const BusinessName = () => {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,6 +27,146 @@ const BusinessName = () => {
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
+  const handleDownloadPDF = (order) => {
+    const doc = new jsPDF();
+    doc.setFontSize(16);
+
+    // Title
+    doc.text("Business Name Registration Form", 20, 20);
+    let yOffset = 30;
+
+    // Business Details Section
+    doc.setFontSize(14);
+    doc.text("Business Details:", 20, yOffset);
+    yOffset += 10;
+    doc.setFontSize(12);
+    doc.text(
+      `Option 1: ${order.businessDetails.businessNameOption1 || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `Option 2: ${order.businessDetails.businessNameOption2 || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `Activity: ${order.businessDetails.businessActivity || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `Email: ${order.businessDetails.businessEmail || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `Phone: ${order.businessDetails.businessPhone || "N/A"}`,
+      20,
+      yOffset
+    );
+
+    yOffset += 20;
+
+    // Proprietor Info Section
+    doc.setFontSize(14);
+    doc.text("Proprietor Info:", 20, yOffset);
+    yOffset += 10;
+    doc.setFontSize(12);
+    doc.text(
+      `Name: ${order.proprietorInfo.firstName} ${order.proprietorInfo.middleName} ${order.proprietorInfo.surname}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(`Gender: ${order.proprietorInfo.gender || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(
+      `Occupation: ${order.proprietorInfo.occupation || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `Date of Birth: ${
+        new Date(order.proprietorInfo.dateOfBirth).toLocaleDateString() || "N/A"
+      }`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(`Email: ${order.proprietorInfo.email || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(
+      `Phone: ${order.proprietorInfo.phoneNumber || "N/A"}`,
+      20,
+      yOffset
+    );
+
+    yOffset += 20;
+
+    // Proprietor Address Section
+    doc.setFontSize(14);
+    doc.text("Proprietor Address:", 20, yOffset);
+    yOffset += 10;
+    doc.setFontSize(12);
+    doc.text(
+      `Country: ${order.proprietorAddress.country || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(`State: ${order.proprietorAddress.state || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(`LGA: ${order.proprietorAddress.lga || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(`City: ${order.proprietorAddress.city || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(
+      `Street: ${order.proprietorAddress.streetName || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(
+      `House Number: ${order.proprietorAddress.houseNumber || "N/A"}`,
+      20,
+      yOffset
+    );
+
+    yOffset += 20;
+
+    // Documents Section
+    doc.setFontSize(14);
+    doc.text("Documents:", 20, yOffset);
+    yOffset += 10;
+    doc.setFontSize(12);
+    doc.text(`Valid ID: ${order.documents.validId || "N/A"}`, 20, yOffset);
+    yOffset += 10;
+    doc.text(
+      `Passport Photo: ${order.documents.passportPhoto || "N/A"}`,
+      20,
+      yOffset
+    );
+    yOffset += 10;
+    doc.text(`Signature: ${order.documents.signature || "N/A"}`, 20, yOffset);
+
+    yOffset += 20;
+
+    // Status Section
+    doc.setFontSize(14);
+    doc.text("Status:", 20, yOffset);
+    yOffset += 10;
+    doc.setFontSize(12);
+    doc.text(`Current Status: ${order.status || "N/A"}`, 20, yOffset);
+
+    doc.save(`Business_Registration_Form_${order._id}.pdf`);
+  };
+
   // Render loading state
   if (loading) {
     return (
@@ -188,6 +328,12 @@ const BusinessName = () => {
                 <h3 className="text-2xl font-semibold text-blue-600">Status</h3>
                 <p className="font-medium text-gray-700">{order.status}</p>
               </section>
+              <button
+                className="btn bg-cyan-500 text-white"
+                onClick={() => handleDownloadPDF(order)}
+              >
+                Download pdf
+              </button>
             </div>
           ))}
         </div>

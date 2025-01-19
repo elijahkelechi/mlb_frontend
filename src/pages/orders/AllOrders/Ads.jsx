@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { customFetch } from "../../utils";
+import { customFetch } from "../../../utils";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 
 const Ads = () => {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [deletingId, setDeletingId] = useState(null);
 
   // Fetch user data from the API
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await customFetch.get("AdsOrders/currentUser", {
+        const response = await customFetch.get("AdsOrders/", {
           withCredentials: true,
         });
         setFormData(response.data);
@@ -27,6 +29,21 @@ const Ads = () => {
   }, []);
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+  const deleteForm = async (id) => {
+    setDeletingId(id);
+    try {
+      await customFetch.delete(`AdsOrders/${id}`, {
+        withCredentials: true,
+      });
+      // Updating the local state to remove the deleted order
+      setFormData((prevData) => prevData.filter((order) => order._id !== id));
+      toast.success(`order id:${id} deleted Sucessfully`);
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setDeletingId(null);
+    }
   };
   // Render loading state
   if (loading) {
@@ -118,6 +135,16 @@ const Ads = () => {
               >
                 Contact Support
               </Link>
+              <button
+                onClick={() => deleteForm(order._id)}
+                className="btn bg-red-500 text-white hover:bg-gray-800 m-4"
+              >
+                {deletingId === order._id ? (
+                  <span>Deleting...</span>
+                ) : (
+                  <span> Delete Expired Orders</span>
+                )}
+              </button>
             </div>
           ))}
         </div>

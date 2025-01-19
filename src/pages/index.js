@@ -35,3 +35,4 @@ export { default as AllUsersOrders } from "./orders/AllUsersOrders";
 export { default as AllBusinessNameOrders } from "./orders/AllOrders/BusinessName";
 export { default as AllLLCorders } from "./orders/AllOrders/LLC";
 export { default as AllSCUMLorders } from "./orders/AllOrders/SCUML";
+export { default as AllAdsSubscriptionOrders } from "./orders/AllOrders/Ads";
