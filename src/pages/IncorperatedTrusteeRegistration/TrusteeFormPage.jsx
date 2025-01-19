@@ -4,8 +4,10 @@ import bgImage from "../../assets/formImage.webp";
 import TrusteeDetails from "./FormStages/TrusteeDetails";
 import TrusteeAddress from "./FormStages/TrusteeAdress";
 import TrusteeDocuments from "./FormStages/TrusteeDocuments";
+import TrusteeReview from "./TrusteeReview";
 import { toast } from "react-toastify";
 import { customFetch } from "../../utils";
+import { PaystackButton } from "react-paystack";
 
 const MultiStageForm = () => {
   const [currentStage, setCurrentStage] = useState(1);
@@ -80,14 +82,7 @@ const MultiStageForm = () => {
   const checkSecondStage = () => {
     const documents = formData.trustees[currentTrusteeIndex].documents;
 
-    // Ensure all required documents are uploaded and valid
-    return (
-      documents.validID && documents.signature && documents.passportPhoto
-      // documents.minutesOfMeetings &&
-      // documents.organizationConstitution &&
-      // documents.trusteeDeclarationForm &&
-      // documents.newspaperPublication
-    );
+    return documents.validID && documents.signature && documents.passportPhoto;
   };
 
   const handleInputChange = (section, field, value) => {
@@ -105,13 +100,6 @@ const MultiStageForm = () => {
   };
 
   const addTrustee = () => {
-    // // Ensure the current trustee is marked as completed first
-    // if (!formData.trustees[currentTrusteeIndex].completed) {
-    //   markCurrentTrusteeAsCompleted();
-    // }
-
-    // Proceed only if the trustee is completed
-
     const handleScrollToTop = () => {
       window.scrollTo(0, 0);
     };
@@ -162,38 +150,6 @@ const MultiStageForm = () => {
     setCurrentStage(1);
     handleScrollToTop();
   };
-
-  // const markCurrentTrusteeAsCompleted = () => {
-  //   const trustee = formData.trustees[currentTrusteeIndex];
-  //   const isCompleted =
-  //     trustee.details.lastName &&
-  //     trustee.details.firstName &&
-  //     trustee.details.DOB &&
-  //     trustee.details.gender &&
-  //     trustee.details.nationality &&
-  //     trustee.details.phoneNumber &&
-  //     trustee.details.email &&
-  //     trustee.address.country &&
-  //     trustee.address.state &&
-  //     trustee.address.city &&
-  //     trustee.address.postCode &&
-  //     trustee.address.streetName &&
-  //     trustee.address.houseNumber &&
-  //     trustee.documents.validID &&
-  //     trustee.documents.signature &&
-  //     trustee.documents.passportPhoto;
-
-  //   // Update the 'completed' flag only if all fields are filled
-  //   if (isCompleted) {
-  //     setFormData((prev) => {
-  //       const updatedTrustees = [...prev.trustees];
-  //       updatedTrustees[currentTrusteeIndex].completed = true;
-  //       return { ...prev, trustees: updatedTrustees };
-  //     });
-  //   } else {
-  //     alert("Please fill all fields before marking the trustee as completed.");
-  //   }
-  // };
 
   const handleSubmit = async () => {
     if (isSubmitting) return; // Prevent multiple submissions
@@ -275,6 +231,24 @@ const MultiStageForm = () => {
   };
 
   const previousStage = () => setCurrentStage((prev) => Math.max(prev - 1, 1));
+  const paystackConfig = {
+    email: formData.email, // Default to user email if proprietor email is unavailable
+    amount: 47500 * 100, // Paystack requires amount in kobo
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
+  };
+
+  const handlePaymentSuccess = (response) => {
+    console.log("Payment Success:", response);
+    toast.success("Payment Successful. Submission in progress...");
+    setIsSubmitting(true);
+    handleDownloadPDF();
+    handleSubmit();
+  };
+
+  const handlePaymentError = (response) => {
+    console.error("Payment Error:", response);
+    toast.error("Payment failed. Please try again.");
+  };
 
   return (
     <div
@@ -311,18 +285,24 @@ const MultiStageForm = () => {
           )}
 
           {currentStage === 2 && (
-            <div>
-              <TrusteeDocuments
-                trusteeIndex={currentTrusteeIndex}
-                formData={formData.trustees[currentTrusteeIndex].documents}
-                onChange={(field, value) =>
-                  handleInputChange("documents", field, value)
-                }
-              />
-            </div>
+            <TrusteeDocuments
+              trusteeIndex={currentTrusteeIndex}
+              formData={formData.trustees[currentTrusteeIndex].documents}
+              onChange={(field, value) =>
+                handleInputChange("documents", field, value)
+              }
+            />
+          )}
+
+          {currentStage === 3 && (
+            <TrusteeReview
+              trustee={formData.trustees[currentTrusteeIndex]}
+              onEdit={() => setCurrentStage(1)} // Allow editing details
+            />
           )}
 
           <div className="flex justify-between mt-4 m-4 md:mt-16">
+            {/* Previous Section Button */}
             {currentStage > 1 && (
               <button
                 className="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded"
@@ -331,51 +311,69 @@ const MultiStageForm = () => {
                 Previous Section
               </button>
             )}
-            {currentStage < 2 && (
+
+            {/* Next Section Button for Stages 1 and 2 */}
+            {currentStage < 3 && (
               <button
-                disabled={!checkFirstStage()}
+                disabled={
+                  (currentStage === 1 && !checkFirstStage()) ||
+                  (currentStage === 2 && !checkSecondStage())
+                }
                 className={`px-4 py-2 rounded ml-auto ${
-                  checkFirstStage()
+                  (currentStage === 1 && checkFirstStage()) ||
+                  (currentStage === 2 && checkSecondStage())
                     ? "bg-blue-500 hover:bg-blue-600 text-white"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
                 onClick={nextStage}
               >
-                Next Section
+                {currentStage === 1 ? "Next Section" : "Review Trustee"}
               </button>
             )}
-            {currentStage === 2 && (
-              <button
-                disabled={!checkSecondStage()}
-                className={`px-4 py-2 rounded ${
-                  checkSecondStage()
-                    ? "bg-green-500 hover:bg-green-700 text-white"
-                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                }`}
-                onClick={addTrustee}
-              >
-                Add Trustee
-              </button>
+
+            {/* Add Trustee or Confirm Trustee Button in Review Stage */}
+            {currentStage === 3 && (
+              <div className="block">
+                <button
+                  className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded ml-auto"
+                  onClick={() => {
+                    addTrustee();
+                  }}
+                >
+                  Add New Trusteee
+                </button>
+
+                <p className="text-xs text-red-500 block">
+                  {formData.trustees.length >= 2
+                    ? "Click to add more trustees or submit below!"
+                    : " Minimum of two trustees is required ⚠️"}
+                </p>
+              </div>
             )}
           </div>
-
-          {currentStage === 2 && formData.trustees.length >= 2 && (
-            <button
-              disabled={!checkSecondStage() || isSubmitting}
-              className={`px-4 py-2 rounded w-full ml-auto ${
-                checkSecondStage() && !isSubmitting
-                  ? "bg-green-500 hover:bg-green-700 text-white"
-                  : "bg-gray-300 text-gray-500 cursor-not-allowed"
-              }`}
-              onClick={handleSubmit}
-            >
-              {isSubmitting ? (
-                <span>Submitting...</span>
-              ) : (
-                <span>Submit form</span>
-              )}
-            </button>
-          )}
+          {/* Submit Button (only visible when conditions are met) */}
+          {currentStage === 3 &&
+            formData.trustees.length >= 2 &&
+            checkSecondStage() && (
+              <div>
+                <p>
+                  <span className="font-bold text-gray-800"> Note: </span>
+                  <span className="text-blue-500">
+                    Form would be submitted automatically on successful payment
+                    <span className="text-red-500 block">
+                      Do not interupt form submission after payment.
+                    </span>
+                  </span>
+                </p>
+                <PaystackButton
+                  text="Proceed to Payment"
+                  className={`bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 w-full`}
+                  {...paystackConfig}
+                  onSuccess={handlePaymentSuccess}
+                  onClose={handlePaymentError}
+                />
+              </div>
+            )}
         </div>
       </motion.div>
     </div>
