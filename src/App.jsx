@@ -39,6 +39,7 @@ import {
   AllLLCorders,
   AllSCUMLorders,
   AllAdsSubscriptionOrders,
+  AllTrusteeOrders,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";
@@ -137,6 +138,10 @@ const router = createBrowserRouter([
         element: <AdsOrders />,
       },
       {
+        path: "Trustee_orders",
+        element: <TrusteeOrders />,
+      },
+      {
         path: "All_Users_Orders",
         element: <AllUsersOrders />,
       },
@@ -155,6 +160,10 @@ const router = createBrowserRouter([
       {
         path: "All_Ads_Orders",
         element: <AllAdsSubscriptionOrders />,
+      },
+      {
+        path: "All_Trustee_Orders",
+        element: <AllTrusteeOrders />,
       },
     ],
   },

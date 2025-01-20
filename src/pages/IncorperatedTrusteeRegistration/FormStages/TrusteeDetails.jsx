@@ -6,10 +6,11 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
 
   return (
     <div className="bg-white p-4 rounded shadow-md mb-4">
-      <h2 className="text-xl font-semibold mb-4">
+      <h2 className="text-lg sm:text-xl font-semibold mb-4">
         Trustee {trusteeIndex + 1} - Details
       </h2>
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form className="grid grid-cols-1 gap-4">
+        {/* Left Column */}
         <div>
           <label htmlFor="lastName" className="block text-sm font-medium mb-1">
             Last Name
@@ -51,6 +52,7 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
           />
         </div>
 
+        {/* Right Column */}
         <div>
           <label htmlFor="DOB" className="block text-sm font-medium mb-1">
             Date of Birth
@@ -94,6 +96,7 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
           />
         </div>
 
+        {/* Other Fields */}
         <div className="w-full">
           <label
             htmlFor="phoneNumber"
@@ -124,6 +127,7 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
             className="w-full p-2 border mb-4 rounded"
           />
         </div>
+
         {/* ID Type and ID Number */}
         <div>
           <label htmlFor="idType" className="block text-sm font-medium mb-1">
@@ -153,8 +157,7 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
         </div>
 
         {/* Chairman and Secretary Radio Buttons */}
-        {/* Chairman Radio Buttons */}
-        <div className="col-span-2 flex gap-4 items-center">
+        <div className="flex flex-col gap-4">
           <label className="flex items-center gap-2">
             <input
               type="radio"
@@ -175,8 +178,7 @@ const TrusteeDetails = ({ formData, trusteeIndex, onChange }) => {
           </label>
         </div>
 
-        {/* Secretary Radio Buttons */}
-        <div className="col-span-2 flex gap-4 items-center">
+        <div className="flex flex-col gap-4">
           <label className="flex items-center gap-2">
             <input
               type="radio"

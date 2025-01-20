@@ -25,7 +25,7 @@ const Orders = () => {
     },
     {
       name: "Incorporated Trustee (NGO | Association) Orders",
-      path: "/ngo-orders",
+      path: "/Trustee_orders",
       icon: <FaUsers />,
     },
 

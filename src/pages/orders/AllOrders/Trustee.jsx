@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { customFetch } from "../../utils";
+import { customFetch } from "../../../utils";
 import { Link } from "react-router";
+import { jsPDF } from "jspdf";
 
 const Trustee = () => {
   const [formData, setFormData] = useState(null);
@@ -11,7 +12,7 @@ const Trustee = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await customFetch.get("/Trusteeform/current", {
+        const response = await customFetch.get("/Trusteeform/", {
           withCredentials: true,
         });
         setFormData(response.data.forms);
@@ -25,6 +26,83 @@ const Trustee = () => {
 
     fetchUserData();
   }, []);
+  const handleDownloadPDF = (order) => {
+    const doc = new jsPDF();
+    const titleFontSize = 16;
+    const sectionFontSize = 14;
+    const contentFontSize = 12;
+    const lineHeight = 10;
+    const margin = 20;
+
+    let yOffset = margin;
+
+    // Add Title
+    doc.setFontSize(titleFontSize);
+    doc.text(
+      "Incorporated Trustee Registration Form (powered by MLB)",
+      margin,
+      yOffset
+    );
+    yOffset += lineHeight * 2;
+
+    // Add Order Details
+    doc.setFontSize(sectionFontSize);
+    doc.text(`Order ID: ${order._id}`, margin, yOffset);
+    yOffset += lineHeight * 2;
+
+    // Add Trustee Details
+    order.trustees.forEach((trustee, index) => {
+      doc.setFontSize(sectionFontSize);
+      doc.text(`Trustee ${index + 1}`, margin, yOffset);
+      yOffset += lineHeight;
+
+      doc.setFontSize(contentFontSize);
+      Object.entries(trustee.details).forEach(([key, value]) => {
+        const fieldLabel = key
+          .replace(/([A-Z])/g, " $1")
+          .replace(/^./, (str) => str.toUpperCase());
+        const fieldValue =
+          value === null
+            ? "N/A"
+            : typeof value === "boolean"
+            ? value
+              ? "Yes"
+              : "No"
+            : value;
+
+        doc.text(`${fieldLabel}: ${fieldValue}`, margin + 10, yOffset);
+        yOffset += lineHeight;
+
+        if (yOffset > 280) {
+          doc.addPage();
+          yOffset = margin;
+        }
+      });
+
+      // Trustee Address
+      doc.text("Address:", margin, yOffset);
+      yOffset += lineHeight;
+      Object.entries(trustee.address).forEach(([key, value]) => {
+        const fieldLabel = key
+          .replace(/([A-Z])/g, " $1")
+          .replace(/^./, (str) => str.toUpperCase());
+        const fieldValue = value || "N/A";
+
+        doc.text(`${fieldLabel}: ${fieldValue}`, margin + 10, yOffset);
+        yOffset += lineHeight;
+
+        if (yOffset > 280) {
+          doc.addPage();
+          yOffset = margin;
+        }
+      });
+
+      yOffset += lineHeight;
+    });
+
+    // Save the PDF
+    doc.save(`Order_${order._id}.pdf`);
+  };
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
@@ -194,6 +272,12 @@ const Trustee = () => {
                   </div>
                 ))}
               </div>
+              <button
+                onClick={() => handleDownloadPDF(order)}
+                className="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600"
+              >
+                Download PDF
+              </button>
             </div>
           ))}
         </div>
