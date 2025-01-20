@@ -436,7 +436,7 @@ const MultiStageForm = () => {
                 }`}
                 onClick={nextStage}
               >
-                {currentStage === 1 ? "Next Section" : "Review Trustee"}
+                {currentStage === 1 ? "Next Section" : "Review"}
               </button>
             )}
 

@@ -129,7 +129,7 @@ const Trustee = () => {
   }
 
   return (
-    <div className="p-6 md:p-12 bg-cyan-50">
+    <div className="p-4 md:p-12 bg-cyan-50">
       <h2 className="text-3xl font-semibold text-gray-600 text-center mb-12 mt-8">
         Incorporated Trustee Registration Orders
         <p className="text-lg">
@@ -138,11 +138,11 @@ const Trustee = () => {
       </h2>
 
       {formData && formData.length > 0 ? (
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:gap-12">
           {formData.map((order, orderIndex) => (
             <div
               key={order._id}
-              className="p-4 bg-white shadow-md rounded-lg border border-gray-200"
+              className="p-2 md:p-4 bg-white shadow-md rounded-lg border border-gray-200"
             >
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Order ID: {order._id}
