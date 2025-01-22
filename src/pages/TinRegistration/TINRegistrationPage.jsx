@@ -61,8 +61,8 @@ const TINRegistrationPage = () => {
                 </p>
 
                 <Link
-                  onClick={handleScrollToTop}
-                  to="/tin_registration_form" // Adjust the link as necessary
+                  to="/Choose_TIN_Type"
+                  onClick={() => window.scrollTo(0, 0)} // Adjust the link as necessary
                   className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   Get Started
@@ -125,19 +125,19 @@ const TINRegistrationPage = () => {
                 icon: FaUser,
                 title: "Individuals",
                 desc: "Employed professionals, self-employed individuals, or freelancers.",
-                link: "",
+                link: "/Choose_TIN_Type",
               },
               {
                 icon: FaBuilding,
                 title: "Business Owners",
                 desc: "Sole proprietors, partnerships, and limited liability companies.",
-                link: "",
+                link: "/Choose_TIN_Type",
               },
               {
                 icon: FaHandsHelping,
                 title: "Non-Profits",
                 desc: "NGOs, religious bodies, and community-based associations.",
-                link: "",
+                link: "/Choose_TIN_Type",
               },
             ].map((item, index) => (
               <motion.div
@@ -152,7 +152,11 @@ const TINRegistrationPage = () => {
                   {item.title}
                 </h3>
                 <p className="text-gray-600 mt-2">{item.desc}</p>
-                <Link className="btn mt-2 bg-cyan-600 hover:bg-gray-800 text-white">
+                <Link
+                  to="/Choose_TIN_Type"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="btn mt-2 bg-cyan-600 hover:bg-gray-800 text-white"
+                >
                   Register Now
                 </Link>
               </motion.div>
@@ -242,13 +246,15 @@ const TINRegistrationPage = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <motion.button
+          <motion.Link
+            to="/Choose_TIN_Type"
+            onClick={() => window.scrollTo(0, 0)}
             className="px-8 py-4 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
             Get Started Now
-          </motion.button>
+          </motion.Link>
         </div>
         <section className="mb-16 mt-16 px-8 md:px-16">
           <motion.h2
@@ -313,7 +319,11 @@ const TINRegistrationPage = () => {
                     <li key={reqIndex}>{req}</li>
                   ))}
                 </ul>
-                <Link className="mt-4 btn text-white bg-cyan-600 hover:bg-gray-800">
+                <Link
+                  to="/Choose_TIN_Type"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="mt-4 btn text-white bg-cyan-600 hover:bg-gray-800"
+                >
                   Register Now
                 </Link>
               </motion.div>
@@ -323,15 +333,20 @@ const TINRegistrationPage = () => {
 
         <section className="bg-gray-100 py-10 px-4 md:px-16 mb-8">
           <div className="container mx-auto">
-            <h2 className="text-center text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-center text-2xl font-bold text-gray-900 mb-6">
               TIN Registration Fees
             </h2>
             <div className="bg-white shadow-md rounded-lg p-6">
               <ul className="space-y-4">
                 <li className="flex justify-between items-center text-lg text-gray-700">
-                  <span>Joint Tax Board (JTB) TIN</span>
-                  <span className="font-semibold">₦10,000</span>
+                  <span className="font-bold text-gray-900">
+                    Joint Tax Board (JTB) TIN
+                  </span>
+                  <span className="font-semibold">
+                    <span>Cost: </span>₦10,000
+                  </span>
                 </li>
+
                 <li>
                   <h3 className="text-gray-800 text-xl font-semibold mb-2">
                     Federal Inland Revenue Service (FIRS) TIN
@@ -339,15 +354,21 @@ const TINRegistrationPage = () => {
                   <ul className="ml-6 space-y-2">
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Business Name</span>
-                      <span className="font-semibold">₦12,000</span>
+                      <span className="font-semibold">
+                        <span>Cost: </span>₦12,000
+                      </span>
                     </li>
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Limited Liability Company</span>
-                      <span className="font-semibold">₦15,000</span>
+                      <span className="font-semibold">
+                        <span>Cost: </span>₦15,000
+                      </span>
                     </li>
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Incorporated Trustee</span>
-                      <span className="font-semibold">₦15,000</span>
+                      <span className="font-semibold">
+                        <span>Cost: </span>₦15,000
+                      </span>
                     </li>
                   </ul>
                 </li>
@@ -358,6 +379,13 @@ const TINRegistrationPage = () => {
                   <span className="font-normal">2-5 working days ⚡️ ⚡️</span>
                 </h1>
               </div>
+              <Link
+                to="/Choose_TIN_Type"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn bg-cyan-600 text-white hover:bg-gray-800 w-full"
+              >
+                Start Registeration
+              </Link>
             </div>
           </div>
         </section>

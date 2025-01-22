@@ -4,12 +4,14 @@ import bgImage from "../../assets/formImage.webp";
 import TrusteeDetails from "./FormStages/TrusteeDetails";
 import TrusteeAddress from "./FormStages/TrusteeAdress";
 import TrusteeDocuments from "./FormStages/TrusteeDocuments";
+import DocumentsRequired from "./FormStages/DocumentsRequired";
 import TrusteeReview from "./TrusteeReview";
 import { toast } from "react-toastify";
+import OrganizationDetails from "./FormStages/OrganizationDetails";
 import { customFetch } from "../../utils";
 import { PaystackButton } from "react-paystack";
 import { Link } from "react-router";
-import { jsPDF } from "jspdf";
+import jsPDF from "jspdf";
 
 const MultiStageForm = () => {
   const [currentStage, setCurrentStage] = useState(1);
@@ -17,9 +19,26 @@ const MultiStageForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
   const [formData, setFormData] = useState({
+    organization: {
+      details: {
+        proposedNameOption1: "",
+        proposedNameOption2: "",
+        organizationPrincipalActivity: "",
+        organizationAimsAndObjectives: "",
+        organizationPhoneNumber: "",
+        organizationEmail: "",
+      },
+      address: {
+        state: "",
+        lga: "",
+        city: "",
+        postCode: "",
+        streetName: "",
+        houseNumber: "",
+      },
+    },
     trustees: [
       {
-        id: 1,
         details: {
           lastName: "",
           firstName: "",
@@ -31,8 +50,8 @@ const MultiStageForm = () => {
           email: "",
           idType: "",
           idNumber: "",
-          isChairman: null,
-          isSecretary: null,
+          isChairman: false,
+          isSecretary: false,
         },
         address: {
           country: "",
@@ -52,16 +71,20 @@ const MultiStageForm = () => {
           trusteeDeclarationForm: null,
           newspaperPublication: null,
         },
-        completed: false,
       },
     ],
+    user: null, // Assuming this will be assigned when the user logs in or is selected
   });
 
-  const checkFirstStage = () => {
+  const checkSecondStage = () => {
     const trustee = formData.trustees[currentTrusteeIndex];
+    const documents = formData.trustees[currentTrusteeIndex].documents;
     const details = trustee.details;
     const address = trustee.address;
     return (
+      documents.validID &&
+      documents.signature &&
+      documents.passportPhoto &&
       details.lastName &&
       details.firstName &&
       details.DOB &&
@@ -83,13 +106,27 @@ const MultiStageForm = () => {
     );
   };
 
-  const checkSecondStage = () => {
-    const documents = formData.trustees[currentTrusteeIndex].documents;
-
-    return documents.validID && documents.signature && documents.passportPhoto;
+  const checkFirstStage = () => {
+    const organizationDetails = formData.organization.details;
+    const organizationAddress = formData.organization.address;
+    return (
+      organizationDetails.proposedNameOption1 &&
+      organizationDetails.proposedNameOption2 &&
+      organizationDetails.organizationPrincipalActivity &&
+      organizationDetails.organizationAimsAndObjectives &&
+      organizationDetails.organizationPhoneNumber &&
+      organizationDetails.organizationEmail &&
+      organizationAddress.state &&
+      organizationAddress.lga &&
+      organizationAddress.city &&
+      organizationAddress.postCode &&
+      organizationAddress.streetName &&
+      organizationAddress.houseNumber
+    );
   };
 
   const handleInputChange = (section, field, value) => {
+    console.log("Section:", section, "Field:", field, "Value:", value);
     setFormData((prev) => {
       const updatedTrustees = [...prev.trustees];
       updatedTrustees[currentTrusteeIndex] = {
@@ -151,20 +188,24 @@ const MultiStageForm = () => {
       ],
     }));
     setCurrentTrusteeIndex(formData.trustees.length);
-    setCurrentStage(1);
+    setCurrentStage(2);
     handleScrollToTop();
   };
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-
     try {
       const formDataObject = new FormData();
+
+      // Add organization details to formData
+      formDataObject.append(
+        "organization",
+        JSON.stringify(formData.organization)
+      );
 
       // Add non-file trustee data (including details such as idType, idNumber, etc.)
       const trusteesWithoutFiles = formData.trustees.map(
         ({ documents, ...rest }) => {
-          // Ensure idType, idNumber, isChairman, and isSecretary are included in the details
           return {
             ...rest,
             details: {
@@ -221,12 +262,11 @@ const MultiStageForm = () => {
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Submission error:", error.response?.data || error.message);
-      toast.error(error?.response?.data?.message || "Submission failed.");
+      toast.error(error?.response?.data?.msg || "Submission failed.");
     } finally {
       setIsSubmitting(false);
     }
   };
-
   const nextStage = () => {
     setCurrentStage((prev) => Math.min(prev + 1, 3));
   };
@@ -242,121 +282,13 @@ const MultiStageForm = () => {
     console.log("Payment Success:", response);
     toast.success("Payment Successful. Submission in progress...");
     setIsSubmitting(true);
-    handleDownloadPDF();
+    // handleDownloadPDF();
     handleSubmit();
   };
 
   const handlePaymentError = (response) => {
     console.error("Payment Error:", response);
     toast.error("Payment failed. Please try again.");
-  };
-  const handleDownloadPDF = () => {
-    const doc = new jsPDF();
-    const titleFontSize = 16;
-    const sectionFontSize = 14;
-    const contentFontSize = 12;
-    const lineHeight = 10;
-    const margin = 20;
-
-    let yOffset = margin;
-
-    // Add Title
-    doc.setFontSize(titleFontSize);
-    doc.text(
-      "Incorporated Trustee Registration Form (powered by MLB)",
-      margin,
-      yOffset
-    );
-    yOffset += lineHeight * 2;
-
-    // Add a section for each trustee
-    formData.trustees.forEach((trustee, index) => {
-      // Trustee Section Header
-      doc.setFontSize(sectionFontSize);
-      doc.text(`Trustee ${index + 1}`, margin, yOffset);
-      yOffset += lineHeight;
-
-      // Add Trustee Details
-      doc.setFontSize(contentFontSize);
-      doc.text("Details:", margin, yOffset);
-      yOffset += lineHeight;
-
-      Object.entries(trustee.details).forEach(([key, value]) => {
-        const fieldLabel = key
-          .replace(/([A-Z])/g, " $1")
-          .replace(/^./, (str) => str.toUpperCase());
-        const fieldValue =
-          value === null
-            ? "N/A"
-            : typeof value === "boolean"
-            ? value
-              ? "Yes"
-              : "No"
-            : value;
-
-        doc.text(`${fieldLabel}: ${fieldValue}`, margin + 10, yOffset);
-        yOffset += lineHeight;
-
-        if (yOffset > 280) {
-          doc.addPage();
-          yOffset = margin;
-        }
-      });
-
-      // Add Trustee Address
-      doc.text("Address:", margin, yOffset);
-      yOffset += lineHeight;
-
-      Object.entries(trustee.address).forEach(([key, value]) => {
-        const fieldLabel = key
-          .replace(/([A-Z])/g, " $1")
-          .replace(/^./, (str) => str.toUpperCase());
-        const fieldValue = value || "N/A";
-
-        doc.text(`${fieldLabel}: ${fieldValue}`, margin + 10, yOffset);
-        yOffset += lineHeight;
-
-        if (yOffset > 280) {
-          doc.addPage();
-          yOffset = margin;
-        }
-      });
-
-      // Add Trustee Documents
-      doc.text("Documents:", margin, yOffset);
-      yOffset += lineHeight;
-
-      Object.entries(trustee.documents).forEach(([key, value]) => {
-        const fieldLabel = key
-          .replace(/([A-Z])/g, " $1")
-          .replace(/^./, (str) => str.toUpperCase());
-        const fieldValue =
-          value instanceof File
-            ? value.name
-            : value
-            ? "Uploaded"
-            : "Not Uploaded";
-
-        doc.text(`${fieldLabel}: ${fieldValue}`, margin + 10, yOffset);
-        yOffset += lineHeight;
-
-        if (yOffset > 280) {
-          doc.addPage();
-          yOffset = margin;
-        }
-      });
-
-      // Add spacing between trustees
-      yOffset += lineHeight * 2;
-
-      if (yOffset > 280) {
-        doc.addPage();
-        yOffset = margin;
-      }
-    });
-
-    // Save the PDF
-    doc.save("Incorporated_Trustee_Form.pdf");
   };
 
   return (
@@ -376,6 +308,31 @@ const MultiStageForm = () => {
         <div className="bg-white p-4 md:p-8 w-full">
           {currentStage === 1 && (
             <div>
+              <OrganizationDetails
+                formData={formData.organization}
+                onChange={(field, value) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    organization: {
+                      ...prev.organization,
+                      [field]: value,
+                    },
+                  }))
+                }
+              />
+
+              <TrusteeDocuments
+                trusteeIndex={currentTrusteeIndex}
+                formData={formData.trustees[currentTrusteeIndex].documents}
+                onChange={(field, value) =>
+                  handleInputChange("documents", field, value)
+                }
+              />
+            </div>
+          )}
+
+          {currentStage === 2 && (
+            <div>
               <TrusteeDetails
                 trusteeIndex={currentTrusteeIndex}
                 formData={formData.trustees[currentTrusteeIndex].details}
@@ -390,17 +347,14 @@ const MultiStageForm = () => {
                   handleInputChange("address", field, value)
                 }
               />
+              <DocumentsRequired
+                trusteeIndex={currentTrusteeIndex}
+                formData={formData.trustees[currentTrusteeIndex].documents}
+                onChange={(field, value) =>
+                  handleInputChange("documents", field, value)
+                }
+              />
             </div>
-          )}
-
-          {currentStage === 2 && (
-            <TrusteeDocuments
-              trusteeIndex={currentTrusteeIndex}
-              formData={formData.trustees[currentTrusteeIndex].documents}
-              onChange={(field, value) =>
-                handleInputChange("documents", field, value)
-              }
-            />
           )}
 
           {currentStage === 3 && (
@@ -436,7 +390,7 @@ const MultiStageForm = () => {
                 }`}
                 onClick={nextStage}
               >
-                {currentStage === 1 ? "Next Section" : "Review"}
+                {currentStage === 1 ? "Next Section" : "Review Trustee"}
               </button>
             )}
 
@@ -445,13 +399,10 @@ const MultiStageForm = () => {
               <div className="block">
                 <button
                   className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 btn-sm md:btn-md rounded ml-auto"
-                  onClick={() => {
-                    addTrustee();
-                  }}
+                  onClick={addTrustee}
                 >
-                  Add New Trusteee
+                  Add New Trustee
                 </button>
-
                 <p className="text-xs text-red-500 block">
                   {formData.trustees.length >= 2
                     ? "Click to add more trustees or submit below!"
@@ -526,12 +477,12 @@ const MultiStageForm = () => {
                 <p className="mt-2">
                   Your form has been submitted successfully. Thank you!
                 </p>
-                <button
+                {/* <button
                   className="text-center mt-8 bg-green-500 text-gray-50 px-4 py-2 rounded hover:bg-green-700"
-                  onClick={() => handleDownloadPDF()}
+                  onClick={handleDownloadPDF}
                 >
                   Download as PDF
-                </button>
+                </button> */}
                 <button
                   onClick={() => setIsSubmissionSuccessful(false)}
                   className="mx-4 text-center mt-8 bg-green-500 text-gray-50 px-4 py-2 rounded hover:bg-green-700"
@@ -541,7 +492,6 @@ const MultiStageForm = () => {
                 <Link
                   className="btn bg-gray-800 text-white my-8"
                   to="/ongoing_orders"
-                  onClick={window.scrollTo(0, 0)}
                 >
                   Check Orders
                 </Link>

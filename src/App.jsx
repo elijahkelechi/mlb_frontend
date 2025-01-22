@@ -32,6 +32,9 @@ import {
   TrusteeOrders,
   SCUMLorders,
   TINorders,
+  FirstTinStage,
+  JTBform,
+  FIRSform,
   AdsOrders,
   WebDesignOrders,
   GraphicDesignOrders,
@@ -84,6 +87,18 @@ const router = createBrowserRouter([
       {
         path: "TIN_Registration",
         element: <TinRegistrationPage />,
+      },
+      {
+        path: "Choose_TIN_Type",
+        element: <FirstTinStage />,
+      },
+      {
+        path: "JTB_form",
+        element: <JTBform />,
+      },
+      {
+        path: "FIRS_form",
+        element: <FIRSform />,
       },
       {
         path: "SCUML_Registeration",

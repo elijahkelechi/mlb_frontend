@@ -9,6 +9,7 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
         Trustee {trusteeIndex + 1} - Address
       </h2>
       <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Text Inputs */}
         <div>
           <label htmlFor="country" className="block text-sm font-medium mb-1">
             Country
@@ -47,6 +48,7 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
           />
         </div>
 
+        {/* Additional Address Fields */}
         <div>
           <label htmlFor="city" className="block text-sm font-medium mb-1">
             City
@@ -106,5 +108,4 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
     </div>
   );
 };
-
 export default TrusteeAddress;
