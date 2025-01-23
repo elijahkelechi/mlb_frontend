@@ -275,7 +275,7 @@ const MultiStageForm = () => {
   const paystackConfig = {
     email: formData.trustees?.[0]?.details?.email,
     amount: 125000 * 100, // Paystack requires amount in kobo
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Replace with your actual Paystack public key
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
   };
 
   const handlePaymentSuccess = (response) => {
@@ -401,7 +401,9 @@ const MultiStageForm = () => {
                   className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 btn-sm md:btn-md rounded ml-auto"
                   onClick={addTrustee}
                 >
-                  Add Trustee
+                  {formData.trustees.length >= 2
+                    ? "Add more Trustee"
+                    : "Add Trustee"}
                 </button>
                 <p className="text-xs text-red-500 block">
                   {formData.trustees.length >= 2
@@ -517,9 +519,7 @@ const MultiStageForm = () => {
                   </h2>
                   <p className="text-gray-700 text-center">
                     Your payment of{" "}
-                    <span className="font-bold text-green-600">
-                      125,000 Naira
-                    </span>{" "}
+                    <span className="font-bold text-green-600">₦125,000</span>{" "}
                     has been received successfully. Your Trustee registration
                     form has been submitted. Thank you for trusting us!
                   </p>
