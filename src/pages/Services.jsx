@@ -101,7 +101,7 @@ const Services = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-left">
           <div className="max-w-5xl mx-auto text-left px-6">
             {/* Header */}
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            <h1 className="text-3xl text-cyan-500 sm:text-4xl font-extrabold mb-4">
               Our Services
             </h1>
             <p className="text-gray-300 text-lg mb-12">
