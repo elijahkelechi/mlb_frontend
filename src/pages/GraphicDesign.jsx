@@ -1,6 +1,6 @@
 import React from "react";
-import heroImageDesktop from "../assets/SCUMLdesktop.jpeg";
-import heroImageMobile from "../assets/SCUMLmobile.jpeg";
+import heroImageMobile from "../assets/SCUMLdesktop.jpeg";
+import heroImageDesktop from "../assets/graphicsDesign/heroDesktop.jpeg";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 const GraphicDesignPage = () => {
@@ -26,7 +26,7 @@ const GraphicDesignPage = () => {
             />
             <img
               className="flex md:hidden h-full w-full object-cover"
-              src={heroImageMobile} // Add your mobile image path
+              src={heroImageDesktop} // Add your mobile image path
               alt="Graphic Design and Branding Mobile"
             />
           </div>

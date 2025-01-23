@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/formImage.webp";
-import heroImageDesktop from "../../assets/SCUMLdesktop.jpeg";
-import heroImageMobile from "../../assets/SCUMLmobile.jpeg";
+import heroImageDesktop from "../../assets/BusinessNamePage/herDesktop.jpeg";
+import heroImageMobile from "../../assets/BusinessNamePage/herMobile.jpeg";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -88,12 +88,22 @@ const BusinessNameRegistration = () => {
             </motion.div>
           </div>
 
-          {/* Right Side: Image */}
+          {/* Right Side: Image (Desktop and Mobile Images) */}
           <div className="w-full md:w-1/2 h-full relative">
+            {/* Mobile Image */}
             <motion.img
-              className="h-full w-full object-cover"
+              className="md:hidden h-full w-full object-cover"
+              src={heroImageMobile}
+              alt="Business Registration Mobile"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
+            {/* Desktop Image */}
+            <motion.img
+              className="hidden md:block h-full w-full object-cover"
               src={heroImageDesktop}
-              alt="Business Registration"
+              alt="Business Registration Desktop"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}

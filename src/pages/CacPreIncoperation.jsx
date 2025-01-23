@@ -60,7 +60,11 @@ const CacPreIncorporation = () => {
                 CAC Pre-Incorporation Services
               </h1>
               <p className="mt-4 text-left text-lg mb-8">
-                Simplify Your Business Setup with Expert Assistance
+                We simplify the process of officially establishing your business
+                with the Corporate Affairs Commission (CAC). Whether you're a
+                small entrepreneur, a growing organization, or a social
+                enterprise, our services ensure your registration is fast,
+                seamless and compliant.
               </p>
 
               <button
