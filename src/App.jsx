@@ -34,6 +34,8 @@ import {
   TINorders,
   FirstTinStage,
   JTBform,
+  JTBorder,
+  FIRSorders,
   FIRSform,
   AdsOrders,
   WebDesignOrders,
@@ -96,6 +98,14 @@ const router = createBrowserRouter([
       {
         path: "JTB_form",
         element: <JTBform />,
+      },
+      {
+        path: "FIRS_orders",
+        element: <FIRSorders />,
+      },
+      {
+        path: "JTB_orders",
+        element: <JTBorder />,
       },
       {
         path: "FIRS_form",

@@ -41,3 +41,6 @@ export { default as AllSCUMLorders } from "./orders/AllOrders/SCUML";
 export { default as AllAdsSubscriptionOrders } from "./orders/AllOrders/Ads";
 export { default as AllTrusteeOrders } from "./orders/AllOrders/Trustee";
 export { default as PostIncoRedirect } from "./PostIncoRedirect";
+export { default as TINdevision } from "../pages/orders/TINdevision";
+export { default as JTBorder } from "../pages/orders/JTBorder";
+export { default as FIRSorders } from "../pages/orders/FIRSorders";
