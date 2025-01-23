@@ -164,7 +164,7 @@ const JTBform = () => {
       <h1 className="text-2xl font-bold text-center mb-6">
         JTB TIN Registration{" "}
         <div className="text-lg font-medium">
-          Cost: <span>₦10,000 only</span>
+          Cost: <span>₦10,000</span>
         </div>
       </h1>
 
@@ -436,7 +436,7 @@ const JTBform = () => {
               <h2 className="text-2xl font-semibold text-green-800 mb-4">
                 Payment Successful!
               </h2>
-              <p className="text-gray-700 text-center">
+              <p className="text-gray-700 text-center my-2">
                 Your payment of{" "}
                 <span className="font-bold text-green-600">10,000 Naira</span>{" "}
                 has been received successfully. Your JBT TIN registration form

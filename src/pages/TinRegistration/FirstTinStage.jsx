@@ -7,7 +7,7 @@ const FirstTinStage = () => {
       <section className="bg-gray-100 mt-8 md:mt-12 px-4 md:px-16 mb-8">
         <div className="container mx-auto">
           <h2 className="text-center text-2xl font-bold text-gray-900 mb-6">
-            JTB TIN Registration
+            JTB TIN
           </h2>
           <div className="bg-white shadow-md rounded-lg p-6">
             <ul className="space-y-4">
@@ -39,7 +39,7 @@ const FirstTinStage = () => {
       <section className="bg-gray-100 py-10 px-4 md:px-16 ">
         <div className="container mx-auto">
           <h2 className="text-center text-2xl font-bold text-gray-900 mb-6">
-            FIRS TIN Registration Fees
+            FIRS TIN
           </h2>
           <div className="bg-white shadow-md rounded-lg p-6">
             <ul className="space-y-4">
@@ -51,19 +51,19 @@ const FirstTinStage = () => {
                   <li className="flex justify-between items-center text-lg text-gray-700">
                     <span>Business Name</span>
                     <span className="font-semibold">
-                      <span>Cost: </span>₦12,000
+                      <span>Cost: </span>₦15,000
                     </span>
                   </li>
                   <li className="flex justify-between items-center text-lg text-gray-700">
                     <span>Limited Liability Company</span>
                     <span className="font-semibold">
-                      <span>Cost: </span>₦15,000
+                      <span>Cost: </span>₦20,000
                     </span>
                   </li>
                   <li className="flex justify-between items-center text-lg text-gray-700">
                     <span>Incorporated Trustee</span>
                     <span className="font-semibold">
-                      <span>Cost: </span>₦15,000
+                      <span>Cost: </span>₦20,000
                     </span>
                   </li>
                 </ul>

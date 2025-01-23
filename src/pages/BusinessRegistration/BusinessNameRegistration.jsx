@@ -35,50 +35,69 @@ const BusinessNameRegistration = () => {
       <div className="relative z-10 min-h-screen  bg-transparent">
         {/* Hero Section */}
         <motion.div
-          className="h-screen w-full relative flex flex-col"
+          className="h-screen w-full relative flex flex-col md:flex-row"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          {/* Background Image */}
-          <div className="h-full w-full flex-shrink-0">
-            <img
-              className="hidden md:flex h-full w-full object-cover"
-              src={heroImageDesktop}
-              alt="Business Registration"
-            />
-            <img
-              className="flex md:hidden h-full w-full object-cover"
-              src={heroImageMobile}
-              alt="Business Registration Mobile"
-            />
-          </div>
-
-          {/* Overlay Content */}
-          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+          {/* Left Side: Text Content (Mobile View Overlay Only) */}
+          <div className="absolute inset-0 md:hidden bg-black bg-opacity-50 flex items-center justify-center z-10">
             <motion.div
-              className="h-screen flex items-center justify-start font-bold text-white px-6 md:px-12"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-center text-white px-6 "
             >
-              <div className="">
-                <h1 className="text-left text-2xl md:text-4xl font-bold">
-                  Register Your Business Name
-                </h1>
-                <p className="mt-4 text-left text-lg mb-8">
-                  Hassle-Free Registration with MULTI-LEVEL BOOST.
-                </p>
-
-                <Link
-                  onClick={handleScrollToTop}
-                  to="/business_name_registration_form"
-                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
-                >
-                  Register Now
-                </Link>
-              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold">
+                Register Your Business Name
+              </h1>
+              <p className="mt-4 text-lg">
+                Hassle-Free Registration with MULTI-LEVEL BOOST.
+              </p>
+              <Link
+                onClick={handleScrollToTop}
+                to="/business_name_registration_form"
+                className="bg-blue-600 text-gray-50 py-3 px-8 mt-6 inline-block rounded shadow hover:bg-gray-800 transition-all duration-300"
+              >
+                Register Now
+              </Link>
             </motion.div>
+          </div>
+
+          {/* Left Side: Text Content (Desktop View, Positioned on the Left of Image) */}
+          <div className="w-full md:w-1/2 h-full flex items-center justify-start px-6 md:px-12 z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-center md:text-left hidden md:block"
+            >
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+                Register Your Business Name
+              </h1>
+              <p className="mt-4 text-lg text-gray-600">
+                Hassle-Free Registration with MULTI-LEVEL BOOST.
+              </p>
+              <Link
+                onClick={handleScrollToTop}
+                to="/business_name_registration_form"
+                className="bg-blue-600 text-gray-50 py-3 px-8 mt-6 inline-block rounded shadow hover:bg-gray-800 transition-all duration-300"
+              >
+                Register Now
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Right Side: Image */}
+          <div className="w-full md:w-1/2 h-full relative">
+            <motion.img
+              className="h-full w-full object-cover"
+              src={heroImageDesktop}
+              alt="Business Registration"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
           </div>
         </motion.div>
 

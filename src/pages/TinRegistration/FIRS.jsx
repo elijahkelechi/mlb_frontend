@@ -3,6 +3,7 @@ import { customFetch } from "../../utils";
 import { toast } from "react-toastify";
 import { PaystackButton } from "react-paystack";
 import { Link } from "react-router";
+
 const FIRS = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -22,38 +23,46 @@ const FIRS = () => {
     constitution: null,
   });
 
-  const [cost, setCost] = useState(0); // State to store the calculated cost
+  const [errors, setErrors] = useState({
+    email: "",
+    phone: "",
+    whatsapp: "",
+    businessPhone: "",
+  });
 
-  // Define costMapping here
-  const costMapping = {
-    "Tax Promax Registration for Entities without TIN": {
-      "Business Name": 15000,
-      "Limited Liability Company": 20000,
-      "Incorporated Trustee": 20000,
-    },
-    "TIN Validation/Tax Promax for Entities with TIN": {
-      "Business Name": 20000,
-      "Limited Liability Company": 25000,
-      "Incorporated Trustee": 25000,
-    },
-  };
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  // Updated calculateCost function
-  const calculateCost = (data) => {
-    const { registrationCategory, registrationType } = data;
-    const categoryCosts = costMapping[registrationCategory] || {};
-    setCost(categoryCosts[registrationType] || 0);
-  };
+  const validatePhoneNumber = (phone) => /^[0-9]{10,15}$/.test(phone);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
 
-    // Update formData and calculate cost using the updated formData
-    const updatedData = { ...formData, [id]: value };
-    setFormData(updatedData);
+    // Update form data
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
 
+    // Validate email and phone fields
+    if (id === "email") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: validateEmail(value) ? "" : "Invalid email address",
+      }));
+    }
+
+    if (id === "phone" || id === "whatsapp" || id === "businessPhone") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [id]: validatePhoneNumber(value)
+          ? ""
+          : "Phone number must be 10-15 digits",
+      }));
+    }
+
+    // Update cost calculation for specific fields
     if (id === "registrationCategory" || id === "registrationType") {
-      calculateCost(updatedData); // Pass updated data to calculateCost
+      calculateCost({ ...formData, [id]: value });
     }
   };
 
@@ -64,10 +73,57 @@ const FIRS = () => {
       [id]: files[0],
     }));
   };
+
+  const calculateCost = (data) => {
+    const costMapping = {
+      "Tax Promax Registration for Entities without TIN": {
+        "Business Name": 15000,
+        "Limited Liability Company": 20000,
+        "Incorporated Trustee": 20000,
+      },
+      "TIN Validation/Tax Promax for Entities with TIN": {
+        "Business Name": 20000,
+        "Limited Liability Company": 25000,
+        "Incorporated Trustee": 25000,
+      },
+    };
+    const { registrationCategory, registrationType } = data;
+    const categoryCosts = costMapping[registrationCategory] || {};
+    setCost(categoryCosts[registrationType] || 0);
+  };
+
+  const [cost, setCost] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
+
+  const isFormValid = () => {
+    const requiredFields = [
+      "fullName",
+      "email",
+      "phone",
+      "whatsapp",
+      "entityName",
+      "registrationNumber",
+      "natureOfBusiness",
+      "businessPhone",
+      "registrationType",
+      "registrationCategory",
+      "validID",
+      "certificate",
+      "statusReport",
+    ];
+
+    // Check if all required fields are filled and no validation errors exist
+    return (
+      requiredFields.every((field) => formData[field]) &&
+      Object.values(errors).every((error) => error === "")
+    );
+  };
+
   const paystackConfig = {
-    email: formData.email, // Default to user email if proprietor email is unavailable
-    amount: cost * 100, // Paystack requires amount in kobo
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Replace with your actual Paystack public key
+    email: formData.email,
+    amount: cost * 100,
+    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6",
   };
   const handlePaymentSuccess = (response) => {
     console.log("Payment Success:", response);
@@ -81,8 +137,7 @@ const FIRS = () => {
     console.error("Payment Error:", response);
     toast.error("Payment failed. Please try again.");
   };
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmissionSuccessful, setIsSubmissionSuccessful] = useState(false);
+
   const handleSubmit = async () => {
     setIsSubmitting(true); // Ensure this is always set regardless of the terms
     setIsSubmissionSuccessful(false); // Reset successful submission state
@@ -109,30 +164,6 @@ const FIRS = () => {
     } finally {
       setIsSubmitting(false); // Ensure `isSubmitting` is reset after the process
     }
-  };
-  const isFormValid = () => {
-    const requiredFields = [
-      "fullName",
-      "email",
-      "phone",
-      "whatsapp",
-      "entityName",
-      "registrationNumber",
-      "natureOfBusiness",
-      "businessPhone",
-      "registrationType",
-      "registrationCategory",
-      "validID",
-      "certificate",
-      "statusReport",
-    ];
-
-    for (let field of requiredFields) {
-      if (!formData[field]) {
-        return false; // Form is not valid
-      }
-    }
-    return true; // Form is valid
   };
 
   return (
@@ -170,9 +201,16 @@ const FIRS = () => {
               id="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`w-full border rounded px-3 py-2 focus:outline-none ${
+                errors.email
+                  ? "border-red-500"
+                  : "focus:ring-2 focus:ring-blue-500"
+              }`}
               placeholder="Enter email"
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium mb-2">
@@ -183,9 +221,16 @@ const FIRS = () => {
               id="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`w-full border rounded px-3 py-2 focus:outline-none ${
+                errors.phone
+                  ? "border-red-500"
+                  : "focus:ring-2 focus:ring-blue-500"
+              }`}
               placeholder="Enter phone number"
             />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}
           </div>
           <div>
             <label
@@ -195,7 +240,7 @@ const FIRS = () => {
               WhatsApp Number
             </label>
             <input
-              type="tel"
+              type="number"
               id="whatsapp"
               value={formData.whatsapp}
               onChange={handleInputChange}

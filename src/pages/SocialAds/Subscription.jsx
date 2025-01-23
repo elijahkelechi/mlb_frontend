@@ -16,7 +16,7 @@ const Subscription = () => {
   const paystackConfig = {
     email: email,
     amount: 0,
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6",
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb",
   };
 
   const handlePayment = async (response) => {

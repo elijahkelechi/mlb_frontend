@@ -100,7 +100,7 @@ const MultiStageForm = () => {
       address.state &&
       address.lga &&
       address.city &&
-      address.postCode &&
+      // address.postCode &&
       address.streetName &&
       address.houseNumber
     );
@@ -119,7 +119,7 @@ const MultiStageForm = () => {
       organizationAddress.state &&
       organizationAddress.lga &&
       organizationAddress.city &&
-      organizationAddress.postCode &&
+      // organizationAddress.postCode &&
       organizationAddress.streetName &&
       organizationAddress.houseNumber
     );

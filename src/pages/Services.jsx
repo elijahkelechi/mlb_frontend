@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import servicesImageDesktop from "../assets/servicesPage/heroDesktop.jpeg";
+import servicesImageMobile from "../assets/servicesPage/heroMobile.jpeg";
 import {
   FaRegFileAlt,
   FaRegHandshake,
@@ -78,20 +80,42 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-16 px-6">
-      {/* Header */}
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">
-          Our Services
-        </h1>
-        <p className="text-gray-600 text-lg mb-12">
-          Explore a range of professional services designed to grow your
-          business and simplify your operations.
-        </p>
+    <div className="bg-gradient-to-r from-gray-50 to-gray-100 ">
+      {/* Hero Section */}
+      <div className="h-screen relative flex flex-col">
+        {/* Background Image */}
+        <div className="absolute inset-0 h-full w-full">
+          <img
+            className="hidden md:flex h-full w-full object-cover"
+            src={servicesImageDesktop}
+            alt="Our Services Desktop"
+          />
+          <img
+            className="flex md:hidden h-full w-full object-cover"
+            src={servicesImageMobile}
+            alt="Our Services Mobile"
+          />
+        </div>
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-left">
+          <div className="max-w-5xl mx-auto text-left px-6">
+            {/* Header */}
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Our Services
+            </h1>
+            <p className="text-gray-300 text-lg mb-12">
+              we are dedicated to providing businesses with the tools and
+              support they need to grow and thrive. From corporate compliance to
+              digital marketing, we offer a wide range of professional services
+              tailored to meet your unique business needs
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Services Grid */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto py-16 px-6">
         {services.map((service, index) => (
           <motion.div
             key={index}

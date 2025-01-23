@@ -3,6 +3,46 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
     onChange(field, value);
   };
 
+  const states = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "Federal Capital Territory",
+  ];
+
   return (
     <div className="bg-white p-4 rounded shadow-md mb-4">
       <h2 className="text-xl font-semibold mb-4">
@@ -26,14 +66,21 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
           <label htmlFor="state" className="block text-sm font-medium mb-1">
             State
           </label>
-          <input
-            type="text"
+          <select
             id="state"
-            placeholder="State"
             value={formData.state}
             onChange={(e) => handleChange("state", e.target.value)}
             className="w-full p-2 border mb-4 rounded"
-          />
+          >
+            <option value="" disabled>
+              Select a state
+            </option>
+            {states.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
 
           <label htmlFor="lga" className="block text-sm font-medium mb-1">
             LGA
@@ -108,4 +155,5 @@ const TrusteeAddress = ({ formData, trusteeIndex, onChange }) => {
     </div>
   );
 };
+
 export default TrusteeAddress;
