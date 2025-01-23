@@ -401,7 +401,7 @@ const MultiStageForm = () => {
                   className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 btn-sm md:btn-md rounded ml-auto"
                   onClick={addTrustee}
                 >
-                  Add New Trustee
+                  Add Trustee
                 </button>
                 <p className="text-xs text-red-500 block">
                   {formData.trustees.length >= 2
