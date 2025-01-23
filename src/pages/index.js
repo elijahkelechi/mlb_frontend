@@ -40,3 +40,4 @@ export { default as AllLLCorders } from "./orders/AllOrders/LLC";
 export { default as AllSCUMLorders } from "./orders/AllOrders/SCUML";
 export { default as AllAdsSubscriptionOrders } from "./orders/AllOrders/Ads";
 export { default as AllTrusteeOrders } from "./orders/AllOrders/Trustee";
+export { default as PostIncoRedirect } from "./PostIncoRedirect";

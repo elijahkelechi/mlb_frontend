@@ -311,12 +311,21 @@ const Development = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">
-                        Tailored Web Design
+                        Web Design and Development Plan
                       </h3>
                       <p className="text-gray-200 mt-2">
                         Get a custom website designed to meet your business
                         goals.
                       </p>
+                      {/* Button Section */}
+                      <div className="text-center mt-8">
+                        <Link
+                          to="/packages"
+                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+                        >
+                          See Packages
+                        </Link>
+                      </div>
                     </div>
                   </div>
 
@@ -326,24 +335,23 @@ const Development = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">
-                        Functional Development
+                        e-Commerce Website
                       </h3>
                       <p className="text-gray-200 mt-2">
-                        A fully functional website that works seamlessly across
-                        all devices.
+                        A fully functional e-commerce website that works
+                        seamlessly across all devices.
                       </p>
+                      {/* Button Section */}
+                      <div className="text-center mt-8">
+                        <Link
+                          to="/packages"
+                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+                        >
+                          See Packages
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                {/* Button Section */}
-                <div className="text-center mt-8">
-                  <Link
-                    to="/packages"
-                    className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
-                  >
-                    See Packages
-                  </Link>
                 </div>
               </div>
             </div>
@@ -351,7 +359,7 @@ const Development = () => {
 
           <div>
             <a
-              href="https://wa.me/09163381375"
+              href="https://wa.me/+234 803 2210489"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
@@ -433,22 +441,6 @@ const Development = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.9 }}
           >
-            <div>
-              <p className="font-bold my-2">
-                Chat Our Senior Developer via WhatsApp Now!
-              </p>
-
-              <a
-                href="https://wa.me/09163381375"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="my-2 inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
-              >
-                <FaWhatsapp className="mr-2" size={20} />{" "}
-                {/* Adds some margin between icon and text */}
-                Chat a Developer Now
-              </a>
-            </div>
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
               Contact Us
             </h2>
@@ -564,7 +556,7 @@ const Development = () => {
                 </p>
 
                 <a
-                  href="https://wa.me/09163381375"
+                  href="https://wa.me/+234 803 2210489"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"

@@ -53,7 +53,7 @@ const GraphicDesignPage = () => {
                   to="/graphic_design_services" // Adjust the link as necessary
                   className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
-                  Explore Services
+                  See Packages
                 </Link>
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ const GraphicDesignPage = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Basic Branding Package
+                  Basic Price
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (3 Concepts)</li>
@@ -153,11 +153,14 @@ const GraphicDesignPage = () => {
                   <li>Brand Guidelines (Basic)</li>
                 </ul>
                 <p className="text-lg font-bold mt-4">Price: ₦50,000</p>
+                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
+                  Order Now!
+                </button>
               </div>
 
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Standard Branding Package
+                  Standard Price
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (5 Concepts)</li>
@@ -167,11 +170,14 @@ const GraphicDesignPage = () => {
                   <li>Brand Guidelines Document</li>
                 </ul>
                 <p className="text-lg font-bold mt-4">Price: ₦100,000</p>
+                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
+                  Order Now!
+                </button>
               </div>
 
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Premium Branding Package
+                  Premium Price
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (Unlimited Concepts)</li>
@@ -182,69 +188,11 @@ const GraphicDesignPage = () => {
                   <li>Packaging Design (Basic)</li>
                 </ul>
                 <p className="text-lg font-bold mt-4">Price: ₦200,000</p>
+                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
+                  Order Now!
+                </button>
               </div>
             </div>
-          </div>
-
-          <div className="mt-10">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Contact Us
-            </h2>
-            <form className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full p-3 border rounded-md"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full p-3 border rounded-md"
-                />
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="w-full p-3 border rounded-md"
-                />
-                <input
-                  type="text"
-                  placeholder="WhatsApp Number"
-                  className="w-full p-3 border rounded-md"
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="Entity Name"
-                className="w-full p-3 border rounded-md"
-              />
-              <input
-                type="text"
-                placeholder="Tagline"
-                className="w-full p-3 border rounded-md"
-              />
-              <select className="w-full p-3 border rounded-md">
-                <option>Brand Colours</option>
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
-                <option>Yellow</option>
-                <option>Black</option>
-                <option>White</option>
-              </select>
-              <select className="w-full p-3 border rounded-md">
-                <option>Select Package</option>
-                <option>Basic Branding Package</option>
-                <option>Standard Branding Package</option>
-                <option>Premium Branding Package</option>
-              </select>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700"
-              >
-                Submit
-              </button>
-            </form>
           </div>
         </div>
       </div>

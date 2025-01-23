@@ -41,21 +41,21 @@ const CacPostIncorporation = () => {
             title: "Annual Return Filing",
             description:
               "Stay compliant with the Corporate Affairs Commission (CAC) by filing your annual returns promptly. Avoid penalties and maintain good standing for your business.",
-            link: "/Annual_return",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Get Started with Annual Return Filing",
           },
           {
             title: "Change of Company Name",
             description:
               "Rebranding or correcting your company name? We’ll guide you through the process of changing your registered name seamlessly.",
-            link: "#change-name",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Change Company Name",
           },
           {
             title: "Appointment and Removal of Directors or Trustees",
             description:
               "Update your company or organization’s leadership by appointing or removing directors or trustees. We ensure the process complies with CAC requirements.",
-            link: "#manage-directors",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Manage Directors and Trustees",
           },
           {
@@ -63,21 +63,21 @@ const CacPostIncorporation = () => {
               "Edit/Correction of Proprietor, Director, or Trustee Details",
             description:
               "Need to correct an error in your registered details? We help you update or edit names, dates of birth, or other personal details on your records.",
-            link: "#correct-details",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Correct Proprietor, Director, or Trustee Details",
           },
           {
             title: "Change of Company Address",
             description:
               "Relocated your business or organization? Update your registered entity address with the CAC effortlessly.",
-            link: "#change-address",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Change Company Address",
           },
           {
             title: "Change of Business Activity",
             description:
               "Expanding or pivoting your business? Update your registered business activities to reflect your new focus.",
-            link: "#change-activity",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Change Business Activity",
           },
           {
@@ -85,21 +85,21 @@ const CacPostIncorporation = () => {
               "Alteration of Memorandum and Articles of Association (MEMART)",
             description:
               "Modify your company’s memorandum and articles of association to align with updated business goals and objectives.",
-            link: "#alter-memart",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Alter MEMART",
           },
           {
             title: "Addition of New Business Objects to Memorandum",
             description:
               "Add new objectives to your company's registered memorandum to support diversification or expansion.",
-            link: "#add-objects",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Add New Business Objects",
           },
           {
             title: "Transfer and Transmission of Shares",
             description:
               "Facilitating share transfers? We handle the legal requirements for transferring or transmitting shares between parties.",
-            link: "#transfer-shares",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Transfer or Transmit Shares",
           },
           {
@@ -107,7 +107,7 @@ const CacPostIncorporation = () => {
               "Filing for Certified True Copy (CTC) or Retrieval of Registration Documents",
             description:
               "Need a certified true copy of your registration documents or need to retrieve lost registration details? Let us handle it for you.",
-            link: "#ctc-retrieval",
+            link: "/CAC_PostInco_Redirect",
             buttonText: "Request CTC or Retrieve Documents",
           },
         ].map((service, index) => (
@@ -120,6 +120,7 @@ const CacPostIncorporation = () => {
             </h3>
             <p className="text-gray-700 mb-4">{service.description}</p>
             <Link
+              onClick={() => window.scrollTo(0, 0)}
               to={service.link}
               className="inline-block bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800"
             >

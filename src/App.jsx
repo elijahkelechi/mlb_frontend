@@ -43,6 +43,7 @@ import {
   AllSCUMLorders,
   AllAdsSubscriptionOrders,
   AllTrusteeOrders,
+  PostIncoRedirect,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";
@@ -127,6 +128,10 @@ const router = createBrowserRouter([
       {
         path: "CAC_post_incoperation",
         element: <CacPostIncoperation />,
+      },
+      {
+        path: "CAC_PostInco_Redirect",
+        element: <PostIncoRedirect />,
       },
       {
         path: "Annual_return",
