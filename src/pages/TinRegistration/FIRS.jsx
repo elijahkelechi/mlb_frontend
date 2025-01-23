@@ -123,7 +123,7 @@ const FIRS = () => {
   const paystackConfig = {
     email: formData.email,
     amount: cost * 100,
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6",
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb",
   };
   const handlePaymentSuccess = (response) => {
     console.log("Payment Success:", response);
