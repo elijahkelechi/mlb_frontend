@@ -129,40 +129,40 @@ const BusinessNameRegistration = () => {
           </motion.div>
 
           {/* Benefits Section */}
-          <section className="py-10 px-6 md:px-12 text-gray-800">
-            <h2 className="text-2xl font-bold text-center mb-6">
-              Benefits Of this Services
+          <section className="py-10 px-6 md:px-12 text-gray-800 bg-gray-50 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold text-left mb-8">
+              Benefits of This Service
             </h2>
-            <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-              <li>
-                <span className="block text-blue-600 font-bold text-3xl">
-                  ✓
-                </span>
-                Flexible Payment Option
+            <ul className="space-y-6 md:space-y-4">
+              <li className="flex items-center">
+                <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                <p className="text-lg md:text-xl font-medium">
+                  Flexible Payment Option
+                </p>
               </li>
-              <li>
-                <span className="block text-blue-600 font-bold text-3xl">
-                  ✓
-                </span>
-                Registration Timeframe: Max of 7 Days
+              <li className="flex items-center">
+                <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                <p className="text-lg md:text-xl font-medium">
+                  Registration Timeframe: Max of 7 Days
+                </p>
               </li>
-              <li>
-                <span className="block text-blue-600 font-bold text-3xl">
-                  ✓
-                </span>
-                Document Delivery in Soft and Hard Copy
+              <li className="flex items-center">
+                <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                <p className="text-lg md:text-xl font-medium">
+                  Document Delivery in Soft and Hard Copy
+                </p>
               </li>
-              <li>
-                <span className="block text-blue-600 font-bold text-3xl">
-                  ✓
-                </span>
-                Guaranteed Delivery. No Stories
+              <li className="flex items-center">
+                <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                <p className="text-lg md:text-xl font-medium">
+                  Guaranteed Delivery. No Stories
+                </p>
               </li>
-              <li>
-                <span className="block text-blue-600 font-bold text-3xl">
-                  ✓
-                </span>
-                Free TIN Registration
+              <li className="flex items-center">
+                <div className="w-3 h-3 bg-blue-600 rounded-full mr-4"></div>
+                <p className="text-lg md:text-xl font-medium">
+                  Free TIN Registration
+                </p>
               </li>
             </ul>
           </section>
@@ -189,9 +189,9 @@ const BusinessNameRegistration = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-left mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4 text-cyan-600">
+            <h2 className="text-4xl font-bold mb-4 text-cyan-500">
               What is a Business Name?
             </h2>
           </motion.div>
@@ -236,7 +236,7 @@ const BusinessNameRegistration = () => {
           transition={{ duration: 0.8 }}
           className="mt-8 px-8 md:px-16"
         >
-          <h2 className="text-2xl text-left font-bold text-gray-800">
+          <h2 className="text-2xl text-left font-bold text-cyan-500">
             Why Register Your Business Name?
           </h2>
           <div className="grid md:gap-6 mt-0 md:grid-cols-2">
@@ -287,7 +287,7 @@ const BusinessNameRegistration = () => {
           transition={{ duration: 0.8 }}
           className="mt-8 bg-gray-100 p-6 md:p-16 bg-opacity-90"
         >
-          <h2 className="text-2xl font-bold text-cyan-600">
+          <h2 className="text-2xl font-bold text-cyan-500">
             Our Services Include
           </h2>
           <ul className="list-disc font-bold list-inside mt-4 text-gray-900 space-y-2">
@@ -310,9 +310,9 @@ const BusinessNameRegistration = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-left mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-cyan-600">
+            <h2 className="text-3xl md:text-4xl font-bold text-cyan-500">
               Requirements for Business Name Registration
             </h2>
             <p className="text-gray-600 mt-4 text-lg">
@@ -389,7 +389,7 @@ const BusinessNameRegistration = () => {
             {/* Individual Feature */}
             <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-cyan-600 mb-4">
-                Experience
+                Experience <span className="text-xl mx-2">🛠️</span>
               </h3>
               <p>
                 We've helped hundreds of entrepreneurs successfully register
@@ -399,7 +399,7 @@ const BusinessNameRegistration = () => {
 
             <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-cyan-600 mb-4">
-                Affordability
+                Affordability<span className="text-xl mx-2">💰</span>
               </h3>
               <p>
                 Our competitive pricing ensures you get the best value for your
@@ -409,14 +409,14 @@ const BusinessNameRegistration = () => {
 
             <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-cyan-600 mb-4">
-                Convenience
+                Convenience<span className="text-xl mx-2">🧘</span>
               </h3>
               <p>We handle everything online—no need to visit our office.</p>
             </div>
 
             <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-cyan-600 mb-4">
-                Dedicated Support
+                Dedicated Support<span className="text-xl mx-2"> 🤝</span>
               </h3>
               <p>
                 We provide cutting-edge customer support, keeping you informed
@@ -426,7 +426,7 @@ const BusinessNameRegistration = () => {
 
             <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-cyan-600 mb-4">
-                Fast Delivery
+                Fast Delivery<span className="text-xl mx-2">🚀</span>
               </h3>
               <p>
                 We complete your registration and provide all documents within 5

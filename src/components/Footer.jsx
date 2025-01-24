@@ -27,15 +27,7 @@ const Footer = () => {
                   Business Name
                 </Link>
               </li>
-              <li>
-                <Link
-                  onClick={handleScrollToTop}
-                  to="/limited_liabiltiy_registration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
-                >
-                  Company
-                </Link>
-              </li>
+
               <li>
                 <Link
                   onClick={handleScrollToTop}
@@ -43,6 +35,15 @@ const Footer = () => {
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
                   Incorporated Trustee
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={handleScrollToTop}
+                  to="/limited_liabiltiy_registration"
+                  className="text-cyan-500 hover:text-cyan-700 underline"
+                >
+                  Limited Liability Company
                 </Link>
               </li>
             </ul>
@@ -93,10 +94,10 @@ const Footer = () => {
               <li>
                 <Link
                   onClick={handleScrollToTop}
-                  to="/TIN_Registration"
+                  to="/CAC_post_incoperation"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
-                  TIN & TCC
+                  CAC Post Incorporations
                 </Link>
               </li>
               <li>
@@ -111,10 +112,10 @@ const Footer = () => {
               <li>
                 <Link
                   onClick={handleScrollToTop}
-                  to="/CAC_post_incoperation"
+                  to="/TIN_Registration"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
-                  CAC Post Incorporations
+                  TIN & TCC
                 </Link>
               </li>
             </ul>
@@ -130,20 +131,22 @@ const Footer = () => {
             </h4>
             <ul className="text-gray-700 space-y-2 text-center md:text-left">
               <li>
-                <a
-                  href="#"
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/MLB_privacy_Policy"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/Terms_Of_Use"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -207,7 +210,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-center mt-8 text-gray-700 text-sm">
+        <div className="text-left mt-8 text-gray-700 text-sm">
           &copy; {new Date().getFullYear()} MLB. All rights reserved.
         </div>
       </div>

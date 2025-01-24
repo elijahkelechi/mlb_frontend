@@ -63,7 +63,7 @@ const TINRegistrationPage = () => {
                 <Link
                   to="/Choose_TIN_Type"
                   onClick={() => window.scrollTo(0, 0)} // Adjust the link as necessary
-                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                  className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   Get Started
                 </Link>
@@ -75,7 +75,7 @@ const TINRegistrationPage = () => {
         {/* What is TIN */}
         <section className="my-16 px-8 md:px-16">
           <motion.h2
-            className="text-2xl font-bold text-gray-800 mb-4"
+            className="text-2xl font-bold text-cyan-500 mb-4"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -102,7 +102,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <FaCheckCircle className="text-cyan-600" />
+                <FaCheckCircle className="text-cyan-500" />
                 <span>{item}</span>
               </motion.li>
             ))}
@@ -112,7 +112,7 @@ const TINRegistrationPage = () => {
         {/* Who Needs a TIN */}
         <section className="my-16 px-8 md:px-16">
           <motion.h2
-            className="text-2xl font-bold text-gray-800 mb-4"
+            className="text-2xl font-bold text-cyan-500 mb-4"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -147,7 +147,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <item.icon className="text-cyan-600 text-4xl mx-auto mb-4" />
+                <item.icon className="text-cyan-500 text-4xl mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-700">
                   {item.title}
                 </h3>
@@ -155,7 +155,7 @@ const TINRegistrationPage = () => {
                 <Link
                   to="/Choose_TIN_Type"
                   onClick={() => window.scrollTo(0, 0)}
-                  className="btn mt-2 bg-cyan-600 hover:bg-gray-800 text-white"
+                  className="btn mt-2 bg-cyan-500 hover:bg-gray-800 text-white"
                 >
                   Register Now
                 </Link>
@@ -166,7 +166,7 @@ const TINRegistrationPage = () => {
 
         {/* Registration Services */}
         <section className="my-16 px-8 md:px-16">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-cyan-500 mb-4">
             Our TIN Registration Services
           </h2>
           <h3 className="pb-4 font-bold text-gray-700">
@@ -203,7 +203,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <item.icon className="text-cyan-600 text-2xl" />
+                <item.icon className="text-cyan-500 text-2xl" />
                 <div>
                   <h4 className="text-lg font-bold text-gray-700">
                     {item.title}
@@ -216,12 +216,12 @@ const TINRegistrationPage = () => {
         </section>
 
         {/* How It Works */}
-        <section className="text-center my-16 px-8 md:px-16">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        <section className="text-left my-16 px-8 md:px-16">
+          <h2 className="text-2xl font-bold text-cyan-500 mb-4">
             How It Works
           </h2>
           <motion.ol
-            className="list-decimal list-inside space-y-4 text-gray-700 text-left max-w-xl mx-auto"
+            className="list-decimal list-inside space-y-4 text-gray-700 text-left "
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -258,7 +258,7 @@ const TINRegistrationPage = () => {
         </div>
         <section className="mb-16 mt-16 px-8 md:px-16">
           <motion.h2
-            className="text-2xl font-bold text-gray-800 mb-4"
+            className="text-2xl font-bold text-cyan-500 mb-4"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -310,7 +310,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <item.icon className="text-cyan-600 text-4xl mb-4" />
+                <item.icon className="text-cyan-500 text-4xl mb-4" />
                 <h3 className="text-lg font-bold text-gray-700">
                   {item.title}
                 </h3>
@@ -322,7 +322,7 @@ const TINRegistrationPage = () => {
                 <Link
                   to="/Choose_TIN_Type"
                   onClick={() => window.scrollTo(0, 0)}
-                  className="mt-4 btn text-white bg-cyan-600 hover:bg-gray-800"
+                  className="mt-4 btn text-white bg-cyan-500 hover:bg-gray-800"
                 >
                   Register Now
                 </Link>
@@ -333,7 +333,7 @@ const TINRegistrationPage = () => {
 
         <section className="bg-gray-100 py-10 px-4 md:px-16 mb-8">
           <div className="container mx-auto">
-            <h2 className="text-center text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-left text-2xl font-bold text-cyan-500 mb-6">
               TIN Registration Fees
             </h2>
             <div className="bg-white shadow-md rounded-lg p-6">
@@ -392,7 +392,7 @@ const TINRegistrationPage = () => {
 
         {/* Why Choose MULTI-LEVEL BOOST */}
         <section className="my-16 px-8 md:px-16">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-cyan-500 mb-4">
             Why Choose MULTI-LEVEL BOOST?
           </h2>
           <ul className="space-y-4">
@@ -425,7 +425,7 @@ const TINRegistrationPage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <item.icon className="text-cyan-600 text-2xl" />
+                <item.icon className="text-cyan-500 text-2xl" />
                 <div>
                   <h4 className="text-lg font-bold text-gray-700">
                     {item.title}

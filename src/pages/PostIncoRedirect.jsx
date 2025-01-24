@@ -12,7 +12,7 @@ const PostIncoRedirect = () => {
 
         {/* Content Section */}
         <p className="text-lg text-gray-700 text-center mb-6">
-          Sorry, this service cannot be completed online due to its complexity.
+          Sorry, this service cannot be completed online due to it's complexity.
           Please contact support for assistance with filling.
         </p>
 
@@ -32,7 +32,7 @@ const PostIncoRedirect = () => {
           onClick={() => window.scrollTo(0, 0)}
           className="w-full flex justify-center items-center py-3 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md hover:bg-blue-700"
         >
-          Contact Us for Assistance
+          Contact Us
         </Link>
       </div>
     </div>

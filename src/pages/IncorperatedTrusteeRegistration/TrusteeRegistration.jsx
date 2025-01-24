@@ -37,20 +37,21 @@ const TrusteeRegistrationPage = () => {
         transition={{ duration: 0.8 }}
         className="bg-black bg-opacity-60 py-10"
       >
-        <div className="h-64 mt-24 md:mt-36">
-          <div className="container mx-auto text-center text-white">
+        <div className="h-64 mt-24 md:mt-36 px-4 md:px-8">
+          <div className="container mx-auto text-left text-white">
             <h1 className="text-3xl md:text-5xl font-bold mb-2">
-              Incorporated Trustee Registration (NGO | Association)
+              Incorporated Trustee
+              <span className="block mt-2">(NGO | Association)</span>
             </h1>
             <p className="text-lg md:text-xl font-medium">
               Establish Your Organization with Confidence
             </p>
           </div>
-          <div className="text-center mt-6">
+          <div className="text-left mt-6">
             <Link
               to="/trustee_form"
               onClick={handleScrollToTop}
-              className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-200"
+              className=" bg-cyan-500 text-white hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg  transition duration-200"
             >
               Start Registration
             </Link>
@@ -81,7 +82,7 @@ const TrusteeRegistrationPage = () => {
         id="incorporated-trustee"
       >
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
             About Incorporated Trustee Registration
           </h2>
           <div className="rounded-lg ">
@@ -107,7 +108,7 @@ const TrusteeRegistrationPage = () => {
       >
         <div className="">
           <motion.h2
-            className="text-3xl font-semibold text-center text-gray-800 mb-8"
+            className="text-3xl font-semibold text-left text-cyan-500 mb-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -172,7 +173,7 @@ const TrusteeRegistrationPage = () => {
         className="py-16 bg-white"
       >
         <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-cyan-500">
             Our Services Include:
           </h2>
           <ul className="list-disc space-y-3 ml-6 text-gray-700 leading-relaxed md:text-lg">
@@ -201,7 +202,7 @@ const TrusteeRegistrationPage = () => {
         id="trustee-requirements"
       >
         <div className=" ">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
             Requirements for Incorporated Trustee Registration
           </h2>
           <div className=" p-6 rounded-lg shadow-lg">
@@ -286,59 +287,59 @@ const TrusteeRegistrationPage = () => {
           </div>
         </div>
       </section>
-
-      <section className="py-16 bg-white" id="why-choose-multi-level-boost">
+      <section className="py-16 bg-gray-50" id="why-choose-multi-level-boost">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-            Why Choose MULTI-LEVEL BOOST?
+          <h2 className="text-3xl font-bold text-left text-gray-800 mb-12">
+            Why Choose <span className="text-cyan-500">MULTI-LEVEL BOOST</span>?
           </h2>
-          <div className="space-y-8">
-            <div className="flex items-start gap-6">
-              <div className="text-2xl font-semibold text-gray-700">1.</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-cyan-500 text-4xl font-bold mr-6">1</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Expert Support
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   Our team specializes in NGO and association registration,
                   ensuring accuracy and compliance with CAC guidelines.
                 </p>
               </div>
             </div>
-
-            <div className="flex items-start gap-6">
-              <div className="text-2xl font-semibold text-gray-700">2.</div>
+            {/* Card 2 */}
+            <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-cyan-500 text-4xl font-bold mr-6">2</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Affordable Pricing
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   We provide cost-effective solutions without compromising
                   quality.
                 </p>
               </div>
             </div>
-
-            <div className="flex items-start gap-6">
-              <div className="text-2xl font-semibold text-gray-700">3.</div>
+            {/* Card 3 */}
+            <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-cyan-500 text-4xl font-bold mr-6">3</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Efficiency
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   We handle the process with precision, completing registration
                   within the shortest possible time.
                 </p>
               </div>
             </div>
-
-            <div className="flex items-start gap-6">
-              <div className="text-2xl font-semibold text-gray-700">4.</div>
+            {/* Card 4 */}
+            <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="text-cyan-500 text-4xl font-bold mr-6">4</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Online Convenience
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-gray-600">
                   Our services are fully online—no need to visit our office!
                 </p>
               </div>
@@ -349,7 +350,7 @@ const TrusteeRegistrationPage = () => {
 
       <section className="py-16 bg-gray-50" id="how-it-works">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
             How It Works
           </h2>
           <div className="space-y-8">
@@ -424,7 +425,7 @@ const TrusteeRegistrationPage = () => {
           </p>
           <Link
             onClick={handleScrollToTop}
-            className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-200"
+            className=" bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-200"
           >
             Start Registration
           </Link>

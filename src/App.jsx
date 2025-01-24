@@ -46,6 +46,8 @@ import {
   AllAdsSubscriptionOrders,
   AllTrusteeOrders,
   PostIncoRedirect,
+  PrivacyPolicy,
+  TermsOfUse,
 } from "./pages";
 import { action as loginAction } from "./pages/Login";
 import { action as registerAction } from "./pages/Register";
@@ -194,6 +196,14 @@ const router = createBrowserRouter([
       {
         path: "All_Trustee_Orders",
         element: <AllTrusteeOrders />,
+      },
+      {
+        path: "MLB_privacy_Policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "Terms_Of_Use",
+        element: <TermsOfUse />,
       },
     ],
   },

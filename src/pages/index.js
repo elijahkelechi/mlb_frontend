@@ -44,3 +44,5 @@ export { default as PostIncoRedirect } from "./PostIncoRedirect";
 export { default as TINdevision } from "../pages/orders/TINdevision";
 export { default as JTBorder } from "../pages/orders/JTBorder";
 export { default as FIRSorders } from "../pages/orders/FIRSorders";
+export { default as PrivacyPolicy } from "../components/PrivacyPolicy";
+export { default as TermsOfUse } from "../components/TermsOfUse";

@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,21 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    if (validateForm()) {
+      console.log("Form Data Sent:", formData);
+      toast.success("Message sent successfully!");
+      // Send formData to the backend (e.g., via Axios or Fetch)
+    } else {
+      toast.error("Please fill out all required fields.");
+    }
+  };
+
+  const validateForm = () => {
+    const { fullName, phoneNumber, whatsappNumber, email, subject, message } =
+      formData;
+    return (
+      fullName && phoneNumber && whatsappNumber && email && subject && message
+    );
   };
 
   return (
@@ -37,7 +52,7 @@ const ContactUs = () => {
       // style={{ backgroundImage: `url(${bgImage})` }}
     >
       <motion.div
-        className="text-center mb-12"
+        className="text-left mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -111,10 +126,28 @@ const ContactUs = () => {
               className="w-full border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
             <input
+              type="text"
+              name="whatsappNumber"
+              placeholder="WhatsApp Number"
+              value={formData.whatsappNumber}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <input
               type="email"
               name="email"
               placeholder="Email"
               value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
               onChange={handleChange}
               required
               className="w-full border rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500"

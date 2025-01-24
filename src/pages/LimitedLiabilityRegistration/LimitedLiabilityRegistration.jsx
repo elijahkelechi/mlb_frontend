@@ -66,7 +66,7 @@ const LimitedLiabilityRegistration = () => {
               <Link
                 onClick={handleScrollToTop}
                 to="/LLC_registration_form"
-                className="bg-blue-500 text-white py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
+                className="bg-cyan-500 text-white py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
               >
                 Start Your Registration
               </Link>
@@ -93,30 +93,40 @@ const LimitedLiabilityRegistration = () => {
         </motion.div>
 
         {/* Benefits Section */}
-        <section className="py-10 px-6 md:px-12 text-gray-800">
-          <h2 className="text-2xl font-bold text-center mb-6">
-            Benefits of This Services
+        <section className="py-10 px-6 md:px-12 text-gray-800 bg-gray-50 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold text-left mb-8">
+            Benefits of This Service
           </h2>
-          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-            <li>
-              <span className="block text-blue-600 font-bold text-3xl">✓</span>
-              Flexible Payment Option
+          <ul className="space-y-6 md:space-y-4">
+            <li className="flex items-center">
+              <div className="w-3 h-3 bg-cyan-600 rounded-full mr-4"></div>
+              <p className="text-lg md:text-xl font-medium">
+                Flexible Payment Option
+              </p>
             </li>
-            <li>
-              <span className="block text-blue-600 font-bold text-3xl">✓</span>
-              Registration Timeframe: Max of 7 Days
+            <li className="flex items-center">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></div>
+              <p className="text-lg md:text-xl font-medium">
+                Registration Timeframe: Max of 7 Days
+              </p>
             </li>
-            <li>
-              <span className="block text-blue-600 font-bold text-3xl">✓</span>
-              Document Delivery in Soft and Hard Copy
+            <li className="flex items-center">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></div>
+              <p className="text-lg md:text-xl font-medium">
+                Document Delivery in Soft and Hard Copy
+              </p>
             </li>
-            <li>
-              <span className="block text-blue-600 font-bold text-3xl">✓</span>
-              Guaranteed Delivery. No Stories
+            <li className="flex items-center">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></div>
+              <p className="text-lg md:text-xl font-medium">
+                Guaranteed Delivery. No Stories
+              </p>
             </li>
-            <li>
-              <span className="block text-blue-600 font-bold text-3xl">✓</span>
-              Free TIN Registration
+            <li className="flex items-center">
+              <div className="w-3 h-3 bg-cyan-500 rounded-full mr-4"></div>
+              <p className="text-lg md:text-xl font-medium">
+                Free TIN Registration
+              </p>
             </li>
           </ul>
         </section>
@@ -131,7 +141,7 @@ const LimitedLiabilityRegistration = () => {
           <Link
             onClick={handleScrollToTop}
             to="/business_name_registration_form"
-            className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-lg font-bold text-lg hover:bg-gray-800 transition-colors"
+            className="bg-cyan-500 text-white py-3 px-6 rounded-lg shadow-lg font-bold text-lg hover:bg-gray-800 transition-colors"
           >
             Get Started Today
           </Link>
@@ -179,10 +189,10 @@ const LimitedLiabilityRegistration = () => {
           className="max-w-4xl mx-auto"
         >
           {/* Section Header */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-cyan-500 mb-6 text-left">
             Why Register a Limited Liability Company?
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-10">
+          <p className="text-lg text-gray-600 text-left mb-10">
             Discover the key benefits of establishing a Limited Liability
             Company (LLC) for your business.
           </p>
@@ -190,7 +200,7 @@ const LimitedLiabilityRegistration = () => {
           {/* Benefits List */}
           <ul className="space-y-8">
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">1.</span>
+              <span className="text-cyan-600 font-bold text-2xl">1.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Separate Legal Entity
@@ -203,7 +213,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">2.</span>
+              <span className="text-cyan-600 font-bold text-2xl">2.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Professional Credibility
@@ -216,7 +226,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">3.</span>
+              <span className="text-cyan-500 font-bold text-2xl">3.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Access to Opportunities
@@ -229,7 +239,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">4.</span>
+              <span className="text-cyan-500 font-bold text-2xl">4.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Tax Advantages
@@ -242,7 +252,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">5.</span>
+              <span className="text-cyan-500 font-bold text-2xl">5.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Build Trust
@@ -255,7 +265,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">6.</span>
+              <span className="text-cyan-500 font-bold text-2xl">6.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Access to Financial Services
@@ -268,7 +278,7 @@ const LimitedLiabilityRegistration = () => {
             </li>
 
             <li className="flex items-start space-x-4">
-              <span className="text-blue-600 font-bold text-2xl">7.</span>
+              <span className="text-cyan-500 font-bold text-2xl">7.</span>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">
                   Expand Your Reach
@@ -287,17 +297,17 @@ const LimitedLiabilityRegistration = () => {
       <section className=" py-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold text-left text-cyan-500 mb-6">
             Our Company Registration Services
           </h2>
-          <p className="text-center text-gray-600 text-lg mb-10">
+          <p className="text-left text-gray-600 text-lg mb-10">
             We provide a comprehensive suite of services to ensure a smooth and
             efficient registration process.
           </p>
           {/* Service List */}
           <ul className="space-y-8 text-gray-700">
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 ✓
               </div>
               <div>
@@ -309,7 +319,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 ✓
               </div>
               <div>
@@ -324,7 +334,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 ✓
               </div>
               <div>
@@ -336,7 +346,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 ✓
               </div>
               <div>
@@ -356,17 +366,17 @@ const LimitedLiabilityRegistration = () => {
       <section className=" py-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold text-left text-cyan-500 mb-6">
             Requirements for Limited Liability Company Registration
           </h2>
-          <p className="text-center text-gray-600 text-lg mb-10">
+          <p className="text-left text-gray-600 text-lg mb-10">
             To register your Limited Liability Company, please provide the
             following details:
           </p>
           {/* Requirements List */}
           <ul className="space-y-6 text-gray-700">
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 1
               </div>
               <div>
@@ -380,7 +390,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 2
               </div>
               <div>
@@ -392,7 +402,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 3
               </div>
               <div>
@@ -406,7 +416,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 4
               </div>
               <div>
@@ -420,7 +430,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 5
               </div>
               <div>
@@ -435,7 +445,7 @@ const LimitedLiabilityRegistration = () => {
               </div>
             </li>
             <li className="flex items-start">
-              <div className="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
+              <div className="bg-cyan-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg mr-4">
                 6
               </div>
               <div>
@@ -449,62 +459,83 @@ const LimitedLiabilityRegistration = () => {
           </ul>
         </div>
       </section>
-      <section className="py-12 bg-gray-50" id="why-choose-us">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-            Why Choose MULTI-LEVEL BOOST?
+      <section className="bg- text-white py-16 px-4 md:px-8 rounded-lg">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+            Why Choose <span className="text-cyan-500">MULTI-LEVEL BOOST?</span>
           </h2>
-          <ul className="space-y-8">
-            <li className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h3 className="text-xl font-semibold text-gray-700 md:w-1/3">
-                Expertise
-              </h3>
-              <p className="text-gray-600 md:w-2/3">
-                Our experienced team understands the CAC process inside out,
-                ensuring smooth and accurate submissions.
-              </p>
-            </li>
-            <li className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h3 className="text-xl font-semibold text-gray-700 md:w-1/3">
-                Affordability
-              </h3>
-              <p className="text-gray-600 md:w-2/3">
-                Our competitive pricing without compromising on quality ensures
-                you get the best value for your investment.
-              </p>
-            </li>
-            <li className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h3 className="text-xl font-semibold text-gray-700 md:w-1/3">
-                Convenience
-              </h3>
-              <p className="text-gray-600 md:w-2/3">
-                We handle everything online—no need to visit our office.
-              </p>
-            </li>
-            <li className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h3 className="text-xl font-semibold text-gray-700 md:w-1/3">
-                Dedicated Support
-              </h3>
-              <p className="text-gray-600 md:w-2/3">
-                We provide cutting-edge customer support. You are always
-                informed of any stage and progress of your registration.
-              </p>
-            </li>
-            <li className="flex flex-col md:flex-row items-start md:items-center gap-4">
-              <h3 className="text-xl font-semibold text-gray-700 md:w-1/3">
-                Speed
-              </h3>
-              <p className="text-gray-600 md:w-2/3">
-                We deliver results within 5–7 working days, depending on the
-                complexity of your application.
-              </p>
-            </li>
-          </ul>
-        </div>
+          <p className=" mt-4 text-lg text-gray-600">
+            Here’s why we’re the best choice for your business registration
+            needs:
+          </p>
+        </motion.div>
+
+        {/* Features List */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {/* Individual Feature */}
+          <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-cyan-600 mb-4">
+              Experience <span className="text-xl mx-2">🛠️</span>
+            </h3>
+            <p>
+              We've helped hundreds of entrepreneurs successfully register their
+              businesses.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-cyan-600 mb-4">
+              Affordability<span className="text-xl mx-2">💰</span>
+            </h3>
+            <p>
+              Our competitive pricing ensures you get the best value for your
+              investment.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-cyan-600 mb-4">
+              Convenience<span className="text-xl mx-2">🧘</span>
+            </h3>
+            <p>We handle everything online—no need to visit our office.</p>
+          </div>
+
+          <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-cyan-600 mb-4">
+              Dedicated Support<span className="text-xl mx-2"> 🤝</span>
+            </h3>
+            <p>
+              We provide cutting-edge customer support, keeping you informed at
+              every stage of your registration.
+            </p>
+          </div>
+
+          <div className="bg-white text-gray-800 p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-bold text-cyan-600 mb-4">
+              Fast Delivery<span className="text-xl mx-2">🚀</span>
+            </h3>
+            <p>
+              We complete your registration and provide all documents within 5
+              to 7 business days.
+            </p>
+          </div>
+        </motion.div>
       </section>
+
       <section className="py-16 bg-white" id="registration-process">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
             Registration Our Process
           </h2>
           <div className="space-y-12">
@@ -513,7 +544,7 @@ const LimitedLiabilityRegistration = () => {
                 1.
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-cyan-500">
                   Submit Your Details
                 </h3>
                 <p className="text-gray-600">
@@ -535,7 +566,7 @@ const LimitedLiabilityRegistration = () => {
                 2.
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-cyan-500">
                   Pay the Registration Fee
                 </h3>
                 <p className="text-gray-600">
@@ -549,7 +580,7 @@ const LimitedLiabilityRegistration = () => {
                 3.
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-cyan-500">
                   Relax While We Handle the Rest
                 </h3>
                 <p className="text-gray-600">
@@ -564,7 +595,7 @@ const LimitedLiabilityRegistration = () => {
                 4.
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-cyan-500">
                   Receive Your Incorporation Documents
                 </h3>
                 <p className="text-gray-600">

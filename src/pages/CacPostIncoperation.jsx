@@ -130,43 +130,81 @@ const CacPostIncorporation = () => {
         ))}
       </motion.div>
 
-      {/* Why Choose Us Section */}
-      <div className="mt-12 bg-gray-100 p-8 rounded-lg shadow-inner">
-        <h2 className="text-3xl font-bold text-blue-800 mb-6">
+      <div className="mt-12 bg-gradient-to-r from-gray-50 to-gray-200 p-6 md:p-8 rounded-xl shadow-lg">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-left text-cyan-600 mb-6 md:mb-8">
           Why Choose Us?
         </h2>
-        <ul className="list-disc ml-6 text-gray-700 space-y-4">
-          <li>
-            <strong>Efficiency:</strong> We ensure your post-incorporation
-            requests are processed swiftly and accurately.
+        <ul className="space-y-6">
+          <li className="flex flex-col sm:flex-row items-start gap-4">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+              1
+            </span>
+            <div>
+              <h3 className="font-bold text-gray-800 text-base md:text-lg">
+                Efficiency
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base">
+                We ensure your post-incorporation requests are processed swiftly
+                and accurately.
+              </p>
+            </div>
           </li>
-          <li>
-            <strong>Expertise:</strong> Our team has extensive experience with
-            CAC processes and requirements.
+          <li className="flex flex-col sm:flex-row items-start gap-4">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+              2
+            </span>
+            <div>
+              <h3 className="font-bold text-gray-800 text-base md:text-lg">
+                Expertise
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base">
+                Our team has extensive experience with CAC processes and
+                requirements.
+              </p>
+            </div>
           </li>
-          <li>
-            <strong>Transparency:</strong> No hidden fees; we provide upfront
-            pricing for all services.
+          <li className="flex flex-col sm:flex-row items-start gap-4">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+              3
+            </span>
+            <div>
+              <h3 className="font-bold text-gray-800 text-base md:text-lg">
+                Transparency
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base">
+                No hidden fees; we provide upfront pricing for all services.
+              </p>
+            </div>
           </li>
-          <li>
-            <strong>Support:</strong> We’re here to assist you every step of the
-            way.
+          <li className="flex flex-col sm:flex-row items-start gap-4">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+              4
+            </span>
+            <div>
+              <h3 className="font-bold text-gray-800 text-base md:text-lg">
+                Support
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base">
+                We’re here to assist you every step of the way.
+              </p>
+            </div>
           </li>
         </ul>
       </div>
 
-      {/* Call to Action */}
-      <div className="mt-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-800 mb-4">
+      <div className="my-8 bg-gradient-to-r from-cyan-50 to-cyan-100 p-6 md:p-8 rounded-lg shadow-lg text-center">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
           Get Started Today
         </h3>
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 text-sm md:text-base mb-6">
           Take the hassle out of post-incorporation tasks. Select the service
           you need and let us handle the rest.
         </p>
         <a
-          href="https://wa.me/yourwhatsappnumber"
-          className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded"
+          href="https://wa.me/+234 803 221 0489"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-in-out"
         >
           Contact Us (WhatsApp Chat)
         </a>

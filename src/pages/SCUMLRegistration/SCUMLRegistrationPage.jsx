@@ -89,7 +89,7 @@ const SCUMLRegistrationPage = () => {
         <section className="bg-gray-50 py-10 px-6 md:px-16 lg:px-20">
           <div className="">
             {/* Header */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-6">
               Secure Your SCUML Certificate
             </h2>
             <p className="text-gray-700  text-lg mb-8">
@@ -102,7 +102,7 @@ const SCUMLRegistrationPage = () => {
             {/* Benefits Section */}
             <div className="grid items-center justify-left lg:justify-left gap-6 lg:gap-8">
               <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
-                <FaCheckCircle className="text-green-500 text-3xl" />
+                <FaCheckCircle className="text-cyan-500 text-3xl" />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
                     Avoid Bank Restrictions
@@ -114,7 +114,7 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </div>
               <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
-                <FaCheckCircle className="text-green-500 text-3xl" />
+                <FaCheckCircle className="text-cyan-500 text-3xl" />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
                     Ensure Smooth Account Opening
@@ -145,7 +145,7 @@ const SCUMLRegistrationPage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl font-bold text-cyan-500 mb-2">
               What is SCUML?
             </h2>
             <p className="text-gray-700">
@@ -162,7 +162,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h3 className="text-lg font-bold text-gray-800 flex items-center justify-between cursor-pointer">
+            <h3 className="text-lg font-bold text-cyan-500 flex items-center justify-between cursor-pointer">
               Businesses Required to Register with SCUML
             </h3>
             {
@@ -170,7 +170,7 @@ const SCUMLRegistrationPage = () => {
                 <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
                   {visibleItems.map((item, index) => (
                     <li key={index} className="flex items-center">
-                      <FaCheckCircle className="text-green-500 mr-2" /> {item}
+                      <FaCheckCircle className="text-cyan-500 mr-2" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -199,7 +199,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl font-bold text-cyan-500 mb-2">
               Benefits of SCUML Registration
             </h2>
             <ul className="space-y-2 text-gray-600">
@@ -243,7 +243,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <h2 className="text-xl font-bold text-gray-800 my-2">
+            <h2 className="text-xl font-bold text-cyan-500 my-2">
               Our SCUML Registration Services
             </h2>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -272,7 +272,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-xl font-bold text-cyan-500 mb-2">
               Registration Requirements
             </h2>
             <div className="p-6 md:p-8 shadow-lg">
@@ -330,23 +330,62 @@ const SCUMLRegistrationPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="my-8"
+            className="my-12 px-6 py-8 bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg shadow-md"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-600 text-center mb-6">
               Why Choose MULTI-LEVEL BOOST?
             </h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>
-                Expert Guidance: Our team has extensive experience in SCUML
-                registration and compliance requirements.
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  ✓
+                </span>
+                <div>
+                  <h3 className="font-semibold text-gray-800">
+                    Expert Guidance
+                  </h3>
+                  <p className="text-gray-600">
+                    Our team has extensive experience in SCUML registration and
+                    compliance requirements.
+                  </p>
+                </div>
               </li>
-              <li>Affordable Pricing: Starting at ₦47,000.</li>
-              <li>
-                Efficient Service: We handle the process quickly to avoid
-                delays.
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  ✓
+                </span>
+                <div>
+                  <h3 className="font-semibold text-gray-800">
+                    Affordable Pricing
+                  </h3>
+                  <p className="text-gray-600">Starting at ₦47,000.</p>
+                </div>
               </li>
-              <li>
-                Convenient Process: Fully online services for your comfort.
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  ✓
+                </span>
+                <div>
+                  <h3 className="font-semibold text-gray-800">
+                    Efficient Service
+                  </h3>
+                  <p className="text-gray-600">
+                    We handle the process quickly to avoid delays.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  ✓
+                </span>
+                <div>
+                  <h3 className="font-semibold text-gray-800">
+                    Convenient Process
+                  </h3>
+                  <p className="text-gray-600">
+                    Fully online services for your comfort.
+                  </p>
+                </div>
               </li>
             </ul>
           </motion.section>
@@ -355,27 +394,63 @@ const SCUMLRegistrationPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="my-8"
+            className="my-12 px-6 py-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-md"
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-500 text-eft mb-6">
               How It Works
             </h2>
-            <ol className="list-decimal list-inside text-gray-600 space-y-2">
-              <li>
-                Submit Your Details: Share your information and required
-                documents.
+            <ol className="space-y-6">
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  1
+                </span>
+                <div>
+                  <h3 className="font-semibold text-cyan-500">
+                    Submit Your Details
+                  </h3>
+                  <p className="text-gray-600">
+                    Share your information and required documents.
+                  </p>
+                </div>
               </li>
-              <li>
-                Make Payment: Securely pay the registration fee to initiate the
-                process.
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  2
+                </span>
+                <div>
+                  <h3 className="font-semibold text-cyan-500">Make Payment</h3>
+                  <p className="text-gray-600">
+                    Securely pay the registration fee to initiate the process.
+                  </p>
+                </div>
               </li>
-              <li>
-                Processing and Follow-Up: We handle all submissions and
-                communicate with SCUML on your behalf.
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  3
+                </span>
+                <div>
+                  <h3 className="font-semibold text-cyan-500">
+                    Processing and Follow-Up
+                  </h3>
+                  <p className="text-gray-600">
+                    We handle all submissions and communicate with SCUML on your
+                    behalf.
+                  </p>
+                </div>
               </li>
-              <li>
-                Receive Your SCUML Certificate: Once registration is complete,
-                we’ll deliver your SCUML certificate to you.
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                  4
+                </span>
+                <div>
+                  <h3 className="font-semibold text-cyan-500">
+                    Receive Your SCUML Certificate
+                  </h3>
+                  <p className="text-gray-600">
+                    Once registration is complete, we’ll deliver your SCUML
+                    certificate to you.
+                  </p>
+                </div>
               </li>
             </ol>
           </motion.section>

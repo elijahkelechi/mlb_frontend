@@ -161,28 +161,30 @@ const CacPreIncorporation = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="bg-blue-50 p-6 rounded-lg shadow-md text-center space-y-4"
+          className="bg-blue-50 p-6 rounded-lg shadow-md text-center space-y-4 w-full"
         >
           <h1 className="font-bold text-2xl font-heading">
             Not Sure What to Register For?
           </h1>
           <a
-            href="https://wa.me/+234 907 460 2590"
+            href="https://wa.me/+234 803 221 0489"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-200"
           >
             <FaWhatsapp className="mx-2 size-6 md:size-12" /> Contact Support
           </a>
-          <h2 className="text-lg md:text-2xl font-bold mb-2 leading-tight font-heading pt-8">
+        </motion.div>
+        <div className="bg-gray-100 p-6 md:p-12 rounded-lg shadow-lg text-center md:text-left">
+          <h2 className="text-xl md:text-3xl font-bold mb-4 leading-snug text-gray-800 font-heading">
             Join the ranks of successful businesses that entrusted their company
             registration to Multi Level Boost.
           </h2>
-          <p className="text-gray-700 mb-4 leading-relaxed">
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
             Don't let finance and paperwork hold you back – let's get your
             Business, NGO, or Association registered.
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -58,9 +58,10 @@ const AdsPage = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
             >
               <div className="text-center">
-                <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-50 mb-4">
-                  Digital Marketing – Social Media Advertising (Facebook &
-                  Instagram Ads)
+                <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-50 mb-4 space-y-4">
+                  Digital Marketing{" "}
+                  <span className="block my-4">Social Media Advertising</span>{" "}
+                  <span className="block">(Facebook & Instagram Ads)</span>
                 </h1>
                 <p className="text-lg md:text-xl text-cyan-300">
                   Unlock the Power of Social Media to Drive Business Growth
@@ -70,7 +71,7 @@ const AdsPage = () => {
                   to="/ads_subscription"
                   className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
                 >
-                  Book Ads Campaign
+                  See Packages
                 </Link>
               </div>
             </motion.div>
@@ -268,7 +269,7 @@ const AdsPage = () => {
                 </ul>
               </li>
             </ul>
-            <div className="text-center">
+            <div className="text-left">
               <Link
                 onClick={handleScrollToTop}
                 to="/ads_subscription"
@@ -352,7 +353,7 @@ const AdsPage = () => {
           transition={{ duration: 0.6 }}
           className="bg-white rounded-lg shadow-lg p-8 mb-12"
         >
-          <h2 className="text-2xl font-bold mb-6 text-gray-800">
+          <h2 className="text-2xl font-bold mb-6 text-cyan-500">
             Why Choose Facebook Ads?
           </h2>
           <ul className="list-disc list-inside space-y-4 text-gray-700">
@@ -379,15 +380,15 @@ const AdsPage = () => {
           </ul>
         </motion.div>
 
-        <section className="bg-gray-100 text-white py-16 px-6 md:px-16 rounded-xl shadow-lg space-y-16">
+        <section className="bg-gray-100 text-white py-16 px-6 md:px-16 rounded-xl shadow-lg space-y-2 md:space-y-4 ">
           {/* Header Section */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={sectionVariant}
-            className="text-center"
+            className="text-left"
           >
-            <h1 className="text-4xl font-bold mb-4 text-gray-800">
+            <h1 className="text-4xl font-bold text-cyan-500 mb-2 md:mb-4">
               Our Facebook Ads Services
             </h1>
             <p className="text-lg text-gray-600">
@@ -446,9 +447,9 @@ const AdsPage = () => {
             initial="hidden"
             animate="visible"
             variants={sectionVariant}
-            className="text-center space-y-6"
+            className="text-left space-y-6 mb-4 md:mb-8"
           >
-            <h2 className="text-3xl font-bold text-gray-800">
+            <h2 className="text-3xl font-bold text-cyan-500">
               Who Can Benefit from Our Services?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
@@ -472,9 +473,9 @@ const AdsPage = () => {
             initial="hidden"
             animate="visible"
             variants={sectionVariant}
-            className="text-center space-y-6"
+            className="text-left space-y-6"
           >
-            <h2 className="text-3xl font-bold text-gray-800">
+            <h2 className="text-3xl font-bold text-cyan-500">
               Why Choose MULTI-LEVEL BOOST?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
@@ -498,7 +499,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="space-y-6"
           >
-            <h2 className="text-3xl font-bold text-center text-gray-800">
+            <h2 className="text-3xl font-bold text-left text-cyan-500">
               How It Works
             </h2>
             <ol className="list-decimal list-inside text-lg space-y-3 text-gray-600">
@@ -526,7 +527,7 @@ const AdsPage = () => {
             initial="hidden"
             animate="visible"
             variants={sectionVariant}
-            className="text-center space-y-4"
+            className="text-center space-y-4 p-4 md:p-8 shadow-lg mt-4 md:mt-16"
           >
             <h2 className="text-3xl font-bold text-gray-900">
               Let’s Get Started!
@@ -558,70 +559,6 @@ const AdsPage = () => {
             </div>
           </motion.div>
         </section>
-
-        {/* Contact Form Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          id="contact-form"
-          className="bg-white rounded-lg shadow-lg p-8 mt-12"
-        >
-          <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
-          <form>
-            <div className="mb-6">
-              <label
-                htmlFor="name"
-                className="block text-gray-700 font-medium mb-2"
-              >
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
-                placeholder="John Doe"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-medium mb-2"
-              >
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
-                placeholder="john.doe@example.com"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-gray-700 font-medium mb-2"
-              >
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                className="w-full px-4 py-2 border rounded-md focus:ring focus:ring-cyan-500"
-                placeholder="Write your message here..."
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all"
-            >
-              Send Message
-            </button>
-          </form>
-        </motion.div>
       </div>
     </motion.div>
   );

@@ -61,7 +61,7 @@ const Home = () => {
   const cards = [
     {
       id: 1,
-      title: "CAC Registration services",
+      title: "CAC Registration ",
       shortDescription: (
         <div>
           We simplify the process of registering and managing your business with
@@ -100,7 +100,7 @@ const Home = () => {
     },
     {
       id: 2,
-      title: "Taxation Services",
+      title: "Taxation ",
       shortDescription: (
         <div>
           Ensure your business is tax-compliant with our efficient services:
@@ -128,7 +128,7 @@ const Home = () => {
     },
     {
       id: 4,
-      title: "Digital Marketing Services",
+      title: "Digital Marketing",
       shortDescription: (
         <div>
           <div>
