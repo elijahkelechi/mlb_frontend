@@ -1,15 +1,52 @@
-import React from "react";
-import heroImageMobile from "../assets/SCUMLdesktop.jpeg";
+import React, { useState } from "react";
+import { PaystackButton } from "react-paystack";
 import heroImageDesktop from "../assets/graphicsDesign/heroDesktop.jpeg";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
 const GraphicDesignPage = () => {
+  const [email, setEmail] = useState(""); // State to store email
+  const [modalVisible, setModalVisible] = useState(false); // State to toggle modal visibility
+  const [selectedPackage, setSelectedPackage] = useState(null); // State to track selected package
+  const [isEmailValid, setIsEmailValid] = useState(false); // State to track email validity
+  const [paymentInitiated, setPaymentInitiated] = useState(false); // State to trigger payment button render
+
+  // Handle modal visibility
+  const showModal = (packageDetails) => {
+    setSelectedPackage(packageDetails); // Set the selected package
+    setModalVisible(true); // Show the modal
+  };
+
+  // Handle email input change
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setIsEmailValid(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.target.value)); // Validate email format
+  };
+
+  const handlePaymentSuccess = (reference) => {
+    alert("Payment Successful. Transaction Reference: " + reference);
+    // Handle success logic, e.g., save transaction, redirect to a success page
+  };
+
+  const handlePaymentClose = () => {
+    alert("Transaction was not completed.");
+  };
+
+  const createPaystackConfig = (amount) => ({
+    reference: new Date().getTime(), // Unique transaction reference
+    email: email, // Customer's email
+    amount: amount * 100, // Amount in kobo
+    currency: "NGN", // Currency
+    publicKey: "your-paystack-public-key", // Your Paystack public key
+  });
+
   const handleScrollToTop = () => {
     scrollTo(0, 0);
   };
+
   return (
     <div className="bg-gray-50">
-      <div className=" bg-gray-50 rounded-lg ">
+      <div className="bg-gray-50 rounded-lg">
         {/* Hero Section */}
         <motion.div
           className="h-screen w-full relative flex flex-col"
@@ -21,12 +58,12 @@ const GraphicDesignPage = () => {
           <div className="h-full w-full flex-shrink-0">
             <img
               className="hidden md:flex h-full w-full object-cover"
-              src={heroImageDesktop} // Add your desktop image path
+              src={heroImageDesktop}
               alt="Graphic Design and Branding Desktop"
             />
             <img
               className="flex md:hidden h-full w-full object-cover"
-              src={heroImageDesktop} // Add your mobile image path
+              src={heroImageDesktop}
               alt="Graphic Design and Branding Mobile"
             />
           </div>
@@ -50,7 +87,7 @@ const GraphicDesignPage = () => {
 
                 <Link
                   onClick={handleScrollToTop}
-                  to="/graphic_design_services" // Adjust the link as necessary
+                  to="/graphic_design_services"
                   className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   See Packages
@@ -59,6 +96,7 @@ const GraphicDesignPage = () => {
             </motion.div>
           </div>
         </motion.div>
+
         <div className="p-6 md:p-12">
           <div className="space-y-4">
             <h1 className="text-2xl font-semibold text-gray-800">
@@ -70,9 +108,9 @@ const GraphicDesignPage = () => {
               MULTI-LEVEL BOOST, we specialize in creating visually striking
               designs and cohesive branding strategies that set you apart from
               the competition. Whether you’re starting fresh or rebranding, our
-              team is here to help you build a memorable and impactful brand
+              team is here to help you build a memorable and impactful brand.
             </p>
-            <h2 className="text-2xl font-semibold text-gray-800">
+            <h2 className="text-2xl font-semibold text-gray-800 pt-8">
               Why Your Business Needs Professional Graphic Design and Branding
             </h2>
             <ul className="list-disc pl-6 text-gray-600">
@@ -96,7 +134,7 @@ const GraphicDesignPage = () => {
           </div>
 
           <div className="mt-10 space-y-8">
-            <h2 className="text-2xl font-semibold text-gray-800">
+            <h2 className="text-2xl font-semibold text-gray-800 pt-6">
               Our Graphic Design and Branding Services
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -144,7 +182,7 @@ const GraphicDesignPage = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Basic Price
+                  Basic Price - ₦50,000
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (3 Concepts)</li>
@@ -152,15 +190,20 @@ const GraphicDesignPage = () => {
                   <li>Social Media Profile Graphics</li>
                   <li>Brand Guidelines (Basic)</li>
                 </ul>
-                <p className="text-lg font-bold mt-4">Price: ₦50,000</p>
-                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
-                  Order Now!
+
+                <button
+                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
+                  onClick={() =>
+                    showModal({ amount: 50000, name: "Basic Package" })
+                  }
+                >
+                  Checkout
                 </button>
               </div>
 
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Standard Price
+                  Standard Price - ₦100,000
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (5 Concepts)</li>
@@ -169,15 +212,20 @@ const GraphicDesignPage = () => {
                   <li>Brochure or Flyer Design (1)</li>
                   <li>Brand Guidelines Document</li>
                 </ul>
-                <p className="text-lg font-bold mt-4">Price: ₦100,000</p>
-                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
-                  Order Now!
+
+                <button
+                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
+                  onClick={() =>
+                    showModal({ amount: 100000, name: "Standard Package" })
+                  }
+                >
+                  Checkout
                 </button>
               </div>
 
               <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Premium Price
+                  Premium Price - ₦200,000
                 </h3>
                 <ul className="list-disc pl-6 text-gray-600">
                   <li>Custom Logo Design (Unlimited Concepts)</li>
@@ -187,15 +235,67 @@ const GraphicDesignPage = () => {
                   <li>Brand Guidelines Document (Comprehensive)</li>
                   <li>Packaging Design (Basic)</li>
                 </ul>
-                <p className="text-lg font-bold mt-4">Price: ₦200,000</p>
-                <button className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white">
-                  Order Now!
+                <button
+                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
+                  onClick={() =>
+                    showModal({ amount: 200000, name: "Premium Package" })
+                  }
+                >
+                  Checkout
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {modalVisible && !paymentInitiated && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-8 rounded-lg w-96">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Enter Your Email
+            </h2>
+            <input
+              type="email"
+              className="w-full p-3 border border-gray-300 rounded mb-4"
+              placeholder="Your email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <div className="space-x-4">
+              <button
+                className="bg-gray-300 text-gray-800 px-4 py-2 rounded"
+                onClick={() => setModalVisible(false)}
+              >
+                Cancel
+              </button>
+              <button
+                className="bg-blue-600 text-white px-4 py-2 rounded"
+                disabled={!isEmailValid}
+                onClick={() => {
+                  if (isEmailValid) {
+                    setPaymentInitiated(true);
+                    setModalVisible(false);
+                  }
+                }}
+              >
+                Proceed to Payment
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Paystack Payment Button */}
+      {paymentInitiated && (
+        <PaystackButton
+          {...createPaystackConfig(selectedPackage.amount)}
+          text={`Pay ₦${selectedPackage.amount}`}
+          onSuccess={handlePaymentSuccess}
+          onClose={handlePaymentClose}
+        />
+      )}
     </div>
   );
 };

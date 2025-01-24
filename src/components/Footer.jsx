@@ -210,7 +210,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-left mt-8 text-gray-700 text-sm">
+        <div className="text-center md:text-left mt-8 text-gray-700 text-sm">
           &copy; {new Date().getFullYear()} MLB. All rights reserved.
         </div>
       </div>

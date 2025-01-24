@@ -230,19 +230,20 @@ const Development = () => {
               Our Website Design and Development Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaMobileAlt className="text-4xl text-cyan-600 mb-4" />
-                <h3 className="text-lg font-semibold">Website Design</h3>
+              <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
+                <div className="text-left">
+                  {" "}
+                  <FaMobileAlt className="text-4xl text-left text-cyan-600 mb-4" />
+                  <h3 className="text-lg font-semibold">Website Design</h3>
+                </div>
+
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Custom, visually appealing layouts</li>
                   <li>Mobile-responsive and user-friendly designs</li>
                   <li>Branding and theme alignment</li>
                 </ul>
-                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
-                  Learn More
-                </Link>
               </div>
-              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
+              <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Website Development</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
@@ -250,11 +251,8 @@ const Development = () => {
                   <li>E-commerce platforms for online sales</li>
                   <li>CMS integration for easy content management</li>
                 </ul>
-                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
-                  Learn More
-                </Link>
               </div>
-              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
+              <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
                 <FaRegStar className="text-4xl text-cyan-600 mb-4" />
                 <h3 className="text-lg font-semibold">Optimization</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
@@ -264,12 +262,9 @@ const Development = () => {
                     Secure websites with SSL certificates and data protection
                   </li>
                 </ul>
-                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
-                  Learn More
-                </Link>
               </div>
-              <div className="flex flex-col items-center bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="flex items-center text-cyan-600 mb-4">
+              <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
+                <div className="flex items-left text-cyan-600 mb-4">
                   <FiSettings className="text-xl mr-2" /> {/* Spanner Icon */}
                   <FaUserCog className="text-xl" /> {/* Human Icon */}
                 </div>
@@ -281,9 +276,6 @@ const Development = () => {
                   <li>Bug fixes and performance enhancements</li>
                   <li>Ongoing support for your evolving needs</li>
                 </ul>
-                <Link className="bg-cyan-600 hover:bg-gray-800 btn text-white mt-4">
-                  Learn More
-                </Link>
               </div>
               <div>
                 <a
@@ -434,9 +426,7 @@ const Development = () => {
               </li>
             </ol>
           </motion.section>
-          <p className="font-bold my-2">
-            Chat Our Senior Developer via WhatsApp Now!
-          </p>
+          <p className="font-bold my-2">Chat Developer Now!</p>
 
           <a
             href="https://wa.me/+234 803 2210489"

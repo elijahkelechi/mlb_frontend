@@ -449,7 +449,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-left space-y-6 mb-4 md:mb-8"
           >
-            <h2 className="text-3xl font-bold text-cyan-500">
+            <h2 className="text-3xl font-bold text-cyan-500 pt-8">
               Who Can Benefit from Our Services?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
@@ -475,7 +475,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-left space-y-6"
           >
-            <h2 className="text-3xl font-bold text-cyan-500">
+            <h2 className="text-3xl font-bold text-cyan-500 pt-8">
               Why Choose MULTI-LEVEL BOOST?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
@@ -499,7 +499,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="space-y-6"
           >
-            <h2 className="text-3xl font-bold text-left text-cyan-500">
+            <h2 className="text-3xl font-bold text-left text-cyan-500 pt-8">
               How It Works
             </h2>
             <ol className="list-decimal list-inside text-lg space-y-3 text-gray-600">
@@ -529,7 +529,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-center space-y-4 p-4 md:p-8 shadow-lg mt-4 md:mt-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-gray-900 pt-8">
               Let’s Get Started!
             </h2>
             <p className="text-lg text-gray-700">

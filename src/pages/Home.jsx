@@ -142,13 +142,13 @@ const Home = () => {
             </span>
 
             <br />
-            <Link
+            {/* <Link
               onClick={handleScrollToTop}
               to="/social_media_ads"
               className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
             >
               Learn more
-            </Link>
+            </Link> */}
           </div>
           <div>
             <ul className="font-bold text-cyan-500 list-disc ">
@@ -161,13 +161,13 @@ const Home = () => {
             </span>
 
             <br />
-            <Link
+            {/* <Link
               onClick={handleScrollToTop}
               to="/website_app_design_development"
               className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
             >
               Learn more
-            </Link>
+            </Link> */}
           </div>
           <div>
             <ul className="font-bold text-cyan-500 list-disc">
@@ -184,7 +184,7 @@ const Home = () => {
         </div>
       ),
       icon: <MdCampaign className="text-cyan-500 text-5xl" />,
-      link: "/graphic_design",
+      link: "/services",
     },
   ];
 
@@ -262,7 +262,7 @@ const Home = () => {
                         admin ? "hidden" : "flex"
                       }`}
                     >
-                      Season's greeting {user.name} 🎉
+                      Hello {user.name} 🎉
                     </div>
                   ) : (
                     <div>
@@ -320,7 +320,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className="relative text-center pt-8 md:mt-0 bg-gray-200">
+      <div className="relative text-left pt-8 md:mt-0 bg-gray-200">
         <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
           <span className="font-extrabold text-lg text-cyan-500">

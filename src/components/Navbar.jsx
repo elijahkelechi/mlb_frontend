@@ -86,17 +86,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             onClick={handleScrollToTop}
-            to="services"
-            className={({ isActive }) =>
-              isActive
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : "hover:text-cyan-500 hover:border-b-2 hover:border-cyan-500 transition-all"
-            }
-          >
-            SERVICES
-          </NavLink>
-          <NavLink
-            onClick={handleScrollToTop}
             to="aboutUs"
             className={({ isActive }) =>
               isActive
@@ -106,6 +95,18 @@ const Navbar = () => {
           >
             ABOUT
           </NavLink>
+          <NavLink
+            onClick={handleScrollToTop}
+            to="services"
+            className={({ isActive }) =>
+              isActive
+                ? "text-cyan-500 border-b-2 border-cyan-500"
+                : "hover:text-cyan-500 hover:border-b-2 hover:border-cyan-500 transition-all"
+            }
+          >
+            SERVICES
+          </NavLink>
+
           <NavLink
             onClick={handleScrollToTop}
             to="contactUs"
@@ -183,17 +184,7 @@ const Navbar = () => {
           >
             HOME
           </NavLink>
-          <NavLink
-            to="services"
-            className={({ isActive }) =>
-              isActive
-                ? "text-cyan-500 border-b-2 border-cyan-500"
-                : "hover:text-cyan-500 hover:border-b-2 hover:border-cyan-500 transition-all"
-            }
-            onClick={toggleMenu}
-          >
-            SERVICES
-          </NavLink>
+
           <NavLink
             to="aboutUs"
             className={({ isActive }) =>
@@ -204,6 +195,17 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             ABOUT
+          </NavLink>
+          <NavLink
+            to="services"
+            className={({ isActive }) =>
+              isActive
+                ? "text-cyan-500 border-b-2 border-cyan-500"
+                : "hover:text-cyan-500 hover:border-b-2 hover:border-cyan-500 transition-all"
+            }
+            onClick={toggleMenu}
+          >
+            SERVICES
           </NavLink>
           <NavLink
             to="contactUs"

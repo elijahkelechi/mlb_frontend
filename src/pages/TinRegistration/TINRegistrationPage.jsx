@@ -355,19 +355,19 @@ const TINRegistrationPage = () => {
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Business Name</span>
                       <span className="font-semibold">
-                        <span>Cost: </span>₦12,000
+                        <span>Cost: </span>₦15,000
                       </span>
                     </li>
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Limited Liability Company</span>
                       <span className="font-semibold">
-                        <span>Cost: </span>₦15,000
+                        <span>Cost: </span>₦20,000
                       </span>
                     </li>
                     <li className="flex justify-between items-center text-lg text-gray-700">
                       <span>Incorporated Trustee</span>
                       <span className="font-semibold">
-                        <span>Cost: </span>₦15,000
+                        <span>Cost: </span>₦20,000
                       </span>
                     </li>
                   </ul>
