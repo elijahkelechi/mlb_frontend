@@ -32,7 +32,7 @@ const LimitedLiabilityRegistration = () => {
 
       {/* Hero Section */}
       <header className="h-screen relative flex flex-col">
-        {/* Background Image */}
+        {/* Background Image
         <div className="absolute inset-0 h-full w-full">
           <img
             className="hidden md:flex h-full w-full object-cover"
@@ -44,21 +44,20 @@ const LimitedLiabilityRegistration = () => {
             src={heroImageMobile}
             alt="LLC Registration Mobile"
           />
-        </div>
-
+        </div> */}
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+        <div className="absolute inset-0  bg-opacity-50 flex items-center">
           <motion.div
             className="container  px-6 md:px-12 text-left"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <h1 className="text-2xl md:text-4xl font-heading md:leading-tight font-bold text-white">
+            <h1 className="text-2xl md:text-4xl font-heading md:leading-tight font-bold text-cyan-500">
               Secure Your Business’s Future with Hassle-Free Limited Liability
               Company Registration
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-gray-100">
+            <p className="mt-4 text-lg md:text-xl text-gray-800">
               A Limited Liability Company (LLC) offers legal protection,
               operational flexibility, and business credibility.
             </p>
