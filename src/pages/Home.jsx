@@ -349,7 +349,7 @@ const Home = () => {
             Our Services
           </h1>
           <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
-            We have all it takes! to Build your business 💪
+            We have all it takes to Build your business 💪
           </h1>
           <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
             Multi-Level Boost has all it takes for you to grow a legit and

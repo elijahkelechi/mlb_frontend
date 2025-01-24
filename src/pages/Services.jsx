@@ -53,7 +53,7 @@ const services = [
       "Ensure compliance and avoid restrictions in SCUML-required sectors like NGOs, Churches, and Mechanized Farming with expert guidance.",
     benefits: [
       "SCUML Certificate",
-      "Timeframe - 7-7 working days",
+      "Timeframe - 5-7 working days",
       "Flexible Payment Options",
     ],
     icon: <FaUniversity className="text-cyan-500 text-4xl" />,

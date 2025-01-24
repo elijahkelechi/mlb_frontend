@@ -94,15 +94,6 @@ const Footer = () => {
               <li>
                 <Link
                   onClick={handleScrollToTop}
-                  to="/CAC_post_incoperation"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
-                >
-                  CAC Post Incorporations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  onClick={handleScrollToTop}
                   to="/SCUML_Registeration"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
@@ -116,6 +107,15 @@ const Footer = () => {
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
                   TIN & TCC
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={handleScrollToTop}
+                  to="/CAC_post_incoperation"
+                  className="text-cyan-500 hover:text-cyan-700 underline"
+                >
+                  CAC Post Incorporations
                 </Link>
               </li>
             </ul>

@@ -285,6 +285,18 @@ const Development = () => {
                   Learn More
                 </Link>
               </div>
+              <div>
+                <a
+                  href="https://wa.me/+234 803 2210489"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
+                >
+                  <FaWhatsapp className="mr-2" size={20} />{" "}
+                  {/* Adds some margin between icon and text */}
+                  Chat a Developer Now
+                </a>
+              </div>
             </div>
           </motion.section>
           <section className="bg-gray-100 py-12">
@@ -357,18 +369,6 @@ const Development = () => {
             </div>
           </section>
 
-          <div>
-            <a
-              href="https://wa.me/+234 803 2210489"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
-            >
-              <FaWhatsapp className="mr-2" size={20} />{" "}
-              {/* Adds some margin between icon and text */}
-              Chat a Developer Now
-            </a>
-          </div>
           {/* Industries Served */}
           <motion.section
             initial={{ opacity: 0 }}
@@ -434,140 +434,20 @@ const Development = () => {
               </li>
             </ol>
           </motion.section>
+          <p className="font-bold my-2">
+            Chat Our Senior Developer via WhatsApp Now!
+          </p>
 
-          {/* Contact Form */}
-          <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.9 }}
+          <a
+            href="https://wa.me/+234 803 2210489"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
           >
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Contact Us
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-gray-700">Full Name</label>
-                <input
-                  type="text"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.fullName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, fullName: e.target.value })
-                  }
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">Email</label>
-                <input
-                  type="email"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">Phone Number</label>
-                <input
-                  type="tel"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.phoneNumber}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phoneNumber: e.target.value })
-                  }
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">WhatsApp Number</label>
-                <input
-                  type="tel"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.whatsappNumber}
-                  onChange={(e) =>
-                    setFormData({ ...formData, whatsappNumber: e.target.value })
-                  }
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700">Business/Industry</label>
-                <select
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.businessIndustry}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      businessIndustry: e.target.value,
-                    })
-                  }
-                >
-                  <option value="E-commerce and Retail">
-                    E-commerce and Retail
-                  </option>
-                  <option value="Real Estate and Property Management">
-                    Real Estate and Property Management
-                  </option>
-                  <option value="Education and Training">
-                    Education and Training
-                  </option>
-                  <option value="Hospitality and Tourism">
-                    Hospitality and Tourism
-                  </option>
-                  <option value="NGOs and Associations">
-                    NGOs and Associations
-                  </option>
-                  <option value="Startups and Entrepreneurs">
-                    Startups and Entrepreneurs
-                  </option>
-                  <option value="Automobile">Automobile</option>
-                  <option value="Renewable Energy Technology">
-                    Renewable Energy Technology
-                  </option>
-                  <option value="Agriculture">Agriculture</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-gray-700">
-                  Any other information
-                </label>
-                <textarea
-                  className="w-full p-3 border border-gray-300 rounded-lg"
-                  value={formData.additionalInfo}
-                  onChange={(e) =>
-                    setFormData({ ...formData, additionalInfo: e.target.value })
-                  }
-                />
-              </div>
-              <div className="text-left block space-y-4">
-                <button
-                  type="submit"
-                  className="bg-cyan-600 text-white py-3 px-6 rounded-lg hover:bg-cyan-700 transition duration-200"
-                >
-                  Submit
-                </button>
-
-                <p className="font-bold my-2">
-                  Chat Our Senior Developer via WhatsApp Now!
-                </p>
-
-                <a
-                  href="https://wa.me/+234 803 2210489"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
-                >
-                  <FaWhatsapp className="mr-2" size={20} />{" "}
-                  {/* Adds some margin between icon and text */}
-                  Chat a Developer Now
-                </a>
-              </div>
-            </form>
-          </motion.section>
+            <FaWhatsapp className="mr-2" size={20} />{" "}
+            {/* Adds some margin between icon and text */}
+            Chat a Developer Now
+          </a>
         </main>
       </div>
     </div>
