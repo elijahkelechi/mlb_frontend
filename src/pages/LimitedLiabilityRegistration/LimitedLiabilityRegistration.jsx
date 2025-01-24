@@ -367,7 +367,7 @@ const LimitedLiabilityRegistration = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <h2 className="text-3xl font-bold text-left text-cyan-500 mb-6">
-            Requirements for Limited Liability Company Registration
+            Requirements for Registration
           </h2>
           <p className="text-left text-gray-600 text-lg mb-10">
             To register your Limited Liability Company, please provide the
