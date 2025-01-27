@@ -78,10 +78,10 @@ const Development = () => {
 
                 <Link
                   onClick={handleScrollToTop}
-                  to="/website_design_services" // Adjust the link as necessary
+                  to="/website_design_packages" // Adjust the link as necessary
                   className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
-                  Learn More
+                  See Packages
                 </Link>
               </div>
             </motion.div>
@@ -111,12 +111,13 @@ const Development = () => {
                 From design to development, we transform your vision into a
                 powerful digital platform that drives results.
               </p>
-              <a
-                href="#contact"
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/website_design_packages"
                 className="inline-block bg-cyan-500 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
 
             {/* Visual Content */}
@@ -309,7 +310,8 @@ const Development = () => {
                       {/* Button Section */}
                       <div className="text-center mt-8">
                         <Link
-                          to="/packages"
+                          onClick={() => window.scrollTo(0, 0)}
+                          to="/website_design_packages"
                           className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
@@ -333,7 +335,8 @@ const Development = () => {
                       {/* Button Section */}
                       <div className="text-center mt-8">
                         <Link
-                          to="/packages"
+                          onClick={() => window.scrollTo(0, 0)}
+                          to="/website_design_packages"
                           className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages

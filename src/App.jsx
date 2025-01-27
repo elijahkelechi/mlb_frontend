@@ -16,6 +16,7 @@ import {
   TrusteeForm,
   TinRegistrationPage,
   Development,
+  WebDesignPackages,
   GraphicDesign,
   AdsPage,
   Subscription,
@@ -132,6 +133,10 @@ const router = createBrowserRouter([
       {
         path: "website_app_design_development",
         element: <Development />,
+      },
+      {
+        path: "website_design_packages",
+        element: <WebDesignPackages />,
       },
       {
         path: "graphic_design",
