@@ -14,9 +14,9 @@ import { FaUserCog } from "react-icons/fa"; // Human with settings icon
 import { FiSettings } from "react-icons/fi"; // Spanner icon
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import webImage from "../assets/website/webImage.webp";
-import mobileHero from "../assets/website/mobileHero.jpeg";
-import desktopHero from "../assets/website/desktopHero.jpeg";
+import webImage from "../../assets/website/webImage.webp";
+import mobileHero from "../../assets/website/mobileHero.jpeg";
+import desktopHero from "../../assets/website/desktopHero.jpeg";
 
 const Development = () => {
   const [formData, setFormData] = useState({

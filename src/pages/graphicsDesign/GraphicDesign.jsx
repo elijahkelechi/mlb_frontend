@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
-import heroImageDesktop from "../assets/graphicsDesign/heroDesktop.jpeg";
+import heroImageDesktop from "../../assets/graphicsDesign/heroDesktop.jpeg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const GraphicDesignPage = () => {
   const [email, setEmail] = useState(""); // State to store email
   const [modalVisible, setModalVisible] = useState(false); // State to toggle modal visibility
   const [selectedPackage, setSelectedPackage] = useState(null); // State to track selected package
   const [isEmailValid, setIsEmailValid] = useState(false); // State to track email validity
-  const [paymentInitiated, setPaymentInitiated] = useState(false); // State to trigger payment button render
 
   // Handle modal visibility
   const showModal = (packageDetails) => {
@@ -24,25 +24,26 @@ const GraphicDesignPage = () => {
   };
 
   const handlePaymentSuccess = (reference) => {
-    alert("Payment Successful. Transaction Reference: " + reference);
+    toast.success(
+      "Payment Successful. Transaction Reference: " + reference.reference
+    );
     // Handle success logic, e.g., save transaction, redirect to a success page
+    setModalVisible(false);
   };
 
   const handlePaymentClose = () => {
-    alert("Transaction was not completed.");
+    toast.error("Transaction was not completed.");
   };
 
   const createPaystackConfig = (amount) => ({
-    reference: new Date().getTime(), // Unique transaction reference
+    reference: new Date().getTime().toString(), // Unique transaction reference
     email: email, // Customer's email
     amount: amount * 100, // Amount in kobo
     currency: "NGN", // Currency
     publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Your Paystack public key
+    onSuccess: handlePaymentSuccess,
+    onClose: handlePaymentClose,
   });
-
-  const handleScrollToTop = () => {
-    scrollTo(0, 0);
-  };
 
   return (
     <div className="bg-gray-50">
@@ -85,13 +86,19 @@ const GraphicDesignPage = () => {
                   Branding
                 </p>
 
-                <Link
-                  onClick={handleScrollToTop}
-                  to="/graphic_design_services"
-                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                <a
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    document.getElementById("packages").scrollIntoView({
+                      behavior: "smooth", // Smooth scrolling effect
+                      block: "start", // Scroll to the start of the section
+                    });
+                  }}
+                  href="#packages"
+                  className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   See Packages
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -174,128 +181,109 @@ const GraphicDesignPage = () => {
             </div>
           </div>
 
-          <div className="mt-10 space-y-8">
+          <div id="packages" className="mt-4 md:mt-8">
             <h2 className="text-2xl font-semibold text-gray-800">
               Our Branding Packages
             </h2>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Basic Price - ₦50,000
-                </h3>
-                <ul className="list-disc pl-6 text-gray-600">
-                  <li>Custom Logo Design (3 Concepts)</li>
-                  <li>Business Card Design</li>
-                  <li>Social Media Profile Graphics</li>
-                  <li>Brand Guidelines (Basic)</li>
-                </ul>
-
-                <button
-                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
-                  onClick={() =>
-                    showModal({ amount: 50000, name: "Basic Package" })
-                  }
-                >
-                  Checkout
-                </button>
-              </div>
-
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Standard Price - ₦100,000
-                </h3>
-                <ul className="list-disc pl-6 text-gray-600">
-                  <li>Custom Logo Design (5 Concepts)</li>
-                  <li>Business Card and Letterhead Design</li>
-                  <li>Social Media Graphics (10 Templates)</li>
-                  <li>Brochure or Flyer Design (1)</li>
-                  <li>Brand Guidelines Document</li>
-                </ul>
-
-                <button
-                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
-                  onClick={() =>
-                    showModal({ amount: 100000, name: "Standard Package" })
-                  }
-                >
-                  Checkout
-                </button>
-              </div>
-
-              <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-xl text-gray-700 mb-4">
-                  Premium Price - ₦200,000
-                </h3>
-                <ul className="list-disc pl-6 texay-600">
-                  <li>Custom Logo Design (Unlimited Concepts)</li>
-                  <li>Complete Stationery Design</li>
-                  <li>Social Media Graphics (20 Templates)</li>
-                  <li>Marketing Materials (2 Brochures/Flyers)</li>
-                  <li>Brand Guidelines Document (Comprehensive)</li>
-                  <li>Packaging Design (Basic)</li>
-                </ul>
-                <button
-                  className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-blue-600 text-white"
-                  onClick={() =>
-                    showModal({ amount: 200000, name: "Premium Package" })
-                  }
-                >
-                  Checkout
-                </button>
-              </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              {[
+                {
+                  name: "Basic",
+                  amount: 50000,
+                  features: [
+                    "Custom Logo Design (3 Concepts)",
+                    "Business Card Design",
+                    "Social Media Profile Graphics",
+                    "Brand Guidelines (Basic)",
+                  ],
+                },
+                {
+                  name: "Standard",
+                  amount: 100000,
+                  features: [
+                    "Custom Logo Design (5 Concepts)",
+                    "Business Card and Letterhead Design",
+                    "Social Media Graphics (10 Templates)",
+                    "Brochure or Flyer Design (1)",
+                    "Brand Guidelines Document",
+                  ],
+                },
+                {
+                  name: "Premium",
+                  amount: 200000,
+                  features: [
+                    "Custom Logo Design (Unlimited Concepts)",
+                    "Complete Stationery Design",
+                    "Social Media Graphics (20 Templates)",
+                    "Marketing Materials (2 Brochures/Flyers)",
+                    "Brand Guidelines Document",
+                  ],
+                },
+              ].map((pkg, idx) => (
+                <div key={idx} className="bg-gray-100 p-6 rounded-lg shadow-md">
+                  <h3 className="font-semibold text-xl text-gray-700 mb-4">
+                    {pkg.name} - ₦{pkg.amount.toLocaleString()}
+                  </h3>
+                  <ul className="list-disc pl-6 text-gray-600">
+                    {pkg.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                  <button
+                    className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-cyan-500 text-white hover:bg-gray-800"
+                    onClick={() => showModal(pkg)}
+                  >
+                    Checkout
+                  </button>
+                </div>
+              ))}
             </div>
+
+            {modalVisible && selectedPackage && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+                  <h3 className="font-semibold text-lg mb-4">
+                    Complete Payment for {selectedPackage.name}
+                  </h3>
+                  <label className="block mb-2 text-gray-600">
+                    Enter your email address:
+                  </label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    className="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="Enter your email"
+                  />
+
+                  {isEmailValid ? (
+                    <PaystackButton
+                      {...createPaystackConfig(selectedPackage.amount)}
+                      className="bg-green-600 text-white py-2 px-4 rounded shadow hover:bg-green-700 mr-4 md:mr-8"
+                    >
+                      {/* Pay ₦{selectedPackage.amount.toLocaleString()} */}
+                      Proceed to payment
+                    </PaystackButton>
+                  ) : (
+                    <button
+                      disabled
+                      className="bg-gray-400 text-white py-2 px-4 rounded shadow cursor-not-allowed"
+                    >
+                      Enter a valid email to proceed
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setModalVisible(false)}
+                    className="mt-4 bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-red-700"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
-
-      {/* Modal */}
-      {modalVisible && !paymentInitiated && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-8 rounded-lg w-96">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Enter Your Email
-            </h2>
-            <input
-              type="email"
-              className="w-full p-3 border border-gray-300 rounded mb-4"
-              placeholder="Your email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <div className="space-x-4">
-              <button
-                className="bg-gray-300 text-gray-800 px-4 py-2 rounded"
-                onClick={() => setModalVisible(false)}
-              >
-                Cancel
-              </button>
-              <button
-                className="bg-blue-600 text-white px-4 py-2 rounded"
-                disabled={!isEmailValid}
-                onClick={() => {
-                  if (isEmailValid) {
-                    setModalVisible(false);
-                    setPaymentInitiated(true); // Trigger Paystack button render
-                  }
-                }}
-              >
-                Proceed to Payment
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Render Paystack Button when payment is initiated */}
-      {paymentInitiated && (
-        <PaystackButton
-          {...createPaystackConfig(selectedPackage.amount)}
-          text={`Pay ₦${selectedPackage.amount}`}
-          onSuccess={handlePaymentSuccess}
-          onClose={handlePaymentClose}
-        />
-      )}
     </div>
   );
 };
