@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
+import { toast } from "react-toastify";
 const Packages = () => {
   const [email, setEmail] = useState(""); // State to store email
   const [modalVisible, setModalVisible] = useState(false); // State to toggle modal visibility
