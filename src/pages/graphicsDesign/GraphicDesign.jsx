@@ -230,7 +230,7 @@ const GraphicDesignPage = () => {
                     ))}
                   </ul>
                   <button
-                    className="btn btn-sm md:btn-md w-full my-4 md:my-6 bg-cyan-500 text-white hover:bg-gray-800"
+                    className="btn btn-md md:btn-md w-full my-4 md:my-6 bg-cyan-500 text-white hover:bg-gray-800"
                     onClick={() => showModal(pkg)}
                   >
                     Checkout
