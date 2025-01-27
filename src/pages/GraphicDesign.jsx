@@ -37,7 +37,7 @@ const GraphicDesignPage = () => {
     email: email, // Customer's email
     amount: amount * 100, // Amount in kobo
     currency: "NGN", // Currency
-    publicKey: "your-paystack-public-key", // Your Paystack public key
+    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Your Paystack public key
   });
 
   const handleScrollToTop = () => {
@@ -227,7 +227,7 @@ const GraphicDesignPage = () => {
                 <h3 className="font-semibold text-xl text-gray-700 mb-4">
                   Premium Price - ₦200,000
                 </h3>
-                <ul className="list-disc pl-6 text-gray-600">
+                <ul className="list-disc pl-6 texay-600">
                   <li>Custom Logo Design (Unlimited Concepts)</li>
                   <li>Complete Stationery Design</li>
                   <li>Social Media Graphics (20 Templates)</li>
@@ -275,8 +275,8 @@ const GraphicDesignPage = () => {
                 disabled={!isEmailValid}
                 onClick={() => {
                   if (isEmailValid) {
-                    setPaymentInitiated(true);
                     setModalVisible(false);
+                    setPaymentInitiated(true); // Trigger Paystack button render
                   }
                 }}
               >
@@ -287,7 +287,7 @@ const GraphicDesignPage = () => {
         </div>
       )}
 
-      {/* Paystack Payment Button */}
+      {/* Render Paystack Button when payment is initiated */}
       {paymentInitiated && (
         <PaystackButton
           {...createPaystackConfig(selectedPackage.amount)}

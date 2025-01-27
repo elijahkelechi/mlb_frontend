@@ -149,12 +149,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/contactUs"
                   className="text-cyan-500 hover:text-cyan-700 underline"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

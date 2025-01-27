@@ -72,7 +72,7 @@ const Subscription = () => {
   const plans = {
     monthly: [
       {
-        name: "Basic Plan",
+        name: "Basic",
         details: [
           "Platforms: Facebook & Instagram",
           "2 Ad Campaigns",
@@ -84,7 +84,7 @@ const Subscription = () => {
         price: "₦30,000",
       },
       {
-        name: "Standard Plan",
+        name: "Standard",
         details: [
           "Platforms: Facebook & Instagram",
           "4 Ad Campaigns",
@@ -96,7 +96,7 @@ const Subscription = () => {
         price: "₦50,000",
       },
       {
-        name: "Premium Plan",
+        name: "Premium",
         details: [
           "Platforms: Facebook & Instagram",
           "Unlimited Ad Campaigns",
@@ -112,7 +112,7 @@ const Subscription = () => {
     ],
     weekly: [
       {
-        name: "Weekly Basic Plan",
+        name: "Weekly Basic",
         details: [
           "Platforms: Facebook & Instagram",
           "1 Ad Campaign",
@@ -123,7 +123,7 @@ const Subscription = () => {
         price: "₦10,000",
       },
       {
-        name: "Weekly Premium Plan",
+        name: "Weekly Premium",
         details: [
           "Platforms: Facebook & Instagram",
           "2 Ad Campaigns",
@@ -165,16 +165,14 @@ const Subscription = () => {
             {plans.monthly.map((plan, index) => (
               <div key={index} className="border p-6 rounded-lg bg-gray-50">
                 <h3 className="text-xl font-bold mb-4 text-cyan-700">
-                  {plan.name}
+                  {plan.name} - {plan.price}
                 </h3>
                 <ul className="list-disc ml-6 mb-4 text-gray-700">
                   {plan.details.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
-                <p className="font-semibold text-lg mb-4 text-gray-800">
-                  Service Charge: {plan.price}
-                </p>
+                <p className="font-semibold text-lg mb-4 text-gray-800"></p>
                 <button
                   onClick={() => openModal(plan, "monthly")}
                   className="bg-cyan-600 text-white hover:bg-gray-800 p-4 rounded-md"
@@ -195,16 +193,14 @@ const Subscription = () => {
             {plans.weekly.map((plan, index) => (
               <div key={index} className="border p-6 rounded-lg bg-gray-50">
                 <h3 className="text-xl font-bold mb-4 text-cyan-700">
-                  {plan.name}
+                  {plan.name} - {plan.price}
                 </h3>
                 <ul className="list-disc ml-6 mb-4 text-gray-700">
                   {plan.details.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
-                <p className="font-semibold text-lg mb-4 text-gray-800">
-                  Service Charge: {plan.price}
-                </p>
+                <p className="font-semibold text-lg mb-4 text-gray-800"></p>
                 <button
                   onClick={() => openModal(plan, "weekly")}
                   className="bg-cyan-600 text-white hover:bg-gray-800 p-4 rounded-md"

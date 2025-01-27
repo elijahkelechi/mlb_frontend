@@ -24,14 +24,14 @@ const TINRegistrationPage = () => {
       <div className="">
         {/* Hero Section */}
         <motion.div
-          className="h-screen w-full relative flex flex-col"
+          className="h-screen w-full relative flex flex-col shadow-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           {/* Background Image */}
           <div className="h-full w-full flex-shrink-0">
-            <img
+            {/* <img
               className="hidden md:flex h-full w-full object-cover"
               src={heroImageDesktop} // Add your desktop image path
               alt="TIN Registration Desktop"
@@ -40,11 +40,11 @@ const TINRegistrationPage = () => {
               className="flex md:hidden h-full w-full object-cover"
               src={heroImageMobile} // Add your mobile image path
               alt="TIN Registration Mobile"
-            />
+            /> */}
           </div>
 
           {/* Overlay Content */}
-          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-0">
             <motion.div
               className="h-screen flex items-center justify-start font-bold text-white px-6 md:px-12"
               initial={{ opacity: 0, y: -50 }}
@@ -52,10 +52,10 @@ const TINRegistrationPage = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
             >
               <div className="">
-                <h1 className="text-left text-2xl md:text-4xl font-bold">
+                <h1 className="text-left text-cyan-500 text-2xl md:text-4xl font-bold">
                   Tax Identification Number (TIN) Registration Service
                 </h1>
-                <p className="mt-4 text-left text-lg mb-8">
+                <p className="mt-4 text-blue-600 text-left text-lg mb-8">
                   Get Your TIN, Stay Tax-Compliant, and Unlock Business
                   Opportunities
                 </p>

@@ -79,7 +79,7 @@ const Development = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/website_design_services" // Adjust the link as necessary
-                  className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                  className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   Learn More
                 </Link>
@@ -103,7 +103,7 @@ const Development = () => {
               </p>
               <p className="text-gray-700 text-base md:text-lg mb-6">
                 At{" "}
-                <span className="text-cyan-600 font-semibold">
+                <span className="text-cyan-500 font-semibold">
                   MULTI-LEVEL BOOST
                 </span>
                 , we specialize in creating stunning, user-friendly, and
@@ -113,7 +113,7 @@ const Development = () => {
               </p>
               <a
                 href="#contact"
-                className="inline-block bg-cyan-600 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-cyan-700 transition duration-200"
+                className="inline-block bg-cyan-500 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
               >
                 Get Started
               </a>
@@ -149,10 +149,7 @@ const Development = () => {
               {/* Section Content */}
               <div className="bg-white p-8 rounded-lg shadow-lg   justify-between">
                 {/* Item 1 */}
-                <div className="flex flex-col items-center text-center space-y-8 mb-8 md:mb-0">
-                  <div className="text-4xl text-blue-500">
-                    <FaLaptopCode />
-                  </div>
+                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 mb-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🧑‍💻 Experienced Team
                   </h3>
@@ -163,10 +160,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex flex-col items-center text-center space-y-4 mb-8 md:mb-0">
-                  <div className="text-4xl text-blue-500">
-                    <FaBullseye />
-                  </div>
+                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🎯 Tailored Solutions
                   </h3>
@@ -177,10 +171,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 3 */}
-                <div className="flex flex-col items-center text-center space-y-4 mb-8 md:mb-0">
-                  <div className="text-4xl text-blue-500">
-                    <FaDollarSign />
-                  </div>
+                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     💰 Affordable Packages
                   </h3>
@@ -191,10 +182,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 4 */}
-                <div className="flex flex-col items-center text-center space-y-4 mb-8 md:mb-0">
-                  <div className="text-4xl text-blue-500">
-                    <FaCogs />
-                  </div>
+                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     ⚙️ Cutting-Edge Technology
                   </h3>
@@ -205,10 +193,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 5 */}
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="text-4xl text-blue-500">
-                    <FaHandshake />
-                  </div>
+                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🤝 Client-Centric Approach
                   </h3>
@@ -233,7 +218,7 @@ const Development = () => {
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
                 <div className="text-left">
                   {" "}
-                  <FaMobileAlt className="text-4xl text-left text-cyan-600 mb-4" />
+                  <FaMobileAlt className="text-4xl text-left text-cyan-500 mb-4" />
                   <h3 className="text-lg font-semibold">Website Design</h3>
                 </div>
 
@@ -244,7 +229,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaLaptopCode className="text-4xl text-cyan-600 mb-4" />
+                <FaLaptopCode className="text-4xl text-cyan-500 mb-4" />
                 <h3 className="text-lg font-semibold">Website Development</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Dynamic, functional websites with seamless navigation</li>
@@ -253,7 +238,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaRegStar className="text-4xl text-cyan-600 mb-4" />
+                <FaRegStar className="text-4xl text-cyan-500 mb-4" />
                 <h3 className="text-lg font-semibold">Optimization</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Fast-loading pages for enhanced user experience</li>
@@ -264,7 +249,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="flex items-left text-cyan-600 mb-4">
+                <div className="flex items-left text-cyan-500 mb-4">
                   <FiSettings className="text-xl mr-2" /> {/* Spanner Icon */}
                   <FaUserCog className="text-xl" /> {/* Human Icon */}
                 </div>
@@ -306,7 +291,7 @@ const Development = () => {
               </div>
 
               {/* Box Section */}
-              <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
+              <div className="bg-cyan-500 text-white p-8 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Left Side: Info with Icons */}
                   <div className="flex items-center space-x-4">
@@ -325,7 +310,7 @@ const Development = () => {
                       <div className="text-center mt-8">
                         <Link
                           to="/packages"
-                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
@@ -349,7 +334,7 @@ const Development = () => {
                       <div className="text-center mt-8">
                         <Link
                           to="/packages"
-                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
