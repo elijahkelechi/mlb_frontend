@@ -221,7 +221,7 @@ const GraphicDesignPage = () => {
                 },
               ].map((pkg, idx) => (
                 <div key={idx} className="bg-gray-100 p-6 rounded-lg shadow-md">
-                  <h3 className="font-semibold text-xl text-gray-700 mb-4">
+                  <h3 className="font-semibold text-xl text-cyan-500 mb-4">
                     {pkg.name} - ₦{pkg.amount.toLocaleString()}
                   </h3>
                   <ul className="list-disc pl-6 text-gray-600">

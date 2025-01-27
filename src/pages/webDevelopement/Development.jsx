@@ -88,7 +88,7 @@ const Development = () => {
           </div>
         </motion.div>
 
-        <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24">
+        <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-16">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8">
             {/* Text Content */}
             <div>
