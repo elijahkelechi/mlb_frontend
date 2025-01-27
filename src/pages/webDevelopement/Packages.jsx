@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-
+import { PaystackButton } from "react-paystack";
 const Packages = () => {
   const [email, setEmail] = useState(""); // State to store email
   const [modalVisible, setModalVisible] = useState(false); // State to toggle modal visibility
   const [selectedPackage, setSelectedPackage] = useState(null); // State to track selected package
   const [isEmailValid, setIsEmailValid] = useState(false); // State to track email validity
+
   const showModal = (packageDetails) => {
     setSelectedPackage(packageDetails); // Set the selected package
     setModalVisible(true); // Show the modal
@@ -186,7 +187,7 @@ const Packages = () => {
       <div className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
         {/* Web Design Packages */}
         <h1 className="text-3xl font-bold text-center mb-12">
-          Web Design and Developement Packages
+          Web Design and Development Packages
         </h1>
         {/* Landing Page Centered */}
         <div className="flex justify-center mb-12">
@@ -202,7 +203,7 @@ const Packages = () => {
             </p>
 
             <button
-              onClick={() => showModal(pkg)}
+              onClick={() => showModal(webPackages[0])}
               className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
             >
               Choose Plan
@@ -249,7 +250,10 @@ const Packages = () => {
               <p className="text-sm text-center text-gray-500 mb-4">
                 {pkg.discount}
               </p>
-              <button className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors">
+              <button
+                onClick={() => showModal(pkg)}
+                className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
                 Choose Plan
               </button>
               <p className="text-sm text-gray-600 mb-6 text-center">
@@ -297,7 +301,10 @@ const Packages = () => {
               <p className="text-sm text-center text-gray-500 mb-4">
                 {pkg.discount}
               </p>
-              <button className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors">
+              <button
+                onClick={() => showModal(pkg)}
+                className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
                 Choose Plan
               </button>
               <p className="text-sm text-gray-600 mb-6 text-center">
@@ -319,8 +326,58 @@ const Packages = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal for Email Entry */}
+      {modalVisible && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
+          <div className="bg-white rounded-lg p-6 w-11/12 sm:w-96 shadow-lg">
+            <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
+              Enter Your Email
+            </h2>
+            <p className="text-gray-600 text-sm mb-4 text-center">
+              Please provide your email to proceed with the payment for the{" "}
+              <span className="font-bold text-cyan-600">
+                {selectedPackage?.title}
+              </span>{" "}
+              package.
+            </p>
+            <input
+              type="email"
+              className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-2 focus:ring-cyan-500 outline-none mb-4"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <div className="flex justify-end space-x-4">
+              <button
+                className="px-4 py-2 bg-gray-300 rounded-lg text-gray-800 hover:bg-gray-400 transition-colors"
+                onClick={() => setModalVisible(false)}
+              >
+                Cancel
+              </button>
+              <PaystackButton
+                {...createPaystackConfig(
+                  parseInt(selectedPackage?.price.replace(/[^0-9]/g, ""), 10)
+                )}
+                disabled={!isEmailValid}
+                className={`px-4 py-2 rounded-lg ${
+                  isEmailValid
+                    ? "bg-cyan-500 text-white hover:bg-cyan-600"
+                    : "bg-gray-300 text-gray-800 cursor-not-allowed"
+                } transition-colors`}
+              >
+                Proceed to Pay
+              </PaystackButton>
+            </div>
+            {!isEmailValid && (
+              <p className="text-sm text-red-500 mt-2 text-center">
+                Please enter a valid email address to continue.
+              </p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-
 export default Packages;
