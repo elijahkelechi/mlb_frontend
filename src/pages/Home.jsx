@@ -366,7 +366,7 @@ const Home = () => {
           alt="Landing"
         />
 
-        <div className="relative mt-0 md:mt-16 cards-div mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
+        <div className="relative mt-0 md:mt-16 cards-div mx-4 md:mx-8 grid gap-8 lg:gap-16 grid-cols-1 lg:grid-cols-1 text-center justify-center">
           {cards.map((card, index) => (
             <div
               key={card.id}
