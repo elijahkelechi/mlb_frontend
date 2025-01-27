@@ -91,7 +91,7 @@ const Services = () => {
     <div className="bg-gradient-to-r from-gray-50 to-gray-100 ">
       <section class="relative pt-20 px-6 bg-gray-100">
         <div class="container mx-auto text-center">
-          <h1 class="text-xl md:text-3xl font-semibold text-cyan-500 mb-4">
+          <h1 class="text-2xl md:text-3xl font-semibold text-cyan-500 mb-4">
             Our Services
           </h1>
 
