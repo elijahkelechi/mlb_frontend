@@ -8,6 +8,7 @@ import {
   FaBullseye,
   FaDollarSign,
   FaHandshake,
+  FaStore,
 } from "react-icons/fa";
 
 import { FaUserCog } from "react-icons/fa"; // Human with settings icon
@@ -132,13 +133,13 @@ const Development = () => {
         </section>
 
         {/* Main Content */}
-        <main className="p-6 md:p-16 space-y-8">
+        <main className="px-6 md:px-16 space-y-8">
           {/* Why Your Business Needs a Website */}
-          <section className="py-12 bg-gray-50">
+          <section className="py-6 md:py-8 bg-gray-50">
             <div className="container mx-auto ">
               {/* Section Title */}
               <div className="text-center mb-8">
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                   Why Choose Multi-Level Boost?
                 </h2>
                 <p className="text-lg text-gray-600 mt-4">
@@ -278,13 +279,13 @@ const Development = () => {
             </div>
           </motion.section>
           <section className="bg-gray-100 py-12">
-            <div className="container mx-auto px-6 md:px-12">
+            <div className="">
               {/* Section Title */}
-              <div className="text-center mb-8">
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+              <div className="text-left mb-8">
+                <h2 className="px-4 text-3xl sm:text-4xl font-bold text-gray-800">
                   Cost of Web Design And Development
                 </h2>
-                <p className="text-lg text-gray-600 mt-4">
+                <p className="px-4 text-lg text-gray-600 mt-4">
                   Our Web Design and Development varies depending on the type of
                   website, its features, functionalities, addons, maintenance,
                   and more. Cost starting from...
@@ -296,9 +297,6 @@ const Development = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Left Side: Info with Icons */}
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-white rounded-full text-blue-500">
-                      <FaLaptopCode className="text-3xl" />
-                    </div>
                     <div>
                       <h3 className="text-xl font-semibold">
                         Web Design and Development Plan
@@ -318,12 +316,12 @@ const Development = () => {
                         </Link>
                       </div>
                     </div>
+                    <div className="p-3 bg-white rounded-full text-blue-500">
+                      <FaLaptopCode className="text-3xl" />
+                    </div>
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-white rounded-full text-blue-500">
-                      <FaCogs className="text-3xl" />
-                    </div>
                     <div>
                       <h3 className="text-xl font-semibold">
                         e-Commerce Website
@@ -342,6 +340,9 @@ const Development = () => {
                           See Packages
                         </Link>
                       </div>
+                    </div>
+                    <div className="p-3 bg-white rounded-full text-blue-500">
+                      <FaStore className="text-3xl" />
                     </div>
                   </div>
                 </div>
