@@ -181,7 +181,7 @@ const GraphicDesignPage = () => {
             </div>
           </div>
 
-          <div id="packages" className="mt-4 md:mt-8">
+          <div id="packages" className="mt-8">
             <h2 className="text-2xl font-semibold text-gray-800">
               Our Branding Packages
             </h2>
