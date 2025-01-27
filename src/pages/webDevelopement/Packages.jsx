@@ -180,7 +180,7 @@ const Packages = () => {
 
   return (
     <div>
-      <h1 className="pt-6 md:pt-8 text-3xl w-full font-bold text-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-200 text-gray-100">
+      <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-200 text-gray-100">
         YOUR WEBSITE IS BUILT BY OUR TEAM OF EXPERTS!
       </h1>
       <div className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
@@ -188,6 +188,45 @@ const Packages = () => {
         <h1 className="text-3xl font-bold text-center mb-12">
           Web Design and Developement Packages
         </h1>
+        {/* Landing Page Centered */}
+        <div className="flex justify-center mb-12">
+          <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
+            <h3 className="text-xl font-bold mb-4 text-center">
+              {webPackages[0].title}
+            </h3>
+            <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+              {webPackages[0].price}
+            </p>
+            <p className="text-sm text-center text-gray-500 mb-4">
+              {webPackages[0].discount}
+            </p>
+
+            <button
+              onClick={() => showModal(pkg)}
+              className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Choose Plan
+            </button>
+            <p className="text-sm text-gray-600 mb-6 text-center">
+              {webPackages[0].description}
+            </p>
+            <ul className="text-sm text-gray-600 mb-6 space-y-2">
+              {webPackages[0].features.map((feature, i) => (
+                <li key={i} className="flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-500 text-center">
+              Maintenance Fee:{" "}
+              <span className="font-semibold">
+                {webPackages[0].maintenance}
+              </span>
+            </p>
+          </div>
+        </div>
+
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
           {webPackages.slice(1).map((pkg, index) => (
             <div
@@ -278,44 +317,6 @@ const Packages = () => {
               </p>
             </div>
           ))}
-        </div>
-        {/* Landing Page Centered */}
-        <div className="flex justify-center mt-12">
-          <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
-            <h3 className="text-xl font-bold mb-4 text-center">
-              {webPackages[0].title}
-            </h3>
-            <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
-              {webPackages[0].price}
-            </p>
-            <p className="text-sm text-center text-gray-500 mb-4">
-              {webPackages[0].discount}
-            </p>
-
-            <button
-              onClick={() => showModal(pkg)}
-              className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Choose Plan
-            </button>
-            <p className="text-sm text-gray-600 mb-6 text-center">
-              {webPackages[0].description}
-            </p>
-            <ul className="text-sm text-gray-600 mb-6 space-y-2">
-              {webPackages[0].features.map((feature, i) => (
-                <li key={i} className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <p className="text-sm text-gray-500 text-center">
-              Maintenance Fee:{" "}
-              <span className="font-semibold">
-                {webPackages[0].maintenance}
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     </div>
