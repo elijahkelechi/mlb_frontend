@@ -133,7 +133,7 @@ const Development = () => {
         </section>
 
         {/* Main Content */}
-        <main className="px-6 md:px-16 space-y-8">
+        <main className="px-6 md:px-16 space-y-8 mb-8">
           {/* Why Your Business Needs a Website */}
           <section className="py-6 md:py-8 bg-gray-50">
             <div className="container mx-auto ">
@@ -415,13 +415,12 @@ const Development = () => {
               </li>
             </ol>
           </motion.section>
-          <p className="font-bold my-2">Chat Developer Now!</p>
 
           <a
             href="https://wa.me/+234 803 2210489"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
+            className="inline-flex items-center justify-center bg-green-600 text-white py-3  px-6 rounded-lg hover:bg-green-700 transition duration-200"
           >
             <FaWhatsapp className="mr-2" size={20} />{" "}
             {/* Adds some margin between icon and text */}
