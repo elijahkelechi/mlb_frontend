@@ -98,7 +98,7 @@ const ContactUs = () => {
 
         {/* Contact Form */}
         <motion.div
-          className="bg-white rounded-lg shadow-lg p-8 space-y-6"
+          className="bg-white rounded-lg shadow-lg p-4 md:p-8 space-y-6"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
