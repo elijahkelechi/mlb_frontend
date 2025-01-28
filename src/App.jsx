@@ -22,6 +22,9 @@ import {
   Division,
   GraphicDesign,
   AdsPage,
+  PlanTypes,
+  MonthlyPlan,
+  WeeklyPlans,
   Subscription,
   CacPostIncoperation,
   AnnualReturnMain,
@@ -132,6 +135,18 @@ const router = createBrowserRouter([
       {
         path: "ads_subscription",
         element: <Subscription />,
+      },
+      {
+        path: "plan_types",
+        element: <PlanTypes />,
+      },
+      {
+        path: "ads_monthly_subscription",
+        element: <MonthlyPlan />,
+      },
+      {
+        path: "ads_weekly_subscription",
+        element: <WeeklyPlans />,
       },
       {
         path: "website_app_design_development",

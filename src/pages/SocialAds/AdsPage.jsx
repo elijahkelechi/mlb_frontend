@@ -68,7 +68,7 @@ const AdsPage = () => {
                 </p>
                 <Link
                   onClick={handleScrollToTop}
-                  to="/ads_subscription"
+                  to="/plan_types"
                   className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
                 >
                   See Packages
@@ -105,7 +105,7 @@ const AdsPage = () => {
           </p>
           <Link
             onClick={handleScrollToTop}
-            to="/ads_subscription"
+            to="/plan_types"
             className="text-center btn bg-cyan-500 text-white mt-4 hover:bg-gray-800"
           >
             Book Ads Campaign
@@ -272,7 +272,7 @@ const AdsPage = () => {
             <div className="text-left">
               <Link
                 onClick={handleScrollToTop}
-                to="/ads_subscription"
+                to="/plan_types"
                 className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
               >
                 Book Ads Campaign
@@ -549,7 +549,7 @@ const AdsPage = () => {
               </motion.a>
               <Link
                 onClick={handleScrollToTop}
-                to="/ads_subscription"
+                to="/plan_types"
                 className="px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition"
                 variants={buttonVariant}
                 whileHover="hover"
