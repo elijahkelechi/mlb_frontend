@@ -6,13 +6,13 @@ const PlanTypes = () => {
     {
       title: "Monthly Plan",
       description:
-        "Get a stunning and fully responsive website tailored to your needs. Perfect for businesses, portfolios, and more.",
+        "Boost your social media presence with a tailored monthly strategy. Includes content creation, posting, and performance tracking to engage your audience consistently.",
       link: "/ads_monthly_subscription",
     },
     {
       title: "Weekly Plan",
       description:
-        "Launch your online store with our feature-rich eCommerce solutions. Includes payment integration and inventory management.",
+        "Get rapid engagement with our weekly social media campaigns. Perfect for time-sensitive promotions, special events, or increasing visibility with frequent posts.",
       link: "/ads_weekly_subscription",
     },
   ];
