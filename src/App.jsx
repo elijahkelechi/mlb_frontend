@@ -17,6 +17,9 @@ import {
   TinRegistrationPage,
   Development,
   WebDesignPackages,
+  WebDesignPlans,
+  EcommercePlans,
+  Division,
   GraphicDesign,
   AdsPage,
   Subscription,
@@ -137,6 +140,18 @@ const router = createBrowserRouter([
       {
         path: "website_design_packages",
         element: <WebDesignPackages />,
+      },
+      {
+        path: "choose_design_packages",
+        element: <Division />,
+      },
+      {
+        path: "web_design_plans",
+        element: <WebDesignPlans />,
+      },
+      {
+        path: "e-commerce_plans",
+        element: <EcommercePlans />,
       },
       {
         path: "graphic_design",

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import bgImage from "../assets/contactPageImage.webp"; // Background image import
+import emailjs from "emailjs-com"; // Import emailjs
 import {
   FaWhatsapp,
   FaPhoneAlt,
@@ -32,7 +32,25 @@ const ContactUs = () => {
     if (validateForm()) {
       console.log("Form Data Sent:", formData);
       toast.success("Message sent successfully!");
-      // Send formData to the backend (e.g., via Axios or Fetch)
+
+      // Send form data via EmailJS
+      emailjs
+        .sendForm(
+          "your_service_id", // Replace with your service ID
+          "template_xqjb1qa", // Replace with your template ID
+          e.target,
+          "your_user_id" // Replace with your user ID
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            toast.success("Message sent successfully!");
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error("Failed to send message.");
+          }
+        );
     } else {
       toast.error("Please fill out all required fields.");
     }
@@ -47,10 +65,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div
-      className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-16 px-6"
-      // style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div className="w-full min-h-screen bg-cover bg-center bg-no-repeat py-16 px-6">
       <motion.div
         className="text-left mb-12"
         initial={{ opacity: 0, y: -20 }}

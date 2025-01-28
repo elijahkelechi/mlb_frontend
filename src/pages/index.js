@@ -12,7 +12,10 @@ export { default as BusinessNameRegistrationForm } from "./BusinessRegistration/
 export { default as TrusteeRegistration } from "./IncorperatedTrusteeRegistration/TrusteeRegistration";
 export { default as TrusteeForm } from "../pages/IncorperatedTrusteeRegistration/TrusteeFormPage";
 export { default as Development } from "../pages/webDevelopement/Development";
+export { default as Division } from "../pages/webDevelopement/Division";
 export { default as WebDesignPackages } from "../pages/webDevelopement/Packages";
+export { default as WebDesignPlans } from "./webDevelopement/WebDesignPlans";
+export { default as EcommercePlans } from "../pages/webDevelopement/EcommercePlans";
 export { default as GraphicDesign } from "./graphicsDesign/GraphicDesign";
 export { default as AdsPage } from "../pages/SocialAds/AdsPage";
 export { default as Subscription } from "../pages/SocialAds/Subscription";

@@ -79,7 +79,7 @@ const Development = () => {
 
                 <Link
                   onClick={handleScrollToTop}
-                  to="/website_design_packages" // Adjust the link as necessary
+                  to="/choose_design_packages" // Adjust the link as necessary
                   className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   See Packages
@@ -114,7 +114,7 @@ const Development = () => {
               </p>
               <Link
                 onClick={() => window.scrollTo(0, 0)}
-                to="/website_design_packages"
+                to="/choose_design_packages"
                 className="inline-block bg-cyan-500 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
               >
                 Get Started
@@ -309,7 +309,7 @@ const Development = () => {
                       <div className="text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
-                          to="/website_design_packages"
+                          to="/choose_design_packages"
                           className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
@@ -334,10 +334,10 @@ const Development = () => {
                       <div className="text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
-                          to="/website_design_packages"
+                          to="/choose_design_packages"
                           className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
-                          See Packages
+                          s See Packages
                         </Link>
                       </div>
                     </div>
