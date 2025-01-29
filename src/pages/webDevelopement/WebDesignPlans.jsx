@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
+import { Link } from "react-router";
 import { toast } from "react-toastify";
 
 const WebDesignPlans = () => {
@@ -121,6 +122,22 @@ const WebDesignPlans = () => {
       discount: "5% OFF",
       popular: false,
     },
+    {
+      title: "Custom",
+      price: "Custom Pricing",
+      description:
+        "Highly tailored or complex features for large businesses or organizations.",
+      features: [
+        "Unlimited pages",
+        "Unique design and branding",
+        "Custom functionalities (e.g., online marketplace, directory, CRM integration)",
+        "Advanced backend systems",
+        "Scalability for large businesses or organizations",
+      ],
+      maintenance: "Custom Pricing",
+      discount: "",
+      popular: false,
+    },
   ];
 
   return (
@@ -152,6 +169,7 @@ const WebDesignPlans = () => {
             >
               Choose Plan
             </button>
+
             <p className="text-sm text-gray-600 mb-6 text-center">
               {webPackages[0].description}
             </p>
@@ -173,7 +191,7 @@ const WebDesignPlans = () => {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-          {webPackages.slice(1).map((pkg, index) => (
+          {webPackages.slice(1, -1).map((pkg, index) => (
             <div
               key={index}
               className={`border rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105 ${
@@ -194,12 +212,23 @@ const WebDesignPlans = () => {
               <p className="text-sm text-center text-gray-500 mb-4">
                 {pkg.discount}
               </p>
-              <button
-                onClick={() => showModal(pkg)}
-                className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
-              >
-                Choose Plan
-              </button>
+              {pkg.title === "Custom" ? (
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to="/contactUs"
+                  className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              ) : (
+                <button
+                  onClick={() => showModal(pkg)}
+                  className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+                >
+                  Choose Plan
+                </button>
+              )}
+
               <p className="text-sm text-gray-600 mb-6 text-center">
                 {pkg.description}
               </p>
@@ -217,6 +246,87 @@ const WebDesignPlans = () => {
               </p>
             </div>
           ))}
+          {/* Custoom Plan Centered on sm */}
+          <div className="flex lg:hidden justify-center mb-12">
+            <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-bold mb-4 text-center">
+                {webPackages[4].title}
+              </h3>
+              <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+                {webPackages[4].price}
+              </p>
+              <p className="text-sm text-center text-gray-500 mb-4">
+                {webPackages[4].discount}
+              </p>
+
+              <Link
+                to="/contactUs"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Contact us
+              </Link>
+
+              <p className="text-sm text-gray-600 mb-6 text-center">
+                {webPackages[4].description}
+              </p>
+              <ul className="text-sm text-gray-600 mb-6 space-y-2">
+                {webPackages[4].features.map((feature, i) => (
+                  <li key={i} className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-gray-500 text-center">
+                Maintenance Fee:{" "}
+                <span className="font-semibold">
+                  {webPackages[4].maintenance}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Custom Plan Centered on lg */}
+        <div className="hidden lg:flex justify-center mb-12">
+          <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
+            <h3 className="text-xl font-bold mb-4 text-center">
+              {webPackages[4].title}
+            </h3>
+            <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+              {webPackages[4].price}
+            </p>
+            <p className="text-sm text-center text-gray-500 mb-4">
+              {webPackages[4].discount}
+            </p>
+
+            <Link
+              to="/contactUs"
+              onClick={() => window.scrollTo(0, 0)}
+              className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Contact us
+            </Link>
+
+            <p className="text-sm text-gray-600 mb-6 text-center">
+              {webPackages[4].description}
+            </p>
+            <ul className="text-sm text-gray-600 mb-6 space-y-2">
+              {webPackages[4].features.map((feature, i) => (
+                <li key={i} className="flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-500 text-center">
+              Maintenance Fee:{" "}
+              <span className="font-semibold">
+                {webPackages[4].maintenance}
+              </span>
+            </p>
+          </div>
         </div>
       </div>
 
