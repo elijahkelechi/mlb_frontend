@@ -63,9 +63,9 @@ const AnnualReturnMain = () => {
           </li>
         </ul>
 
-        <h2 className="font-semibold mb-6 flex items-left justify-left space-x-3">
+        <h2 className=" text-xl md:text-4xlfont-semibold mb-6 flex items-left justify-left space-x-3">
           <FaRegCheckCircle className="text-cyan-400" />
-          <span className="text-gray-800 text-xl md:text-4xl">
+          <span className="text-gray-800 ">
             Why Filing Annual Returns is Important?
           </span>
         </h2>
@@ -92,11 +92,9 @@ const AnnualReturnMain = () => {
           </li>
         </ul>
 
-        <h2 className=" font-semibold mb-6 flex items-left justify-left space-x-3">
+        <h2 className="  text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
           <FaRegClipboard className="text-cyan-400" />
-          <span className="text-gray-800 text-xl md:text-4xl">
-            Penalties for Non-Compliance
-          </span>
+          <span className="text-gray-800">Penalties for Non-Compliance</span>
         </h2>
         <p className="text-lg mb-6 text-left">
           Failing to file annual returns results in penalties, including:
@@ -109,11 +107,9 @@ const AnnualReturnMain = () => {
           </li>
         </ul>
 
-        <h2 className="font-semibold mb-6 flex items-left justify-left space-x-3">
+        <h2 className=" text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
           <FaRegClipboard className="text-cyan-400" />
-          <span className="text-gray-800 text-xl md:text-4xl">
-            How We Can Assist You
-          </span>
+          <span className="text-gray-800">How We Can Assist You</span>
         </h2>
         <p className="text-lg mb-6">
           At Multi-Level Boost, we streamline the annual return filing process,
@@ -139,11 +135,9 @@ const AnnualReturnMain = () => {
           </li>
         </ul>
 
-        <h2 className="font-semibold mb-6 flex items-left justify-left space-x-3">
+        <h2 className=" text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
           <FaRegClipboard className="text-cyan-400" />
-          <span className="text-gray-800 text-xl md:text-4xl">
-            Why Choose Us?
-          </span>
+          <span className="text-gray-800">Why Choose Us?</span>
         </h2>
         <ul className="list-disc list-inside text-left mb-8 space-y-4">
           <li>
@@ -166,11 +160,9 @@ const AnnualReturnMain = () => {
         </ul>
         <div className="text-left justify-left">
           {" "}
-          <h2 className="font-semibold mb-6 flex items-left justify-left space-x-3">
+          <h2 className="text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
             <FaRegClipboard className="text-cyan-400" />
-            <span className="text-gray-800 text-xl md:text-4xl">
-              How to Get Started
-            </span>
+            <span className="text-gray-800 ">How to Get Started</span>
           </h2>
           <p className="text-lg mb-6">
             1. Select your registration type below to proceed to the filling
@@ -207,11 +199,9 @@ const AnnualReturnMain = () => {
           </div>
         </div> */}
 
-        <h2 className="md:text-4xl font-semibold mt-12 mb-6 flex items-left justify-left space-x-3">
+        <h2 className="text-xl md:text-4xl md:text-4xl font-semibold mt-12 mb-6 flex items-left justify-left space-x-3">
           <FaRegClipboard className="text-cyan-400" />
-          <span className="text-gray-800 text-xl md:text-4xl">
-            Annual Return Filing Fees
-          </span>
+          <span className="text-gray-800 ">Annual Return Filing Fees</span>
         </h2>
         <div className="text-left">
           <div className="mb-6">
