@@ -37,7 +37,7 @@ const WebDesignPlans = () => {
     email: email, // Customer's email
     amount: amount * 100, // Amount in kobo
     currency: "NGN", // Currency
-    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Your Paystack public key
+    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Your Paystack public key
     onSuccess: handlePaymentSuccess,
     onClose: handlePaymentClose,
   });
