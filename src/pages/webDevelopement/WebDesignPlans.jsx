@@ -125,16 +125,15 @@ const WebDesignPlans = () => {
     {
       title: "Custom",
       price: "Custom Pricing",
-      description:
-        "Highly tailored or complex features for large businesses or organizations.",
+      description: "Do you have a unique web design project in mind?",
+      subDescription:
+        "Let’s bring your vision to life. Our Custom Package is tailored to your specific business needs and goals.",
       features: [
-        "Unlimited pages",
-        "Unique design and branding",
-        "Custom functionalities (e.g., online marketplace, directory, CRM integration)",
-        "Advanced backend systems",
-        "Scalability for large businesses or organizations",
+        "Schedule a free consultation with our support team.",
+        "Discuss your requirements, features, and budget.",
+        "Receive a personalized proposal and cost breakdown",
       ],
-      maintenance: "Custom Pricing",
+      maintenance: "Let’s create a website that sets your business apart.",
       discount: "",
       popular: false,
     },
@@ -143,54 +142,60 @@ const WebDesignPlans = () => {
   return (
     <div>
       <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-200 text-gray-100">
-        YOUR WEBSITE IS BUILT BY OUR TEAM OF EXPERTS!
+        Website Design and Development Pricing Plans
       </h1>
-      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
+      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
         {/* Web Design Packages */}
-        <h1 className="text-3xl font-bold text-center mb-12">
-          Web Design and Development Packages
-        </h1>
-        {/* Landing Page Centered */}
-        <div className="flex justify-center mb-12">
-          <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
-            <h3 className="text-xl font-bold mb-4 text-center">
-              {webPackages[0].title}
-            </h3>
-            <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
-              {webPackages[0].price}
-            </p>
-            <p className="text-sm text-center text-gray-500 mb-4">
-              {webPackages[0].discount}
-            </p>
-
-            <button
-              onClick={() => showModal(webPackages[0])}
-              className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Choose Plan
-            </button>
-
-            <p className="text-sm text-gray-600 mb-6 text-center">
-              {webPackages[0].description}
-            </p>
-            <ul className="text-sm text-gray-600 mb-6 space-y-2">
-              {webPackages[0].features.map((feature, i) => (
-                <li key={i} className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <p className="text-sm text-gray-500 text-center">
-              Maintenance Fee:{" "}
-              <span className="font-semibold">
-                {webPackages[0].maintenance}
-              </span>
-            </p>
-          </div>
+        <div class="rounded-lg">
+          <p class="text-lg text-gray-800 font-normal mb-4">
+            At <span className="font-semibold">Multi-Level Boost</span>, we
+            offer flexible and affordable website development packages to suit
+            businesses of all sizes and needs. Whether you're a startup, an
+            established business, or seeking a tailored solution, we have you
+            covered.
+          </p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+          {/* Landing Page Centered */}
+          <div className="flex justify-center mb-12">
+            <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-bold mb-4 text-center">
+                {webPackages[0].title}
+              </h3>
+              <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+                {webPackages[0].price}
+              </p>
+              {/* <p className="text-sm text-center text-gray-500 mb-4">
+                {webPackages[0].discount}
+              </p> */}
+
+              <button
+                onClick={() => showModal(webPackages[0])}
+                className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Choose Plan
+              </button>
+
+              <p className="text-sm text-gray-600 mb-6 text-center">
+                {webPackages[0].description}
+              </p>
+              <ul className="text-sm text-gray-600 mb-6 space-y-2">
+                {webPackages[0].features.map((feature, i) => (
+                  <li key={i} className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-gray-500 text-center">
+                Maintenance Fee:{" "}
+                <span className="font-semibold">
+                  {webPackages[0].maintenance}
+                </span>
+              </p>
+            </div>
+          </div>
           {webPackages.slice(1, -1).map((pkg, index) => (
             <div
               key={index}
@@ -209,9 +214,9 @@ const WebDesignPlans = () => {
               <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
                 {pkg.price}
               </p>
-              <p className="text-sm text-center text-gray-500 mb-4">
+              {/* <p className="text-sm text-center text-gray-500 mb-4">
                 {pkg.discount}
-              </p>
+              </p> */}
               {pkg.title === "Custom" ? (
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
@@ -247,6 +252,7 @@ const WebDesignPlans = () => {
             </div>
           ))}
           {/* Custoom Plan Centered on sm */}
+
           <div className="flex lg:hidden justify-center mb-12">
             <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
               <h3 className="text-xl font-bold mb-4 text-center">
@@ -259,16 +265,22 @@ const WebDesignPlans = () => {
                 {webPackages[4].discount}
               </p>
 
-              <Link
+              {/* <Link
                 to="/contactUs"
                 onClick={() => window.scrollTo(0, 0)}
                 className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
               >
                 Contact us
-              </Link>
+              </Link> */}
 
               <p className="text-sm text-gray-600 mb-6 text-center">
                 {webPackages[4].description}
+              </p>
+              <p className="text-sm text-gray-600 mb-6 text-left">
+                {webPackages[4].subDescription}
+              </p>
+              <p className="text-sm text-gray-500 text-left mb-1">
+                <span className="font-semibold">Get Started:</span>
               </p>
               <ul className="text-sm text-gray-600 mb-6 space-y-2">
                 {webPackages[4].features.map((feature, i) => (
@@ -279,53 +291,70 @@ const WebDesignPlans = () => {
                 ))}
               </ul>
               <p className="text-sm text-gray-500 text-center">
-                Maintenance Fee:{" "}
                 <span className="font-semibold">
                   {webPackages[4].maintenance}
                 </span>
               </p>
+              <Link
+                to="/contactUs"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Contact us
+              </Link>
             </div>
           </div>
-        </div>
+          {/* Custom Plan Centered on lg */}
+          <div className="hidden lg:flex justify-center mb-12">
+            <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-bold mb-4 text-center">
+                {webPackages[4].title}
+              </h3>
+              <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+                {webPackages[4].price}
+              </p>
+              <p className="text-sm text-center text-gray-500 mb-4">
+                {webPackages[4].discount}
+              </p>
 
-        {/* Custom Plan Centered on lg */}
-        <div className="hidden lg:flex justify-center mb-12">
-          <div className="border rounded-lg p-6 shadow-lg w-full max-w-md transition-transform transform hover:scale-105">
-            <h3 className="text-xl font-bold mb-4 text-center">
-              {webPackages[4].title}
-            </h3>
-            <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
-              {webPackages[4].price}
-            </p>
-            <p className="text-sm text-center text-gray-500 mb-4">
-              {webPackages[4].discount}
-            </p>
+              {/* <Link
+                to="/contactUs"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Contact us
+              </Link> */}
 
-            <Link
-              to="/contactUs"
-              onClick={() => window.scrollTo(0, 0)}
-              className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Contact us
-            </Link>
-
-            <p className="text-sm text-gray-600 mb-6 text-center">
-              {webPackages[4].description}
-            </p>
-            <ul className="text-sm text-gray-600 mb-6 space-y-2">
-              {webPackages[4].features.map((feature, i) => (
-                <li key={i} className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <p className="text-sm text-gray-500 text-center">
-              Maintenance Fee:{" "}
-              <span className="font-semibold">
-                {webPackages[4].maintenance}
-              </span>
-            </p>
+              <p className="text-sm text-gray-600 mb-6 text-center">
+                {webPackages[4].description}
+              </p>
+              <p className="text-sm text-gray-600 mb-6 text-left">
+                {webPackages[4].subDescription}
+              </p>
+              <p className="text-sm text-gray-500 text-left mb-1">
+                <span className="font-semibold">Get Started:</span>
+              </p>
+              <ul className="text-sm text-gray-600 mb-6 space-y-2">
+                {webPackages[4].features.map((feature, i) => (
+                  <li key={i} className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full inline-block mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-gray-500 text-center">
+                <span className="font-semibold">
+                  {webPackages[4].maintenance}
+                </span>
+              </p>
+              <Link
+                to="/contactUs"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Contact us
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -138,7 +138,7 @@ const Development = () => {
           <section className="py-6 md:py-8 bg-gray-50">
             <div className="container mx-auto ">
               {/* Section Title */}
-              <div className="text-center mb-8">
+              <div className="text-left mb-8">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                   Why Choose Multi-Level Boost?
                 </h2>
@@ -149,9 +149,9 @@ const Development = () => {
               </div>
 
               {/* Section Content */}
-              <div className="bg-white p-8 rounded-lg shadow-lg   justify-between">
+              <div className="bg-white p-8 rounded-lg shadow-lg text-left">
                 {/* Item 1 */}
-                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 mb-8 md:mb-0">
+                <div className="flex flex-col items-left text-left space-y-4 my-4 md:my-8 mb-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🧑‍💻 Experienced Team
                   </h3>
@@ -162,7 +162,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 2 */}
-                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
+                <div className="flex flex-col items-left text-left space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🎯 Tailored Solutions
                   </h3>
@@ -173,7 +173,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 3 */}
-                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
+                <div className="flex flex-col items-left text-left space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     💰 Affordable Packages
                   </h3>
@@ -184,7 +184,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 4 */}
-                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8 md:mb-0">
+                <div className="flex flex-col items-left text-left space-y-4 my-4 md:my-8 md:mb-0">
                   <h3 className="text-xl font-semibold text-gray-800">
                     ⚙️ Cutting-Edge Technology
                   </h3>
@@ -195,7 +195,7 @@ const Development = () => {
                 </div>
 
                 {/* Item 5 */}
-                <div className="flex flex-col items-center text-center space-y-4 my-4 md:my-8">
+                <div className="flex flex-col items-left text-left space-y-4 my-4 md:my-8">
                   <h3 className="text-xl font-semibold text-gray-800">
                     🤝 Client-Centric Approach
                   </h3>
@@ -287,8 +287,8 @@ const Development = () => {
                 </h2>
                 <p className="px-4 text-lg text-gray-600 mt-4">
                   Our Web Design and Development varies depending on the type of
-                  website, its features, functionalities, addons, maintenance,
-                  and more. Cost starting from...
+                  website, features, functionalities, addons, maintenance, and
+                  more.
                 </p>
               </div>
 
@@ -299,7 +299,7 @@ const Development = () => {
                   <div className="flex items-center space-x-4">
                     <div>
                       <h3 className="text-xl font-semibold">
-                        Web Design and Development Plan
+                        Web Design and Development
                       </h3>
                       <p className="text-gray-200 mt-2">
                         Get a custom website designed to meet your business

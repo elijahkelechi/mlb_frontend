@@ -143,6 +143,74 @@ const WeeklyPlan = () => {
             ))}
           </div>
         </div>
+        {/* New Section: Subscription Plans & Ad Budget Details */}
+        <div className="bg-gray-100 p-8 rounded-lg shadow-md mt-12">
+          <h3 className="text-2xl font-semibold mb-4 text-cyan-700">
+            Please Note:
+          </h3>
+
+          <h4 className="text-xl font-semibold mb-2 text-cyan-700">
+            1. Subscription Plans - Service Charge
+          </h4>
+          <p className="text-lg text-gray-700 mb-4">
+            This is the fee you pay Multi Level Boost for managing your Ad
+            campaigns across Meta Platforms (Facebook and Instagram). It covers
+            everything from setting up, optimizing, monitoring, and
+            troubleshooting your ad campaigns to ensure you get the best
+            results. It does not include ad budget.
+          </p>
+          <p className="text-lg text-gray-700 mb-4">For example:</p>
+          <ul className="list-disc ml-6 text-gray-700 mb-6">
+            <li>
+              <strong>Weekly Basic Plan:</strong> ₦10,000 for the entire week
+              (Billed weekly)
+            </li>
+            <li>
+              <strong>Weekly Premium Plan:</strong> ₦20,000 for the entire week
+              (Billed weekly)
+            </li>
+          </ul>
+
+          <h4 className="text-xl font-semibold mb-2 text-cyan-700">
+            2. Ad Budget:
+          </h4>
+          <p className="text-lg text-gray-700 mb-4">
+            This is the amount of money you pay directly to Facebook for running
+            your ads. It determines your ad reach. The more budget you allocate,
+            the wider your audience reach and the better chances of getting
+            higher results. We recommend a minimum ad budget of ₦3,000 per day,
+            which is separate from the service charge.
+          </p>
+          <p className="text-lg text-gray-700 mb-4">Example:</p>
+          <ul className="list-disc ml-6 text-gray-700 mb-6">
+            <li>
+              For the <strong>Weekly Basic Plan</strong>, you’ll pay us ₦10,000
+              for our services.
+            </li>
+            <li>
+              Separately, we’ll set a daily ad budget of ₦3,000 (or more)
+              depending on your budget that goes directly to Facebook, either
+              deposited to your Meta ad account (for prepared ad accounts) or
+              charged directly from your debit/credit card.
+            </li>
+          </ul>
+
+          <p className="text-lg text-gray-700 mb-6">
+            If you have any other questions or need further clarification,
+            please contact Support.
+          </p>
+
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://wa.me/+234 803 221 0489"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white hover:bg-green-600 py-3 px-8 rounded-md shadow-lg"
+            >
+              Contact Support via WhatsApp
+            </a>
+          </div>
+        </div>
 
         {showModal && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">

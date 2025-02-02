@@ -12,7 +12,7 @@ import { customFetch } from "../../utils";
 import { PaystackButton } from "react-paystack";
 import { Link } from "react-router";
 import jsPDF from "jspdf";
-
+11;
 const MultiStageForm = () => {
   const [currentStage, setCurrentStage] = useState(1);
   const [currentTrusteeIndex, setCurrentTrusteeIndex] = useState(0);
@@ -35,6 +35,12 @@ const MultiStageForm = () => {
         postCode: "",
         streetName: "",
         houseNumber: "",
+      },
+      documents: {
+        minutesOfMeetings: null,
+        organizationConstitution: null,
+        trusteeDeclarationForm: null,
+        newspaperPublication: null,
       },
     },
     trustees: [
@@ -66,10 +72,6 @@ const MultiStageForm = () => {
           validID: null,
           signature: null,
           passportPhoto: null,
-          minutesOfMeetings: null,
-          organizationConstitution: null,
-          trusteeDeclarationForm: null,
-          newspaperPublication: null,
         },
       },
     ],
@@ -275,7 +277,7 @@ const MultiStageForm = () => {
   const paystackConfig = {
     email: formData.trustees?.[0]?.details?.email,
     amount: 125000 * 100, // Paystack requires amount in kobo
-    publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
+    publicKey: "pk_test_fa21cc6e09d2b11d0309361ba8996f55d18742f6", // Replace with your actual Paystack public key
   };
 
   const handlePaymentSuccess = (response) => {
