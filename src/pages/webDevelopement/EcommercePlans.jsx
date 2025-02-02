@@ -114,7 +114,7 @@ const EcommercePlans = () => {
   return (
     <div>
       <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-200 text-gray-100">
-        YOUR WEBSITE IS BUILT BY OUR TEAM OF EXPERTS!
+        YOUR E-Commerce WEBSITE IS BUILT BY OUR TEAM OF EXPERTS!
       </h1>
       <div className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
         {/* eCommerce Packages */}

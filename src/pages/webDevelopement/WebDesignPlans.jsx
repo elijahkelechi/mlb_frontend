@@ -146,7 +146,7 @@ const WebDesignPlans = () => {
       </h1>
       <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
         {/* Web Design Packages */}
-        <div class="rounded-lg">
+        <div class="rounded-lg mb-4 md:mb-8">
           <p class="text-lg text-gray-800 font-normal mb-4">
             At <span className="font-semibold">Multi-Level Boost</span>, we
             offer flexible and affordable website development packages to suit
