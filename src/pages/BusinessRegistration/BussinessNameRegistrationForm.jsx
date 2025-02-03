@@ -167,7 +167,7 @@ const MultiStageForm = () => {
   };
   const paystackConfig = {
     email: formData.proprietorInfo.email || user?.email, // Default to user email if proprietor email is unavailable
-    amount: 28000 * 100, // Paystack requires amount in kobo
+    amount: 25000 * 100, // Paystack requires amount in kobo
     publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
   };
 

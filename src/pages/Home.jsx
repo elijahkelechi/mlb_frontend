@@ -321,7 +321,7 @@ const Home = () => {
       </motion.div>
 
       <div className="relative text-left pt-8 md:mt-0 bg-gray-200">
-        <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
+        {/* <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
           <span className="font-extrabold text-lg text-cyan-500">
             digital marketing
@@ -342,14 +342,14 @@ const Home = () => {
           >
             Visit our services for more info
           </Link>
-        </h3>
+        </h3> */}
         <div className="pt-12 pb-6 md:pb-0">
           {" "}
           <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
             Our Services
           </h1>
           <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
-            We have all it takes to Build your business 💪
+            We have all it takes to build your business 💪
           </h1>
           <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
             Multi-Level Boost has all it takes for you to grow a legit and

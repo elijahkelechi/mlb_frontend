@@ -113,10 +113,17 @@ const EcommercePlans = () => {
 
   return (
     <div>
-      <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-200 text-gray-100">
-        YOUR E-Commerce WEBSITE IS BUILT BY OUR TEAM OF EXPERTS!
+      <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
+        e-Commerce Web Design Plans
       </h1>
-      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50">
+      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
+        <div class="rounded-lg mb-4 md:mb-8 text-center">
+          <p class="text-lg text-gray-800 font-normal mb-4 text-center">
+            At <span className="font-semibold"> Multi-Level Boost</span>, we
+            offer flexible and affordable ecommerce website development packages
+            to suit businesses of all sizes and needs.
+          </p>
+        </div>
         {/* eCommerce Packages */}
         <h2 className="text-3xl font-bold text-center mt-12 mb-8">
           E-Commerce Packages
