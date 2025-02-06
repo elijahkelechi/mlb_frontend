@@ -48,7 +48,6 @@ const Home = () => {
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  bad;
 
   const handleGetStarted = () => {
     if (user) {
