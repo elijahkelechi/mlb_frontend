@@ -30,7 +30,7 @@ const Homelayout = () => {
       <section
         className={`bg-gray-100${isHome ? "" : " pt-16 md:pt-20 lg:pt-24"}`}
       >
-        <Outlet />
+        {/* <Outlet /> */}
         <div>
           {/* WhatsApp Button */}
           <a

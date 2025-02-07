@@ -47,7 +47,7 @@ const AboutUs = () => {
       description:
         "We promote ethical practices and long-term growth for businesses, building a sustainable future.",
       icon: <FaLeaf className="text-green-700 text-4xl" />,
-    },ab;
+    },
   ];
 
   return (

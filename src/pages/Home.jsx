@@ -58,6 +58,7 @@ const Home = () => {
       handleScrollToTop();
     }
   };
+
   const cards = [
     {
       id: 1,
