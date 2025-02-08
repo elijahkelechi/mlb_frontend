@@ -141,16 +141,15 @@ const WebDesignPlans = () => {
 
   return (
     <div>
-      <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
+      <h1 className="pt-6 md:pt-16 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
         Website Design and Development Pricing Plans
       </h1>
-      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
+      <div className="pb-12 pt-4 px-4 sm:px-8 lg:px-16 bg-white">
         {/* Web Design Packages */}
         <div class="rounded-lg mb-4 md:mb-8 text-center">
           <p class="text-lg text-gray-800 font-normal mb-4 text-center">
-            At <span className="font-semibold">Multi-Level Boost</span>, we
-            offer flexible and affordable website development packages to suit
-            businesses of all sizes and needs. Whether you're a startup, an
+            we offer flexible and affordable website development packages to
+            suit businesses of all sizes and needs. Whether you're a startup, an
             established business, or seeking a tailored solution, we have you
             covered.
           </p>

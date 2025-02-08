@@ -114,7 +114,7 @@ const EcommercePlans = () => {
   return (
     <div>
       <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
-        e-Commerce Web Design Plans
+        e-Commerce Packages
       </h1>
       <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
         <div class="rounded-lg mb-4 md:mb-8 text-center">
@@ -125,9 +125,7 @@ const EcommercePlans = () => {
           </p>
         </div>
         {/* eCommerce Packages */}
-        <h2 className="text-3xl font-bold text-center mt-12 mb-8">
-          E-Commerce Packages
-        </h2>
+
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {ecommercePackages.map((pkg, index) => (
             <div

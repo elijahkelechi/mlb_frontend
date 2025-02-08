@@ -53,7 +53,7 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-50 ">
       <div className="h-screen relative flex flex-col">
-        {/* Background Image */}
+        {/* Background Image
         <div className="absolute inset-0 h-full w-full">
           <img
             className="hidden md:flex h-full w-full object-cover"
@@ -65,10 +65,9 @@ const AboutUs = () => {
             src={heroImageMobile} // Replace with your hero image for mobile
             alt="About Us Hero Image Mobile"
           />
-        </div>
-
+        </div> */}
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-start justify-start">
+        <div className="absolute pt-32  flex items-start justify-start">
           <div className="container text-left px-4 md:px-12">
             {/* Header Text */}
             <motion.div
@@ -77,12 +76,12 @@ const AboutUs = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
                 About Us
               </h1>
-              <p className="text-lg md:text-xl font-medium text-gray-100 leading-relaxed">
+              <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
                 We are a{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-gray-800">
                   passionate team
                 </span>{" "}
                 of
@@ -105,7 +104,7 @@ const AboutUs = () => {
                   corporate service experts
                 </span>{" "}
                 committed to transforming businesses through
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-gray-800">
                   {" "}
                   innovative solutions
                 </span>
