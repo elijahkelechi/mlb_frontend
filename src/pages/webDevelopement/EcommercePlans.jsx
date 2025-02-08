@@ -113,10 +113,10 @@ const EcommercePlans = () => {
 
   return (
     <div>
-      <h1 className="pt-6 md:pt-8 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
+      <h1 className="pt-6 md:pt-16 pb-6 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
         e-Commerce Packages
       </h1>
-      <div className="py-12 px-4 sm:px-8 lg:px-16 bg-white">
+      <div className="px-4 sm:px-8 lg:px-16 bg-white">
         <div class="rounded-lg mb-4 md:mb-8 text-center">
           <p class="text-lg text-gray-800 font-normal mb-4 text-center">
             At <span className="font-semibold"> Multi-Level Boost</span>, we
@@ -125,7 +125,6 @@ const EcommercePlans = () => {
           </p>
         </div>
         {/* eCommerce Packages */}
-
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {ecommercePackages.map((pkg, index) => (
             <div
