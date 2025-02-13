@@ -545,7 +545,7 @@ const MultiStageForm = () => {
               <p className="text-gray-700">
                 You are about to pay the sum of{" "}
                 <span className="font-bold text-blue-600">
-                  65,000 Naira only
+                  60,000 Naira only
                 </span>{" "}
                 for your Company registration with the details you provided
                 above.
@@ -649,7 +649,7 @@ const MultiStageForm = () => {
                 </h2>
                 <p className="text-gray-700 text-center">
                   Your payment of{" "}
-                  <span className="font-bold text-green-600">65,000 Naira</span>{" "}
+                  <span className="font-bold text-green-600">60,000 Naira</span>{" "}
                   has been received successfully. Your Business Name
                   registration form has been submitted. Thank you for trusting
                   us!
