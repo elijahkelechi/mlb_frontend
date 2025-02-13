@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import heroImageDesktop from "../assets/aboutUs/bgLaptop.jpeg";
 import heroImageMobile from "../assets/aboutUs/bgMobile.jpeg";
+
 const AboutUs = () => {
   const missionVisionValues = [
     {
@@ -51,67 +52,60 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-gray-50 ">
-      <div className="h-screen relative flex flex-col">
-        {/* Background Image
+    <div className="bg-gray-50">
+      {/* Background Image */}
+      <div className="relative h-screen">
         <div className="absolute inset-0 h-full w-full">
-          <img
+          {/* <img
             className="hidden md:flex h-full w-full object-cover"
-            src={heroImageDesktop} // Replace with your hero image for desktop
+            src={heroImageDesktop}
             alt="About Us Hero Image"
           />
           <img
             className="flex md:hidden h-full w-full object-cover"
-            src={heroImageMobile} // Replace with your hero image for mobile
+            src={heroImageMobile}
             alt="About Us Hero Image Mobile"
-          />
-        </div> */}
+          /> */}
+        </div>
+
         {/* Overlay Content */}
-        <div className="absolute pt-32  flex items-start justify-start">
-          <div className="container text-left px-4 md:px-12">
-            {/* Header Text */}
-            <motion.div
-              className="text-center justify-center items-center mt-36 md:mt-44 md:col-span-6 text-white"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
-                About Us
-              </h1>
-              <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
-                We are a{" "}
-                <span className="font-semibold text-gray-800">
-                  passionate team
-                </span>{" "}
-                of
-                <span className="font-semibold text-cyan-400"> SEOs</span>,
-                <span className="font-semibold text-cyan-400">
-                  {" "}
-                  advertising specialists
-                </span>
-                ,<span className="font-semibold text-cyan-400"> designers</span>
-                ,
-                <span className="font-semibold text-cyan-400"> developers</span>
-                ,
-                <span className="font-semibold text-cyan-400">
-                  {" "}
-                  strategists
-                </span>
-                , and
-                <span className="font-semibold text-cyan-400">
-                  {" "}
-                  corporate service experts
-                </span>{" "}
-                committed to transforming businesses through
-                <span className="font-semibold text-gray-800">
-                  {" "}
-                  innovative solutions
-                </span>
-                .
-              </p>
-            </motion.div>
-          </div>
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4 md:px-12 ">
+          <motion.div
+            className="text-white"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+              About Us
+            </h1>
+            <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
+              We are a{" "}
+              <span className="font-semibold text-gray-800">
+                passionate team
+              </span>{" "}
+              of
+              <span className="font-semibold text-cyan-400"> SEOs</span>,
+              <span className="font-semibold text-cyan-400">
+                {" "}
+                advertising specialists
+              </span>
+              ,<span className="font-semibold text-cyan-400"> designers</span>,
+              <span className="font-semibold text-cyan-400"> developers</span>,
+              <span className="font-semibold text-cyan-400"> strategists</span>,
+              and
+              <span className="font-semibold text-cyan-400">
+                {" "}
+                corporate service experts
+              </span>
+              committed to transforming businesses through
+              <span className="font-semibold text-gray-800">
+                {" "}
+                innovative solutions
+              </span>
+              .
+            </p>
+          </motion.div>
         </div>
       </div>
 
@@ -122,7 +116,6 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Story Section */}
         <motion.div
           className="mt-12 mb-8"
           initial={{ opacity: 0, x: -50 }}
@@ -139,6 +132,7 @@ const AboutUs = () => {
             company registration services.
           </p>
         </motion.div>
+
         <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-4">
           Mission and Vision
         </h2>
@@ -195,7 +189,7 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 ">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
           Let’s Grow Together!
         </h2>
         <p className="text-gray-900 leading-7 pb-20">
