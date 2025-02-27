@@ -306,11 +306,11 @@ const Development = () => {
                         goals.
                       </p>
                       {/* Button Section */}
-                      <div className="flex text-center mt-8">
+                      <div className="text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
-                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
+                          className="flex bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
@@ -331,11 +331,11 @@ const Development = () => {
                         seamlessly across all devices.
                       </p>
                       {/* Button Section */}
-                      <div className="flex text-center mt-8">
+                      <div className=" text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
-                          className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
+                          className="flex bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
