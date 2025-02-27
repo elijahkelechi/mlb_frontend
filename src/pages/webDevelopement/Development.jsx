@@ -306,7 +306,7 @@ const Development = () => {
                         goals.
                       </p>
                       {/* Button Section */}
-                      <div className="text-center mt-8">
+                      <div className="flex text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
@@ -331,13 +331,13 @@ const Development = () => {
                         seamlessly across all devices.
                       </p>
                       {/* Button Section */}
-                      <div className="text-center mt-8">
+                      <div className="flex text-center mt-8">
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
                           className="bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
-                          s See Packages
+                          See Packages
                         </Link>
                       </div>
                     </div>
