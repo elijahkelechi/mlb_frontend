@@ -69,7 +69,7 @@ const CacPreIncorporation = () => {
 
               <button
                 onClick={ScrollToBusinessName}
-                className="bg-blue-600 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                className="bg-blue-900 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
               >
                 Learn More
               </button>
@@ -100,7 +100,7 @@ const CacPreIncorporation = () => {
           <Link
             onClick={handleScrollToTop}
             to="/businessNameRegistration"
-            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+            className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
             Learn More
           </Link>
@@ -124,7 +124,7 @@ const CacPreIncorporation = () => {
           <Link
             onClick={handleScrollToTop}
             to="/limited_liabiltiy_registration"
-            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+            className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
             Learn More
           </Link>
@@ -149,7 +149,7 @@ const CacPreIncorporation = () => {
           <Link
             onClick={handleScrollToTop}
             to="/incorperated_trustee_registration"
-            className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
+            className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-gray-800 transition duration-200"
           >
             Learn More
           </Link>
@@ -178,7 +178,7 @@ const CacPreIncorporation = () => {
         <div className="bg-gray-100 p-6 md:p-12 rounded-lg shadow-lg text-center md:text-left">
           <h2 className="text-xl md:text-3xl font-bold mb-4 leading-snug text-gray-800 font-heading">
             Join the ranks of successful businesses that entrusted their company
-            registration to Multi Level Boost.
+            registration to 247 CORPORATE CONSULTING.
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
             Don't let finance and paperwork hold you back – let's get your

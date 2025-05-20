@@ -265,7 +265,7 @@ const MultiStageForm = () => {
         transition={{ duration: 1 }}
         className="p-8 bg-transparent min-h-screen"
       >
-        <h1 className="text-3xl font-bold text-cyan-500 text-center mb-8">
+        <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">
           Limited Liability Company Registration Form
         </h1>
 

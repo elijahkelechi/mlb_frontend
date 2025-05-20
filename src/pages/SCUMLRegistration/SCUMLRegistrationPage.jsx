@@ -62,7 +62,7 @@ const SCUMLRegistrationPage = () => {
             <div className="container text-left px-6 md:px-20">
               {/* Header Text */}
               <div className="text-2xl md:col-span-6 font-bold justify-center items-left text-left sm:text-3xl md:text-4xl">
-                <span className="text-cyan-500">
+                <span className="text-green-500">
                   SCUML Registration Service
                 </span>
                 <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-100">
@@ -72,7 +72,7 @@ const SCUMLRegistrationPage = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/SCUML_Form"
-                  className="btn bg-green-600 my-4 hover:bg-gray-800 text-white"
+                  className="btn bg-blue-900 my-4 hover:bg-gray-800 text-white"
                 >
                   Start Registration
                 </Link>
@@ -80,7 +80,7 @@ const SCUMLRegistrationPage = () => {
 
               {/* Icon */}
               <div className="flex justify-left items-left mt-4 md:mt-0">
-                <FaUserShield className="text-cyan-500 text-6xl md:text-8xl" />
+                <FaUserShield className="text-green-500 text-6xl md:text-8xl" />
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ const SCUMLRegistrationPage = () => {
         <section className="bg-gray-50 py-10 px-6 md:px-16 lg:px-20">
           <div className="">
             {/* Header */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-500 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-6">
               Secure Your SCUML Certificate
             </h2>
             <p className="text-gray-700  text-lg mb-8">
@@ -102,7 +102,7 @@ const SCUMLRegistrationPage = () => {
             {/* Benefits Section */}
             <div className="grid items-center justify-left lg:justify-left gap-6 lg:gap-8">
               <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
-                <FaCheckCircle className="text-cyan-500 text-3xl" />
+                <FaCheckCircle className="text-blue-900 text-3xl" />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
                     Avoid Bank Restrictions
@@ -114,7 +114,7 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </div>
               <div className="bg-white shadow-md p-6 rounded-lg flex items-center text-left space-x-4 max-w-lg">
-                <FaCheckCircle className="text-cyan-500 text-3xl" />
+                <FaCheckCircle className="text-blue-900 text-3xl" />
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800">
                     Ensure Smooth Account Opening
@@ -145,7 +145,7 @@ const SCUMLRegistrationPage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-xl font-bold text-cyan-500 mb-2">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">
               What is SCUML?
             </h2>
             <p className="text-gray-700">
@@ -162,7 +162,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h3 className="text-lg font-bold text-cyan-500 flex items-center justify-between cursor-pointer">
+            <h3 className="text-lg font-bold text-blue-900 flex items-center justify-between cursor-pointer">
               Businesses Required to Register with SCUML
             </h3>
             {
@@ -170,7 +170,7 @@ const SCUMLRegistrationPage = () => {
                 <ul className="list-disc list-inside text-gray-600 mt-2 space-y-1">
                   {visibleItems.map((item, index) => (
                     <li key={index} className="flex items-center">
-                      <FaCheckCircle className="text-cyan-500 mr-2" /> {item}
+                      <FaCheckCircle className="text-blue-900 mr-2" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -185,7 +185,7 @@ const SCUMLRegistrationPage = () => {
                 {showAllItems && (
                   <button
                     onClick={toggleShowAll}
-                    className="mt-3 text-cyan-600 font-bold underline"
+                    className="mt-3 text-blue-900 font-bold underline"
                   >
                     Show Less
                   </button>
@@ -199,7 +199,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h2 className="text-xl font-bold text-cyan-500 mb-2">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">
               Benefits of SCUML Registration
             </h2>
             <ul className="space-y-2 text-gray-600">
@@ -243,7 +243,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <h2 className="text-xl font-bold text-cyan-500 my-2">
+            <h2 className="text-xl font-bold text-blue-900 my-2">
               Our SCUML Registration Services
             </h2>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -272,7 +272,7 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-8"
           >
-            <h2 className="text-xl font-bold text-cyan-500 mb-2">
+            <h2 className="text-xl font-bold text-blue-900 mb-2">
               Registration Requirements
             </h2>
             <div className="p-6 md:p-8 shadow-lg">
@@ -330,14 +330,14 @@ const SCUMLRegistrationPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="my-12 px-6 py-8 bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg shadow-md"
+            className="my-12 px-6 py-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-600 text-center mb-6">
-              Why Choose MULTI-LEVEL BOOST?
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 text-center mb-6">
+              Why Choose 247 CORPORATE CONSULTING?
             </h2>
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   ✓
                 </span>
                 <div>
@@ -351,7 +351,7 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   ✓
                 </span>
                 <div>
@@ -362,7 +362,7 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   ✓
                 </span>
                 <div>
@@ -375,7 +375,7 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   ✓
                 </span>
                 <div>
@@ -396,16 +396,16 @@ const SCUMLRegistrationPage = () => {
             transition={{ duration: 1 }}
             className="my-12 px-6 py-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-500 text-eft mb-6">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 text-eft mb-6">
               How It Works
             </h2>
             <ol className="space-y-6">
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   1
                 </span>
                 <div>
-                  <h3 className="font-semibold text-cyan-500">
+                  <h3 className="font-semibold text-blue-900">
                     Submit Your Details
                   </h3>
                   <p className="text-gray-600">
@@ -414,22 +414,22 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   2
                 </span>
                 <div>
-                  <h3 className="font-semibold text-cyan-500">Make Payment</h3>
+                  <h3 className="font-semibold text-blue-900">Make Payment</h3>
                   <p className="text-gray-600">
                     Securely pay the registration fee to initiate the process.
                   </p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   3
                 </span>
                 <div>
-                  <h3 className="font-semibold text-cyan-500">
+                  <h3 className="font-semibold text-blue-900">
                     Processing and Follow-Up
                   </h3>
                   <p className="text-gray-600">
@@ -439,11 +439,11 @@ const SCUMLRegistrationPage = () => {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+                <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
                   4
                 </span>
                 <div>
-                  <h3 className="font-semibold text-cyan-500">
+                  <h3 className="font-semibold text-blue-900">
                     Receive Your SCUML Certificate
                   </h3>
                   <p className="text-gray-600">

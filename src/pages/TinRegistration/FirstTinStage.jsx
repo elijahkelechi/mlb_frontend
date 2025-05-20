@@ -29,7 +29,7 @@ const FirstTinStage = () => {
             <Link
               to="/JTB_form"
               onClick={() => window.scrollTo(0, 0)}
-              className="btn bg-cyan-600 text-white hover:bg-gray-800 w-full"
+              className="btn bg-blue-900 text-white hover:bg-gray-800 w-full"
             >
               Start Registeration
             </Link>
@@ -77,7 +77,7 @@ const FirstTinStage = () => {
             </div>
             <Link
               to="/FIRS_form"
-              className="btn bg-cyan-600 text-white hover:bg-gray-800 w-full"
+              className="btn bg-blue-900 text-white hover:bg-gray-800 w-full"
             >
               Start Registeration
             </Link>

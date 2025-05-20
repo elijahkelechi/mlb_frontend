@@ -107,8 +107,8 @@ const WeeklyPlan = () => {
       className="bg-cover bg-center text-gray-800 min-h-screen flex items-center justify-center"
       style={{ backgroundImage: `url(${adsBg})` }}
     >
-      <div className="bg-white bg-opacity-90 p-8 rounded shadow-lg w-full">
-        <h1 className="text-4xl font-extrabold mb-6 text-center bg-cyan-600 text-cyan-50 p-8 rounded-md">
+      <div className="bg-white bg-opacity-90 px-6 md:px-8 py-8  md:py-16 rounded shadow-lg w-full">
+        <h1 className="text-4xl font-extrabold mb-6 text-center bg-blue-900 text-blue-50 p-8 rounded-md">
           Social Media Ads Subscription Plans
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
@@ -118,13 +118,13 @@ const WeeklyPlan = () => {
 
         {/* Weekly Plans */}
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-cyan-700">
+          <h2 className="text-2xl font-semibold mb-4 text-blue-900">
             Weekly Plans
           </h2>
           <div className="space-y-6">
             {plans.weekly.map((plan, index) => (
               <div key={index} className="border p-6 rounded-lg bg-gray-50">
-                <h3 className="text-xl font-bold mb-4 text-cyan-700">
+                <h3 className="text-xl font-bold mb-4 text-blue-900">
                   {plan.name} - {plan.price}
                 </h3>
                 <ul className="list-disc ml-6 mb-4 text-gray-700">
@@ -135,7 +135,7 @@ const WeeklyPlan = () => {
                 <p className="font-semibold text-lg mb-4 text-gray-800"></p>
                 <button
                   onClick={() => openModal(plan, "weekly")}
-                  className="bg-cyan-600 text-white hover:bg-gray-800 p-4 rounded-md"
+                  className="bg-blue-900 text-white hover:bg-gray-800 p-4 rounded-md"
                 >
                   Subscribe
                 </button>
@@ -145,11 +145,11 @@ const WeeklyPlan = () => {
         </div>
         {/* New Section: Subscription Plans & Ad Budget Details */}
         <div className="bg-gray-100 p-8 rounded-lg shadow-md mt-12">
-          <h3 className="text-2xl font-semibold mb-4 text-cyan-700">
+          <h3 className="text-2xl font-semibold mb-4 text-blue-900">
             Please Note:
           </h3>
 
-          <h4 className="text-xl font-semibold mb-2 text-cyan-700">
+          <h4 className="text-xl font-semibold mb-2 text-blue-900">
             1. Subscription Plans - Service Charge
           </h4>
           <p className="text-lg text-gray-700 mb-4">
@@ -171,7 +171,7 @@ const WeeklyPlan = () => {
             </li>
           </ul>
 
-          <h4 className="text-xl font-semibold mb-2 text-cyan-700">
+          <h4 className="text-xl font-semibold mb-2 text-blue-900">
             2. Ad Budget:
           </h4>
           <p className="text-lg text-gray-700 mb-4">
@@ -215,7 +215,7 @@ const WeeklyPlan = () => {
         {showModal && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-              <h3 className="text-xl font-bold mb-4 text-cyan-700">
+              <h3 className="text-xl font-bold mb-4 text-blue-900">
                 Enter Your Email
               </h3>
               <p className="font-bold text-xs md:text-sm">
@@ -309,12 +309,12 @@ const WeeklyPlan = () => {
                         Your payment has been received successfully Thank you
                         for trusting us!
                       </p>
-                      <h2 className="font-bold text-blue-600">
+                      <h2 className="font-bold text-blue-900">
                         Check your ongoing orders for status
                       </h2>
                       <button
                         onClick={() => setIsSubmissionSuccessful(false)}
-                        className="btn bg-blue-500 m-4 text-white hover:bg-black"
+                        className="btn bg-blue-900 m-4 text-white hover:bg-black"
                       >
                         Close
                       </button>

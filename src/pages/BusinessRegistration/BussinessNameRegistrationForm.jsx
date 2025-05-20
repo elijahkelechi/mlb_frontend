@@ -17,7 +17,7 @@ import { customFetch } from "../../utils";
 const MultiStageForm = () => {
   const user = useSelector((state) => state.userState.user);
   const [currentStage, setCurrentStage] = useState(1);
-  const [disableNext, setDisableNext] = useState(true); // State to disable/enable Next button
+  const [disableNext, setDisableNext] = useState(true); // Business Name Registration Form State to disable/enable Next button
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     businessDetails: {
@@ -199,7 +199,7 @@ const MultiStageForm = () => {
         transition={{ duration: 1 }}
         className="p-4 md:p-8 bg-transparent min-h-screen"
       >
-        <h1 className="text-3xl font-bold text-cyan-500 text-center mb-8">
+        <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">
           Business Name Registration Form
         </h1>
 
@@ -412,7 +412,7 @@ const MultiStageForm = () => {
                           href={URL.createObjectURL(file)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-500 underline"
+                          className="text-blue-900 underline"
                         >
                           {file.name}
                         </a>
@@ -424,12 +424,12 @@ const MultiStageForm = () => {
                 ))}
               </ul>
               <div className="bg-blue-50 border border-blue-300 rounded-lg p-4 my-6 shadow-md">
-                <h2 className="text-lg font-semibold text-blue-800 mb-2">
+                <h2 className="text-lg font-semibold text-blue-900 mb-2">
                   Payment Confirmation
                 </h2>
                 <p className="text-gray-700">
                   You are about to pay the sum of{" "}
-                  <span className="font-bold text-blue-600">
+                  <span className="font-bold text-blue-900">
                     25,000 Naira only
                   </span>{" "}
                   for your Business Name registration with the details you
@@ -447,7 +447,7 @@ const MultiStageForm = () => {
             </div>
 
             <button
-              className="text-center mt-8 bg-blue-500 text-gray-50 px-4 py-2 rounded hover:bg-gray-800"
+              className="text-center mt-8 bg-blue-900 text-gray-50 px-4 py-2 rounded hover:bg-gray-800"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
@@ -459,7 +459,7 @@ const MultiStageForm = () => {
               ) : (
                 <PaystackButton
                   text="Procced to payment"
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-500"
                   {...paystackConfig}
                   onSuccess={handlePaymentSuccess}
                   onClose={handlePaymentError}
@@ -540,7 +540,7 @@ const MultiStageForm = () => {
                       registration form has been submitted. Thank you for
                       trusting us!
                     </p>
-                    <h2 className="font-bold text-blue-600">
+                    <h2 className="font-bold text-blue-900">
                       Check your ongoing orders for status
                     </h2>
                   </div>
@@ -564,7 +564,7 @@ const MultiStageForm = () => {
             {currentStage < 4 && (
               <div className="flex justify-end ">
                 <button
-                  className={`bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded ${
+                  className={`bg-blue-900 hover:bg-blue-500 text-white px-4 py-2 rounded ${
                     disableNext
                       ? "opacity-80 md:opacity-50 cursor-not-allowed"
                       : ""

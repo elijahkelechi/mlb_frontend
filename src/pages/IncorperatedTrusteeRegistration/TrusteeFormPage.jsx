@@ -304,7 +304,7 @@ const MultiStageForm = () => {
         transition={{ duration: 1 }}
         className="p-2 md:p-8 bg-transparent min-h-screen"
       >
-        <h1 className="text-3xl mt-8 mx-4 font-bold text-cyan-500 text-center mb-8">
+        <h1 className="text-3xl mt-8 mx-4 font-bold text-blue-900 text-center mb-8">
           Trustee Registration Form
         </h1>
         <div className="bg-white p-4 md:p-8 w-full">
@@ -396,7 +396,7 @@ const MultiStageForm = () => {
               </button>
             )}
 
-            {/* Add Trustee or Confirm Trustee Button in Review Stage */}
+            {/* Add Trustee or Confirm Trustee Button in Review Stage cyan */}
             {currentStage === 3 && (
               <div className="block">
                 <button

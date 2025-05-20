@@ -37,11 +37,11 @@ const Register = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-cyan-200 via-cyan-300 to-cyan-400 overflow-hidden">
+    <div className="min-h-screen w-full flex justify-center items-center px-4 md:px-16 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 overflow-hidden">
       <Form
         method="POST"
         onSubmit={confirmPassword}
-        className="bg-gradient-to-br from-cyan-100 via-cyan-200 to-cyan-300 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2 border-cyan-100 rounded-md w-full max-w-md"
+        className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 shadow-xl px-6 py-8 md:px-12 md:py-12 grid place-items-center gap-4 border-2 border-blue-100 rounded-md w-full max-w-md"
       >
         <div className="grid gap-2 md:gap-4 w-full">
           <label className="input input-bordered flex items-center gap-2 w-full">
@@ -119,9 +119,9 @@ const Register = () => {
               onChange={handlePasswordMatch}
             />
           </label>
-          <p className="text-gray-500">
+          <p className="text-gray-50">
             Already registered?{" "}
-            <Link className="link link-hover text-cyan-400" to="/login">
+            <Link className="link link-hover text-blue-300" to="/login">
               Login
             </Link>
           </p>
@@ -130,7 +130,7 @@ const Register = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn bg-cyan-400 mt-4 w-full text-center text-white"
+          className="btn bg-blue-900 hover:bg-blue-600 mt-4 w-full text-center text-white"
         >
           {isSubmitting ? (
             <>

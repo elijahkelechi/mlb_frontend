@@ -28,7 +28,7 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: "#164e63",
+          primary: "#17357e",
           secondary: "#e7e5e4",
           accent: "#fecaca",
           neutral: "#fecdd3",

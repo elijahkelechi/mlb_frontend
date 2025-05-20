@@ -12,7 +12,7 @@ const CacPostIncorporation = () => {
       // }}
     >
       <div className="bg-gray-100 p-4 md:p-8 rounded-md">
-        <h1 className="text-2xl md:text-4xl font-heading font-extrabold mb-6 text-center text-cyan-500">
+        <h1 className="text-2xl md:text-4xl font-heading font-extrabold mb-6 text-center text-blue-900">
           CAC Post-Incorporation Services
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
@@ -22,7 +22,7 @@ const CacPostIncorporation = () => {
           need to file annual returns, update company details, or make
           structural changes, we’ve got you covered.
         </p>
-        <p className="text-lg  text-center text-blue-600 font-medium">
+        <p className="text-lg  text-center text-blue-900 font-medium">
           Explore our range of post-incorporation services below. Simply click
           on the button for the service you need, and you'll be directed to the
           respective form page to get started.
@@ -122,7 +122,7 @@ const CacPostIncorporation = () => {
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to={service.link}
-              className="inline-block bg-cyan-500 text-white py-2 px-4 rounded hover:bg-gray-800"
+              className="inline-block bg-blue-900 text-white py-2 px-4 rounded hover:bg-gray-800"
             >
               {service.buttonText}
             </Link>
@@ -131,12 +131,12 @@ const CacPostIncorporation = () => {
       </motion.div>
 
       <div className="mt-12 bg-gradient-to-r from-gray-50 to-gray-200 p-6 md:p-8 rounded-xl shadow-lg">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-left text-cyan-600 mb-6 md:mb-8">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-left text-blue-900 mb-6 md:mb-8">
           Why Choose Us?
         </h2>
         <ul className="space-y-6">
           <li className="flex flex-col sm:flex-row items-start gap-4">
-            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
               1
             </span>
             <div>
@@ -150,7 +150,7 @@ const CacPostIncorporation = () => {
             </div>
           </li>
           <li className="flex flex-col sm:flex-row items-start gap-4">
-            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
               2
             </span>
             <div>
@@ -164,7 +164,7 @@ const CacPostIncorporation = () => {
             </div>
           </li>
           <li className="flex flex-col sm:flex-row items-start gap-4">
-            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
               3
             </span>
             <div>
@@ -177,7 +177,7 @@ const CacPostIncorporation = () => {
             </div>
           </li>
           <li className="flex flex-col sm:flex-row items-start gap-4">
-            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-lg">
+            <span className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-lg">
               4
             </span>
             <div>
@@ -192,7 +192,7 @@ const CacPostIncorporation = () => {
         </ul>
       </div>
 
-      <div className="my-8 bg-gradient-to-r from-cyan-50 to-cyan-100 p-6 md:p-8 rounded-lg shadow-lg text-center">
+      <div className="my-8 bg-gradient-to-r from-blue-50 to-blue-100 p-6 md:p-8 rounded-lg shadow-lg text-center">
         <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
           Get Started Today
         </h3>

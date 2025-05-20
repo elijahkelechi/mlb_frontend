@@ -22,7 +22,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/businessNameRegistration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Business Name
                 </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/incorperated_trustee_registration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Incorporated Trustee
                 </Link>
@@ -41,7 +41,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/limited_liabiltiy_registration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Limited Liability Company
                 </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/social_media_ads"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Facebook Ads
                 </Link>
@@ -68,7 +68,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/graphic_design"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Graphic Design & Branding
                 </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/website_app_design_development"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Website Design & Development
                 </Link>
@@ -95,7 +95,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/SCUML_Registeration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   SCUML
                 </Link>
@@ -104,7 +104,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/TIN_Registration"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   TIN & TCC
                 </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/CAC_post_incoperation"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   CAC Post Incorporations
                 </Link>
@@ -134,7 +134,7 @@ const Footer = () => {
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to="/MLB_privacy_Policy"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Privacy Policy
                 </Link>
@@ -143,7 +143,7 @@ const Footer = () => {
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to="/Terms_Of_Use"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Terms of Service
                 </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to="/contactUs"
-                  className="text-cyan-500 hover:text-cyan-700 underline"
+                  className="text-blue-900 hover:text-blue-500 underline"
                 >
                   Contact Us
                 </Link>
@@ -166,7 +166,7 @@ const Footer = () => {
               Contact Us
             </h4>
             <p className="text-gray-700 text-center md:text-left">
-              Email: support@mlb.ng
+              Email: services@247corporateconsulting.ng
             </p>
             <p className="text-gray-700 text-center md:text-left">
               Phone: +234-907-460-2590
@@ -179,7 +179,7 @@ const Footer = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-500 hover:text-cyan-700"
+              className="text-blue-900 hover:text-blue-500"
             >
               <FaFacebook size={20} />
             </a>
@@ -187,7 +187,7 @@ const Footer = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-500 hover:text-cyan-700"
+              className="text-blue-900 hover:text-blue-500"
             >
               <FaTwitter size={20} />
             </a>
@@ -195,7 +195,7 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-500 hover:text-cyan-700"
+              className="text-blue-900 hover:text-blue-500"
             >
               <FaInstagram size={20} />
             </a>
@@ -203,7 +203,7 @@ const Footer = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cyan-500 hover:text-cyan-700"
+              className="text-blue-900 hover:text-blue-500"
             >
               <FaLinkedin size={20} />
             </a>
@@ -212,7 +212,8 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="text-center md:text-left mt-8 text-gray-700 text-sm">
-          &copy; {new Date().getFullYear()} MLB. All rights reserved.
+          &copy; {new Date().getFullYear()} 247 CORPORATE CONSULTING LTD. All
+          rights reserved.
         </div>
       </div>
     </footer>

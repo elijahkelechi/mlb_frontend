@@ -63,13 +63,13 @@ const AdsPage = () => {
                   <span className="block my-4">Social Media Advertising</span>{" "}
                   <span className="block">(Facebook & Instagram Ads)</span>
                 </h1>
-                <p className="text-lg md:text-xl text-cyan-300">
+                <p className="text-lg md:text-xl text-blue-300">
                   Unlock the Power of Social Media to Drive Business Growth
                 </p>
                 <Link
                   onClick={handleScrollToTop}
                   to="/plan_types"
-                  className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
+                  className=" btn bg-blue-900 hover:bg-blue-600 mt-8 text-white "
                 >
                   See Packages
                 </Link>
@@ -99,14 +99,14 @@ const AdsPage = () => {
           <p className="text-gray-700">
             In today’s digital age, social media is more than just a platform
             for connection—it’s a powerful tool for business growth. At{" "}
-            <span className="font-bold">MULTI-LEVEL BOOST</span>, we specialize
-            in crafting high-converting Facebook advertising campaigns that
-            generate leads and boost sales effortlessly.
+            <span className="font-bold">247 CORPORATE CONSULTING</span>, we
+            specialize in crafting high-converting Facebook advertising
+            campaigns that generate leads and boost sales effortlessly.
           </p>
           <Link
             onClick={handleScrollToTop}
             to="/plan_types"
-            className="text-center btn bg-cyan-500 text-white mt-4 hover:bg-gray-800"
+            className="text-center btn bg-blue-900 text-white mt-4 hover:bg-gray-800"
           >
             Book Ads Campaign
           </Link>
@@ -117,7 +117,7 @@ const AdsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="md:py-16 lg:w-full bg-cyan-600 md:bg-gradient-to-r lg:grid lg:grid-cols-12 from-cyan-700 via-cyan-500 to-cyan-400 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
+          className="md:py-16 lg:w-full bg-blue-600 md:bg-gradient-to-r lg:grid lg:grid-cols-12 from-blue-900 to-blue-600 text-gray-50 rounded-xl shadow-lg p-10 mb-12"
         >
           <div className="col-span-8 flex-col w-full pr-8 ">
             {" "}
@@ -129,7 +129,7 @@ const AdsPage = () => {
                 <h3 className="font-bold text-xl mb-2">
                   Consultation and Strategy Development
                 </h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">
                       Initial Consultation:
@@ -149,7 +149,7 @@ const AdsPage = () => {
 
               <li>
                 <h3 className="font-bold text-xl mb-2">Ad Creation</h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">
                       Creative Development:
@@ -167,7 +167,7 @@ const AdsPage = () => {
 
               <li>
                 <h3 className="font-bold text-xl mb-2">Targeting and Setup</h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">
                       Advanced Targeting:
@@ -186,7 +186,7 @@ const AdsPage = () => {
 
               <li>
                 <h3 className="font-bold text-xl mb-2">Campaign Management</h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">Ad Placement:</strong> We
                     handle the setup and placement of your ads across Facebook’s
@@ -207,7 +207,7 @@ const AdsPage = () => {
                 <h3 className="font-bold text-xl mb-2">
                   Monitoring and Optimization
                 </h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">
                       Performance Tracking:
@@ -232,7 +232,7 @@ const AdsPage = () => {
                 <h3 className="font-bold text-xl mb-2">
                   Reporting and Insights
                 </h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">Regular Reports:</strong>{" "}
                     We provide detailed reports on campaign performance,
@@ -253,7 +253,7 @@ const AdsPage = () => {
                 <h3 className="font-bold text-xl mb-2">
                   Support and Consultation
                 </h3>
-                <ul className="space-y-4 pl-8 border-l-4 border-cyan-300">
+                <ul className="space-y-4 pl-8 border-l-4 border-blue-300">
                   <li>
                     <strong className="text-blue-200">Ongoing Support:</strong>{" "}
                     Our team is available to answer any questions and provide
@@ -273,7 +273,7 @@ const AdsPage = () => {
               <Link
                 onClick={handleScrollToTop}
                 to="/plan_types"
-                className=" btn bg-blue-600 hover:bg-blue-500 mt-8 text-white "
+                className=" btn bg-blue-900 hover:bg-blue-600 mt-8 text-white "
               >
                 Book Ads Campaign
               </Link>
@@ -289,8 +289,8 @@ const AdsPage = () => {
               className="hidden relative lg:grid place-items-center gap-4 md:gap-8 lg:gap-24  z-40 w-full md:w-[20rem] lg:w-[25rem] lg:mt-24 lg:right-0 md:right-0"
             >
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-lg md:text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-lg md:text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative">🔍</span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -298,8 +298,8 @@ const AdsPage = () => {
                 </span>
               </div>
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative">🎯</span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -307,8 +307,8 @@ const AdsPage = () => {
                 </span>
               </div>
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative">📊 </span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -316,8 +316,8 @@ const AdsPage = () => {
                 </span>
               </div>
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative">💡 </span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -325,8 +325,8 @@ const AdsPage = () => {
                 </span>
               </div>
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative">🧲 </span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -334,8 +334,8 @@ const AdsPage = () => {
                 </span>
               </div>
               <div className="bg-gray-50 md:w-full text-gray-800 font-bold p-2 md:p-8 text-xl rounded-l-md flex items-center justify-center">
-                <span className="relative text-5xl text-cyan-600 font-extrabold">
-                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full blur-xl"></span>
+                <span className="relative text-5xl text-blue-600 font-extrabold">
+                  <span className="absolute -top-4 -left-8 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl"></span>
                   <span className="z-10 relative"> 📈 ​</span>
                 </span>
                 <span className="ml-4 text-gray-700 text-sm md:text-xl font-medium">
@@ -353,7 +353,7 @@ const AdsPage = () => {
           transition={{ duration: 0.6 }}
           className="bg-white rounded-lg shadow-lg p-8 mb-12"
         >
-          <h2 className="text-2xl font-bold mb-6 text-cyan-500">
+          <h2 className="text-2xl font-bold mb-6 text-blue-900">
             Why Choose Facebook Ads?
           </h2>
           <ul className="list-disc list-inside space-y-4 text-gray-700">
@@ -388,12 +388,13 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-left"
           >
-            <h1 className="text-4xl font-bold text-cyan-500 mb-2 md:mb-4">
+            <h1 className="text-4xl font-bold text-blue-900 mb-2 md:mb-4">
               Our Facebook Ads Services
             </h1>
             <p className="text-lg text-gray-600">
-              At <strong>MULTI-LEVEL BOOST</strong>, we provide comprehensive
-              Facebook advertising services tailored to your business needs.
+              At <strong>247 CORPORATE CONSULTING</strong>, we provide
+              comprehensive Facebook advertising services tailored to your
+              business needs.
             </p>
           </motion.div>
 
@@ -449,7 +450,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-left space-y-6 mb-4 md:mb-8"
           >
-            <h2 className="text-3xl font-bold text-cyan-500 pt-8">
+            <h2 className="text-3xl font-bold text-blue-900 pt-8">
               Who Can Benefit from Our Services?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
@@ -475,8 +476,8 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="text-left space-y-6"
           >
-            <h2 className="text-3xl font-bold text-cyan-500 pt-8">
-              Why Choose MULTI-LEVEL BOOST?
+            <h2 className="text-3xl font-bold text-blue-900 pt-8">
+              Why Choose 247 CORPORATE CONSULTING?
             </h2>
             <ul className="space-y-3 text-lg text-gray-600">
               {[
@@ -499,7 +500,7 @@ const AdsPage = () => {
             variants={sectionVariant}
             className="space-y-6"
           >
-            <h2 className="text-3xl font-bold text-left text-cyan-500 pt-8">
+            <h2 className="text-3xl font-bold text-left text-blue-900 pt-8">
               How It Works
             </h2>
             <ol className="list-decimal list-inside text-lg space-y-3 text-gray-600">
@@ -550,7 +551,7 @@ const AdsPage = () => {
               <Link
                 onClick={handleScrollToTop}
                 to="/plan_types"
-                className="px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition"
+                className="px-6 py-3 bg-blue-900 text-white rounded-full shadow-md hover:bg-blue-600 transition"
                 variants={buttonVariant}
                 whileHover="hover"
               >

@@ -29,7 +29,7 @@ const NavPersonLinks = () => {
           </p>
           <button
             onClick={handleLogout}
-            className="btn btn-primary bg-cyan-600 hover:bg-gray-800 btn-sm md:btn-sm text-white mt-2"
+            className="btn btn-primary bg-blue-950 hover:bg-gray-800 btn-sm md:btn-sm text-white mt-2"
           >
             Logout
           </button>
@@ -41,7 +41,7 @@ const NavPersonLinks = () => {
             return (
               <li key={id}>
                 <NavLink
-                  className="capitalize text-sm md:text-sm md:w-28 btn btn-primary bg-cyan-500 hover:bg-gray-800 text-white"
+                  className="capitalize text-sm md:text-sm md:w-28 btn btn-primary bg-blue-900 hover:bg-gray-800 text-white"
                   to={url}
                 >
                   {text}

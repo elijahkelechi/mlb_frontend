@@ -17,7 +17,7 @@ const AboutUs = () => {
       title: "Integrity",
       description:
         "We uphold transparency and honesty in all our dealings, ensuring trust and reliability for our clients.",
-      icon: <FaHandshake className="text-blue-500 text-4xl" />,
+      icon: <FaHandshake className="text-blue-900 text-4xl" />,
     },
     {
       title: "Innovation",
@@ -76,30 +76,30 @@ const AboutUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
               About Us
             </h1>
-            <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed">
+            <p className="text-lg md:text-xl font-medium text-gray-900 leading-relaxed">
               We are a{" "}
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-900">
                 passionate team
               </span>{" "}
               of
-              <span className="font-semibold text-cyan-400"> SEOs</span>,
-              <span className="font-semibold text-cyan-400">
+              <span className="font-semibold text-blue-900"> SEOs</span>,
+              <span className="font-semibold text-blue-900">
                 {" "}
                 advertising specialists
               </span>
-              ,<span className="font-semibold text-cyan-400"> designers</span>,
-              <span className="font-semibold text-cyan-400"> developers</span>,
-              <span className="font-semibold text-cyan-400"> strategists</span>,
+              ,<span className="font-semibold text-blue-900"> designers</span>,
+              <span className="font-semibold text-blue-900"> developers</span>,
+              <span className="font-semibold text-blue-900"> strategists</span>,
               and
-              <span className="font-semibold text-cyan-400">
+              <span className="font-semibold text-blue-900">
                 {" "}
                 corporate service experts
               </span>
               committed to transforming businesses through
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-900">
                 {" "}
                 innovative solutions
               </span>
@@ -122,10 +122,10 @@ const AboutUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
             Our Journey
           </h2>
-          <p className="text-gray-800 leading-7">
+          <p className="text-gray-900 leading-7">
             Based in Uyo, Akwa Ibom State, Nigeria, we started our journey in
             late 2021 with just two team members. Our mission is to help
             businesses grow through premium digital marketing and seamless
@@ -133,18 +133,18 @@ const AboutUs = () => {
           </p>
         </motion.div>
 
-        <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">
           Mission and Vision
         </h2>
         <div className="space-y-6">
-          <p className="text-gray-800">
+          <p className="text-gray-900">
             <span className="font-semibold text-gray-900">Mission:</span> ​To
             empower businesses and entrepreneurs by providing exceptional
             digital marketing strategies and seamless company registration
             services, enabling them to achieve their goals and thrive in a
             competitive marketplace.
           </p>
-          <p className="text-gray-800">
+          <p className="text-gray-900">
             <span className="font-semibold text-gray-900">Vision:</span> To be
             the leading provider of innovative digital solutions and corporate
             services, fostering growth, trust, and success for businesses across
@@ -160,7 +160,7 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-cyan-500 mb-6">
+        <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-6">
           Core Values
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -172,7 +172,7 @@ const AboutUs = () => {
             >
               <div>{item.icon}</div>
               <div>
-                <h3 className="text-md md:text-lg font-bold text-gray-800">
+                <h3 className="text-md md:text-lg font-bold text-gray-900">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
@@ -189,7 +189,7 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
           Let’s Grow Together!
         </h2>
         <p className="text-gray-900 leading-7 pb-20">

@@ -95,7 +95,7 @@ const GraphicDesignPage = () => {
                     });
                   }}
                   href="#packages"
-                  className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                  className="bg-blue-900 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   See Packages
                 </a>
@@ -221,7 +221,7 @@ const GraphicDesignPage = () => {
                 },
               ].map((pkg, idx) => (
                 <div key={idx} className="bg-gray-100 p-6 rounded-lg shadow-md">
-                  <h3 className="font-semibold text-xl text-cyan-500 mb-4">
+                  <h3 className="font-semibold text-xl text-blue-600 mb-4">
                     {pkg.name} - ₦{pkg.amount.toLocaleString()}
                   </h3>
                   <ul className="list-disc pl-6 text-gray-600">
@@ -230,7 +230,7 @@ const GraphicDesignPage = () => {
                     ))}
                   </ul>
                   <button
-                    className="btn btn-md md:btn-md w-full my-4 md:my-6 bg-cyan-500 text-white hover:bg-gray-800"
+                    className="btn btn-md md:btn-md w-full my-4 md:my-6 bg-blue-900 text-white hover:bg-gray-800"
                     onClick={() => showModal(pkg)}
                   >
                     Checkout

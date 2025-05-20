@@ -67,7 +67,7 @@ const Home = () => {
         <div>
           We simplify the process of registering and managing your business with
           CAC
-          <h1 className="font-bold pt-2 text-cyan-500">Pre-Incorporation</h1>
+          <h1 className="font-bold pt-2 text-blue-900">Pre-Incorporation</h1>
           <ul className="list-disc ml-4">
             <li> Business Name Registration</li>
             <li> Limited Liability Company (LLC) Registration</li>
@@ -76,12 +76,12 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/CAC_Pre-incoperation"
-            className="btn btn-sm w-full md:w-96 rounded-full my-4 bg-cyan-500 hover:bg-gray-800 text-gray-50"
+            className="btn btn-sm w-full md:w-96 rounded-full my-4 bg-blue-900 hover:bg-gray-800 text-gray-50"
           >
             Learn more
           </Link>
           <div>
-            <h1 className="font-bold text-cyan-500">Post-Incorporation</h1>
+            <h1 className="font-bold text-blue-900">Post-Incorporation</h1>
             <ul className="list-disc ml-4">
               <li> Annual Return Filing</li>
               <li> Change of Company Name, Director, Trustee, or Address</li>
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
         </div>
       ),
-      icon: <FaFileSignature className="text-cyan-500 text-5xl" />,
+      icon: <FaFileSignature className="text-blue-900 text-5xl" />,
       link: "/CAC_post_incoperation",
     },
     {
@@ -111,7 +111,7 @@ const Home = () => {
           </ul>
         </div>
       ),
-      icon: <IdentificationIcon className="text-cyan-500 size-14" />,
+      icon: <IdentificationIcon className="text-blue-900 size-14" />,
       link: "/TIN_Registration",
     },
     {
@@ -124,7 +124,7 @@ const Home = () => {
           for your business.
         </div>
       ),
-      icon: <ShieldCheckIcon className="text-cyan-500 size-14" />,
+      icon: <ShieldCheckIcon className="text-blue-900 size-14" />,
       link: "/SCUML_Registeration",
     },
     {
@@ -133,7 +133,7 @@ const Home = () => {
       shortDescription: (
         <div>
           <div>
-            <ul className="list-disc font-bold text-cyan-500">
+            <ul className="list-disc font-bold text-blue-900">
               <li> Social Media Ads </li>
             </ul>
             <span>
@@ -146,13 +146,13 @@ const Home = () => {
             {/* <Link
               onClick={handleScrollToTop}
               to="/social_media_ads"
-              className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
+              className="btn btn-sm w-full md:w-96  bg-blue-900 hover:bg-gray-800 text-gray-50 mt-2 mb-12  rounded-full"
             >
               Learn more
             </Link> */}
           </div>
           <div>
-            <ul className="font-bold text-cyan-500 list-disc ">
+            <ul className="font-bold text-blue-900 list-disc ">
               <li> Website Development </li>
             </ul>
             <span>
@@ -165,13 +165,13 @@ const Home = () => {
             {/* <Link
               onClick={handleScrollToTop}
               to="/website_app_design_development"
-              className="btn btn-sm w-full md:w-96  bg-cyan-500 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
+              className="btn btn-sm w-full md:w-96  bg-blue-900 hover:bg-gray-800 text-gray-50 mt-2 mb-12 rounded-full"
             >
               Learn more
             </Link> */}
           </div>
           <div>
-            <ul className="font-bold text-cyan-500 list-disc">
+            <ul className="font-bold text-blue-900 list-disc">
               <li>Graphic Design & Branding </li>
             </ul>
             <span>
@@ -184,7 +184,7 @@ const Home = () => {
           </div>
         </div>
       ),
-      icon: <MdCampaign className="text-cyan-500 text-5xl" />,
+      icon: <MdCampaign className="text-blue-900 text-5xl" />,
       link: "/services",
     },
   ];
@@ -241,7 +241,7 @@ const Home = () => {
                 >
                   <Link
                     onClick={handleGetStarted}
-                    className={`btn text-sm sm:text-base font-heading bg-cyan-500 hover:bg-gray-800 text-gray-50 px-6 py-3 ${
+                    className={`btn text-sm sm:text-base font-heading bg-blue-900 hover:bg-gray-800 text-gray-50 px-6 py-3 ${
                       admin ? "hidden md:flex" : "flex"
                     }`}
                   >
@@ -269,7 +269,7 @@ const Home = () => {
                     <div>
                       <Link
                         to="login"
-                        className="btn font-heading bg-opacity-20 text-gray-50 border-cyan-500 px-6 py-3 text-sm sm:text-base hover:bg-opacity-0 hover:text-cyan-700"
+                        className="btn font-heading bg-opacity-20 text-gray-50 border-blue-900 px-6 py-3 text-sm sm:text-base hover:bg-opacity-0 hover:text-blue-700"
                       >
                         Login
                       </Link>
@@ -324,11 +324,11 @@ const Home = () => {
       <div className="relative text-left pt-8 md:mt-0 bg-gray-200">
         {/* <h3 className="text-sm p-4 rounded-md text-gray-600 leading-relaxed md:text-sm lg:text-lg font-sans font-semibold">
           As a leading{" "}
-          <span className="font-extrabold text-lg text-cyan-500">
+          <span className="font-extrabold text-lg text-blue-900">
             digital marketing
           </span>{" "}
           and{" "}
-          <span className="font-extrabold text-lg text-cyan-500">
+          <span className="font-extrabold text-lg text-blue-900">
             company registration agency
           </span>
           , we are committed to helping businesses of all sizes establish, grow,
@@ -339,17 +339,17 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/services"
-            className="text-xs text-blue-500 border-b-2 border-blue-500 hover:text-sm hover:text-blue-600 hover:border-blue-600 transition-all duration-300 ease-in-out"
+            className="text-xs text-blue-900 border-b-2 border-blue-900 hover:text-sm hover:text-blue-600 hover:border-blue-600 transition-all duration-300 ease-in-out"
           >
-            Visit our services for more info
+            Visit our services 500 for more info
           </Link>
         </h3> */}
         <div className="pt-12 pb-6 md:pb-0">
           {" "}
-          <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
+          <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-blue-900">
             Our Services
           </h1>
-          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-cyan-500">
+          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-blue-900">
             We have all it takes to build your business 💪
           </h1>
           <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
@@ -392,7 +392,7 @@ const Home = () => {
                 <Link
                   to={card.link}
                   onClick={handleScrollToTop}
-                  className=" btn w-full md:w-96  btn-sm px-2 mt-2 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                  className=" btn w-full md:w-96  btn-sm px-2 mt-2 bg-blue-900 text-white rounded-full hover:bg-gray-800 transition duration-300"
                 >
                   {/* {expandedCard === index ? "Show Less" : "Learn More"} */}
                   Learn more
@@ -405,7 +405,7 @@ const Home = () => {
                     <Link
                       onClick={handleScrollToTop}
                       to={card.link}
-                      className="btn w-full mt-4 px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-gray-800 transition duration-300"
+                      className="btn w-full mt-4 px-6 py-3 bg-blue-900 text-white rounded-full hover:bg-gray-800 transition duration-300"
                     >
                       Get Started
                     </Link>
@@ -417,12 +417,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="reative grid mt-8 md:grid-cols-12  leading-relaxed  px-8   text-gray-50 md:p-8 md:pr-36 rounded-r-md  z-10 bg-gradient-to-r from-cyan-400 to-cyan-600 overflow-x-hidden">
+      <div className="reative grid mt-8 md:grid-cols-12  leading-relaxed  px-8   text-gray-50 md:p-8 md:pr-36 rounded-r-md  z-10 bg-gradient-to-r from-blue-600 to-blue-900 overflow-x-hidden">
         <div className="col-span-9 pt-4 md:py-16 pb-8">
           <div className="ml-2 col-span-2 flex flex-col  ">
             <MdCampaign className="size-14 md:size-36" />
           </div>
-          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-cyan-50 my-2 ">
+          <h1 className=" font-heading font-bold text-3xl md:text-4xl text-blue-50 my-2 ">
             Not Just Another Advertising Agency{" "}
           </h1>
           <p className="font-sans md:pr-32 mb-8">
@@ -446,7 +446,7 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/social_media_ads"
-            className=" p-2 bg-cyan-500 bg-opacity-10 btn-xs md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
+            className=" p-2 bg-blue-900 bg-opacity-10 btn-xs md:btn-lg border-2 rounded-sm md:rounded-md hover:bg-gray-800"
           >
             SKY ROCKET 🚀 YOUR BUSINESS NOW!
           </Link>
@@ -456,9 +456,9 @@ const Home = () => {
       </div>
       {/* mobile view */}
       <MobileCounter />
-      {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-cyan-600 to-cyan-400">
+      {/* <motion.div className="absolute md:ml-36 text-gray-50 p-8 md:p-8 md:pr-36 rounded-l-md top-[300rem] md:top-[240rem] lg:top-[168rem] z-10 bg-gradient-to-r from-blue-600 to-blue-400">
         <div className="py-4 md:py-16 pb-8">
-          <h1 className=" font-heading font-bold text-2xl md:text-4xl text-cyan-50 mt-2 ">
+          <h1 className=" font-heading font-bold text-2xl md:text-4xl text-blue-50 mt-2 ">
             Marketing Solutions That Scale{" "}
           </h1>
           <p className="font-sans md:pr-32 mt-4">
@@ -477,7 +477,7 @@ const Home = () => {
             offering solutions that you can take to your customers to grow their
             marketing while expanding your organization’s capabilities.
           </p>
-          <div className="mt-6 bg-cyan-500 bg-opacity-10 border-2 rounded-md relative overflow-hidden p-4 text-center text-black font-medium">
+          <div className="mt-6 bg-blue-900 bg-opacity-10 border-2 rounded-md relative overflow-hidden p-4 text-center text-black font-medium">
             <span className="flowing-text">
               * Small Business Solutions * Medium Business Solutions *
               Enterprise Solutions * Partner & Affiliate Solutions
@@ -500,7 +500,7 @@ const Home = () => {
           <div className="absolute inset-0 flex md:hidden items-center justify-center">
             <div className="text-center px-4 mt-80">
               <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-4 py-2">
-                <h1 className="text-sm text-cyan-600 font-bold font-heading">
+                <h1 className="text-sm text-blue-600 font-bold font-heading">
                   Why Choose Multi-Level Boost?
                 </h1>
               </div>
@@ -513,7 +513,7 @@ const Home = () => {
           {/* Text for Larger Screens */}
           <div className="hidden md:flex flex-col items-center">
             <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-6 py-3">
-              <h1 className="text-xl md:text-2xl lg:text-4xl text-cyan-600 font-bold font-heading">
+              <h1 className="text-xl md:text-2xl lg:text-4xl text-blue-900 font-bold font-heading">
                 Why Choose Multi-Level Boost?
               </h1>
             </div>
@@ -566,7 +566,7 @@ const Home = () => {
       </div>
 
       {/* Celebrate Us Section */}
-      <div className="relative bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-8 mt-8 rounded-lg shadow-lg">
+      <div className="relative bg-gradient-to-r from-blue-600 to-blue-900 text-white p-8 mt-8 rounded-lg shadow-lg">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-4xl font-extrabold font-heading mb-4 text-center">
             🎉 Celebrate 10 Years of Success with Us! 🎉
@@ -579,7 +579,7 @@ const Home = () => {
           <Link
             onClick={handleScrollToTop}
             to="/services"
-            className="btn w-full mt-4 bg-cyan-600 text-gray-50 px-6 py-2 rounded-lg hover:bg-cyan-700 transition-all"
+            className="btn w-full mt-4 bg-blue-600 text-gray-50 px-6 py-2 rounded-lg hover:bg-blue-700 transition-all"
           >
             Services
           </Link>

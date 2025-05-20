@@ -113,7 +113,7 @@ const EcommercePlans = () => {
 
   return (
     <div>
-      <h1 className="pt-6 md:pt-16 pb-6 text-gl md:text-3xl w-full font-bold text-center bg-white text-cyan-500">
+      <h1 className="pt-6 md:pt-16 pb-6 text-gl md:text-3xl w-full font-bold text-center bg-white text-blue-900">
         e-Commerce Packages
       </h1>
       <div className="px-4 sm:px-8 lg:px-16 bg-white">
@@ -130,18 +130,18 @@ const EcommercePlans = () => {
             <div
               key={index}
               className={`border rounded-lg p-6 shadow-lg transition-transform transform hover:scale-105 ${
-                pkg.popular ? "border-cyan-500" : ""
+                pkg.popular ? "border-blue-900" : ""
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -mt-8 bg-cyan-500 text-white py-1 px-4 text-sm font-semibold rounded-full">
+                <div className="absolute -mt-8 bg-blue-900 text-white py-1 px-4 text-sm font-semibold rounded-full">
                   Most Popular
                 </div>
               )}
               <h3 className="text-xl font-bold mb-4 text-center">
                 {pkg.title}
               </h3>
-              <p className="text-2xl font-extrabold text-center text-cyan-600 mb-2">
+              <p className="text-2xl font-extrabold text-center text-blue-600 mb-2">
                 {pkg.price}
               </p>
               <p className="text-sm text-center text-gray-500 mb-4">
@@ -149,7 +149,7 @@ const EcommercePlans = () => {
               </p>
               <button
                 onClick={() => showModal(pkg)}
-                className="mt-6 mb-6 w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors"
+                className="mt-6 mb-6 w-full bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
               >
                 Choose Plan
               </button>
@@ -182,14 +182,14 @@ const EcommercePlans = () => {
             </h2>
             <p className="text-gray-600 text-sm mb-4 text-center">
               Please provide your email to proceed with the payment for the{" "}
-              <span className="font-bold text-cyan-600">
+              <span className="font-bold text-blue-600">
                 {selectedPackage?.title}
               </span>{" "}
               package.
             </p>
             <input
               type="email"
-              className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-2 focus:ring-cyan-500 outline-none mb-4"
+              className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-900 outline-none mb-4"
               placeholder="Enter your email address"
               value={email}
               onChange={handleEmailChange}
@@ -208,7 +208,7 @@ const EcommercePlans = () => {
                 disabled={!isEmailValid}
                 className={`px-4 py-2 rounded-lg ${
                   isEmailValid
-                    ? "bg-cyan-500 text-white hover:bg-cyan-600"
+                    ? "bg-blue-900 text-white hover:bg-blue-600"
                     : "bg-gray-300 text-gray-800 cursor-not-allowed"
                 } transition-colors`}
               >

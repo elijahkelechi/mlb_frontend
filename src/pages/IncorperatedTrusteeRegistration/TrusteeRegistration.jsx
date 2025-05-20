@@ -51,7 +51,7 @@ const TrusteeRegistrationPage = () => {
             <Link
               to="/trustee_form"
               onClick={handleScrollToTop}
-              className=" bg-cyan-500 text-white hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg  transition duration-200"
+              className=" bg-blue-900 text-white hover:bg-gray-800 font-semibold px-6 py-3 rounded-lg  transition duration-200"
             >
               Start Registration
             </Link>
@@ -71,8 +71,8 @@ const TrusteeRegistrationPage = () => {
             Whether you’re starting a Non-Governmental Organization (NGO), a
             community-based association, or a religious or charitable
             foundation, registering as an Incorporated Trustee with the
-            Corporate Affairs Commission (CAC) is a critical step. At
-            MULTI-LEVEL BOOST, we simplify the registration process, ensuring
+            Corporate Affairs Commission (CAC) is a critical step. At 247
+            Corperate Consulting, we simplify the registration process, ensuring
             your organization is legally recognized and ready to make an impact.
           </p>
         </div>
@@ -82,7 +82,7 @@ const TrusteeRegistrationPage = () => {
         id="incorporated-trustee"
       >
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-blue-900 mb-8">
             About Incorporated Trustee Registration
           </h2>
           <div className="rounded-lg ">
@@ -108,7 +108,7 @@ const TrusteeRegistrationPage = () => {
       >
         <div className="">
           <motion.h2
-            className="text-3xl font-semibold text-left text-cyan-500 mb-8"
+            className="text-3xl font-semibold text-left text-blue-900 mb-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -173,7 +173,7 @@ const TrusteeRegistrationPage = () => {
         className="py-16 bg-white"
       >
         <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-cyan-500">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-900">
             Our Services Include:
           </h2>
           <ul className="list-disc space-y-3 ml-6 text-gray-700 leading-relaxed md:text-lg">
@@ -202,7 +202,7 @@ const TrusteeRegistrationPage = () => {
         id="trustee-requirements"
       >
         <div className=" ">
-          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-blue-900 mb-8">
             Requirements for Incorporated Trustee Registration
           </h2>
           <div className=" p-6 rounded-lg shadow-lg">
@@ -290,12 +290,13 @@ const TrusteeRegistrationPage = () => {
       <section className="py-16 bg-gray-50" id="why-choose-multi-level-boost">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-left text-gray-800 mb-12">
-            Why Choose <span className="text-cyan-500">MULTI-LEVEL BOOST</span>?
+            Why Choose{" "}
+            <span className="text-blue-900">247 CORPORATE CONSULTING</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {/* Card 1 */}
             <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-cyan-500 text-4xl font-bold mr-6">1</div>
+              <div className="text-blue-900 text-4xl font-bold mr-6">1</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Expert Support
@@ -308,7 +309,7 @@ const TrusteeRegistrationPage = () => {
             </div>
             {/* Card 2 */}
             <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-cyan-500 text-4xl font-bold mr-6">2</div>
+              <div className="text-blue-900 text-4xl font-bold mr-6">2</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Affordable Pricing
@@ -321,7 +322,7 @@ const TrusteeRegistrationPage = () => {
             </div>
             {/* Card 3 */}
             <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-cyan-500 text-4xl font-bold mr-6">3</div>
+              <div className="text-blue-900 text-4xl font-bold mr-6">3</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Efficiency
@@ -334,7 +335,7 @@ const TrusteeRegistrationPage = () => {
             </div>
             {/* Card 4 */}
             <div className="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-cyan-500 text-4xl font-bold mr-6">4</div>
+              <div className="text-blue-900 text-4xl font-bold mr-6">4</div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Online Convenience
@@ -350,7 +351,7 @@ const TrusteeRegistrationPage = () => {
 
       <section className="py-16 bg-gray-50" id="how-it-works">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-left text-cyan-500 mb-8">
+          <h2 className="text-3xl font-semibold text-left text-blue-900 mb-8">
             How It Works
           </h2>
           <div className="space-y-8">
@@ -420,12 +421,12 @@ const TrusteeRegistrationPage = () => {
             Start Your Journey Today!
           </h2>
           <p className="mb-4 md:text-lg leading-relaxed">
-            Turn your vision into a legally recognized organization with
-            MULTI-LEVEL BOOST. Let us guide you every step of the way.
+            Turn your vision into a legally recognized organization with 247
+            CORPORATE CONSULTING LTD. Let us guide you every step of the way.
           </p>
           <Link
             onClick={handleScrollToTop}
-            className=" bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-200"
+            className=" bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-200"
           >
             Start Registration
           </Link>

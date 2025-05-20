@@ -28,7 +28,7 @@ const services = [
       "Limited Liability Company",
       "Incorporated Trustee",
     ],
-    icon: <FaRegFileAlt className="text-cyan-500 text-4xl" />,
+    icon: <FaRegFileAlt className="text-blue-900 text-4xl" />,
     link: "/CAC_pre-incoperation",
   },
   {
@@ -36,7 +36,7 @@ const services = [
     description:
       "Easily update your registered business or NGO details, including directors, trustees, address, or business activities. Filing annual returns is simplified.",
     benefits: ["Change directors/trustees", "Update details", "File returns"],
-    icon: <FaRegHandshake className="text-cyan-500 text-4xl" />,
+    icon: <FaRegHandshake className="text-blue-900 text-4xl" />,
     link: "/CAC_post_incoperation",
   },
   {
@@ -44,7 +44,7 @@ const services = [
     description:
       "Reach your target audience, grow leads, and enhance brand awareness with expert-managed ad campaigns tailored for success.",
     benefits: ["Sales", "Leads", "Awareness", "Website Traffic", "Engagement"],
-    icon: <FaBullhorn className="text-cyan-500 text-4xl" />,
+    icon: <FaBullhorn className="text-blue-900 text-4xl" />,
     link: "/social_media_ads",
   },
   {
@@ -56,7 +56,7 @@ const services = [
       "Timeframe - 5-7 working days",
       "Flexible Payment Options",
     ],
-    icon: <FaUniversity className="text-cyan-500 text-4xl" />,
+    icon: <FaUniversity className="text-blue-900 text-4xl" />,
     link: "/SCUML_Registeration",
   },
   {
@@ -64,7 +64,7 @@ const services = [
     description:
       "Simplify your tax compliance process with our TIN registration services. We handle registrations for businesses, NGOs, and individuals.",
     benefits: ["JTB TIN", "FIRS TIN/ Tax promax", "Tax Clearance"],
-    icon: <FaFileSignature className="text-cyan-500 text-4xl" />,
+    icon: <FaFileSignature className="text-blue-900 text-4xl" />,
     link: "/TIN_registration",
   },
 
@@ -73,7 +73,7 @@ const services = [
     description:
       "From simple websites to advanced eCommerce platforms, we deliver responsive, customized solutions that meet your business goals.",
     benefits: ["Responsive designs", "Custom development", "SEO-optimized"],
-    icon: <FaLaptopCode className="text-cyan-500 text-4xl" />,
+    icon: <FaLaptopCode className="text-blue-900 text-4xl" />,
     link: "/website_app_design_development",
   },
   {
@@ -81,7 +81,7 @@ const services = [
     description:
       "Our creative team delivers visually stunning and engaging designs that elevate your brand's identity.",
     benefits: ["Logo", "Branding", "Flyer/Brochure"],
-    icon: <FaPaintBrush className="text-cyan-500 text-4xl" />,
+    icon: <FaPaintBrush className="text-blue-900 text-4xl" />,
     link: "/graphic_design",
   },
 ];
@@ -91,7 +91,7 @@ const Services = () => {
     <div className="bg-gradient-to-r from-gray-50 to-gray-100 ">
       <section class="relative pt-20 px-6 bg-gray-100">
         <div class="container mx-auto text-center">
-          <h1 class="text-2xl md:text-3xl font-semibold text-cyan-500 mb-4">
+          <h1 class="text-2xl md:text-3xl font-semibold text-blue-900 mb-4">
             Our Services
           </h1>
 
@@ -130,7 +130,7 @@ const Services = () => {
               <Link
                 to={service.link}
                 onClick={handleScrollToTop}
-                className="block text-center bg-cyan-500 text-white py-2 px-4 rounded shadow-md hover:bg-cyan-600 transition duration-200"
+                className="block text-center bg-blue-900 text-white py-2 px-4 rounded shadow-md hover:bg-blue-600 transition duration-200"
               >
                 GET STARTED
               </Link>

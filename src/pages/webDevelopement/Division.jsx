@@ -18,8 +18,8 @@ const Division = () => {
   ];
 
   return (
-    <div className="px-4 py-8 bg-gray-50">
-      <h1 className="text-xl md:text-2xl font-bold font-heading text-center text-cyan-500 mb-6">
+    <div className="px-6 md:px-8 py-8 md:py-16 bg-gray-50">
+      <h1 className="text-xl md:text-2xl font-bold font-heading text-center text-blue-900 mb-6">
         Web development and eCommerce packages tailored to suit businesses of
         all sizes and needs.
       </h1>
@@ -27,7 +27,7 @@ const Division = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="border bg-white shadow-lg rounded-2xl p-6 border-cyan-500 hover:shadow-xl transition-transform transform hover:scale-105 duration-300"
+            className="border bg-white shadow-lg rounded-2xl p-6 border-blue-900 hover:shadow-xl transition-transform transform hover:scale-105 duration-300"
           >
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
               {plan.title}
@@ -35,7 +35,7 @@ const Division = () => {
             <p className="text-gray-600 mb-4">{plan.description}</p>
             <Link
               to={plan.link}
-              className="text-white bg-cyan-500 hover:bg-gray-800 font-medium px-4 py-2 rounded-lg text-sm inline-block"
+              className="text-white bg-blue-900 hover:bg-gray-800 font-medium px-4 py-2 rounded-lg text-sm inline-block"
             >
               View Plans
             </Link>

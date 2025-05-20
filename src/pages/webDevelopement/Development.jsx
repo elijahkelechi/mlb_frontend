@@ -80,7 +80,7 @@ const Development = () => {
                 <Link
                   onClick={handleScrollToTop}
                   to="/choose_design_packages" // Adjust the link as necessary
-                  className="bg-cyan-500 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
+                  className="bg-blue-900 text-gray-50 py-3 px-8 rounded shadow hover:bg-gray-800 transition-all duration-300"
                 >
                   See Packages
                 </Link>
@@ -104,8 +104,8 @@ const Development = () => {
               </p>
               <p className="text-gray-700 text-base md:text-lg mb-6">
                 At{" "}
-                <span className="text-cyan-500 font-semibold">
-                  MULTI-LEVEL BOOST
+                <span className="text-blue-900 font-semibold">
+                  247 CORPORATE CONSULTING
                 </span>
                 , we specialize in creating stunning, user-friendly, and
                 mobile-optimized websites tailored to meet your unique needs.
@@ -115,7 +115,7 @@ const Development = () => {
               <Link
                 onClick={() => window.scrollTo(0, 0)}
                 to="/choose_design_packages"
-                className="inline-block bg-cyan-500 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
+                className="inline-block bg-blue-900 text-white text-sm md:text-base py-3 px-6 rounded hover:bg-gray-800 transition duration-200"
               >
                 Get Started
               </Link>
@@ -140,7 +140,7 @@ const Development = () => {
               {/* Section Title */}
               <div className="text-left mb-8">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800">
-                  Why Choose Multi-Level Boost?
+                  Why Choose 247 CORPORATE CONSULTING?
                 </h2>
                 <p className="text-lg text-gray-600 mt-4">
                   Discover the benefits of working with us, and why we're the
@@ -220,7 +220,7 @@ const Development = () => {
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
                 <div className="text-left">
                   {" "}
-                  <FaMobileAlt className="text-4xl text-left text-cyan-500 mb-4" />
+                  <FaMobileAlt className="text-4xl text-left text-blue-900 mb-4" />
                   <h3 className="text-lg font-semibold">Website Design</h3>
                 </div>
 
@@ -231,7 +231,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaLaptopCode className="text-4xl text-cyan-500 mb-4" />
+                <FaLaptopCode className="text-4xl text-blue-900 mb-4" />
                 <h3 className="text-lg font-semibold">Website Development</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Dynamic, functional websites with seamless navigation</li>
@@ -240,7 +240,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <FaRegStar className="text-4xl text-cyan-500 mb-4" />
+                <FaRegStar className="text-4xl text-blue-900 mb-4" />
                 <h3 className="text-lg font-semibold">Optimization</h3>
                 <ul className="text-gray-600 mt-4 space-y-2 list-disc">
                   <li>Fast-loading pages for enhanced user experience</li>
@@ -251,7 +251,7 @@ const Development = () => {
                 </ul>
               </div>
               <div className="flex flex-col items-left bg-gray-100 p-6 rounded-lg shadow-md">
-                <div className="flex items-left text-cyan-500 mb-4">
+                <div className="flex items-left text-blue-900 mb-4">
                   <FiSettings className="text-xl mr-2" /> {/* Spanner Icon */}
                   <FaUserCog className="text-xl" /> {/* Human Icon */}
                 </div>
@@ -269,7 +269,7 @@ const Development = () => {
                   href="https://wa.me/+234 803 2210489"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
+                  className="inline-flex items-center justify-center bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
                 >
                   <FaWhatsapp className="mr-2" size={20} />{" "}
                   {/* Adds some margin between icon and text */}
@@ -293,7 +293,7 @@ const Development = () => {
               </div>
 
               {/* Box Section */}
-              <div className="bg-cyan-500 text-white p-8 rounded-lg shadow-lg">
+              <div className="bg-blue-900 text-white p-8 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Left Side: Info with Icons */}
                   <div className="flex items-center space-x-4">
@@ -310,13 +310,13 @@ const Development = () => {
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
-                          className="flex bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
+                          className="flex bg-green-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
                       </div>
                     </div>
-                    <div className="p-3 bg-white rounded-full text-blue-500">
+                    <div className="p-3 bg-white rounded-full text-blue-900">
                       <FaLaptopCode className="text-3xl" />
                     </div>
                   </div>
@@ -335,13 +335,13 @@ const Development = () => {
                         <Link
                           onClick={() => window.scrollTo(0, 0)}
                           to="/choose_design_packages"
-                          className="flex bg-yellow-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
+                          className="flex bg-green-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition duration-300"
                         >
                           See Packages
                         </Link>
                       </div>
                     </div>
-                    <div className="p-3 bg-white rounded-full text-blue-500">
+                    <div className="p-3 bg-white rounded-full text-blue-900">
                       <FaStore className="text-3xl" />
                     </div>
                   </div>

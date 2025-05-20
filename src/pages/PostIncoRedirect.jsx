@@ -30,7 +30,7 @@ const PostIncoRedirect = () => {
         <Link
           to="/contactUs"
           onClick={() => window.scrollTo(0, 0)}
-          className="w-full flex justify-center items-center py-3 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md hover:bg-blue-700"
+          className="w-full flex justify-center items-center py-3 bg-blue-900 text-white font-semibold text-lg rounded-lg shadow-md hover:bg-blue-600"
         >
           Contact Us
         </Link>
