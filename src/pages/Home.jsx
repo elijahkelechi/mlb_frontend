@@ -21,6 +21,19 @@ import LaptopCounter from "../components/LaptopCounter";
 import MobileCounter from "../components/MobileCounter";
 
 const Home = () => {
+  //overay message
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const today = new Date().toDateString();
+    const lastShown = localStorage.getItem("modalShownDate");
+
+    if (lastShown !== today) {
+      setShowModal(true);
+      localStorage.setItem("modalShownDate", today);
+    }
+  }, []);
+
   const [key1, setKey1] = useState(0);
   const [key2, setKey2] = useState(0);
   const [key3, setKey3] = useState(0);
@@ -191,6 +204,29 @@ const Home = () => {
 
   return (
     <div className="w-full overflow-x-hidden bg-gray-200 ">
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl max-w-md p-6 text-center space-y-4 relative">
+            <h2 className="text-xl font-bold text-gray-900">🚀 Big News!</h2>
+            <p className="text-gray-700">
+              We are excited to officially announce that{" "}
+              <strong className="text-cyan-500">
+                Multi-Level Boost Limited
+              </strong>{" "}
+              is now{" "}
+              <strong className="text-blue-900">
+                247 Corporate Consulting LTD!
+              </strong>
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              onClick={() => setShowModal(false)}
+            >
+              Got it!
+            </button>
+          </div>
+        </div>
+      )}
       {/* Image Section with Motion */}
       <motion.div
         className="h-screen w-full relative flex flex-col"

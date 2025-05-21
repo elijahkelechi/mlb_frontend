@@ -66,7 +66,7 @@ const Navbar = () => {
               247 CORPORATE
               <p> CONSULTING</p>
             </h1>
-            <p className="hidden md:block font-sans text-center text-xs">
+            <p className="hidden md:block font-sans text-center text-xs text-green-500">
               Professional. Reliable. Timely
             </p>
           </span>
