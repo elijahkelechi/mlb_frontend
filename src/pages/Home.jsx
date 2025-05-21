@@ -211,7 +211,7 @@ const Home = () => {
             <p className="text-gray-700">
               We are excited to officially announce that{" "}
               <strong className="text-cyan-500">
-                Multi-Level Boost Limited
+                247 Corporate Consulting Limited
               </strong>{" "}
               is now{" "}
               <strong className="text-blue-900">
@@ -389,10 +389,10 @@ const Home = () => {
             We have all it takes to build your business 💪
           </h1>
           <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
-            Multi-Level Boost has all it takes for you to grow a legit and
-            successful business ranging from registering your business, running
-            effective ads, creative designs, to building a website or mobile app
-            for your business with our team of designers/developers.
+            247 Corporate Consulting has all it takes for you to grow a legit
+            and successful business ranging from registering your business,
+            running effective ads, creative designs, to building a website or
+            mobile app for your business with our team of designers/developers.
           </p>
         </div>
       </div>
@@ -459,7 +459,7 @@ const Home = () => {
             <MdCampaign className="size-14 md:size-36" />
           </div>
           <h1 className=" font-heading font-bold text-3xl md:text-4xl text-blue-50 my-2 ">
-            Not Just Another Advertising Agency{" "}
+            Not Just Another Consulting Agency{" "}
           </h1>
           <p className="font-sans md:pr-32 mb-8">
             Your business is unique and has distinct goals. That’s why we carry
@@ -535,11 +535,6 @@ const Home = () => {
           {/* Overlay Text for Mobile View */}
           <div className="absolute inset-0 flex md:hidden items-center justify-center">
             <div className="text-center px-4 mt-80">
-              <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-4 py-2">
-                <h1 className="text-sm text-blue-600 font-bold font-heading">
-                  Why Choose Multi-Level Boost?
-                </h1>
-              </div>
               <h1 className="font-heading font-extrabold text-xl text-gray-800 drop-shadow-md tracking-wide mt-2">
                 We have all it takes!
               </h1>
@@ -550,7 +545,7 @@ const Home = () => {
           <div className="hidden md:flex flex-col items-center">
             <div className="relative bg-white rounded-full shadow-lg border border-gray-300 inline-block px-6 py-3">
               <h1 className="text-xl md:text-2xl lg:text-4xl text-blue-900 font-bold font-heading">
-                Why Choose Multi-Level Boost?
+                Why Choose 247 Corporate Consulting?
               </h1>
             </div>
             <h1 className="font-heading font-extrabold text-2xl md:text-4xl lg:text-5xl text-gray-800 tracking-wide mt-4 lg:mt-6">

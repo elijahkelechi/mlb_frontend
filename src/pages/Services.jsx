@@ -96,10 +96,10 @@ const Services = () => {
           </h1>
 
           <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
-            We are dedicated to providing businesses with the tools and support
-            they need to grow and thrive. From corporate compliance to digital
-            marketing, we offer a wide range of professional services tailored
-            to meet your unique business needs.
+            We are dedicated to providing businesses with the services and
+            support they need to grow and thrive. From corporate compliance to
+            digital marketing, we offer a wide range of professional services
+            tailored to meet your unique business needs.
           </p>
         </div>
       </section>
