@@ -18,7 +18,7 @@ const AnnualReturnMain = () => {
       className="text-left"
     >
       <div className="w-full pt-16 mx-auto bg-gray-50 bg-opacity-70 md:px-8 px-6 md:p-16">
-        <h1 className="text-xl md:text-4xl text-gray-50 rounded-md  bg-cyan-500 p-4 md:p-8 font-bold leading-tight mb-8">
+        <h1 className="text-xl md:text-4xl text-gray-50 rounded-md  bg-blue-900 p-4 md:p-8 font-bold leading-tight mb-8">
           Comprehensive Guide to CAC Annual Return Filing
         </h1>
         <p className="text-lg mb-6 md:mb-6 text-left">
@@ -36,64 +36,64 @@ const AnnualReturnMain = () => {
         <Link
           onClick={() => window.scrollTo(0, 0)}
           to="/CAC_PostInco_Redirect"
-          className="btn btn-md md:btn-lg bg-cyan-500 text-white hover:bg-gray-800 text-left justify-left mb-6 md:mb-8"
+          className="btn btn-md md:btn-lg bg-blue-900 text-white hover:bg-gray-800 text-left justify-left mb-6 md:mb-8"
         >
           Get Started
         </Link>
         {/* Icons with Section Headings */}
         <h2 className="text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
-          <FaRegFileAlt className="text-cyan-400" />
+          <FaRegFileAlt className="text-blue-700" />
           <span className="text-gray-800 ">Who Must File Annual Returns?</span>
         </h2>
         <ul className="list-disc list-inside text-left mb-8 space-y-4">
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Sole proprietorships and partnerships registered as business names
             must file annual returns to confirm ongoing operation.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Limited Liability Companies, whether private or public, must file
             annual returns to maintain compliance.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Incorporated Trustees (NGOs, Churches, Associations) must also file
             annual returns to preserve their legal status.
           </li>
         </ul>
 
         <h2 className=" text-xl md:text-4xlfont-semibold mb-6 flex items-left justify-left space-x-3">
-          <FaRegCheckCircle className="text-cyan-400" />
+          <FaRegCheckCircle className="text-blue-700" />
           <span className="text-gray-800 ">
             Why Filing Annual Returns is Important?
           </span>
         </h2>
         <ul className="list-disc list-inside text-left mb-8 space-y-4">
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Filing annual returns is mandatory under the Companies and Allied
             Matters Act (CAMA). Non-compliance attracts penalties and
             deregistration.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Regular filings maintain your business’s status as active and
             compliant.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Late filings incur fines that accumulate over time, becoming a
             financial burden.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Promotes transparency and accountability within your organization.
           </li>
         </ul>
 
         <h2 className="  text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
-          <FaRegClipboard className="text-cyan-400" />
+          <FaRegClipboard className="text-blue-700" />
           <span className="text-gray-800">Penalties for Non-Compliance</span>
         </h2>
         <p className="text-lg mb-6 text-left">
@@ -108,7 +108,7 @@ const AnnualReturnMain = () => {
         </ul>
 
         <h2 className=" text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
-          <FaRegClipboard className="text-cyan-400" />
+          <FaRegClipboard className="text-blue-700" />
           <span className="text-gray-800">How We Can Assist You</span>
         </h2>
         <p className="text-lg mb-6">
@@ -117,57 +117,57 @@ const AnnualReturnMain = () => {
         </p>
         <ul className="list-disc list-inside text-left mb-8 space-y-4">
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Document preparation—gathering all necessary documents and ensuring
             accuracy.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Submission to CAC—filing your returns accurately and on time.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Confirmation & receipt—providing proof of filing for compliance.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Advisory support—guidance on additional compliance requirements.
           </li>
         </ul>
 
         <h2 className=" text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
-          <FaRegClipboard className="text-cyan-400" />
+          <FaRegClipboard className="text-blue-700" />
           <span className="text-gray-800">Why Choose Us?</span>
         </h2>
         <ul className="list-disc list-inside text-left mb-8 space-y-4">
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Extensive experience—helping businesses stay compliant with CAC
             regulations.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Efficiency—timely filing, avoiding unnecessary delays.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Transparency—clear pricing and no hidden fees.
           </li>
           <li>
-            <FaRegClipboard className="inline-block mr-2 text-cyan-400" />
+            <FaRegClipboard className="inline-block mr-2 text-blue-700" />
             Dedicated support—available to answer any queries or concerns.
           </li>
         </ul>
         <div className="text-left justify-left">
           {" "}
           <h2 className="text-xl md:text-4xl font-semibold mb-6 flex items-left justify-left space-x-3">
-            <FaRegClipboard className="text-cyan-400" />
+            <FaRegClipboard className="text-blue-700" />
             <span className="text-gray-800 ">How to Get Started</span>
           </h2>
           <p className="text-lg mb-6">
             1. Select your registration type below to proceed to the filling
             page, or
-            <a href="/contact-us" className="text-cyan-400 hover:underline">
+            <a href="/contact-us" className="text-blue-700 hover:underline">
               {" "}
               contact us
             </a>{" "}
@@ -182,25 +182,25 @@ const AnnualReturnMain = () => {
         </div>
 
         {/* <div className="flex justify-center space-x-2">
-          <div className=" bg-cyan-400 hover:bg-cyan-500 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
+          <div className=" bg-blue-700 hover:bg-blue-900 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
             File Annual Return for Business Name
             <br></br>
             <Link className="btn btn-sm">Get Started</Link>
           </div>
-          <div className="bg-cyan-400 hover:bg-cyan-500 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
+          <div className="bg-blue-700 hover:bg-blue-900 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
             File Annual Return for Limited Liability Company
             <br></br>
             <Link className="btn btn-sm">Get Started</Link>
           </div>
-          <div className="bg-cyan-400 hover:bg-cyan-500 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
+          <div className="bg-blue-700 hover:bg-blue-900 text-white py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
             File Annual Return for Incorporated Trustee
             <br></br>
             <Link className="btn btn-sm">Get Started</Link>
           </div>
         </div> */}
 
-        <h2 className="text-xl md:text-4xl md:text-4xl font-semibold mt-12 mb-6 flex items-left justify-left space-x-3">
-          <FaRegClipboard className="text-cyan-400" />
+        <h2 className="text-xl md:text-4xl  font-semibold mt-12 mb-6 flex items-left justify-left space-x-3">
+          <FaRegClipboard className="text-blue-700" />
           <span className="text-gray-800 ">Annual Return Filing Fees</span>
         </h2>
         <div className="text-left">
@@ -214,7 +214,7 @@ const AnnualReturnMain = () => {
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/CAC_PostInco_Redirect"
-              className="btn btn-sm bg-cyan-500  text-gray-50"
+              className="btn btn-sm bg-blue-900  text-gray-50"
             >
               File Now
             </Link>
@@ -229,7 +229,7 @@ const AnnualReturnMain = () => {
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/CAC_PostInco_Redirect"
-              className="btn btn-sm bg-cyan-500  text-gray-50"
+              className="btn btn-sm bg-blue-900  text-gray-50"
             >
               File Now
             </Link>
@@ -244,7 +244,7 @@ const AnnualReturnMain = () => {
             <Link
               onClick={() => window.scrollTo(0, 0)}
               to="/CAC_PostInco_Redirect"
-              className="btn btn-sm bg-cyan-500  text-gray-50"
+              className="btn btn-sm bg-blue-900  text-gray-50"
             >
               File Now
             </Link>
