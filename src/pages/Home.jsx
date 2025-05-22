@@ -210,10 +210,8 @@ const Home = () => {
             <h2 className="text-xl font-bold text-gray-900">🚀 Big News!</h2>
             <p className="text-gray-700">
               We are excited to officially announce that{" "}
-              <strong className="text-cyan-500">
-                247 Corporate Consulting Limited
-              </strong>{" "}
-              is now{" "}
+              <strong className="text-cyan-500">Multi-Level Boost</strong> is
+              now{" "}
               <strong className="text-blue-900">
                 247 Corporate Consulting LTD!
               </strong>
