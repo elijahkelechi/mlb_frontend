@@ -8,15 +8,15 @@ const PrivacyPolicy = () => {
       {/*  services@247corporateconsulting.ng*/}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">1. Introduction</h2>
-        <p className="mb-4">Welcome to247 Corporate Consulting.</p>
+        <p className="mb-4">Welcome to 247 Corporate Consulting.</p>
         <p className="mb-4">
-          247 Corporate Consulting (“us”, “we”, or “our”) operates mlb.ng
-          (hereinafter referred to as “Service”).
+          247 Corporate Consulting (“us”, “we”, or “our”) operates
+          247corporateconsulting.ng (hereinafter referred to as “Service”).
         </p>
         <p className="mb-4">
-          Our Privacy Policy governs your visit to mlb.ng, and explains how we
-          collect, safeguard and disclose information that results from your use
-          of our Service.
+          Our Privacy Policy governs your visit to 247corporateconsulting.ng,
+          and explains how we collect, safeguard and disclose information that
+          results from your use of our Service.
         </p>
         <p className="mb-4">
           We use your data to provide and improve Service. By using Service, you
@@ -35,8 +35,8 @@ const PrivacyPolicy = () => {
         <h2 className="text-2xl font-bold mb-2">2. Definitions</h2>
         <ul className="list-disc ml-6 space-y-2">
           <li>
-            <strong>SERVICE</strong> means the mlb.ng website operated by Multi
-            Level Boost.
+            <strong>SERVICE</strong> means the 247corporateconsulting.ng website
+            operated by 247 Corporate Consulting.
           </li>
           <li>
             <strong>PERSONAL DATA</strong> means data about a living individual
