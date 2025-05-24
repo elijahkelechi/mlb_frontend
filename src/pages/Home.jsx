@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import landingImage2 from "../assets/landingImage2.webp";
-import landingImage from "../assets/landingImage.webp";
+// import landingImage2 from "../assets/landingImage2.webp";
+import landingImage2 from "../assets/Hero/heroImage.jpeg";
+import landingImage from "../assets/Hero/heroImage.jpeg";
 import serviceSectionImage from "../assets/ServicesImage.jpeg";
 import { Link, Navigate } from "react-router";
 import { useNavigate } from "react-router";
@@ -247,7 +248,7 @@ const Home = () => {
         </div>
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-50">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-60">
           <motion.div
             className="h-screen grid grid-cols-1 lg:grid-cols-12 font-bold font-heading text-gray-50"
             initial={{ opacity: 0, y: -50 }}

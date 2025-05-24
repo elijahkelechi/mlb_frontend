@@ -17,10 +17,10 @@ const CacPostIncorporation = () => {
         </h1>
         <p className="text-lg mb-6 text-center text-gray-700">
           Welcome to our CAC Post-Incorporation Services page. At{" "}
-          <strong>Multi-Level Boost</strong>, we make managing your business's
-          compliance and corporate updates seamless and stress-free. Whether you
-          need to file annual returns, update company details, or make
-          structural changes, we’ve got you covered.
+          <strong>247 Corporate Consulting</strong>, we make managing your
+          business's compliance and corporate updates seamless and stress-free.
+          Whether you need to file annual returns, update company details, or
+          make structural changes, we’ve got you covered.
         </p>
         <p className="text-lg  text-center text-blue-900 font-medium">
           Explore our range of post-incorporation services below. Simply click

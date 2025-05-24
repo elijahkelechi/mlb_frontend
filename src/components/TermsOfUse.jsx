@@ -17,13 +17,14 @@ const TermsOfUse = () => {
             </h2>
 
             <p class="mb-4">
-              Welcome to Multi Level Boost (“Company”, “we”, “our”, “us”)!
+              Welcome to 247 Corporate Consulting (“Company”, “we”, “our”,
+              “us”)!
             </p>
 
             <p class="mb-4">
               These Terms of Service (“Terms”, “Terms of Service”) govern your
               use of our website located at mlb.com.ng (together or individually
-              “Service”) operated by Multi Level Boost.
+              “Service”) operated by 247 Corporate Consulting.
             </p>
 
             <p class="mb-4">
@@ -102,21 +103,21 @@ const TermsOfUse = () => {
             <p class="mb-4">
               At the end of each Billing Cycle, your Subscription will
               automatically renew under the exact same conditions unless you
-              cancel it or Multi Level Boost cancels it. You may cancel your
-              Subscription renewal either through your online account management
-              page or by contacting services@247corporateconsulting.ng customer
-              support team.
+              cancel it or 247 Corporate Consulting cancels it. You may cancel
+              your Subscription renewal either through your online account
+              management page or by contacting
+              services@247corporateconsulting.ng customer support team.
             </p>
 
             <p class="mb-4">
               A valid payment method is required to process the payment for your
-              subscription. You shall provide Multi Level Boost with accurate
-              and complete billing information that may include but not limited
-              to full name, address, state, postal or zip code, telephone
-              number, and a valid payment method information. By submitting such
-              payment information, you automatically authorize Multi Level Boost
-              to charge all Subscription fees incurred through your account to
-              any such payment instruments.
+              subscription. You shall provide 247 Corporate Consulting with
+              accurate and complete billing information that may include but not
+              limited to full name, address, state, postal or zip code,
+              telephone number, and a valid payment method information. By
+              submitting such payment information, you automatically authorize
+              247 Corporate Consulting to charge all Subscription fees incurred
+              through your account to any such payment instruments.
             </p>
 
             <p class="mb-4">
@@ -129,7 +130,7 @@ const TermsOfUse = () => {
             <h2 class="text-2xl font-bold mb-4 text-gray-800">6. Free Trial</h2>
 
             <p class="mb-4">
-              Multi Level Boost may, at its sole discretion, offer a
+              247 Corporate Consulting may, at its sole discretion, offer a
               Subscription with a free trial for a limited period of time ("Free
               Trial").
             </p>
@@ -141,16 +142,16 @@ const TermsOfUse = () => {
 
             <p class="mb-4">
               If you do enter your billing information when signing up for Free
-              Trial, you will not be charged by Multi Level Boost until Free
-              Trial has expired. On the last day of Free Trial period, unless
-              you cancelled your Subscription, you will be automatically charged
-              the applicable Subscription fees for the type of Subscription you
-              have selected.
+              Trial, you will not be charged by 247 Corporate Consulting until
+              Free Trial has expired. On the last day of Free Trial period,
+              unless you cancelled your Subscription, you will be automatically
+              charged the applicable Subscription fees for the type of
+              Subscription you have selected.
             </p>
 
             <p class="mb-4">
-              At any time and without notice, Multi Level Boost reserves the
-              right to:
+              At any time and without notice, 247 Corporate Consulting reserves
+              the right to:
             </p>
 
             <ul class="list-disc pl-6 mb-4">
@@ -164,16 +165,17 @@ const TermsOfUse = () => {
             </h2>
 
             <p class="mb-4">
-              Multi Level Boost, in its sole discretion and at any time, may
-              modify Subscription fees for the Subscriptions. Any Subscription
-              fee change will become effective at the end of the then-current
-              Billing Cycle.
+              247 Corporate Consulting, in its sole discretion and at any time,
+              may modify Subscription fees for the Subscriptions. Any
+              Subscription fee change will become effective at the end of the
+              then-current Billing Cycle.
             </p>
 
             <p class="mb-4">
-              Multi Level Boost will provide you with a reasonable prior notice
-              of any change in Subscription fees to give you an opportunity to
-              terminate your Subscription before such change becomes effective.
+              247 Corporate Consulting will provide you with a reasonable prior
+              notice of any change in Subscription fees to give you an
+              opportunity to terminate your Subscription before such change
+              becomes effective.
             </p>
 
             <p class="mb-4">
@@ -357,11 +359,11 @@ const TermsOfUse = () => {
             <p class="mb-4">
               Service and its original content (excluding Content provided by
               users), features, and functionality are and will remain the
-              exclusive property of Multi Level Boost and its licensors. Service
-              is protected by copyright, trademark, and other laws of and
-              foreign countries. Our trademarks may not be used in connection
-              with any product or service without the prior written consent of
-              Multi Level Boost.
+              exclusive property of 247 Corporate Consulting and its licensors.
+              Service is protected by copyright, trademark, and other laws of
+              and foreign countries. Our trademarks may not be used in
+              connection with any product or service without the prior written
+              consent of 247 Corporate Consulting.
             </p>
           </section>
           <section class="py-8 px-6 bg-gray-50" id="copyright-policy">
@@ -473,11 +475,11 @@ const TermsOfUse = () => {
 
             <p class="mb-4">
               Our Service may contain links to third party web sites or services
-              that are not owned or controlled by Multi Level Boost.
+              that are not owned or controlled by 247 Corporate Consulting.
             </p>
 
             <p class="mb-4">
-              Multi Level Boost has no control over, and assumes no
+              247 Corporate Consulting has no control over, and assumes no
               responsibility for the content, privacy policies, or practices of
               any third party web sites or services. We do not warrant the
               offerings of any of these entities/individuals or their websites.
@@ -695,7 +697,7 @@ const TermsOfUse = () => {
         </div>
 
         <footer className="mt-12 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Multi Level Boost. All rights
+          &copy; {new Date().getFullYear()} 247 Corporate Consulting. All rights
           reserved.
         </footer>
       </div>
