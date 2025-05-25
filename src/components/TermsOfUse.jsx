@@ -3,7 +3,7 @@ import React from "react";
 const TermsOfUse = () => {
   return (
     <div className="bg-gray-100 py-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg p-8">
+      <div className="max-w-7xl mx-auto bg-white rounded-lg p-8">
         <h1 className="text-4xl font-bold mb-6 text-gray-900">
           Terms of Use (Terms and Conditions)
         </h1>
