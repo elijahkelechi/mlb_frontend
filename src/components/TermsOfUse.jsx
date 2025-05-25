@@ -9,9 +9,9 @@ const TermsOfUse = () => {
         </h1>
         <p className="text-gray-600 text-sm mb-6">Last updated: 2022-11-20</p>
 
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-x-4">
           {/* Section 1 */}
-          <section class="py-8 px-6 bg-gray-50" id="introduction">
+          <section class="py-8" id="introduction">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               1. Introduction
             </h2>
@@ -33,7 +33,7 @@ const TermsOfUse = () => {
               results from your use of our web pages.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="communications">
+          <section class="py-8" id="communications">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               2. Communications
             </h2>
@@ -53,7 +53,7 @@ const TermsOfUse = () => {
               .
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="purchases">
+          <section class="py-8" id="purchases">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">3. Purchases</h2>
 
             <p class="mb-4">
@@ -71,10 +71,7 @@ const TermsOfUse = () => {
               information to these third parties subject to our Privacy Policy.
             </p>
           </section>
-          <section
-            class="py-8 px-6 bg-gray-50"
-            id="contests-sweepstakes-promotions"
-          >
+          <section class="py-8" id="contests-sweepstakes-promotions">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               4. Contests, Sweepstakes and Promotions
             </h2>
@@ -87,7 +84,7 @@ const TermsOfUse = () => {
               as well as our Privacy Policy.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="subscriptions">
+          <section class="py-8" id="subscriptions">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               5. Subscriptions
             </h2>
@@ -126,7 +123,7 @@ const TermsOfUse = () => {
               with immediate effect.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="free-trial">
+          <section class="py-8" id="free-trial">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">6. Free Trial</h2>
 
             <p class="mb-4">
@@ -159,7 +156,7 @@ const TermsOfUse = () => {
               <li>Cancel such Free Trial offer.</li>
             </ul>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="fee-changes">
+          <section class="py-8" id="fee-changes">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               7. Fee Changes
             </h2>
@@ -184,7 +181,7 @@ const TermsOfUse = () => {
               Subscription fee amount.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="refunds">
+          <section class="py-8" id="refunds">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">8. Refunds</h2>
 
             <p class="mb-4">
@@ -192,7 +189,7 @@ const TermsOfUse = () => {
               purchase of the Contract.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="content">
+          <section class="py-8" id="content">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">9. Content</h2>
 
             <p class="mb-4">
@@ -204,7 +201,7 @@ const TermsOfUse = () => {
               us.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="prohibited-uses">
+          <section class="py-8" id="prohibited-uses">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               10. Prohibited Uses
             </h2>
@@ -293,7 +290,7 @@ const TermsOfUse = () => {
               </li>
             </ul>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="analytics">
+          <section class="py-8" id="analytics">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">11. Analytics</h2>
 
             <p class="mb-4">
@@ -301,7 +298,7 @@ const TermsOfUse = () => {
               the use of our Service.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="no-use-by-minors">
+          <section class="py-8" id="no-use-by-minors">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               12. No Use By Minors
             </h2>
@@ -316,7 +313,7 @@ const TermsOfUse = () => {
               prohibited from both the access and usage of Service.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="accounts">
+          <section class="py-8" id="accounts">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">13. Accounts</h2>
 
             <p class="mb-4">
@@ -351,7 +348,7 @@ const TermsOfUse = () => {
               or edit content, or cancel orders in our sole discretion.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="intellectual-property">
+          <section class="py-8" id="intellectual-property">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               14. Intellectual Property
             </h2>
@@ -366,7 +363,7 @@ const TermsOfUse = () => {
               consent of 247 Corporate Consulting.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="copyright-policy">
+          <section class="py-8" id="copyright-policy">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               15. Copyright Policy
             </h2>
@@ -396,7 +393,7 @@ const TermsOfUse = () => {
               your copyright.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="dmca-notice">
+          <section class="py-8" id="dmca-notice">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               16. DMCA Notice and Procedure for Copyright Infringement Claims
             </h2>
@@ -442,7 +439,7 @@ const TermsOfUse = () => {
               services@247corporateconsulting.ng.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="error-reporting">
+          <section class="py-8" id="error-reporting">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               17. Error Reporting and Feedback
             </h2>
@@ -468,7 +465,7 @@ const TermsOfUse = () => {
               Feedback in any manner and for any purpose.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="links-to-other-websites">
+          <section class="py-8" id="links-to-other-websites">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               18. Links To Other Web Sites
             </h2>
@@ -498,7 +495,7 @@ const TermsOfUse = () => {
               POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="disclaimer-of-warranty">
+          <section class="py-8" id="disclaimer-of-warranty">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               19. Disclaimer Of Warranty
             </h2>
@@ -540,7 +537,7 @@ const TermsOfUse = () => {
               EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="limitation-of-liability">
+          <section class="py-8" id="limitation-of-liability">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               20. Limitation Of Liability
             </h2>
@@ -567,7 +564,7 @@ const TermsOfUse = () => {
               EXCLUSION MAY NOT APPLY TO YOU.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="termination">
+          <section class="py-8" id="termination">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               21. Termination
             </h2>
@@ -591,7 +588,7 @@ const TermsOfUse = () => {
               and limitations of liability.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="governing-law">
+          <section class="py-8" id="governing-law">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               22. Governing Law
             </h2>
@@ -613,7 +610,7 @@ const TermsOfUse = () => {
               have had between us regarding Service.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="changes-to-service">
+          <section class="py-8" id="changes-to-service">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               23. Changes To Service
             </h2>
@@ -627,7 +624,7 @@ const TermsOfUse = () => {
               the entire Service, to users, including registered users.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="amendments-to-terms">
+          <section class="py-8" id="amendments-to-terms">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               24. Amendments To Terms
             </h2>
@@ -652,7 +649,7 @@ const TermsOfUse = () => {
               use Service.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="waiver-and-severability">
+          <section class="py-8" id="waiver-and-severability">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               25. Waiver And Severability
             </h2>
@@ -673,7 +670,7 @@ const TermsOfUse = () => {
               continue in full force and effect.
             </p>
           </section>
-          <section class="py-8 px-6 bg-gray-50" id="acknowledgement">
+          <section class="py-8" id="acknowledgement">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">
               26. Acknowledgement
             </h2>
