@@ -57,7 +57,7 @@ const CacPreIncorporation = () => {
           >
             <div>
               <h1 className="text-left text-2xl md:text-4xl font-bold">
-                CAC Pre-Incorporation Services
+                Company Registaration Service
               </h1>
               <p className="mt-4 text-left text-lg mb-8">
                 We simplify the process of officially establishing your business

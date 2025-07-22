@@ -204,7 +204,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden bg-gray-200 ">
+    <div className="w-full overflow-x-hidden bg-gray-200">
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-xl max-w-md p-6 text-center space-y-4 relative">
@@ -382,16 +382,17 @@ const Home = () => {
         <div className="pt-12 pb-6 md:pb-0">
           {" "}
           <h1 className="text-2xl lg:text-4xl md:3xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-blue-900">
-            Our Services
+            Services
           </h1>
-          <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-blue-900">
+          {/* <h1 className="text-xl lg:text-4xl md:2xl px-8 pt-2 lg:px-36 md:px-20 text-center font-heading font-bold text-blue-900">
             We have all it takes to build your business 💪
-          </h1>
+          </h1> */}
           <p className="text-center leading-relaxed text-sm md:text-lg px-6 md:px-24 lg:px-40 text-gray-800 mt-4 md:mt-6 font-sans">
-            247 Corporate Consulting has all it takes for you to grow a legit
-            and successful business ranging from registering your business,
-            running effective ads, creative designs, to building a website or
-            mobile app for your business with our team of designers/developers.
+            247 Corporate Consulting offers everything you need to build a legit
+            and successful business -from business registartion & Compliance to
+            Digital Marketing (high-converting social media ads), creative
+            design, proffessional website or mobile app development and
+            corporate solution.
           </p>
         </div>
       </div>
@@ -594,29 +595,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Celebrate Us Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-blue-900 text-white p-8 mt-8 rounded-lg shadow-lg">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-extrabold font-heading mb-4 text-center">
-            🎉 Celebrate 10 Years of Success with Us! 🎉
-          </h1>
-          <p className="text-lg font-medium text-center">
-            Get each service now at{" "}
-            <span className="text-yellow-300 font-bold">20% Discount</span> as
-            we mark our 10th Year of excellence in business!
-          </p>
-          <Link
-            onClick={handleScrollToTop}
-            to="/services"
-            className="btn w-full mt-4 bg-blue-600 text-gray-50 px-6 py-2 rounded-lg hover:bg-blue-700 transition-all"
-          >
-            Services
-          </Link>
-        </div>
-      </div>
-
-      <div className="relative">
+      <div className="relative mt-8">
         <Footer />
       </div>
     </div>

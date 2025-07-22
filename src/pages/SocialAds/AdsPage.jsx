@@ -1,6 +1,7 @@
 import React from "react";
 import heroImageDesktop from "../../assets/adsPage/laptopHero.jpeg";
 import heroImageMobile from "../../assets/adsPage/mobileHero.jpeg";
+import adsImage from "../../assets/adsPage/adsImage.jpeg";
 import { motion } from "framer-motion"; // Import framer-motion
 import { Link } from "react-router";
 
@@ -28,52 +29,82 @@ const AdsPage = () => {
       // }}
     >
       <div className=" w-full">
-        {/* Header Section */}
         <motion.div
-          className="h-screen w-full relative flex flex-col"
+          className="min-h-screen w-full relative flex flex-col md:flex-row pt-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          {/* Background Image */}
-          <div className="h-full w-full flex-shrink-0">
-            <img
-              className="hidden md:flex h-full w-full object-cover"
-              src={heroImageDesktop}
-              alt="Digital Marketing Desktop"
-            />
-            <img
-              className="flex md:hidden h-full w-full object-cover"
-              src={heroImageMobile}
-              alt="Digital Marketing Mobile"
-            />
-          </div>
-
-          {/* Overlay Content */}
-          <div className="absolute inset-0 bg-gradient-to-r bg-black bg-opacity-50">
+          {/* Mobile View Overlay */}
+          {/* Gray Overlay for Mobile */}
+          <div className="absolute inset-0 bg-gray-800/40 md:hidden z-0" />
+          <div className="absolute inset-0 md:hidden flex items-center justify-center z-10">
             <motion.div
-              className="h-screen flex items-center justify-center font-bold text-white px-6 md:px-12"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-center text-white px-6"
             >
-              <div className="text-center">
-                <h1 className="text-2xl md:text-4xl font-bold font-heading text-gray-50 mb-4 space-y-4">
-                  Digital Marketing{" "}
-                  <span className="block my-4">Social Media Advertising</span>{" "}
-                  <span className="block">(Facebook & Instagram Ads)</span>
-                </h1>
-                <p className="text-lg md:text-xl text-blue-300">
-                  Unlock the Power of Social Media to Drive Business Growth
-                </p>
-                <Link
-                  onClick={handleScrollToTop}
-                  to="/plan_types"
-                  className=" btn bg-blue-900 hover:bg-blue-600 mt-8 text-white "
-                >
-                  See Packages
-                </Link>
-              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white">
+                <span className="block mt-2">SOCIAL MEDIA ADS SERVICES</span>
+              </h1>
+              <p className="text-lg text-white mt-2">
+                Reach the Right Audience. Drive Sales. Grow Your Business.
+              </p>
+              <Link
+                onClick={handleScrollToTop}
+                to="/plan_types"
+                className="bg-blue-900 text-white py-3 px-8 mt-6 inline-block rounded shadow hover:bg-blue-600 transition-all duration-300"
+              >
+                See Packages
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Left Side: Image */}
+          <div className="w-full md:w-1/2 h-full flex items-center justify-center bg-black">
+            {/* Mobile Image */}
+            <motion.img
+              className="md:hidden h-full w-full object-contain"
+              src={heroImageMobile}
+              alt="Digital Marketing Mobile"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
+
+            {/* Desktop Image */}
+            <motion.img
+              className="hidden md:block h-full w-full object-contain"
+              src={heroImageDesktop}
+              alt="Digital Marketing Desktop"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
+          </div>
+
+          {/* Right Side: Text Content */}
+          <div className="w-full md:w-1/2 h-full flex items-center justify-start px-6 md:px-12 z-10">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="text-center md:text-left hidden md:block"
+            >
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+                <span className="block mt-2">SOCIAL MEDIA ADS SERVICES</span>
+              </h1>
+              <p className="text-lg text-blue-500 mt-2">
+                Reach the Right Audience. Drive Sales. Grow Your Business.
+              </p>
+              <Link
+                onClick={handleScrollToTop}
+                to="/plan_types"
+                className="bg-blue-900 text-white py-3 px-8 mt-6 inline-block rounded shadow hover:bg-blue-600 transition-all duration-300"
+              >
+                See Packages
+              </Link>
             </motion.div>
           </div>
         </motion.div>
@@ -89,19 +120,17 @@ const AdsPage = () => {
             Struggling to Get Results?
           </h2>
           <p className="text-gray-700 mb-4">
-            Struggling to get the results you want from your Facebook ads?
-             Tired of wasting money 💸 on ads that don't convert? Tired of Low
-            Sales and Poor Leads? Lets help you run a highly converting Facebook
-            Ads. Our expert Facebook ad  deliver exceptional results! Whether
-            you're a startup or an established business, we create customized
-            campaigns that reach your ideal audience and drive real result.
+            Struggling to get the results you want from your Facebook ads? Tired
+            of wasting money 💸 on ads that don't convert? Tired of Low Sales
+            and Poor Leads? Lets help you run a highly converting Facebook Ads.
           </p>
           <p className="text-gray-700">
-            In today’s digital age, social media is more than just a platform
-            for connection—it’s a powerful tool for business growth. At{" "}
-            <span className="font-bold">247 CORPORATE CONSULTING</span>, we
-            specialize in crafting high-converting Facebook advertising
-            campaigns that generate leads and boost sales effortlessly.
+            In today’s digital world, social media is more than just a platform
+            for connection—it’s a powerful tool for business growth. Your
+            customers are online — and we know exactly how to find them. At{" "}
+            <span className="font-bold">247 Corporate Consulting Ltd</span>, we
+            help businesses like yours run high-converting Social Media Ads that
+            attract leads, boost sales, and increase visibility.
           </p>
           <Link
             onClick={handleScrollToTop}
@@ -346,39 +375,42 @@ const AdsPage = () => {
           </div>
         </motion.div>
 
-        {/* Why Facebook Ads Section */}
-        <motion.div
+        {/* Why Social Media Advertising Section */}
+        <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-lg shadow-lg p-8 mb-12"
+          className="bg-white rounded-2xl px-6 py-10 md:px-12 mb-12 flex flex-col md:flex-row gap-8 items-center"
         >
-          <h2 className="text-2xl font-bold mb-6 text-blue-900">
-            Why Choose Facebook Ads?
-          </h2>
-          <ul className="list-disc list-inside space-y-4 text-gray-700">
-            <li>
-              <span className="font-bold">Massive Audience:</span> Facebook
-              boasts over 2.9 billion active users worldwide, offering
-              unparalleled reach to diverse demographics.
-            </li>
-            <li>
-              <span className="font-bold">Advanced Targeting:</span> Target your
-              ideal customers based on their location, age, interests, behavior,
-              and more, ensuring every ad dollar is spent wisely.
-            </li>
-            <li>
-              <span className="font-bold">Cost-Effective:</span> Facebook Ads
-              are one of the most affordable ways to reach thousands of
-              potential customers, regardless of your budget.
-            </li>
-            <li>
-              <span className="font-bold">Measurable Results:</span> Track
-              performance in real-time with detailed analytics, so you know
-              exactly how your campaigns are performing.
-            </li>
-          </ul>
-        </motion.div>
+          {/* Image (Replace src later) */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={adsImage} // Replace with your actual image path
+              alt="Why Social Media Ads"
+              className="w-full h-auto max-w-md rounded-lg shadow-md"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-blue-900">
+              Why Social Media Advertising?
+            </h2>
+            <p className="text-gray-700 mb-4">
+              <span className="font-semibold">
+                With billions of active users on social media every day, your
+                ideal customers are just a click away.
+              </span>{" "}
+              Social media advertising gives your business powerful tools to:
+            </p>
+            <ul className="list-disc pl-5 space-y-3 text-gray-700">
+              <li>Target specific interests, demographics, and locations</li>
+              <li>Promote your product or service 24/7</li>
+              <li>Track performance and ROI in real-time</li>
+              <li>Generate high-quality leads and engagement quickly</li>
+            </ul>
+          </div>
+        </motion.section>
 
         <section className="bg-gray-100 text-white py-16 px-6 md:px-16 rounded-xl shadow-lg space-y-2 md:space-y-4 ">
           {/* Header Section */}

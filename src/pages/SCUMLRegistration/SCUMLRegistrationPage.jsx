@@ -358,7 +358,7 @@ const SCUMLRegistrationPage = () => {
                   <h3 className="font-semibold text-gray-800">
                     Affordable Pricing
                   </h3>
-                  <p className="text-gray-600">Starting at ₦47,000.</p>
+                  <p className="text-gray-600">Starting at ₦40,000.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">

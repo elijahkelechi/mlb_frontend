@@ -167,7 +167,7 @@ const SCUMLform = () => {
 
   const paystackConfig = {
     email: formData.email, // Default to user email if proprietor email is unavailable
-    amount: 47500 * 100, // Paystack requires amount in kobo
+    amount: 40000 * 100, // Paystack requires amount in kobo
     publicKey: "pk_live_1e16875ee44434a99e327eb8e7835abffd03ecfb", // Replace with your actual Paystack public key
   };
 
@@ -190,10 +190,10 @@ const SCUMLform = () => {
     >
       <div className="bg-white bg-opacity-90 p-8  rounded shadow-md max-w-4xl mx-auto">
         <h1 className="text-2xl font-semibold mb-6 text-center">
-          SCUML REGISTRATION FORM
+          SCUML REGISTRATION
         </h1>
         <p className="text-gray-600 my-4 text-center">
-          Registration cost is ₦47,500.only
+          Registration cost is ₦40,000.only
         </p>
         <p className="text-gray-600 mb-4 text-center">
           All fields marked * are required.
@@ -563,7 +563,7 @@ const SCUMLform = () => {
                 </h2>
                 <p className="text-gray-700 text-center">
                   Your payment of{" "}
-                  <span className="font-bold text-green-600">47,500 Naira</span>{" "}
+                  <span className="font-bold text-green-600">40,500 Naira</span>{" "}
                   has been received successfully. Your Business Name
                   registration form has been submitted. Thank you for trusting
                   us!
